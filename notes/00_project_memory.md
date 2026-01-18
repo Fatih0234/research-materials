@@ -342,3 +342,131 @@ The selected shortlist tells a coherent story in 6 acts:
 **Created:** `plans/01_paper_shortlist.csv` (20 papers evaluated, scored, classified)
 **Updated:** This project memory with shortlist rationale and OpenRouter decision
 **Next Up:** Iteration C - Paper-by-paper detailed extraction
+
+---
+
+## Iteration C0 Outcomes: Extraction Scaffolding (SETUP ONLY)
+
+**Completed:** 2026-01-18
+**Goal:** Create templates, extraction queue, and design accumulator for Iterations C1-C7
+
+### Files Created
+
+1. **`notes/papers/_template.md`** - Strict extraction template
+   - All required sections for codable paper notes
+   - Game parameters, prompt structures, metrics, human baselines
+   - Implementation notes (parsing, failure modes, logging)
+   - Local path documentation requirements
+   - Extraction quality checklist
+
+2. **`plans/01b_extraction_queue.md`** - Paper-by-paper extraction order
+   - 7 CORE papers in recommended sequence:
+     1. C1: Horton (2023) - Homo Silicus foundation
+     2. C2: Xie et al. (2024) - PRIMARY Trust Game replication target ⭐
+     3. C3: Akata et al. (2025 Nature) - Social Chain-of-Thought prompting
+     4. C4: Aher et al. (2023 ICML) - Human simulation methods
+     5. C5: Wang et al. (2023) - Self-consistency sampling
+     6. C6: Agarwal et al. (2025) - Attitudinal conditioning (iterated PD)
+     7. C7: Sreedhar et al. (2025) - Public goods extension
+   - Definition-of-done checklist per paper
+   - STOP condition after each extraction
+   - Rationale for extraction order
+
+3. **`plans/02a_design_accumulator.md`** - Cross-paper pattern tracking
+   - Empty tables ready to populate during C1-C7:
+     - Game Parameters Table
+     - Prompt Patterns Table
+     - Sampling/Variance Strategy Table
+     - Metrics & Aggregation Table
+     - Human Baseline References Table
+     - Prompting Intervention Effects
+     - Implementation Challenges & Failure Modes
+     - Replication Priorities (MVP vs extensions)
+   - Convergence/divergence tracking
+   - Synthesis questions for TrustBench design
+
+4. **`specs/00_llm_interface.md`** - OpenRouter calling contract
+   - Provider: OpenRouter (unified interface to multiple LLM providers)
+   - Model identifier format: `openrouter/{provider}/{model-id}`
+   - Required per-call logged fields (17 categories):
+     - Request metadata (ID, timestamp, model version)
+     - Sampling parameters (temp, top_p, seed, max_tokens)
+     - Prompt content (hash, version, full text)
+     - Response content (raw output, parsed action, parse errors)
+     - Token usage & cost tracking
+   - Structured output strategy: Multi-stage parsing with LLM repair
+   - Reproducibility guarantees: prompt versioning, config snapshots, seed handling
+   - Self-consistency implementation (n>1, aggregation)
+   - Error handling & rate limiting
+   - Example pseudocode
+
+### Extraction Order (Slugs Only)
+
+1. `arxiv_2301.07543` (Horton - Homo Silicus)
+2. `arxiv_2402.04559` (Xie - Trust Game) ⭐ PRIMARY
+3. `www_nature_com_s41562_025_02172_y` (Akata - Social CoT)
+4. `proceedings_mlr_press_aher23a` (Aher - Human simulation)
+5. `arxiv_2203.11171` (Wang - Self-consistency)
+6. `arxiv_2501.16173v1` (Agarwal - Attitudinal conditioning)
+7. `arxiv_2502.12504` (Sreedhar - Public goods)
+
+### Definition of Done (Per Paper)
+
+For each extraction (C1-C7), the following MUST be complete:
+- ✅ File `notes/papers/<slug>.md` created using template
+- ✅ All template sections filled (no placeholders)
+- ✅ Codable details extracted: game params, prompts, metrics, sampling
+- ✅ Human baseline data identified (if present)
+- ✅ Local paths to all consulted chunks documented
+- ✅ Implementation notes: parsing rules, failure modes, logging
+- ✅ Replication target scoped (MVP vs extensions)
+- ✅ Project memory updated with "Iteration CX outcomes" section
+- ✅ Git committed: "Iteration CX: extract <slug>"
+
+### Platform Decisions Reinforced
+
+**OpenRouter for LLM API:** Decision from Iteration B is now formalized in `specs/00_llm_interface.md`
+- Single API key, multiple providers (GPT-4, Claude, Gemini, Llama)
+- Unified schema, cost efficiency, reproducibility guarantees
+- Detailed logging contract for all API calls
+
+### Critical Rules for C1-C7
+
+**NON-NEGOTIABLE:**
+- **TOC-first policy:** Open `toc.md` first, then ONLY relevant chunks
+- **No full PDF reading:** Never load entire PDFs into context
+- **Local paths only:** All citations use local knowledge_library paths
+- **Stop after each paper:** One iteration = one paper extraction + memory update
+- **No proceeding without instruction:** Wait for explicit "Iteration CX" command
+
+### What Iteration C1 Will Do
+
+**Next:** Iteration C1 - Extract Horton (2023) "Homo Silicus" paper
+- Open `knowledge_library/docling/arxiv_2301.07543/toc.md`
+- Identify relevant sections (Methods, Results, persona techniques)
+- Read ONLY those chunks
+- Fill template: `notes/papers/arxiv_2301.07543.md`
+- Update design accumulator tables with Horton findings
+- Update project memory with C1 outcomes
+- Git commit: "Iteration C1: extract arxiv_2301.07543"
+- **STOP and await C2 instruction**
+
+### Success Metrics
+
+- All scaffolding files exist and follow specified structure ✅
+- Template is comprehensive and codable ✅
+- Extraction queue has clear order + rationale ✅
+- Design accumulator ready to capture cross-paper patterns ✅
+- OpenRouter spec provides full implementation contract ✅
+- Project memory documents C0 outcomes ✅
+
+**Status:** Iteration C0 COMPLETE. Ready for C1.
+
+---
+
+## End of Iteration C0
+
+**Completed:** Extraction scaffolding for paper-by-paper analysis
+**Created:** Template, extraction queue, design accumulator, LLM interface spec
+**Updated:** This project memory with C0 outcomes
+**Next Up:** Iteration C1 - Extract Horton (2023) arxiv_2301.07543
