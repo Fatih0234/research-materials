@@ -1,0 +1,367 @@
+[
+  {
+    "title": "preamble",
+    "level": 1,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/01-preamble.md"
+  },
+  {
+    "title": "LEARNING FROM SYNTHETIC LABS: LANGUAGE MODELS AS AUCTION PARTICIPANTS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/02-LEARNING FROM SYNTHETIC LABS- LANGUAGE MODELS AS AUCTION PARTICIPANTS.md"
+  },
+  {
+    "title": "Anonymous authors",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/03-Anonymous authors.md"
+  },
+  {
+    "title": "ABSTRACT",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/04-ABSTRACT.md"
+  },
+  {
+    "title": "1 INTRODUCTION",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/05-1 INTRODUCTION.md"
+  },
+  {
+    "title": "1.1 RELATED WORK",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/06-1.1 RELATED WORK.md"
+  },
+  {
+    "title": "2 METHODS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/07-2 METHODS.md"
+  },
+  {
+    "title": "2.1 LLM AS AUCTION PARTICIPANTS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/08-2.1 LLM AS AUCTION PARTICIPANTS.md"
+  },
+  {
+    "title": "2.2 SIMULATION PROCEDURE",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/09-2.2 SIMULATION PROCEDURE.md"
+  },
+  {
+    "title": "3 BENCHMARKING AGAINST EXISTING AUCTIONS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/10-3 BENCHMARKING AGAINST EXISTING AUCTIONS.md"
+  },
+  {
+    "title": "3.1 SEALED BID AUCTIONS WITH INDEPENDENT PRIVATE VALUES",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/11-3.1 SEALED BID AUCTIONS WITH INDEPENDENT PRIVATE VALUES.md"
+  },
+  {
+    "title": "3.1.1 SETTING",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/12-3.1.1 SETTING.md"
+  },
+  {
+    "title": "3.1.2 THEORETICAL AND EMPIRICAL BENCHMARKS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/13-3.1.2 THEORETICAL AND EMPIRICAL BENCHMARKS.md"
+  },
+  {
+    "title": "3.1.3 SIMULATION EVIDENCE",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/14-3.1.3 SIMULATION EVIDENCE.md"
+  },
+  {
+    "title": "3.2 OBVIOUSLY STRATEGY-PROOFNESS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/15-3.2 OBVIOUSLY STRATEGY-PROOFNESS.md"
+  },
+  {
+    "title": "3.2.1 SETTING",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/16-3.2.1 SETTING.md"
+  },
+  {
+    "title": "3.2.2 THEORETICAL BENCHMARKS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/17-3.2.2 THEORETICAL BENCHMARKS.md"
+  },
+  {
+    "title": "3.2.3 EMPIRICAL BENCHMARKS AND RESULTS 15 15",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/18-3.2.3 EMPIRICAL BENCHMARKS AND RESULTS 15 15.md"
+  },
+  {
+    "title": "4 EBAY AUCTION DESIGN",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/19-4 EBAY AUCTION DESIGN.md"
+  },
+  {
+    "title": "4.1 SETTING",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/20-4.1 SETTING.md"
+  },
+  {
+    "title": "4.2 SIMULATION PROCESS OF EBAY AUCTION",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/21-4.2 SIMULATION PROCESS OF EBAY AUCTION.md"
+  },
+  {
+    "title": "4.3 SIMULATION EVIDENCE",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/22-4.3 SIMULATION EVIDENCE.md"
+  },
+  {
+    "title": "5 INTERVENTION DESIGN IN SEALED-BID AUCTION",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/23-5 INTERVENTION DESIGN IN SEALED-BID AUCTION.md"
+  },
+  {
+    "title": "5.1 SIMULATION EVIDENCE",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/24-5.1 SIMULATION EVIDENCE.md"
+  },
+  {
+    "title": "6 CONCLUSION",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/25-6 CONCLUSION.md"
+  },
+  {
+    "title": "REFERENCES",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/26-REFERENCES.md"
+  },
+  {
+    "title": "APPENDIX",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/27-APPENDIX.md"
+  },
+  {
+    "title": "A PROMPTS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/28-A PROMPTS.md"
+  },
+  {
+    "title": "A.1 INDEPENDENT PRIVATE VALUES PROMPTS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/29-A.1 INDEPENDENT PRIVATE VALUES PROMPTS.md"
+  },
+  {
+    "title": "For the SPSB, we describe the auction format as follows:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/30-For the SPSB, we describe the auction format as follows-.md"
+  },
+  {
+    "title": "For the TPSB, we describe the auction format as follows:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/31-For the TPSB, we describe the auction format as follows-.md"
+  },
+  {
+    "title": "For the all-pay auction, we describe the auction format as follows:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/32-For the all-pay auction, we describe the auction format as follows-.md"
+  },
+  {
+    "title": "A.2 AFFILIATED VALUES PROMPTS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/33-A.2 AFFILIATED VALUES PROMPTS.md"
+  },
+  {
+    "title": "B IMPLEMENTATION DETAILS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/34-B IMPLEMENTATION DETAILS.md"
+  },
+  {
+    "title": "B.1 SIMULATION PROCESS IN SEALED-BID AUCTIONS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/35-B.1 SIMULATION PROCESS IN SEALED-BID AUCTIONS.md"
+  },
+  {
+    "title": "B.2 SIMULATION PROCESS IN ASCENDING CLOCK AUCTIONS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/36-B.2 SIMULATION PROCESS IN ASCENDING CLOCK AUCTIONS.md"
+  },
+  {
+    "title": "B.3 SIMULATION PROCESS IN EBAY AUCTIONS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/37-B.3 SIMULATION PROCESS IN EBAY AUCTIONS.md"
+  },
+  {
+    "title": "C THINKING-MODEL BEHAVES LIKE AN AUCTION THEORIST",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/38-C THINKING-MODEL BEHAVES LIKE AN AUCTION THEORIST.md"
+  },
+  {
+    "title": "C.1 EXAMPLE 1: FIRST-PRICE SEALED-BID AUCTION",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/39-C.1 EXAMPLE 1- FIRST-PRICE SEALED-BID AUCTION.md"
+  },
+  {
+    "title": "C.2 EXAMPLE 2: SECOND-PRICE SEALED-BID AUCTION",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/40-C.2 EXAMPLE 2- SECOND-PRICE SEALED-BID AUCTION.md"
+  },
+  {
+    "title": "D ONE-ROUND SEALED-BID AUCTIONS AND THE DISAPPEARANCE OF OVERBIDDING",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/41-D ONE-ROUND SEALED-BID AUCTIONS AND THE DISAPPEARANCE OF OVERBIDDING.md"
+  },
+  {
+    "title": "E.3 VARYING LANGUAGE IN RULE EXPLANATIONS IN SPSB AND FPSB",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/42-E.3 VARYING LANGUAGE IN RULE EXPLANATIONS IN SPSB AND FPSB.md"
+  },
+  {
+    "title": "E ROBUSTNESS CHECKS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/43-E ROBUSTNESS CHECKS.md"
+  },
+  {
+    "title": "E.1 VARYING THE NUMBER OF AGENT IN FIRST-PRICE SEALED-BID AUCTIONS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/44-E.1 VARYING THE NUMBER OF AGENT IN FIRST-PRICE SEALED-BID AUCTIONS.md"
+  },
+  {
+    "title": "E.2 VARYING CURRENCY IN SPSB AND FPSB AUCTIONS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/45-E.2 VARYING CURRENCY IN SPSB AND FPSB AUCTIONS.md"
+  },
+  {
+    "title": "F AN ABLATION STUDY WITH AN 'OUT-OF-THE-BOX' LLM AGENT",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/46-F AN ABLATION STUDY WITH AN 'OUT-OF-THE-BOX' LLM AGENT.md"
+  },
+  {
+    "title": "Language Robustness Checks: SPSB vs FPSB",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/47-Language Robustness Checks- SPSB vs FPSB.md"
+  },
+  {
+    "title": "G STATISTICAL TEST FOR OSP",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/48-G STATISTICAL TEST FOR OSP.md"
+  },
+  {
+    "title": "H SUPPLEMENTARY MATERIALS IN EBAY AUCTIONS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/49-H SUPPLEMENTARY MATERIALS IN EBAY AUCTIONS.md"
+  },
+  {
+    "title": "I RULES EXPLANATION PROMPTS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/50-I RULES EXPLANATION PROMPTS.md"
+  },
+  {
+    "title": "For the First-Price Sealed-Bid prompt in the IPV setting, the rule is:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/51-For the First-Price Sealed-Bid prompt in the IPV setting, the rule is-.md"
+  },
+  {
+    "title": "For the Second-Price Sealed-Bid prompt in the IPV setting, the rule is:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/52-For the Second-Price Sealed-Bid prompt in the IPV setting, the rule is-.md"
+  },
+  {
+    "title": "For the Ascending Clock auction without dropping information (AC-B) in the APV setting, the rule is",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/53-For the Ascending Clock auction without dropping information (AC-B) in the APV setting, the rule is.md"
+  },
+  {
+    "title": "For the Second-Price Sealed-Bid Auction in the APV setting, the rule is",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/54-For the Second-Price Sealed-Bid Auction in the APV setting, the rule is.md"
+  },
+  {
+    "title": "For the Menu-Description intervention, the rule is",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/55-For the Menu-Description intervention, the rule is.md"
+  },
+  {
+    "title": "For the Clock-Description intervention, the rule is",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/56-For the Clock-Description intervention, the rule is.md"
+  },
+  {
+    "title": "For the Nash-Deviation intervention, the rule is",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/57-For the Nash-Deviation intervention, the rule is.md"
+  },
+  {
+    "title": "For the Direct-Revelation intervention, the rule is",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/58-For the Direct-Revelation intervention, the rule is.md"
+  },
+  {
+    "title": "For the Wrong Direct Revelation intervention, the rule is",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/59-For the Wrong Direct Revelation intervention, the rule is.md"
+  },
+  {
+    "title": "Below are the prompts used in the robustness check with Currency and Language:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/60-Below are the prompts used in the robustness check with Currency and Language-.md"
+  },
+  {
+    "title": "For the FPSB auction with another currency, the rule is",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/61-For the FPSB auction with another currency, the rule is.md"
+  },
+  {
+    "title": "For the SPSB auction with Euro currency, the rule is",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/62-For the SPSB auction with Euro currency, the rule is.md"
+  },
+  {
+    "title": "X1*X*, 17**5\u20145{num\\_bidders}}#*\u0416*",
+    "level": 1,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/63-X1-X-, 17--5\u20145{num-_bidders}}#-\u0416-.md"
+  },
+  {
+    "title": "J INTERVENTION SUPPLEMENTARY MATERIALS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/64-J INTERVENTION SUPPLEMENTARY MATERIALS.md"
+  },
+  {
+    "title": "Menu-Description",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/65-Menu-Description.md"
+  },
+  {
+    "title": "Clock-Description",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/66-Clock-Description.md"
+  },
+  {
+    "title": "Nash Deviation",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/67-Nash Deviation.md"
+  },
+  {
+    "title": "Direct Revelation",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/68-Direct Revelation.md"
+  },
+  {
+    "title": "Wrong Direct Revelation",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/69-Wrong Direct Revelation.md"
+  },
+  {
+    "title": "Risk Neutrality",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/70-Risk Neutrality.md"
+  },
+  {
+    "title": "K ETHICS STATEMENT",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/71-K ETHICS STATEMENT.md"
+  },
+  {
+    "title": "L REPRODUCIBILITY STATEMENT",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/72-L REPRODUCIBILITY STATEMENT.md"
+  },
+  {
+    "title": "M LLM USAGE",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/openreview_net_665ce75262e3c2f8a35c3dc83267ceb9788e2242/chunks/73-M LLM USAGE.md"
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "title": "Game Theory Meets Large Language Models: A Systematic Survey with Taxonomy and New Frontiers",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/01-Game Theory Meets Large Language Models- A Systematic Survey with Taxonomy and New Frontiers.md"
+  },
+  {
+    "title": "ACMReference Format:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/02-ACMReference Format-.md"
+  },
+  {
+    "title": "1 INTRODUCTION",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/03-1 INTRODUCTION.md"
+  },
+  {
+    "title": "2 EVALUATING LLMS IN GAME-BASED PLAYGROUND",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/04-2 EVALUATING LLMS IN GAME-BASED PLAYGROUND.md"
+  },
+  {
+    "title": "2.1 Observing Behavioral Features of LLM-based Agents",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/05-2.1 Observing Behavioral Features of LLM-based Agents.md"
+  },
+  {
+    "title": "2.2 Strategizing LLMs' Reasoning in Games",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/06-2.2 Strategizing LLMs' Reasoning in Games.md"
+  },
+  {
+    "title": "Discussions",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/07-Discussions.md"
+  },
+  {
+    "title": "3 IMPROVING LLMS WITH GAME-THEORETICAL METHODS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/08-3 IMPROVING LLMS WITH GAME-THEORETICAL METHODS.md"
+  },
+  {
+    "title": "3.1 Enhancing Model Interpretability through Cooperative Game",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/09-3.1 Enhancing Model Interpretability through Cooperative Game.md"
+  },
+  {
+    "title": "3.2 Aligning General Preferences through Min-Max Equilibrium",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/10-3.2 Aligning General Preferences through Min-Max Equilibrium.md"
+  },
+  {
+    "title": "3.3 Capturing Preference Heterogeneity with Social Choice Theory",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/11-3.3 Capturing Preference Heterogeneity with Social Choice Theory.md"
+  },
+  {
+    "title": "3.4 Achieving Dynamic Adaptation through Competitive Game",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/12-3.4 Achieving Dynamic Adaptation through Competitive Game.md"
+  },
+  {
+    "title": "Discussions",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/13-Discussions.md"
+  },
+  {
+    "title": "4 CHARACTERIZING LLM-RELATED EVENTS THROUGH GAME MODELS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/14-4 CHARACTERIZING LLM-RELATED EVENTS THROUGH GAME MODELS.md"
+  },
+  {
+    "title": "4.1 Multi-Stakeholder Competition and Cooperation in LLM Era",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/15-4.1 Multi-Stakeholder Competition and Cooperation in LLM Era.md"
+  },
+  {
+    "title": "4.2 Framing the Societal Impact of LLMs",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/16-4.2 Framing the Societal Impact of LLMs.md"
+  },
+  {
+    "title": "Discussions",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/17-Discussions.md"
+  },
+  {
+    "title": "5 ADVANCING GAME THEORY WITH LARGE LANGUAGE MODELS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/18-5 ADVANCING GAME THEORY WITH LARGE LANGUAGE MODELS.md"
+  },
+  {
+    "title": "5.1 Expanding Game Modeling with LLMs",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/19-5.1 Expanding Game Modeling with LLMs.md"
+  },
+  {
+    "title": "5.2 Solving Intractable Game Problems with LLMs",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/20-5.2 Solving Intractable Game Problems with LLMs.md"
+  },
+  {
+    "title": "Discussions",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/21-Discussions.md"
+  },
+  {
+    "title": "6 CHALLENGES AND FUTURE DIRECTIONS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/22-6 CHALLENGES AND FUTURE DIRECTIONS.md"
+  },
+  {
+    "title": "6.1 LLM-based Agents with Comprehensive Game Abilities",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/23-6.1 LLM-based Agents with Comprehensive Game Abilities.md"
+  },
+  {
+    "title": "6.2 Moving Beyond Human-Oriented Evaluation Frameworks",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/24-6.2 Moving Beyond Human-Oriented Evaluation Frameworks.md"
+  },
+  {
+    "title": "6.3 Understanding LLMs' Strategic Behavior",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/25-6.3 Understanding LLMs' Strategic Behavior.md"
+  },
+  {
+    "title": "6.4 Capturing Cooperative Games in LLM Optimization",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/26-6.4 Capturing Cooperative Games in LLM Optimization.md"
+  },
+  {
+    "title": "6.5 Modeling Cooperation Between Multi-LLMs and Humans",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/27-6.5 Modeling Cooperation Between Multi-LLMs and Humans.md"
+  },
+  {
+    "title": "6.6 Leveraging LLMs as Oracles to Extend Theoretical Game Models",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/28-6.6 Leveraging LLMs as Oracles to Extend Theoretical Game Models.md"
+  },
+  {
+    "title": "7 CONCLUSION",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/29-7 CONCLUSION.md"
+  },
+  {
+    "title": "REFERENCES",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.09053v2/chunks/30-REFERENCES.md"
+  }
+]

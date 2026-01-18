@@ -1,0 +1,5 @@
+## Webinars
+[The Event Experience Equation: Small Tweaks That Drive Big Pipeline Impact](https://goldcastevents.registration.goldcast.io/webinar/95aa0681-2d73-4329-a536-71718e1a27cc?utm_campaign=insider_jan2026&utm_medium=email&utm_source=partner&utm_content=martech?utm_source=sel&utm_medium=textlink&utm_campaign=webinars "Date of Webninar: 2026-01-22")
+[From SEO to GEO: What the Shift Means For Your Site and Your Brand](https://www.bigmarker.com/third-door-media/from-seo-to-geo-what-the-shift-means-for-your-site-and-your-brand?utm_source=dmd&utm_medium=webpage&utm_bmcr_source=dmdhome&utm_term=dmdhome?utm_source=sel&utm_medium=textlink&utm_campaign=webinars "Date of Webninar: 2026-01-27")
+[Beyond Awareness: Putting AEO into Action for AI-Powered Search and Conversion](https://www.bigmarker.com/third-door-media/beyond-awareness-putting-aeo-into-action-for-ai-powered-search-and-conversion?utm_source=dmd&utm_medium=webpage&utm_bmcr_source=dmdhome&utm_term=dmdhome?utm_source=sel&utm_medium=textlink&utm_campaign=webinars "Date of Webninar: 2025-12-11")
+[View all Webinars](https://searchengineland.com/webinars)

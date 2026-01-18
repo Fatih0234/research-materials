@@ -1,0 +1,8 @@
+#  Generative Agent-Based Modeling (GABM) 
+Updated 11 July 2025 
+  * Generative Agent-Based Modeling (GABM) is an agent-based simulation paradigm that leverages deep generative and language models for context-sensitive, adaptive agent behavior.
+  * It advances classic models by enabling agents to generate dynamic actions, decisions, and communications through probabilistic and deep learning techniques.
+  * GABM finds practical applications in population synthesis, social dynamics, epidemic modeling, digital economies, and public administration research.
+
+
+Generative [Agent-Based Modeling](https://www.emergentmind.com/topics/agent-based-modeling-abm) (GABM) is an [agent-based simulation](https://www.emergentmind.com/topics/agent-based-simulation) paradigm in which agents generate actions, decisions, and communications using large-scale machine learning models, most notably LLMs and deep generative architectures. Unlike classic [agent-based models](https://www.emergentmind.com/topics/agent-based-models-abms) (ABMs), in which agent behavior is typically defined by hardcoded rules or heuristics, GABM endows agents with the capacity for context-dependent reasoning, flexible adaptation, natural language interaction, and emergent pattern formation. The deployment of generative models in [agent-based frameworks](https://www.emergentmind.com/topics/agent-based-frameworks) has enabled new levels of realism, scalability, and interpretability in simulating complex systems, notably in population synthesis, social dynamics, human-in-the-loop experimentation, digital economy simulations, and public administration modeling.

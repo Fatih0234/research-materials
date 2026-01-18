@@ -1,0 +1,3 @@
+## 3 Game Theory for Algorithmic Innovation
+
+This section investigates how game-theoretic principles contribute to developing LLMs by informing algorithmic innovation. Game theory has proven instrumental in enhancing our understanding of LLMs, mainly through the use of tools like the Shapley Value and social choice models. These methods offer valuable insights into model interpretability, enabling a deeper understanding of how LLMs process and respond to input. Beyond interpretability, game theory also provides a framework for developing training objectives and evaluation metrics that address key challenges in LLM development, such as model heterogeneity and alignment with human preferences.

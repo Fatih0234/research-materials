@@ -1,0 +1,307 @@
+[
+  {
+    "title": "Pay What LLM Wants:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/01-Pay What LLM Wants-.md"
+  },
+  {
+    "title": "Can LLM Simulate Economics Experiment with 522 Real-human Persona?",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/02-Can LLM Simulate Economics Experiment with 522 Real-human Persona-.md"
+  },
+  {
+    "title": "Abstract",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/03-Abstract.md"
+  },
+  {
+    "title": "Introduction",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/04-Introduction.md"
+  },
+  {
+    "title": "Related Work",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/05-Related Work.md"
+  },
+  {
+    "title": "Human Experiment",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/06-Human Experiment.md"
+  },
+  {
+    "title": "Pay What You Want",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/07-Pay What You Want.md"
+  },
+  {
+    "title": "Persona Information",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/08-Persona Information.md"
+  },
+  {
+    "title": "Question Form",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/09-Question Form.md"
+  },
+  {
+    "title": "Statistical Tests Conducted in the Experiment",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/10-Statistical Tests Conducted in the Experiment.md"
+  },
+  {
+    "title": "RQ1 : Sequential vs Human-guided",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/11-RQ1 - Sequential vs Human-guided.md"
+  },
+  {
+    "title": "Experiment Setup",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/12-Experiment Setup.md"
+  },
+  {
+    "title": "Evaluation",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/13-Evaluation.md"
+  },
+  {
+    "title": "Models",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/14-Models.md"
+  },
+  {
+    "title": "Results and Discussion",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/15-Results and Discussion.md"
+  },
+  {
+    "title": "RQ2 : Prompt Injection Methology",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/16-RQ2 - Prompt Injection Methology.md"
+  },
+  {
+    "title": "Experiment Setup",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/17-Experiment Setup.md"
+  },
+  {
+    "title": "Result and Discussion",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/18-Result and Discussion.md"
+  },
+  {
+    "title": "Conclusion",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/19-Conclusion.md"
+  },
+  {
+    "title": "References",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/20-References.md"
+  },
+  {
+    "title": "A Detailed Persona Information",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/21-A Detailed Persona Information.md"
+  },
+  {
+    "title": "A.1 Basic Demographic Information (11 items)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/22-A.1 Basic Demographic Information (11 items).md"
+  },
+  {
+    "title": "A.2 Cultural Participation (6 items)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/23-A.2 Cultural Participation (6 items).md"
+  },
+  {
+    "title": "A.3 Cultural Arts Attitudes (19 items)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/24-A.3 Cultural Arts Attitudes (19 items).md"
+  },
+  {
+    "title": "A.4 Cultural Arts Knowledge Level (4 items)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/25-A.4 Cultural Arts Knowledge Level (4 items).md"
+  },
+  {
+    "title": "A.5 Cultural Education Experience (9 items)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/26-A.5 Cultural Education Experience (9 items).md"
+  },
+  {
+    "title": "\ubc1b \uc740 \uacbd \ud5d8 \uc774\uc788\uc73c \uc2ed \ub2c8 \uae4c ?",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/27-\ubc1b \uc740 \uacbd \ud5d8 \uc774\uc788\uc73c \uc2ed \ub2c8 \uae4c -.md"
+  },
+  {
+    "title": "A.6 Institution Satisfaction (4 items)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/28-A.6 Institution Satisfaction (4 items).md"
+  },
+  {
+    "title": "\uadc0 \ud558 \uaed8 \uc11c \uad6d \ub9bd \uc911 \uc559 \ubc15 \ubb3c \uad00 \uc5d0 \ubc29 \ubb38 \ud6c4 \ub290 \uaf08 \ub358 \uc804 \ubc18 \uc801 \uc778 \ub9cc \uc871 \ub3c4 \ub294 \uc5b4 \ub5a0 \uc2ed \ub2c8 \uae4c ?",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/29-\uadc0 \ud558 \uaed8 \uc11c \uad6d \ub9bd \uc911 \uc559 \ubc15 \ubb3c \uad00 \uc5d0 \ubc29 \ubb38 \ud6c4 \ub290 \uaf08 \ub358 \uc804 \ubc18 \uc801 \uc778 \ub9cc \uc871 \ub3c4 \ub294 \uc5b4 \ub5a0 \uc2ed \ub2c8 \uae4c -.md"
+  },
+  {
+    "title": "A.7 Social Norms and Attitudes (10 items)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/30-A.7 Social Norms and Attitudes (10 items).md"
+  },
+  {
+    "title": "B Detailed Question Form",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/31-B Detailed Question Form.md"
+  },
+  {
+    "title": "C Detailed Human Experiment Analysis",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/32-C Detailed Human Experiment Analysis.md"
+  },
+  {
+    "title": "C.1 Art Exhibition Analysis",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/33-C.1 Art Exhibition Analysis.md"
+  },
+  {
+    "title": "C.2 Music Performance Analysis",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/34-C.2 Music Performance Analysis.md"
+  },
+  {
+    "title": "Step 1: Selection Equation (Probit Model)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/35-Step 1- Selection Equation (Probit Model).md"
+  },
+  {
+    "title": "Step 2: Outcome Equation",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/36-Step 2- Outcome Equation.md"
+  },
+  {
+    "title": "C.3 Data Processing and Quality Control",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/37-C.3 Data Processing and Quality Control.md"
+  },
+  {
+    "title": "Sample Selection Criteria",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/38-Sample Selection Criteria.md"
+  },
+  {
+    "title": "Variable Transformations",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/39-Variable Transformations.md"
+  },
+  {
+    "title": "D Persona Input Formats",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/40-D Persona Input Formats.md"
+  },
+  {
+    "title": "D.1 Survey Format",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/41-D.1 Survey Format.md"
+  },
+  {
+    "title": "D.2 Storytelling Format",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/42-D.2 Storytelling Format.md"
+  },
+  {
+    "title": "D.3 Prompt for generating narratives",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/43-D.3 Prompt for generating narratives.md"
+  },
+  {
+    "title": "Original Korean Prompt:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/44-Original Korean Prompt-.md"
+  },
+  {
+    "title": "English Translation:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/45-English Translation-.md"
+  },
+  {
+    "title": "E Detailed Result for RQ1",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/46-E Detailed Result for RQ1.md"
+  },
+  {
+    "title": "F Detailed Result for RQ2",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/47-F Detailed Result for RQ2.md"
+  },
+  {
+    "title": "G RQ2 Heatmap",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/48-G RQ2 Heatmap.md"
+  },
+  {
+    "title": "[ \ub300 \uc0c1 \uc548 \ub0b4 / Participant Criteria]",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/49-[ \ub300 \uc0c1 \uc548 \ub0b4 - Participant Criteria].md"
+  },
+  {
+    "title": "[ \uc870 \uc0ac \ubaa9 \uc801 / Survey Purpose]",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/50-[ \uc870 \uc0ac \ubaa9 \uc801 - Survey Purpose].md"
+  },
+  {
+    "title": "[ \uc751 \ub2f5 \uc790 \ubcf4 \ud638 / Confidentiality]",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/51-[ \uc751 \ub2f5 \uc790 \ubcf4 \ud638 - Confidentiality].md"
+  },
+  {
+    "title": "\ub2e4 \uc2dc \ud55c \ubc88 , \uc124 \ubb38 \uc5d0 \ucc38 \uc5ec \ud574 \uc8fc \uc154\uc11c \uac10 \uc0ac \ud569 \ub2c8\ub2e4 .",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/52-\ub2e4 \uc2dc \ud55c \ubc88 , \uc124 \ubb38 \uc5d0 \ucc38 \uc5ec \ud574 \uc8fc \uc154\uc11c \uac10 \uc0ac \ud569 \ub2c8\ub2e4 ..md"
+  },
+  {
+    "title": "CASE 1",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/53-CASE 1.md"
+  },
+  {
+    "title": "II. \ub2e4 \uc74c\uc740 \uc804 \uc2dc \ubc29 \ubb38 \uac00 \uc0c1\uc0c1 \ud669 \uc5d0 \ub300 \ud55c \uc124 \uba85 \uc785 \ub2c8\ub2e4 .",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/54-II. \ub2e4 \uc74c\uc740 \uc804 \uc2dc \ubc29 \ubb38 \uac00 \uc0c1\uc0c1 \ud669 \uc5d0 \ub300 \ud55c \uc124 \uba85 \uc785 \ub2c8\ub2e4 ..md"
+  },
+  {
+    "title": "II. The following is a hypothetical scenario about visiting an exhibition.",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/55-II. The following is a hypothetical scenario about visiting an exhibition..md"
+  },
+  {
+    "title": "\u300a \uc804 \uc2dc \uc18c \uac1c \u300b Exhibition Description",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/56-\u300a \uc804 \uc2dc \uc18c \uac1c \u300b Exhibition Description.md"
+  },
+  {
+    "title": "CASE 2",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/57-CASE 2.md"
+  },
+  {
+    "title": "III. \ub2e4 \uc74c\uc740 \uc608 \uc220 \uc758 \uc804 \ub2f9 \uc5d0 \ub300 \ud55c \uc124 \uba85 \uc785 \ub2c8\ub2e4 .",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/58-III. \ub2e4 \uc74c\uc740 \uc608 \uc220 \uc758 \uc804 \ub2f9 \uc5d0 \ub300 \ud55c \uc124 \uba85 \uc785 \ub2c8\ub2e4 ..md"
+  },
+  {
+    "title": "IV. \ub2e4 \uc74c\uc740 \uac00 \uc0c1\uc0c1 \ud669 \uc5d0 \ub300 \ud55c \uc124 \uba85 \uc785 \ub2c8\ub2e4 .",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/59-IV. \ub2e4 \uc74c\uc740 \uac00 \uc0c1\uc0c1 \ud669 \uc5d0 \ub300 \ud55c \uc124 \uba85 \uc785 \ub2c8\ub2e4 ..md"
+  },
+  {
+    "title": "IV. The following is a hypothetical scenario.",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/60-IV. The following is a hypothetical scenario..md"
+  },
+  {
+    "title": "\u00a1 \uc5f0 \uc8fc \uc790 \ubc0f \uacf5 \uc5f0 \uc18c \uac1c \u00bf About the Artist and Performance",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2508.03262v1/chunks/61-\u00a1 \uc5f0 \uc8fc \uc790 \ubc0f \uacf5 \uc5f0 \uc18c \uac1c \u00bf About the Artist and Performance.md"
+  }
+]

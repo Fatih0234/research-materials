@@ -1,0 +1,6112 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.9.0",
+  "name": "web_stanford_edu_Auctions",
+  "origin": {
+    "mimetype": "application/pdf",
+    "binary_hash": 17791776630193440192,
+    "filename": "web_stanford_edu_Auctions.pdf"
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "children": [],
+    "content_layer": "furniture",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "children": [
+      {
+        "$ref": "#/texts/0"
+      },
+      {
+        "$ref": "#/texts/1"
+      },
+      {
+        "$ref": "#/texts/2"
+      },
+      {
+        "$ref": "#/texts/3"
+      },
+      {
+        "$ref": "#/texts/4"
+      },
+      {
+        "$ref": "#/texts/5"
+      },
+      {
+        "$ref": "#/texts/6"
+      },
+      {
+        "$ref": "#/groups/0"
+      },
+      {
+        "$ref": "#/texts/12"
+      },
+      {
+        "$ref": "#/texts/13"
+      },
+      {
+        "$ref": "#/texts/14"
+      },
+      {
+        "$ref": "#/texts/15"
+      },
+      {
+        "$ref": "#/texts/16"
+      },
+      {
+        "$ref": "#/texts/17"
+      },
+      {
+        "$ref": "#/texts/18"
+      },
+      {
+        "$ref": "#/texts/19"
+      },
+      {
+        "$ref": "#/texts/20"
+      },
+      {
+        "$ref": "#/texts/21"
+      },
+      {
+        "$ref": "#/texts/22"
+      },
+      {
+        "$ref": "#/texts/23"
+      },
+      {
+        "$ref": "#/texts/24"
+      },
+      {
+        "$ref": "#/texts/25"
+      },
+      {
+        "$ref": "#/texts/26"
+      },
+      {
+        "$ref": "#/texts/27"
+      },
+      {
+        "$ref": "#/texts/28"
+      },
+      {
+        "$ref": "#/texts/29"
+      },
+      {
+        "$ref": "#/texts/30"
+      },
+      {
+        "$ref": "#/texts/31"
+      },
+      {
+        "$ref": "#/texts/32"
+      },
+      {
+        "$ref": "#/texts/33"
+      },
+      {
+        "$ref": "#/texts/34"
+      },
+      {
+        "$ref": "#/texts/35"
+      },
+      {
+        "$ref": "#/texts/36"
+      },
+      {
+        "$ref": "#/texts/37"
+      },
+      {
+        "$ref": "#/texts/38"
+      },
+      {
+        "$ref": "#/texts/39"
+      },
+      {
+        "$ref": "#/texts/40"
+      },
+      {
+        "$ref": "#/texts/41"
+      },
+      {
+        "$ref": "#/texts/42"
+      },
+      {
+        "$ref": "#/texts/43"
+      },
+      {
+        "$ref": "#/texts/44"
+      },
+      {
+        "$ref": "#/texts/45"
+      },
+      {
+        "$ref": "#/texts/46"
+      },
+      {
+        "$ref": "#/texts/47"
+      },
+      {
+        "$ref": "#/texts/48"
+      },
+      {
+        "$ref": "#/texts/49"
+      },
+      {
+        "$ref": "#/texts/50"
+      },
+      {
+        "$ref": "#/texts/51"
+      },
+      {
+        "$ref": "#/texts/52"
+      },
+      {
+        "$ref": "#/texts/53"
+      },
+      {
+        "$ref": "#/texts/54"
+      },
+      {
+        "$ref": "#/texts/55"
+      },
+      {
+        "$ref": "#/texts/56"
+      },
+      {
+        "$ref": "#/texts/57"
+      },
+      {
+        "$ref": "#/texts/58"
+      },
+      {
+        "$ref": "#/texts/59"
+      },
+      {
+        "$ref": "#/texts/60"
+      },
+      {
+        "$ref": "#/texts/61"
+      },
+      {
+        "$ref": "#/texts/62"
+      },
+      {
+        "$ref": "#/texts/63"
+      },
+      {
+        "$ref": "#/texts/64"
+      },
+      {
+        "$ref": "#/texts/65"
+      },
+      {
+        "$ref": "#/texts/66"
+      },
+      {
+        "$ref": "#/texts/67"
+      },
+      {
+        "$ref": "#/texts/68"
+      },
+      {
+        "$ref": "#/texts/69"
+      },
+      {
+        "$ref": "#/groups/1"
+      },
+      {
+        "$ref": "#/texts/73"
+      },
+      {
+        "$ref": "#/texts/74"
+      },
+      {
+        "$ref": "#/texts/75"
+      },
+      {
+        "$ref": "#/texts/76"
+      },
+      {
+        "$ref": "#/texts/77"
+      },
+      {
+        "$ref": "#/texts/78"
+      },
+      {
+        "$ref": "#/texts/79"
+      },
+      {
+        "$ref": "#/texts/80"
+      },
+      {
+        "$ref": "#/texts/81"
+      },
+      {
+        "$ref": "#/texts/82"
+      },
+      {
+        "$ref": "#/texts/83"
+      },
+      {
+        "$ref": "#/texts/84"
+      },
+      {
+        "$ref": "#/texts/85"
+      },
+      {
+        "$ref": "#/texts/86"
+      },
+      {
+        "$ref": "#/texts/87"
+      },
+      {
+        "$ref": "#/texts/88"
+      },
+      {
+        "$ref": "#/texts/89"
+      },
+      {
+        "$ref": "#/texts/90"
+      },
+      {
+        "$ref": "#/texts/91"
+      },
+      {
+        "$ref": "#/texts/92"
+      },
+      {
+        "$ref": "#/texts/93"
+      },
+      {
+        "$ref": "#/texts/94"
+      },
+      {
+        "$ref": "#/texts/95"
+      },
+      {
+        "$ref": "#/texts/96"
+      },
+      {
+        "$ref": "#/texts/97"
+      },
+      {
+        "$ref": "#/texts/98"
+      },
+      {
+        "$ref": "#/texts/99"
+      },
+      {
+        "$ref": "#/texts/100"
+      },
+      {
+        "$ref": "#/texts/101"
+      },
+      {
+        "$ref": "#/texts/102"
+      },
+      {
+        "$ref": "#/groups/2"
+      },
+      {
+        "$ref": "#/texts/105"
+      },
+      {
+        "$ref": "#/texts/106"
+      },
+      {
+        "$ref": "#/texts/107"
+      },
+      {
+        "$ref": "#/texts/108"
+      },
+      {
+        "$ref": "#/texts/109"
+      },
+      {
+        "$ref": "#/groups/3"
+      },
+      {
+        "$ref": "#/texts/116"
+      },
+      {
+        "$ref": "#/texts/117"
+      },
+      {
+        "$ref": "#/texts/118"
+      },
+      {
+        "$ref": "#/texts/119"
+      },
+      {
+        "$ref": "#/texts/120"
+      },
+      {
+        "$ref": "#/texts/121"
+      },
+      {
+        "$ref": "#/texts/122"
+      },
+      {
+        "$ref": "#/texts/123"
+      },
+      {
+        "$ref": "#/texts/124"
+      },
+      {
+        "$ref": "#/groups/4"
+      },
+      {
+        "$ref": "#/texts/126"
+      },
+      {
+        "$ref": "#/groups/5"
+      },
+      {
+        "$ref": "#/texts/128"
+      },
+      {
+        "$ref": "#/texts/129"
+      },
+      {
+        "$ref": "#/texts/130"
+      },
+      {
+        "$ref": "#/texts/131"
+      },
+      {
+        "$ref": "#/texts/132"
+      },
+      {
+        "$ref": "#/texts/133"
+      },
+      {
+        "$ref": "#/texts/134"
+      },
+      {
+        "$ref": "#/texts/135"
+      },
+      {
+        "$ref": "#/texts/136"
+      },
+      {
+        "$ref": "#/texts/137"
+      },
+      {
+        "$ref": "#/texts/138"
+      },
+      {
+        "$ref": "#/texts/139"
+      },
+      {
+        "$ref": "#/texts/140"
+      },
+      {
+        "$ref": "#/texts/141"
+      },
+      {
+        "$ref": "#/texts/142"
+      },
+      {
+        "$ref": "#/texts/143"
+      },
+      {
+        "$ref": "#/groups/6"
+      },
+      {
+        "$ref": "#/texts/147"
+      },
+      {
+        "$ref": "#/texts/148"
+      },
+      {
+        "$ref": "#/texts/149"
+      },
+      {
+        "$ref": "#/texts/150"
+      },
+      {
+        "$ref": "#/texts/151"
+      },
+      {
+        "$ref": "#/texts/152"
+      },
+      {
+        "$ref": "#/texts/153"
+      },
+      {
+        "$ref": "#/texts/154"
+      },
+      {
+        "$ref": "#/texts/155"
+      },
+      {
+        "$ref": "#/texts/156"
+      },
+      {
+        "$ref": "#/texts/157"
+      },
+      {
+        "$ref": "#/texts/158"
+      },
+      {
+        "$ref": "#/groups/7"
+      },
+      {
+        "$ref": "#/texts/163"
+      },
+      {
+        "$ref": "#/texts/164"
+      },
+      {
+        "$ref": "#/texts/165"
+      },
+      {
+        "$ref": "#/texts/166"
+      },
+      {
+        "$ref": "#/texts/167"
+      },
+      {
+        "$ref": "#/texts/168"
+      },
+      {
+        "$ref": "#/texts/169"
+      },
+      {
+        "$ref": "#/texts/170"
+      },
+      {
+        "$ref": "#/texts/171"
+      },
+      {
+        "$ref": "#/texts/172"
+      },
+      {
+        "$ref": "#/texts/173"
+      },
+      {
+        "$ref": "#/texts/174"
+      },
+      {
+        "$ref": "#/texts/175"
+      },
+      {
+        "$ref": "#/texts/176"
+      },
+      {
+        "$ref": "#/texts/177"
+      },
+      {
+        "$ref": "#/groups/8"
+      },
+      {
+        "$ref": "#/texts/182"
+      },
+      {
+        "$ref": "#/groups/9"
+      },
+      {
+        "$ref": "#/texts/191"
+      }
+    ],
+    "content_layer": "body",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [
+    {
+      "self_ref": "#/groups/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/7"
+        },
+        {
+          "$ref": "#/texts/8"
+        },
+        {
+          "$ref": "#/texts/9"
+        },
+        {
+          "$ref": "#/texts/10"
+        },
+        {
+          "$ref": "#/texts/11"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/1",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/70"
+        },
+        {
+          "$ref": "#/texts/71"
+        },
+        {
+          "$ref": "#/texts/72"
+        }
+      ],
+      "content_layer": "body",
+      "name": "group",
+      "label": "key_value_area"
+    },
+    {
+      "self_ref": "#/groups/2",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/103"
+        },
+        {
+          "$ref": "#/texts/104"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/3",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/110"
+        },
+        {
+          "$ref": "#/texts/111"
+        },
+        {
+          "$ref": "#/texts/112"
+        },
+        {
+          "$ref": "#/texts/113"
+        },
+        {
+          "$ref": "#/texts/114"
+        },
+        {
+          "$ref": "#/texts/115"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/4",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/125"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/5",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/127"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/6",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/144"
+        },
+        {
+          "$ref": "#/texts/145"
+        },
+        {
+          "$ref": "#/texts/146"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/7",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/159"
+        },
+        {
+          "$ref": "#/texts/160"
+        },
+        {
+          "$ref": "#/texts/161"
+        },
+        {
+          "$ref": "#/texts/162"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/8",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/178"
+        },
+        {
+          "$ref": "#/texts/179"
+        },
+        {
+          "$ref": "#/texts/180"
+        },
+        {
+          "$ref": "#/texts/181"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/9",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/183"
+        },
+        {
+          "$ref": "#/texts/184"
+        },
+        {
+          "$ref": "#/texts/185"
+        },
+        {
+          "$ref": "#/texts/186"
+        },
+        {
+          "$ref": "#/texts/187"
+        },
+        {
+          "$ref": "#/texts/188"
+        },
+        {
+          "$ref": "#/texts/189"
+        },
+        {
+          "$ref": "#/texts/190"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    }
+  ],
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 250.32,
+            "t": 619.413,
+            "r": 359.985,
+            "b": 603.945,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            14
+          ]
+        }
+      ],
+      "orig": "Auction Theory",
+      "text": "Auction Theory",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/1",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 265.14,
+            "t": 585.292,
+            "r": 345.187,
+            "b": 574.732,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            14
+          ]
+        }
+      ],
+      "orig": "Jonathan Levin",
+      "text": "Jonathan Levin",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/2",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 270.84,
+            "t": 560.872,
+            "r": 339.507,
+            "b": 550.312,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            12
+          ]
+        }
+      ],
+      "orig": "October 2004",
+      "text": "October 2004",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/3",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 125.819,
+            "t": 520.248,
+            "r": 484.591,
+            "b": 415.754,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            601
+          ]
+        }
+      ],
+      "orig": "Our next topic is auctions. Our objective will be to cover a few of the main ideas and highlights. Auction theory can be approached from di ff erent angles - from the perspective of game theory (auctions are bayesian games of incomplete information), contract or mechanism design theory (auctions are allocation mechanisms), market microstructure (auctions are models of price formation), as well as in the context of di ff erent applications (procurement, patent licensing, public fi nance, etc.). We're going to take a relatively game-theoretic approach, but some of this richness should be evident.",
+      "text": "Our next topic is auctions. Our objective will be to cover a few of the main ideas and highlights. Auction theory can be approached from di ff erent angles - from the perspective of game theory (auctions are bayesian games of incomplete information), contract or mechanism design theory (auctions are allocation mechanisms), market microstructure (auctions are models of price formation), as well as in the context of di ff erent applications (procurement, patent licensing, public fi nance, etc.). We're going to take a relatively game-theoretic approach, but some of this richness should be evident."
+    },
+    {
+      "self_ref": "#/texts/4",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 125.82,
+            "t": 393.643,
+            "r": 469.829,
+            "b": 381.043,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            43
+          ]
+        }
+      ],
+      "orig": "1 The Independent Private Value (IPV) Model",
+      "text": "1 The Independent Private Value (IPV) Model",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/5",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 125.82,
+            "t": 367.312,
+            "r": 208.286,
+            "b": 356.804,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            11
+          ]
+        }
+      ],
+      "orig": "1.1 A Model",
+      "text": "1.1 A Model",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/6",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 125.82,
+            "t": 346.008,
+            "r": 329.204,
+            "b": 336.375,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            42
+          ]
+        }
+      ],
+      "orig": "The basic auction environment consists of:",
+      "text": "The basic auction environment consists of:"
+    },
+    {
+      "self_ref": "#/texts/7",
+      "parent": {
+        "$ref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 142.14,
+            "t": 322.812,
+            "r": 242.101,
+            "b": 304.421,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            24
+          ]
+        }
+      ],
+      "orig": "\u00b7 Bidders i = 1 , ..., n",
+      "text": "Bidders i = 1 , ..., n",
+      "enumerated": false,
+      "marker": "\u00b7"
+    },
+    {
+      "self_ref": "#/texts/8",
+      "parent": {
+        "$ref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 142.138,
+            "t": 300.972,
+            "r": 256.183,
+            "b": 282.581,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            23
+          ]
+        }
+      ],
+      "orig": "\u00b7 One object to be sold",
+      "text": "One object to be sold",
+      "enumerated": false,
+      "marker": "\u00b7"
+    },
+    {
+      "self_ref": "#/texts/9",
+      "parent": {
+        "$ref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 142.138,
+            "t": 279.13200000000006,
+            "r": 484.493,
+            "b": 255.55500000000006,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            114
+          ]
+        }
+      ],
+      "orig": "\u00b7 Bidder i observes a 'signal' S i \u223c F ( \u00b7 ), with typical realization s i \u2208 [ s, s ], and assume F is continuous.",
+      "text": "Bidder i observes a 'signal' S i \u223c F ( \u00b7 ), with typical realization s i \u2208 [ s, s ], and assume F is continuous.",
+      "enumerated": false,
+      "marker": "\u00b7"
+    },
+    {
+      "self_ref": "#/texts/10",
+      "parent": {
+        "$ref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 142.14,
+            "t": 243.73199999999997,
+            "r": 356.919,
+            "b": 225.34000000000003,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            50
+          ]
+        }
+      ],
+      "orig": "\u00b7 Bidders' signals S 1 , ..., S n are independent.",
+      "text": "Bidders' signals S 1 , ..., S n are independent.",
+      "enumerated": false,
+      "marker": "\u00b7"
+    },
+    {
+      "self_ref": "#/texts/11",
+      "parent": {
+        "$ref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 142.14,
+            "t": 221.89200000000005,
+            "r": 283.372,
+            "b": 203.5,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            39
+          ]
+        }
+      ],
+      "orig": "\u00b7 Bidder i 's value v i ( s i ) = s i .",
+      "text": "Bidder i 's value v i ( s i ) = s i .",
+      "enumerated": false,
+      "marker": "\u00b7"
+    },
+    {
+      "self_ref": "#/texts/12",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 125.818,
+            "t": 197.928,
+            "r": 484.514,
+            "b": 120.55500000000006,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            444
+          ]
+        }
+      ],
+      "orig": "Given this basic set-up, specifying a set of auction rules will give rise to a game between the bidders. Before going on, observe two features of the model that turn out to be important. First, bidder i 's information (her signal) is independent of bidder j 's information. Second, bidder i 's value is independent of bidder j 's information - so bidder j 's information is private in the sense that it doesn't a ff ect anyone else's valuation.",
+      "text": "Given this basic set-up, specifying a set of auction rules will give rise to a game between the bidders. Before going on, observe two features of the model that turn out to be important. First, bidder i 's information (her signal) is independent of bidder j 's information. Second, bidder i 's value is independent of bidder j 's information - so bidder j 's information is private in the sense that it doesn't a ff ect anyone else's valuation."
+    },
+    {
+      "self_ref": "#/texts/13",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 302.397,
+            "t": 100.30700000000002,
+            "r": 307.887,
+            "b": 90.67499999999995,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "1",
+      "text": "1"
+    },
+    {
+      "self_ref": "#/texts/14",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 125.82,
+            "t": 659.332,
+            "r": 344.322,
+            "b": 648.824,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            34
+          ]
+        }
+      ],
+      "orig": "1.2 Vickrey (Second-Price) Auction",
+      "text": "1.2 Vickrey (Second-Price) Auction",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/15",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 125.82,
+            "t": 638.028,
+            "r": 484.488,
+            "b": 601.275,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            205
+          ]
+        }
+      ],
+      "orig": "In a Vickrey, or second price, auction, bidders are asked to submit sealed bids b 1 , ..., b n . The bidder who submits the highest bid is awarded the object, and pays the amount of the second highest bid.",
+      "text": "In a Vickrey, or second price, auction, bidders are asked to submit sealed bids b 1 , ..., b n . The bidder who submits the highest bid is awarded the object, and pays the amount of the second highest bid."
+    },
+    {
+      "self_ref": "#/texts/16",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 125.82,
+            "t": 585.407,
+            "r": 484.444,
+            "b": 561.222,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            113
+          ]
+        }
+      ],
+      "orig": "Proposition 1 In a second price auction, it is a weakly dominant strategy to bid one's value, b i ( s i ) = s i .",
+      "text": "Proposition 1 In a second price auction, it is a weakly dominant strategy to bid one's value, b i ( s i ) = s i ."
+    },
+    {
+      "self_ref": "#/texts/17",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 340.381,
+            "t": 533.232,
+            "r": 340.381,
+            "b": 514.84,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "6",
+      "text": "6"
+    },
+    {
+      "self_ref": "#/texts/18",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 125.4,
+            "t": 546.348,
+            "r": 484.89,
+            "b": 413.802,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            774
+          ]
+        }
+      ],
+      "orig": "Proof. Suppose i 's value is s i , and she considers bidding b i > s i . Let \u02c6 b denote the highest bid of the other bidders j = i (from i 's perspective this is a random variable). There are three possible outcomes from i 's perspective: (i) \u02c6 b > b i , s i ; (ii) b i > \u02c6 b > s i ; or (iii) b i , s i > \u02c6 b . In the event of the fi rst or third outcome, i would have done equally well to bid s i rather than b i > s i . In (i) she won't win regardless, and in (ii) she will win, and will pay \u02c6 b regardless. However, in case (ii), i will win and pay more than her value if she bids \u02c6 b , something that won't happen if she bids s i . Thus, i does better to bid s i than b i > s i . A similar argument shows that i also does better to bid s i than to bid b i < s i . Q.E.D.",
+      "text": "Proof. Suppose i 's value is s i , and she considers bidding b i > s i . Let \u02c6 b denote the highest bid of the other bidders j = i (from i 's perspective this is a random variable). There are three possible outcomes from i 's perspective: (i) \u02c6 b > b i , s i ; (ii) b i > \u02c6 b > s i ; or (iii) b i , s i > \u02c6 b . In the event of the fi rst or third outcome, i would have done equally well to bid s i rather than b i > s i . In (i) she won't win regardless, and in (ii) she will win, and will pay \u02c6 b regardless. However, in case (ii), i will win and pay more than her value if she bids \u02c6 b , something that won't happen if she bids s i . Thus, i does better to bid s i than b i > s i . A similar argument shows that i also does better to bid s i than to bid b i < s i . Q.E.D."
+    },
+    {
+      "self_ref": "#/texts/19",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 125.82,
+            "t": 398.928,
+            "r": 484.523,
+            "b": 313.6,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            325
+          ]
+        }
+      ],
+      "orig": "Since each bidder will bid their value, the seller's revenue (the amount paid in equilibrium) will be equal to the second highest value. Let S i : n denote the i th highest of n draws from distribution F (so S i : n is a random variable with typical realization s i : n ). Then the seller's expected revenue is E \u00a3 S 2: n \u00a4 .",
+      "text": "Since each bidder will bid their value, the seller's revenue (the amount paid in equilibrium) will be equal to the second highest value. Let S i : n denote the i th highest of n draws from distribution F (so S i : n is a random variable with typical realization s i : n ). Then the seller's expected revenue is E \u00a3 S 2: n \u00a4 ."
+    },
+    {
+      "self_ref": "#/texts/20",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 125.82,
+            "t": 331.187,
+            "r": 484.566,
+            "b": 266.323,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            338
+          ]
+        }
+      ],
+      "orig": "The truthful equilibrium described in Proposition 1 is the unique symmetric Bayesian Nash equilibrium of the second price auction. There are also asymmetric equilibria that involve players using weakly dominated strategies. One such equilibrium is for some player i to bid b i ( s i ) = v and all the other players to bid b j ( s j ) = 0.",
+      "text": "The truthful equilibrium described in Proposition 1 is the unique symmetric Bayesian Nash equilibrium of the second price auction. There are also asymmetric equilibria that involve players using weakly dominated strategies. One such equilibrium is for some player i to bid b i ( s i ) = v and all the other players to bid b j ( s j ) = 0."
+    },
+    {
+      "self_ref": "#/texts/21",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 125.82,
+            "t": 263.447,
+            "r": 484.56,
+            "b": 131.83299999999997,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            734
+          ]
+        }
+      ],
+      "orig": "While Vickrey auctions are not used very often in practice, open ascending (or English) auctions are used frequently. One way to model such auctions is to assume that the price rises continuously from zero and players each can push a button to 'drop out' of the bidding. In an independent private values setting, the Nash equilibria of the English auction are the same as the Nash equilibria of the Vickrey auction. In particular, the unique symmetric equilibrium (or unique sequential equilibrium) of the English auction has each bidder drop out when the price reaches his value. In equilibrium, the auction ends when the bidder with the second-highest value drops out, so the winner pays an amount equal to the second highest value.",
+      "text": "While Vickrey auctions are not used very often in practice, open ascending (or English) auctions are used frequently. One way to model such auctions is to assume that the price rises continuously from zero and players each can push a button to 'drop out' of the bidding. In an independent private values setting, the Nash equilibria of the English auction are the same as the Nash equilibria of the Vickrey auction. In particular, the unique symmetric equilibrium (or unique sequential equilibrium) of the English auction has each bidder drop out when the price reaches his value. In equilibrium, the auction ends when the bidder with the second-highest value drops out, so the winner pays an amount equal to the second highest value."
+    },
+    {
+      "self_ref": "#/texts/22",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 302.4,
+            "t": 100.30500000000006,
+            "r": 307.89,
+            "b": 90.673,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "2",
+      "text": "2"
+    },
+    {
+      "self_ref": "#/texts/23",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 125.82,
+            "t": 659.332,
+            "r": 348.662,
+            "b": 648.824,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            36
+          ]
+        }
+      ],
+      "orig": "1.3 Sealed Bid (First-Price) Auction",
+      "text": "1.3 Sealed Bid (First-Price) Auction",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/24",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 125.82,
+            "t": 638.028,
+            "r": 484.497,
+            "b": 601.275,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            167
+          ]
+        }
+      ],
+      "orig": "In a sealed bid, or fi rst price, auction, bidders submit sealed bids b 1 , ..., b n . The bidders who submits the highest bid is awarded the object, and pays his bid.",
+      "text": "In a sealed bid, or fi rst price, auction, bidders submit sealed bids b 1 , ..., b n . The bidders who submits the highest bid is awarded the object, and pays his bid."
+    },
+    {
+      "self_ref": "#/texts/25",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 125.82,
+            "t": 597.407,
+            "r": 484.52,
+            "b": 533.534,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            320
+          ]
+        }
+      ],
+      "orig": "Under these rules, it should be clear that bidders will not want to bid their true values. By doing so, they would ensure a zero pro fi t. By bidding somewhat below their values, they can potentially make a pro fi t some of the time. We now consider two approaches to solving for symmetric equlibrium bidding strategies.",
+      "text": "Under these rules, it should be clear that bidders will not want to bid their true values. By doing so, they would ensure a zero pro fi t. By bidding somewhat below their values, they can potentially make a pro fi t some of the time. We now consider two approaches to solving for symmetric equlibrium bidding strategies."
+    },
+    {
+      "self_ref": "#/texts/26",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 125.82,
+            "t": 520.306,
+            "r": 365.565,
+            "b": 510.717,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            40
+          ]
+        }
+      ],
+      "orig": "A. The 'First Order Conditions' Approach",
+      "text": "A. The 'First Order Conditions' Approach",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/27",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 322.8,
+            "t": 470.712,
+            "r": 322.8,
+            "b": 452.32,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "6",
+      "text": "6"
+    },
+    {
+      "self_ref": "#/texts/28",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 125.82,
+            "t": 497.445,
+            "r": 484.558,
+            "b": 446.142,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            311
+          ]
+        }
+      ],
+      "orig": "We will look for an equilibrium where each bidder uses a bid strategy that is a strictly increasing, continuous, and di ff erentiable function of his value. 1 To do this, suppose that bidders j = i use identical bidding strategies b j = b ( s j ) with these properties and consider the problem facing bidder i .",
+      "text": "We will look for an equilibrium where each bidder uses a bid strategy that is a strictly increasing, continuous, and di ff erentiable function of his value. 1 To do this, suppose that bidders j = i use identical bidding strategies b j = b ( s j ) with these properties and consider the problem facing bidder i ."
+    },
+    {
+      "self_ref": "#/texts/29",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 142.741,
+            "t": 443.268,
+            "r": 473.574,
+            "b": 432.582,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            78
+          ]
+        }
+      ],
+      "orig": "Bidder i 's expected payo ff , as a function of his bid b i and signal s i is:",
+      "text": "Bidder i 's expected payo ff , as a function of his bid b i and signal s i is:"
+    },
+    {
+      "self_ref": "#/texts/30",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 191.46,
+            "t": 423.072,
+            "r": 418.793,
+            "b": 404.68,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            70
+          ]
+        }
+      ],
+      "orig": "U ( b i , s i ) = ( s i -b i ) \u00b7 Pr[ b j = b ( S j ) \u2264 b i , \u2200 j = i ]",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/31",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 125.82,
+            "t": 402.108,
+            "r": 282.707,
+            "b": 392.476,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            34
+          ]
+        }
+      ],
+      "orig": "Thus, bidder i chooses b to solve:",
+      "text": "Thus, bidder i chooses b to solve:"
+    },
+    {
+      "self_ref": "#/texts/32",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 236.88,
+            "t": 391.506,
+            "r": 373.422,
+            "b": 350.44,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            46
+          ]
+        }
+      ],
+      "orig": "max b i ( s i -b i ) F n -1 \u00a1 b -1 ( b i ) \u00a2 .",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/33",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 125.821,
+            "t": 356.327,
+            "r": 257.582,
+            "b": 346.695,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            30
+          ]
+        }
+      ],
+      "orig": "The fi rst order condition is:",
+      "text": "The fi rst order condition is:"
+    },
+    {
+      "self_ref": "#/texts/34",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 129.361,
+            "t": 343.806,
+            "r": 480.872,
+            "b": 302.74,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            114
+          ]
+        }
+      ],
+      "orig": "( s i -b i ) ( n -1) F n -2 \u00a1 b -1 ( b i ) \u00a2 f \u00a1 b -1 ( b i ) \u00a2 1 b 0 ( b -1 ( b i )) -F n -1 \u00a1 b -1 ( b i ) \u00a2 = 0",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/35",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 125.819,
+            "t": 307.488,
+            "r": 484.532,
+            "b": 284.295,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            145
+          ]
+        }
+      ],
+      "orig": "At a symmetric equilibrium, b i = b ( s i ), so the fi rst order condition reduces to a di ff erential equation (here I'll drop the i subscript):",
+      "text": "At a symmetric equilibrium, b i = b ( s i ), so the fi rst order condition reduces to a di ff erential equation (here I'll drop the i subscript):"
+    },
+    {
+      "self_ref": "#/texts/36",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 232.199,
+            "t": 275.02700000000004,
+            "r": 378.041,
+            "b": 249.64,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            51
+          ]
+        }
+      ],
+      "orig": "b 0 ( s ) = ( s -b ( s )) ( n -1) f ( s ) F ( s ) .",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/37",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 125.82,
+            "t": 241.24800000000005,
+            "r": 480.666,
+            "b": 231.61599999999999,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            78
+          ]
+        }
+      ],
+      "orig": "This can be solved, using the boundary condition that b ( s ) = s , to obtain:",
+      "text": "This can be solved, using the boundary condition that b ( s ) = s , to obtain:"
+    },
+    {
+      "self_ref": "#/texts/38",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 243.78,
+            "t": 231.30600000000004,
+            "r": 366.522,
+            "b": 190.24099999999999,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            55
+          ]
+        }
+      ],
+      "orig": "b ( s ) = s -R s i s F n -1 (\u02dc s ) d \u02dc s F n -1 ( s ) .",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/39",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "footnote",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 125.818,
+            "t": 185.466,
+            "r": 484.504,
+            "b": 120.96699999999998,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            513
+          ]
+        }
+      ],
+      "orig": "1 In fact, it is possible to prove that in any symmetric equilibrium each bidder must use a continuous and strictly increasing strategy. To prove this, one shows that in equilbrium there cannot be a 'gap' in the range of bids o ff ered in equilibrium (because then it would be sub-optimal to o ff er the bid just above the gap) and there cannot be an 'atom' in the equilibrium distribution of bids (because then no bidder would make an o ff er just below the atom, leading to a gap). I'll skip the details though.",
+      "text": "1 In fact, it is possible to prove that in any symmetric equilibrium each bidder must use a continuous and strictly increasing strategy. To prove this, one shows that in equilbrium there cannot be a 'gap' in the range of bids o ff ered in equilibrium (because then it would be sub-optimal to o ff er the bid just above the gap) and there cannot be an 'atom' in the equilibrium distribution of bids (because then no bidder would make an o ff er just below the atom, leading to a gap). I'll skip the details though."
+    },
+    {
+      "self_ref": "#/texts/40",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 400.5,
+            "t": 423.072,
+            "r": 400.5,
+            "b": 404.68,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "6",
+      "text": "6"
+    },
+    {
+      "self_ref": "#/texts/41",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 302.4,
+            "t": 100.30799999999999,
+            "r": 307.89,
+            "b": 90.67499999999995,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "3",
+      "text": "3"
+    },
+    {
+      "self_ref": "#/texts/42",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 125.819,
+            "t": 658.608,
+            "r": 484.477,
+            "b": 621.915,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            168
+          ]
+        }
+      ],
+      "orig": "It is easy to check that b ( s ) is increasing and di ff erentiable. So any symmetric equilibrium with these properties must involve bidders using the strategy b ( s ).",
+      "text": "It is easy to check that b ( s ) is increasing and di ff erentiable. So any symmetric equilibrium with these properties must involve bidders using the strategy b ( s )."
+    },
+    {
+      "self_ref": "#/texts/43",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 125.818,
+            "t": 606.048,
+            "r": 341.524,
+            "b": 596.459,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            34
+          ]
+        }
+      ],
+      "orig": "B. The 'Envelope Theorem' Approach",
+      "text": "B. The 'Envelope Theorem' Approach",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/44",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 125.818,
+            "t": 580.548,
+            "r": 484.525,
+            "b": 557.355,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            146
+          ]
+        }
+      ],
+      "orig": "A closely related, and often convenient, approach to identify necessary conditions for a symmetric equilibrium is to exploit the envelope theorem.",
+      "text": "A closely related, and often convenient, approach to identify necessary conditions for a symmetric equilibrium is to exploit the envelope theorem."
+    },
+    {
+      "self_ref": "#/texts/45",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 125.818,
+            "t": 553.427,
+            "r": 484.565,
+            "b": 529.242,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            146
+          ]
+        }
+      ],
+      "orig": "To this end, suppose b ( s ) is a symmetric equilibrium in increasing differentiable strategies. Then i 's equilibrium payo ff given signal s i is",
+      "text": "To this end, suppose b ( s ) is a symmetric equilibrium in increasing differentiable strategies. Then i 's equilibrium payo ff given signal s i is"
+    },
+    {
+      "self_ref": "#/texts/46",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 234.72,
+            "t": 518.18,
+            "r": 484.512,
+            "b": 497.38,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            49
+          ]
+        }
+      ],
+      "orig": "U ( s i ) = ( s i -b ( s i )) F n -1 ( s i ). (1)",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/47",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 125.82,
+            "t": 490.847,
+            "r": 437.567,
+            "b": 481.215,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            67
+          ]
+        }
+      ],
+      "orig": "Alternatively, because i is playing a best-response in equilibrium:",
+      "text": "Alternatively, because i is playing a best-response in equilibrium:"
+    },
+    {
+      "self_ref": "#/texts/48",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 219.359,
+            "t": 469.16,
+            "r": 390.889,
+            "b": 448.36,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            56
+          ]
+        }
+      ],
+      "orig": "U ( s i ) = max b i ( s i -b i ) F n -1 ( b -1 ( b i )).",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/49",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 125.82,
+            "t": 436.547,
+            "r": 452.885,
+            "b": 426.915,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            65
+          ]
+        }
+      ],
+      "orig": "Applying the envelope theorem (Milgrom and Segal, 2002), we have:",
+      "text": "Applying the envelope theorem (Milgrom and Segal, 2002), we have:"
+    },
+    {
+      "self_ref": "#/texts/50",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 125.82,
+            "t": 374.447,
+            "r": 168.295,
+            "b": 364.815,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            9
+          ]
+        }
+      ],
+      "orig": "and also,",
+      "text": "and also,"
+    },
+    {
+      "self_ref": "#/texts/51",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 204.24,
+            "t": 422.946,
+            "r": 408.431,
+            "b": 362.262,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            74
+          ]
+        }
+      ],
+      "orig": "d ds U ( s ) \u00af \u00af \u00af \u00af s = s i = F n -1 ( b -1 ( b ( s i )) = F n -1 ( s i )",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/52",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 229.98,
+            "t": 372.125,
+            "r": 484.511,
+            "b": 331.06,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            55
+          ]
+        }
+      ],
+      "orig": "U ( s i ) = U ( s ) + Z s i s F n -1 (\u02dc s ) d \u02dc s . (2)",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/53",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 125.82,
+            "t": 328.848,
+            "r": 484.477,
+            "b": 305.655,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            99
+          ]
+        }
+      ],
+      "orig": "As b ( s ) is increasing, a bidder with signal s will never win the auction therefore, U ( s ) = 0.",
+      "text": "As b ( s ) is increasing, a bidder with signal s will never win the auction therefore, U ( s ) = 0."
+    },
+    {
+      "self_ref": "#/texts/54",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 125.82,
+            "t": 301.788,
+            "r": 484.468,
+            "b": 278.595,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            94
+          ]
+        }
+      ],
+      "orig": "Combining (1) and (2), we solve for the equilibrium strategy (again dropping the i subscript):",
+      "text": "Combining (1) and (2), we solve for the equilibrium strategy (again dropping the i subscript):"
+    },
+    {
+      "self_ref": "#/texts/55",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 243.78,
+            "t": 274.326,
+            "r": 366.533,
+            "b": 233.26,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            55
+          ]
+        }
+      ],
+      "orig": "b ( s ) = s -R s i s F n -1 (\u02dc s ) d \u02dc s F n -1 ( s ) .",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/56",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 125.82,
+            "t": 224.20799999999997,
+            "r": 484.573,
+            "b": 133.27499999999998,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            477
+          ]
+        }
+      ],
+      "orig": "Again, we have showed necessary conditions for an equilibrium (i.e. any increasing di ff erentiable symmetric equilibrium must involve the strategy b ( s )). To check su ffi ciency (that b ( s ) actually is an equilibrium), we can exploit the fact that b ( s ) is increasing and satis fi es the envelope formula to show that it must be a selection from i 's best response given the other bidder's use the strategy b ( s ). (For details, see Milgrom 2004, Theorems 4.2 amd 4.6).",
+      "text": "Again, we have showed necessary conditions for an equilibrium (i.e. any increasing di ff erentiable symmetric equilibrium must involve the strategy b ( s )). To check su ffi ciency (that b ( s ) actually is an equilibrium), we can exploit the fact that b ( s ) is increasing and satis fi es the envelope formula to show that it must be a selection from i 's best response given the other bidder's use the strategy b ( s ). (For details, see Milgrom 2004, Theorems 4.2 amd 4.6)."
+    },
+    {
+      "self_ref": "#/texts/57",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 302.401,
+            "t": 100.30700000000002,
+            "r": 307.891,
+            "b": 90.67499999999995,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "4",
+      "text": "4"
+    },
+    {
+      "self_ref": "#/texts/58",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 5,
+          "bbox": {
+            "l": 125.82,
+            "t": 658.608,
+            "r": 484.494,
+            "b": 621.936,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            189
+          ]
+        }
+      ],
+      "orig": "Remark 1 In most auction models, both the fi rst order conditions and the envelope approach can be used to characterize an equilibrium. The trick is to fi gure out which is more convenient.",
+      "text": "Remark 1 In most auction models, both the fi rst order conditions and the envelope approach can be used to characterize an equilibrium. The trick is to fi gure out which is more convenient."
+    },
+    {
+      "self_ref": "#/texts/59",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 5,
+          "bbox": {
+            "l": 125.819,
+            "t": 606.948,
+            "r": 484.519,
+            "b": 541.609,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            337
+          ]
+        }
+      ],
+      "orig": "What is the revenue from the fi rst price auction? It is the expected winning bid, or the expected bid of the bidder with the highest signal, E \u00a3 b ( S 1: n ) \u00a4 . To sharpen this, de fi ne G ( s ) = F n -1 ( s ). Then G is the probability that if you take n -1 draws from F , all will be below s (i.e. it is the cdf of S 1: n -1 ). Then,",
+      "text": "What is the revenue from the fi rst price auction? It is the expected winning bid, or the expected bid of the bidder with the highest signal, E \u00a3 b ( S 1: n ) \u00a4 . To sharpen this, de fi ne G ( s ) = F n -1 ( s ). Then G is the probability that if you take n -1 draws from F , all will be below s (i.e. it is the cdf of S 1: n -1 ). Then,"
+    },
+    {
+      "self_ref": "#/texts/60",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 5,
+          "bbox": {
+            "l": 125.82,
+            "t": 539.827,
+            "r": 484.491,
+            "b": 488.921,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            128
+          ]
+        }
+      ],
+      "orig": "b ( s ) = s -R s s F n -1 (\u02dc s ) d \u02dc s F n -1 ( s ) = 1 F n -1 ( s ) Z s s \u02dc sdF n -1 (\u02dc s ) = E \u00a3 S 1: n -1 | S 1: n -1 \u2264 s \u00a4 .",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/61",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 5,
+          "bbox": {
+            "l": 125.818,
+            "t": 489.767,
+            "r": 484.491,
+            "b": 453.075,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            174
+          ]
+        }
+      ],
+      "orig": "That is, if a bidder has signal s , he sets his bid equal to the expectation of the highest of the other n -1 values, conditional on all those values being less than his own.",
+      "text": "That is, if a bidder has signal s , he sets his bid equal to the expectation of the highest of the other n -1 values, conditional on all those values being less than his own."
+    },
+    {
+      "self_ref": "#/texts/62",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 5,
+          "bbox": {
+            "l": 142.738,
+            "t": 449.147,
+            "r": 333.623,
+            "b": 439.515,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            41
+          ]
+        }
+      ],
+      "orig": "Using this fact, the expected revenue is:",
+      "text": "Using this fact, the expected revenue is:"
+    },
+    {
+      "self_ref": "#/texts/63",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 5,
+          "bbox": {
+            "l": 184.198,
+            "t": 435.546,
+            "r": 426.112,
+            "b": 394.479,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            73
+          ]
+        }
+      ],
+      "orig": "E \u00a3 b \u00a1 S 1: n \u00a2\u00a4 = E \u00a3 S 1: n -1 | S 1: n -1 \u2264 S 1: n \u00a4 = E \u00a3 S 2: n \u00a4 ,",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/64",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 5,
+          "bbox": {
+            "l": 125.82,
+            "t": 402.048,
+            "r": 458.456,
+            "b": 392.416,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            68
+          ]
+        }
+      ],
+      "orig": "equal to the expectation of the second highest value. We have shown:",
+      "text": "equal to the expectation of the second highest value. We have shown:"
+    },
+    {
+      "self_ref": "#/texts/65",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 5,
+          "bbox": {
+            "l": 125.819,
+            "t": 377.448,
+            "r": 484.461,
+            "b": 354.337,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            88
+          ]
+        }
+      ],
+      "orig": "Proposition 2 The fi rst and second price auction yield the same revenue in expectation.",
+      "text": "Proposition 2 The fi rst and second price auction yield the same revenue in expectation."
+    },
+    {
+      "self_ref": "#/texts/66",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 5,
+          "bbox": {
+            "l": 125.82,
+            "t": 335.572,
+            "r": 280.243,
+            "b": 325.064,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            23
+          ]
+        }
+      ],
+      "orig": "1.4 Revenue Equivalence",
+      "text": "1.4 Revenue Equivalence",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/67",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 5,
+          "bbox": {
+            "l": 125.82,
+            "t": 314.268,
+            "r": 484.553,
+            "b": 277.515,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            177
+          ]
+        }
+      ],
+      "orig": "The result above is a special case of the celebrated 'revenue equivalence theorem' due to Vickrey (1961), Myerson (1981), Riley and Samuelson (1981) and Harris and Raviv (1981).",
+      "text": "The result above is a special case of the celebrated 'revenue equivalence theorem' due to Vickrey (1961), Myerson (1981), Riley and Samuelson (1981) and Harris and Raviv (1981)."
+    },
+    {
+      "self_ref": "#/texts/68",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 5,
+          "bbox": {
+            "l": 125.82,
+            "t": 262.60799999999995,
+            "r": 484.527,
+            "b": 198.81600000000003,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            346
+          ]
+        }
+      ],
+      "orig": "Theorem 1 (Revenue Equivalence) Suppose n bidders have values s 1 , ..., s n identically and independently distributed with cdf F ( \u00b7 ) . Then all auction mechanisms that (i) always award the object to the bidder with highest value in equilibrium, and (ii) give a bidder with valuation s zero pro fi ts, generates the same revenue in expectation.",
+      "text": "Theorem 1 (Revenue Equivalence) Suppose n bidders have values s 1 , ..., s n identically and independently distributed with cdf F ( \u00b7 ) . Then all auction mechanisms that (i) always award the object to the bidder with highest value in equilibrium, and (ii) give a bidder with valuation s zero pro fi ts, generates the same revenue in expectation."
+    },
+    {
+      "self_ref": "#/texts/69",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 5,
+          "bbox": {
+            "l": 125.821,
+            "t": 183.82799999999997,
+            "r": 484.45,
+            "b": 159.63200000000006,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            131
+          ]
+        }
+      ],
+      "orig": "Proof. We consider the general class of auctions where bidders submit bids b 1 , ..., b n . An auction rule speci fi es for all i ,",
+      "text": "Proof. We consider the general class of auctions where bidders submit bids b 1 , ..., b n . An auction rule speci fi es for all i ,"
+    },
+    {
+      "self_ref": "#/texts/70",
+      "parent": {
+        "$ref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 5,
+          "bbox": {
+            "l": 238.081,
+            "t": 146.74800000000005,
+            "r": 260.752,
+            "b": 136.12200000000007,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            5
+          ]
+        }
+      ],
+      "orig": "x i :",
+      "text": "x i :"
+    },
+    {
+      "self_ref": "#/texts/71",
+      "parent": {
+        "$ref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 5,
+          "bbox": {
+            "l": 270.66,
+            "t": 147.13200000000006,
+            "r": 372.172,
+            "b": 128.74,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            25
+          ]
+        }
+      ],
+      "orig": "B 1 \u00d7 ... \u00d7 B n \u2192 [0 , 1]",
+      "text": "B 1 \u00d7 ... \u00d7 B n \u2192 [0 , 1]"
+    },
+    {
+      "self_ref": "#/texts/72",
+      "parent": {
+        "$ref": "#/groups/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 5,
+          "bbox": {
+            "l": 240.42,
+            "t": 130.188,
+            "r": 260.752,
+            "b": 119.56200000000001,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            5
+          ]
+        }
+      ],
+      "orig": "t i :",
+      "text": "t i :"
+    },
+    {
+      "self_ref": "#/texts/73",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 5,
+          "bbox": {
+            "l": 270.66,
+            "t": 130.572,
+            "r": 361.242,
+            "b": 112.18000000000006,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            21
+          ]
+        }
+      ],
+      "orig": "B 1 \u00d7 ... \u00d7 B n \u2192 R ,",
+      "text": "B 1 \u00d7 ... \u00d7 B n \u2192 R ,"
+    },
+    {
+      "self_ref": "#/texts/74",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 5,
+          "bbox": {
+            "l": 302.4,
+            "t": 100.30799999999999,
+            "r": 307.89,
+            "b": 90.67600000000004,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "5",
+      "text": "5"
+    },
+    {
+      "self_ref": "#/texts/75",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 6,
+          "bbox": {
+            "l": 125.82,
+            "t": 658.992,
+            "r": 484.509,
+            "b": 634.413,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            149
+          ]
+        }
+      ],
+      "orig": "where x i ( \u00b7 ) gives the probability i will get the object and t i ( \u00b7 ) gives i 's required payment as a function of the bids ( b 1 , ..., b n ). 2",
+      "text": "where x i ( \u00b7 ) gives the probability i will get the object and t i ( \u00b7 ) gives i 's required payment as a function of the bids ( b 1 , ..., b n ). 2"
+    },
+    {
+      "self_ref": "#/texts/76",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 6,
+          "bbox": {
+            "l": 125.82,
+            "t": 631.548,
+            "r": 484.5,
+            "b": 608.355,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            92
+          ]
+        }
+      ],
+      "orig": "Given the auction rule, bidder i 's expected payo ff as a function of his signal and bid is:",
+      "text": "Given the auction rule, bidder i 's expected payo ff as a function of his signal and bid is:"
+    },
+    {
+      "self_ref": "#/texts/77",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 6,
+          "bbox": {
+            "l": 191.459,
+            "t": 595.992,
+            "r": 418.852,
+            "b": 577.6,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            84
+          ]
+        }
+      ],
+      "orig": "U i ( s i , b i ) = s i E b -i [ x i ( b i , b -i )] -E b -i [ t i ( b i , b -i )] .",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/78",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 6,
+          "bbox": {
+            "l": 125.819,
+            "t": 573.612,
+            "r": 484.469,
+            "b": 550.035,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            105
+          ]
+        }
+      ],
+      "orig": "Let b i ( \u00b7 ) , b -i ( \u00b7 ) denote an equilibrium of the auction game. Bidder i 's equilibrium payo ff is:",
+      "text": "Let b i ( \u00b7 ) , b -i ( \u00b7 ) denote an equilibrium of the auction game. Bidder i 's equilibrium payo ff is:"
+    },
+    {
+      "self_ref": "#/texts/79",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 6,
+          "bbox": {
+            "l": 158.399,
+            "t": 540.14,
+            "r": 451.912,
+            "b": 519.34,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            104
+          ]
+        }
+      ],
+      "orig": "U i ( s i ) = U i ( s i , b ( s i )) = s i F n -1 ( s i ) -E s -i [ t i ( b i ( s i ) , b -i ( s -i )] ,",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/80",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 6,
+          "bbox": {
+            "l": 125.82,
+            "t": 517.22,
+            "r": 410.691,
+            "b": 498.229,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            83
+          ]
+        }
+      ],
+      "orig": "where we use (i) to write E s -i [ x i ( b ( s i ) , b ( s -i ))] = F n -1 ( s i ).",
+      "text": "where we use (i) to write E s -i [ x i ( b ( s i ) , b ( s -i ))] = F n -1 ( s i )."
+    },
+    {
+      "self_ref": "#/texts/81",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 6,
+          "bbox": {
+            "l": 125.82,
+            "t": 501.408,
+            "r": 484.511,
+            "b": 469.84,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            137
+          ]
+        }
+      ],
+      "orig": "Using the fact that b ( s i ) must maximize i 's payo ff given s i and opponent strategies b -i ( \u00b7 ), the envelope theorem implies that:",
+      "text": "Using the fact that b ( s i ) must maximize i 's payo ff given s i and opponent strategies b -i ( \u00b7 ), the envelope theorem implies that:"
+    },
+    {
+      "self_ref": "#/texts/82",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 6,
+          "bbox": {
+            "l": 125.82,
+            "t": 430.008,
+            "r": 165.27,
+            "b": 420.376,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            8
+          ]
+        }
+      ],
+      "orig": "and also",
+      "text": "and also"
+    },
+    {
+      "self_ref": "#/texts/83",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 6,
+          "bbox": {
+            "l": 182.1,
+            "t": 476.406,
+            "r": 430.55,
+            "b": 415.722,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            95
+          ]
+        }
+      ],
+      "orig": "d ds U i ( s ) \u00af \u00af \u00af \u00af s = s i = E b -i [ x i ( b i ( s i ) , b -i ( s -i ))] = F n -1 ( s i ),",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/84",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 6,
+          "bbox": {
+            "l": 186.6,
+            "t": 421.025,
+            "r": 423.638,
+            "b": 379.96,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            84
+          ]
+        }
+      ],
+      "orig": "U i ( s i ) = U i ( s ) + Z s i s F n -1 (\u02dc s ) d \u02dc s = Z s i s F n -1 (\u02dc s ) d \u02dc s,",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/85",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 6,
+          "bbox": {
+            "l": 125.82,
+            "t": 375.408,
+            "r": 300.653,
+            "b": 364.782,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            41
+          ]
+        }
+      ],
+      "orig": "where we use (ii) to write U i ( s ) = 0.",
+      "text": "where we use (ii) to write U i ( s ) = 0."
+    },
+    {
+      "self_ref": "#/texts/86",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 6,
+          "bbox": {
+            "l": 125.821,
+            "t": 361.848,
+            "r": 484.515,
+            "b": 338.655,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            96
+          ]
+        }
+      ],
+      "orig": "Combining our expressions for U i ( s i ), we get bidder i 's expected payment given his signal:",
+      "text": "Combining our expressions for U i ( s i ), we get bidder i 's expected payment given his signal:"
+    },
+    {
+      "self_ref": "#/texts/87",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 6,
+          "bbox": {
+            "l": 150.661,
+            "t": 337.206,
+            "r": 459.582,
+            "b": 296.14,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            108
+          ]
+        }
+      ],
+      "orig": "E s -i [ t i ( b i , b -i )] = s i F n -1 ( s i ) -Z s i s F n -1 (\u02dc s ) d \u02dc s = Z s i s \u02dc sdF n -1 (\u02dc s ) ,",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/88",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 6,
+          "bbox": {
+            "l": 125.82,
+            "t": 291.972,
+            "r": 484.53,
+            "b": 240.28300000000002,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            281
+          ]
+        }
+      ],
+      "orig": "where the last equality is from integration by parts. Since x i ( \u00b7 ) does not enter into this expression, bidder i 's expected equilibrium payment given his signal is the same under all auction rules that satisfy (i) and (ii) . Indeed, i 's expected payment given s i is equal to:",
+      "text": "where the last equality is from integration by parts. Since x i ( \u00b7 ) does not enter into this expression, bidder i 's expected equilibrium payment given his signal is the same under all auction rules that satisfy (i) and (ii) . Indeed, i 's expected payment given s i is equal to:"
+    },
+    {
+      "self_ref": "#/texts/89",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 6,
+          "bbox": {
+            "l": 195.24,
+            "t": 238.50599999999997,
+            "r": 415.061,
+            "b": 197.43899999999996,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            65
+          ]
+        }
+      ],
+      "orig": "E \u00a3 S 1: n -1 | S 1: n -1 < s i \u00a4 = E \u00a3 S 2: n | S 1: n = s i \u00a4 .",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/90",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 6,
+          "bbox": {
+            "l": 125.819,
+            "t": 206.20799999999997,
+            "r": 245.144,
+            "b": 196.57600000000002,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            27
+          ]
+        }
+      ],
+      "orig": "So the seller's revenue is:",
+      "text": "So the seller's revenue is:"
+    },
+    {
+      "self_ref": "#/texts/91",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 6,
+          "bbox": {
+            "l": 167.819,
+            "t": 193.74599999999998,
+            "r": 442.421,
+            "b": 152.68000000000006,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            70
+          ]
+        }
+      ],
+      "orig": "E [Revenue] = n E s i [ i 's expected payment | s i ] = E \u00a3 S 2: n \u00a4 ,",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/92",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "footnote",
+      "prov": [
+        {
+          "page_no": 6,
+          "bbox": {
+            "l": 125.82,
+            "t": 163.56600000000003,
+            "r": 484.489,
+            "b": 120.63200000000006,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            359
+          ]
+        }
+      ],
+      "orig": "2 So in a fi rst price auction, x 1 ( b 1 , ..., b n ) equals 1 if b 1 is the highest bid, and otherwise zero. Meanwhile t 1 ( b 1 , ..., b n ) equals zero unless b 1 is highest, in which case t 1 = b 1 . In a second price auction, x 1 ( \u00b7 ) is the same, and t 1 ( \u00b7 ) is zero unless b 1 is highest, in which case t 1 equals the highest of ( b 2 , ..., b n ).",
+      "text": "2 So in a fi rst price auction, x 1 ( b 1 , ..., b n ) equals 1 if b 1 is the highest bid, and otherwise zero. Meanwhile t 1 ( b 1 , ..., b n ) equals zero unless b 1 is highest, in which case t 1 = b 1 . In a second price auction, x 1 ( \u00b7 ) is the same, and t 1 ( \u00b7 ) is zero unless b 1 is highest, in which case t 1 equals the highest of ( b 2 , ..., b n )."
+    },
+    {
+      "self_ref": "#/texts/93",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 6,
+          "bbox": {
+            "l": 302.4,
+            "t": 100.30799999999999,
+            "r": 307.89,
+            "b": 90.67499999999995,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "6",
+      "text": "6"
+    },
+    {
+      "self_ref": "#/texts/94",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_header",
+      "prov": [
+        {
+          "page_no": 7,
+          "bbox": {
+            "l": 450.42,
+            "t": 658.608,
+            "r": 484.447,
+            "b": 648.996,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            6
+          ]
+        }
+      ],
+      "orig": "Q.E.D.",
+      "text": "Q.E.D."
+    },
+    {
+      "self_ref": "#/texts/95",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 7,
+          "bbox": {
+            "l": 125.82,
+            "t": 658.608,
+            "r": 178.327,
+            "b": 648.976,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            11
+          ]
+        }
+      ],
+      "orig": "a constant.",
+      "text": "a constant."
+    },
+    {
+      "self_ref": "#/texts/96",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 7,
+          "bbox": {
+            "l": 125.818,
+            "t": 633.108,
+            "r": 484.49,
+            "b": 582.855,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            232
+          ]
+        }
+      ],
+      "orig": "The revenue equivalence theorem has many applications. One useful trick is that it allows us to solve for the equilibrium of di ff erent auctions, so long as we know that the auction will satis fi y (i) and (ii) . Here's an example.",
+      "text": "The revenue equivalence theorem has many applications. One useful trick is that it allows us to solve for the equilibrium of di ff erent auctions, so long as we know that the auction will satis fi y (i) and (ii) . Here's an example."
+    },
+    {
+      "self_ref": "#/texts/97",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 7,
+          "bbox": {
+            "l": 125.818,
+            "t": 566.987,
+            "r": 484.55,
+            "b": 476.055,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            502
+          ]
+        }
+      ],
+      "orig": "Application: The All-Pay Auction. Consider the same set-up - bidders 1 , .., n , with values s 1 , ..., s n , identically and independently distributed with cdf F -and consider the following rules. Bidders submit bids b 1 , ..., b n and the bidder who submits the highest bid gets the object. However, bidders must pay their bid regardless of whether they win the auction. (These rules might seem a little strange - the all-pay auction is commonly used as a model of lobbying or political in fl uence).",
+      "text": "Application: The All-Pay Auction. Consider the same set-up - bidders 1 , .., n , with values s 1 , ..., s n , identically and independently distributed with cdf F -and consider the following rules. Bidders submit bids b 1 , ..., b n and the bidder who submits the highest bid gets the object. However, bidders must pay their bid regardless of whether they win the auction. (These rules might seem a little strange - the all-pay auction is commonly used as a model of lobbying or political in fl uence)."
+    },
+    {
+      "self_ref": "#/texts/98",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 7,
+          "bbox": {
+            "l": 125.819,
+            "t": 472.126,
+            "r": 484.491,
+            "b": 434.382,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            214
+          ]
+        }
+      ],
+      "orig": "Suppose this auction has a symmetric equilibrium with an increasing strategy b A ( s ) used by all players. Then, bidder i 's expected payo ff given value s i will be (if everyone plays the equilibrium strategies):",
+      "text": "Suppose this auction has a symmetric equilibrium with an increasing strategy b A ( s ) used by all players. Then, bidder i 's expected payo ff given value s i will be (if everyone plays the equilibrium strategies):"
+    },
+    {
+      "self_ref": "#/texts/99",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 7,
+          "bbox": {
+            "l": 196.799,
+            "t": 431.165,
+            "r": 414.269,
+            "b": 390.1,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            73
+          ]
+        }
+      ],
+      "orig": "U ( s i ) = s i F n -1 ( s i ) -b A ( s i ) = Z s i s F n -1 (\u02dc s ) d \u02dc s",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/100",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 7,
+          "bbox": {
+            "l": 125.82,
+            "t": 384.107,
+            "r": 137.369,
+            "b": 374.475,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            2
+          ]
+        }
+      ],
+      "orig": "So",
+      "text": "So"
+    },
+    {
+      "self_ref": "#/texts/101",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 7,
+          "bbox": {
+            "l": 223.501,
+            "t": 383.945,
+            "r": 387.571,
+            "b": 342.88,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            52
+          ]
+        }
+      ],
+      "orig": "b A ( s ) = sF n -1 ( s ) -Z s s F n -1 (\u02dc s ) d \u02dc s",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/102",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 7,
+          "bbox": {
+            "l": 125.821,
+            "t": 322.488,
+            "r": 484.486,
+            "b": 285.735,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            193
+          ]
+        }
+      ],
+      "orig": "In addition to the all-pay auction, many other auction rules also satisfy the revenue equivalence assumptions when bidder values are independently and identically distributed. Two examples are:",
+      "text": "In addition to the all-pay auction, many other auction rules also satisfy the revenue equivalence assumptions when bidder values are independently and identically distributed. Two examples are:"
+    },
+    {
+      "self_ref": "#/texts/103",
+      "parent": {
+        "$ref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 7,
+          "bbox": {
+            "l": 139.141,
+            "t": 269.86699999999996,
+            "r": 484.632,
+            "b": 206.05500000000006,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            339
+          ]
+        }
+      ],
+      "orig": "1. The English (oral ascending) auction. All bidders start in the auction with a price of zero. The price rises continuously, and bidders may drop out at any point in time. Once they drop out, they cannot reenter. The auction ends when only one bidder is left, and this bidder pays the price at which the second-to-last bidder dropped out.",
+      "text": "The English (oral ascending) auction. All bidders start in the auction with a price of zero. The price rises continuously, and bidders may drop out at any point in time. Once they drop out, they cannot reenter. The auction ends when only one bidder is left, and this bidder pays the price at which the second-to-last bidder dropped out.",
+      "enumerated": true,
+      "marker": "1."
+    },
+    {
+      "self_ref": "#/texts/104",
+      "parent": {
+        "$ref": "#/groups/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 7,
+          "bbox": {
+            "l": 139.141,
+            "t": 193.12699999999995,
+            "r": 484.479,
+            "b": 156.43499999999995,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            205
+          ]
+        }
+      ],
+      "orig": "2. The Dutch (descending price) auction. The price starts at a very high level and drops continuously. At any point in time, a bidder can stop the auction, and pay the current price. Then the auction ends.",
+      "text": "The Dutch (descending price) auction. The price starts at a very high level and drops continuously. At any point in time, a bidder can stop the auction, and pay the current price. Then the auction ends.",
+      "enumerated": true,
+      "marker": "2."
+    },
+    {
+      "self_ref": "#/texts/105",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 7,
+          "bbox": {
+            "l": 302.401,
+            "t": 100.30700000000002,
+            "r": 307.891,
+            "b": 90.67499999999995,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "7",
+      "text": "7"
+    },
+    {
+      "self_ref": "#/texts/106",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 8,
+          "bbox": {
+            "l": 125.82,
+            "t": 660.943,
+            "r": 326.409,
+            "b": 648.343,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            23
+          ]
+        }
+      ],
+      "orig": "2 Common Value Auctions",
+      "text": "2 Common Value Auctions",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/107",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 8,
+          "bbox": {
+            "l": 125.82,
+            "t": 634.248,
+            "r": 484.507,
+            "b": 583.995,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            310
+          ]
+        }
+      ],
+      "orig": "We would now like to generalize the model to allow for the possibility that (i) learning bidder j 's information could cause bidder i to re-assess his estimate of how much he values the object, and (ii) the information of i and j is not independent (when j 's estimate is high, i 's is also likely to be high).",
+      "text": "We would now like to generalize the model to allow for the possibility that (i) learning bidder j 's information could cause bidder i to re-assess his estimate of how much he values the object, and (ii) the information of i and j is not independent (when j 's estimate is high, i 's is also likely to be high)."
+    },
+    {
+      "self_ref": "#/texts/108",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 8,
+          "bbox": {
+            "l": 125.819,
+            "t": 580.067,
+            "r": 484.575,
+            "b": 434.952,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            819
+          ]
+        }
+      ],
+      "orig": "These features are natural to incorporate in many situations. For instance, consider an auction for a natural resource like a tract of timber. In such a setting, bidders are likely to have di ff erent costs of harvesting or processing the timber. These costs may be independent across bidders and private, much like in the above model. But at the same time, bidders are likely to be unsure exactly how much merchanteable timber is on the tract, and use some sort of statistical sampling to estimate the quantity. Because these estimates will be based on limited sampling, they will be imperfect so if i learned that j had sampled a di ff erent area and got a low estimate, she would likely revise her opinion of the tract's value. In addition, if the areas sampled overlap, the estimates are unlikely to be independent.",
+      "text": "These features are natural to incorporate in many situations. For instance, consider an auction for a natural resource like a tract of timber. In such a setting, bidders are likely to have di ff erent costs of harvesting or processing the timber. These costs may be independent across bidders and private, much like in the above model. But at the same time, bidders are likely to be unsure exactly how much merchanteable timber is on the tract, and use some sort of statistical sampling to estimate the quantity. Because these estimates will be based on limited sampling, they will be imperfect so if i learned that j had sampled a di ff erent area and got a low estimate, she would likely revise her opinion of the tract's value. In addition, if the areas sampled overlap, the estimates are unlikely to be independent."
+    },
+    {
+      "self_ref": "#/texts/109",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 8,
+          "bbox": {
+            "l": 125.82,
+            "t": 416.092,
+            "r": 258.932,
+            "b": 405.584,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            19
+          ]
+        }
+      ],
+      "orig": "2.1 A General Model",
+      "text": "2.1 A General Model",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/110",
+      "parent": {
+        "$ref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 8,
+          "bbox": {
+            "l": 142.14,
+            "t": 395.172,
+            "r": 242.102,
+            "b": 376.78,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            24
+          ]
+        }
+      ],
+      "orig": "\u00b7 Bidders i = 1 , ..., n",
+      "text": "Bidders i = 1 , ..., n",
+      "enumerated": false,
+      "marker": "\u00b7"
+    },
+    {
+      "self_ref": "#/texts/111",
+      "parent": {
+        "$ref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 8,
+          "bbox": {
+            "l": 142.139,
+            "t": 372.672,
+            "r": 340.451,
+            "b": 354.28,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            51
+          ]
+        }
+      ],
+      "orig": "\u00b7 Signals S 1 , ..., S n with joint density f ( \u00b7 )",
+      "text": "Signals S 1 , ..., S n with joint density f ( \u00b7 )",
+      "enumerated": false,
+      "marker": "\u00b7"
+    },
+    {
+      "self_ref": "#/texts/112",
+      "parent": {
+        "$ref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 8,
+          "bbox": {
+            "l": 142.14,
+            "t": 350.112,
+            "r": 378.829,
+            "b": 331.721,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            54
+          ]
+        }
+      ],
+      "orig": "\u00b7 Signals are (i) exchangeable, and (ii) a ffi liated.",
+      "text": "Signals are (i) exchangeable, and (ii) a ffi liated.",
+      "enumerated": false,
+      "marker": "\u00b7"
+    },
+    {
+      "self_ref": "#/texts/113",
+      "parent": {
+        "$ref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 8,
+          "bbox": {
+            "l": 165.36,
+            "t": 326.48,
+            "r": 484.49,
+            "b": 306.22,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            77
+          ]
+        }
+      ],
+      "orig": "-Signals are exchangeable if s 0 is a permutation of s \u21d2 f ( s ) = f ( s 0 ).",
+      "text": "-Signals are exchangeable if s 0 is a permutation of s \u21d2 f ( s ) = f ( s 0 ).",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/114",
+      "parent": {
+        "$ref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 8,
+          "bbox": {
+            "l": 165.36,
+            "t": 308.96,
+            "r": 483.982,
+            "b": 283.516,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            133
+          ]
+        }
+      ],
+      "orig": "-Signals are a ffi liated if f ( s \u2227 s 0 ) f ( s \u2228 s 0 ) \u2265 f ( s 0 ) f ( s ) (i.e. s j | s i has monotone likelihood ratio property).",
+      "text": "-Signals are a ffi liated if f ( s \u2227 s 0 ) f ( s \u2228 s 0 ) \u2265 f ( s 0 ) f ( s ) (i.e. s j | s i has monotone likelihood ratio property).",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/115",
+      "parent": {
+        "$ref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 8,
+          "bbox": {
+            "l": 142.14,
+            "t": 268.0319999999999,
+            "r": 294.71,
+            "b": 249.64099999999996,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            40
+          ]
+        }
+      ],
+      "orig": "\u00b7 Value to bidder i is v ( s i , s -i ).",
+      "text": "Value to bidder i is v ( s i , s -i ).",
+      "enumerated": false,
+      "marker": "\u00b7"
+    },
+    {
+      "self_ref": "#/texts/116",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 8,
+          "bbox": {
+            "l": 125.821,
+            "t": 242.14800000000002,
+            "r": 484.425,
+            "b": 211.85000000000002,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            153
+          ]
+        }
+      ],
+      "orig": "Example 1 The independent private value model above is a special case: just let v ( s i , s -i ) = s i , and suppose that S 1 , ..., S n are independent.",
+      "text": "Example 1 The independent private value model above is a special case: just let v ( s i , s -i ) = s i , and suppose that S 1 , ..., S n are independent."
+    },
+    {
+      "self_ref": "#/texts/117",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 8,
+          "bbox": {
+            "l": 125.82,
+            "t": 203.08799999999997,
+            "r": 484.522,
+            "b": 130.89999999999998,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            401
+          ]
+        }
+      ],
+      "orig": "Example 2 Another common special case is the pure common value model with conditionally independent signals. In this model, all bidders have the same value, given by some random variable V . The signals S 1 , .., S n are each correlated with V , but independent conditional on it (so for instance, S i = V + \u03b5 i , where \u03b5 1 , .., \u03b5 n are independent. Then v ( s i , s -i ) = E [ V | s 1 , ..., s n ] .",
+      "text": "Example 2 Another common special case is the pure common value model with conditionally independent signals. In this model, all bidders have the same value, given by some random variable V . The signals S 1 , .., S n are each correlated with V , but independent conditional on it (so for instance, S i = V + \u03b5 i , where \u03b5 1 , .., \u03b5 n are independent. Then v ( s i , s -i ) = E [ V | s 1 , ..., s n ] ."
+    },
+    {
+      "self_ref": "#/texts/118",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 8,
+          "bbox": {
+            "l": 302.4,
+            "t": 100.30799999999999,
+            "r": 307.89,
+            "b": 90.67600000000004,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "8",
+      "text": "8"
+    },
+    {
+      "self_ref": "#/texts/119",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 125.82,
+            "t": 312.408,
+            "r": 135.585,
+            "b": 302.775,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            2
+          ]
+        }
+      ],
+      "orig": "or",
+      "text": "or"
+    },
+    {
+      "self_ref": "#/texts/120",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 125.82,
+            "t": 658.608,
+            "r": 484.467,
+            "b": 594.816,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            391
+          ]
+        }
+      ],
+      "orig": "Example 3 A commonly used, but somewhat hard to motivate, variant of the general model is obtained by letting v i ( s i , s -i ) = s i + \u03b2 P j = i s j , with \u03b2 \u2264 1 , and assuming that S 1 , ..., S n are independent. This model has the feature that bidder's have independent information (so a version of the RET applies), but interdependent valuations (so there are winner's curse e ff ects).",
+      "text": "Example 3 A commonly used, but somewhat hard to motivate, variant of the general model is obtained by letting v i ( s i , s -i ) = s i + \u03b2 P j = i s j , with \u03b2 \u2264 1 , and assuming that S 1 , ..., S n are independent. This model has the feature that bidder's have independent information (so a version of the RET applies), but interdependent valuations (so there are winner's curse e ff ects)."
+    },
+    {
+      "self_ref": "#/texts/121",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 434.7,
+            "t": 640.16,
+            "r": 434.7,
+            "b": 626.749,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "6",
+      "text": "6"
+    },
+    {
+      "self_ref": "#/texts/122",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 125.82,
+            "t": 580.907,
+            "r": 484.525,
+            "b": 503.534,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            430
+          ]
+        }
+      ],
+      "orig": "A new feature of the more general auction environment is that each bidder i will want to account for the fact that her opponents' bids reveal something about their signals, information that is relevant for i 's own valuation. In particular, if i wins, then the mere fact of winning reveals that her opponent's values were not that high - hence winning is 'bad news' about i 's valuation. This feature is called the winner's curse.",
+      "text": "A new feature of the more general auction environment is that each bidder i will want to account for the fact that her opponents' bids reveal something about their signals, information that is relevant for i 's own valuation. In particular, if i wins, then the mere fact of winning reveals that her opponent's values were not that high - hence winning is 'bad news' about i 's valuation. This feature is called the winner's curse."
+    },
+    {
+      "self_ref": "#/texts/123",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 125.82,
+            "t": 485.032,
+            "r": 284.047,
+            "b": 474.524,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            24
+          ]
+        }
+      ],
+      "orig": "2.2 Second Price Auction",
+      "text": "2.2 Second Price Auction",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/124",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 125.819,
+            "t": 463.668,
+            "r": 484.519,
+            "b": 426.975,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            159
+          ]
+        }
+      ],
+      "orig": "Let's look for a symmetric increasing equilibrium bid strategy b ( s ) in this more general environment. We start by considering the bidding problem facing i :",
+      "text": "Let's look for a symmetric increasing equilibrium bid strategy b ( s ) in this more general environment. We start by considering the bidding problem facing i :"
+    },
+    {
+      "self_ref": "#/texts/125",
+      "parent": {
+        "$ref": "#/groups/4"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 142.14,
+            "t": 415.075,
+            "r": 384.473,
+            "b": 395.08,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            54
+          ]
+        }
+      ],
+      "orig": "\u00b7 Let s i denote the highest signal of bidders j = i .",
+      "text": "Let s i denote the highest signal of bidders j = i .",
+      "enumerated": false,
+      "marker": "\u00b7"
+    },
+    {
+      "self_ref": "#/texts/126",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 366.12,
+            "t": 413.472,
+            "r": 366.12,
+            "b": 395.08,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "6",
+      "text": "6"
+    },
+    {
+      "self_ref": "#/texts/127",
+      "parent": {
+        "$ref": "#/groups/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 142.14,
+            "t": 393.235,
+            "r": 472.691,
+            "b": 373.24,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            81
+          ]
+        }
+      ],
+      "orig": "\u00b7 Bidder i will win if she bids b i \u2265 b ( s i ), in which case she pays b ( s i )",
+      "text": "Bidder i will win if she bids b i \u2265 b ( s i ), in which case she pays b ( s i )",
+      "enumerated": false,
+      "marker": "\u00b7"
+    },
+    {
+      "self_ref": "#/texts/128",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 142.74,
+            "t": 367.727,
+            "r": 270.78,
+            "b": 358.095,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            28
+          ]
+        }
+      ],
+      "orig": "Bidder i 's problem is then:",
+      "text": "Bidder i 's problem is then:"
+    },
+    {
+      "self_ref": "#/texts/129",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 148.44,
+            "t": 354.666,
+            "r": 461.302,
+            "b": 307.6,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            117
+          ]
+        }
+      ],
+      "orig": "max b i Z s s \u00a3 E S -i \u00a3 v ( s i , S -i ) | s i , S i = s i \u00a4 -b ( s i ) \u00a4 1 { b ( s i ) \u2264 b i } f ( s i | s i ) ds i",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/130",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 125.82,
+            "t": 267.28700000000003,
+            "r": 337.949,
+            "b": 257.655,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            47
+          ]
+        }
+      ],
+      "orig": "The fi rst order condition for this problem is:",
+      "text": "The fi rst order condition for this problem is:"
+    },
+    {
+      "self_ref": "#/texts/131",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 163.14,
+            "t": 309.006,
+            "r": 447.131,
+            "b": 261.94000000000005,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            102
+          ]
+        }
+      ],
+      "orig": "max b i Z b -1 ( b i ) s \u00a3 E S -i \u00a3 v ( s i , S -i ) | s i , S i = s i \u00a4 -b ( s i ) \u00a4 dF ( s i | s i )",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/132",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 125.82,
+            "t": 250.74599999999998,
+            "r": 493.211,
+            "b": 209.68000000000006,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            129
+          ]
+        }
+      ],
+      "orig": "0 = -1 b 0 ( b -1 ( b i )) \u00a3 E S -i \u00a3 v ( s i , S -i ) | s i , S i = b -1 ( b i ) \u00a4 -b ( b -1 ( b i )) \u00a4 f ( b -1 ( b i ) | s i )",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/133",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 359.7,
+            "t": 176.12,
+            "r": 359.7,
+            "b": 162.71000000000004,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "6",
+      "text": "6"
+    },
+    {
+      "self_ref": "#/texts/134",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 125.82,
+            "t": 213.10799999999995,
+            "r": 194.387,
+            "b": 203.47500000000002,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            15
+          ]
+        }
+      ],
+      "orig": "or simplifying:",
+      "text": "or simplifying:"
+    },
+    {
+      "self_ref": "#/texts/135",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 197.521,
+            "t": 201.66599999999994,
+            "r": 412.777,
+            "b": 160.60000000000002,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            73
+          ]
+        }
+      ],
+      "orig": "b i = b ( s i ) = E S -i \u2219 v ( s i , S -i ) | s i , max j = i s j = s i \u00b8",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/136",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 125.82,
+            "t": 157.308,
+            "r": 484.526,
+            "b": 120.55500000000006,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            202
+          ]
+        }
+      ],
+      "orig": "That is, in equilibrium, bidder i will bid her expected value conditional on her own signal and conditional on all other bidders having a signal less than hers (with the best of the rest equal to hers).",
+      "text": "That is, in equilibrium, bidder i will bid her expected value conditional on her own signal and conditional on all other bidders having a signal less than hers (with the best of the rest equal to hers)."
+    },
+    {
+      "self_ref": "#/texts/137",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 302.4,
+            "t": 100.30700000000002,
+            "r": 307.89,
+            "b": 90.67499999999995,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "9",
+      "text": "9"
+    },
+    {
+      "self_ref": "#/texts/138",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 10,
+          "bbox": {
+            "l": 125.82,
+            "t": 658.608,
+            "r": 484.518,
+            "b": 540.635,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            641
+          ]
+        }
+      ],
+      "orig": "Remark 2 While we will not purse it here, in this more general environment the revenue equivalence theorem fails. Milgrom and Weber (1982) prove a very general result called the 'linkage principle' which basically states that in this general symmetric setting, the more information on which the winner's payment is based, the higher will be the expected revenue. Thus, the fi rst price auction will have lower expected revenue than the second price auction because the winner's payment in the fi rst price auction is based only on her own signal, while in the second price auction it is based on her own signal and the second-highest signal.",
+      "text": "Remark 2 While we will not purse it here, in this more general environment the revenue equivalence theorem fails. Milgrom and Weber (1982) prove a very general result called the 'linkage principle' which basically states that in this general symmetric setting, the more information on which the winner's payment is based, the higher will be the expected revenue. Thus, the fi rst price auction will have lower expected revenue than the second price auction because the winner's payment in the fi rst price auction is based only on her own signal, while in the second price auction it is based on her own signal and the second-highest signal."
+    },
+    {
+      "self_ref": "#/texts/139",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 10,
+          "bbox": {
+            "l": 125.82,
+            "t": 518.203,
+            "r": 455.872,
+            "b": 505.603,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            42
+          ]
+        }
+      ],
+      "orig": "3 Large Auctions & Information Aggregation",
+      "text": "3 Large Auctions & Information Aggregation",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/140",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 10,
+          "bbox": {
+            "l": 125.82,
+            "t": 491.508,
+            "r": 484.518,
+            "b": 441.255,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            288
+          ]
+        }
+      ],
+      "orig": "An interesting question that has been studied in the auction literature arises if we think about auction models as a story about how prices are determined in Walrasian markets. In this context, we might then ask to what extent prices will aggregate the information of market participants.",
+      "text": "An interesting question that has been studied in the auction literature arises if we think about auction models as a story about how prices are determined in Walrasian markets. In this context, we might then ask to what extent prices will aggregate the information of market participants."
+    },
+    {
+      "self_ref": "#/texts/141",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 10,
+          "bbox": {
+            "l": 125.819,
+            "t": 437.327,
+            "r": 484.529,
+            "b": 346.393,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            491
+          ]
+        }
+      ],
+      "orig": "We now consider a series of results along these lines. For each result, the basic set-up is the same. There are a lot of bidders, and the auction has pure common values with conditionally independent signals. We consider second price auctions (or more generally, with k objects, k +1 price auctions, where all winning bidders pay the k +1st highest bid). The basic question is: as the number of bidders gets large, will the auction price converge to the true value of the object(s) for sale?",
+      "text": "We now consider a series of results along these lines. For each result, the basic set-up is the same. There are a lot of bidders, and the auction has pure common values with conditionally independent signals. We consider second price auctions (or more generally, with k objects, k +1 price auctions, where all winning bidders pay the k +1st highest bid). The basic question is: as the number of bidders gets large, will the auction price converge to the true value of the object(s) for sale?"
+    },
+    {
+      "self_ref": "#/texts/142",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 10,
+          "bbox": {
+            "l": 125.82,
+            "t": 327.532,
+            "r": 273.708,
+            "b": 317.024,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            22
+          ]
+        }
+      ],
+      "orig": "3.1 Wilson (1977, RES)",
+      "text": "3.1 Wilson (1977, RES)",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/143",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 10,
+          "bbox": {
+            "l": 125.82,
+            "t": 306.228,
+            "r": 484.531,
+            "b": 269.475,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            173
+          ]
+        }
+      ],
+      "orig": "Wilson considers information aggregation in a setting with a special information structure. In his setting, bidders learn a lower bound on the object's value. The model has:",
+      "text": "Wilson considers information aggregation in a setting with a special information structure. In his setting, bidders learn a lower bound on the object's value. The model has:"
+    },
+    {
+      "self_ref": "#/texts/144",
+      "parent": {
+        "$ref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 10,
+          "bbox": {
+            "l": 142.14,
+            "t": 253.99099999999999,
+            "r": 226.802,
+            "b": 235.60000000000002,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            21
+          ]
+        }
+      ],
+      "orig": "\u00b7 Bidder's 1 , ..., n",
+      "text": "Bidder's 1 , ..., n",
+      "enumerated": false,
+      "marker": "\u00b7"
+    },
+    {
+      "self_ref": "#/texts/145",
+      "parent": {
+        "$ref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 10,
+          "bbox": {
+            "l": 142.138,
+            "t": 231.49099999999999,
+            "r": 378.771,
+            "b": 213.10000000000002,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            49
+          ]
+        }
+      ],
+      "orig": "\u00b7 A single object with common value V \u223c U [0 , 1]",
+      "text": "A single object with common value V \u223c U [0 , 1]",
+      "enumerated": false,
+      "marker": "\u00b7"
+    },
+    {
+      "self_ref": "#/texts/146",
+      "parent": {
+        "$ref": "#/groups/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 10,
+          "bbox": {
+            "l": 142.137,
+            "t": 208.93200000000002,
+            "r": 484.512,
+            "b": 184.36199999999997,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            91
+          ]
+        }
+      ],
+      "orig": "\u00b7 Bidder's signals S 1 , ..., S n are iid with S i \u223c U [0 , v ] (so signal s i \u21d2 V \u2265 s i ).",
+      "text": "Bidder's signals S 1 , ..., S n are iid with S i \u223c U [0 , v ] (so signal s i \u21d2 V \u2265 s i ).",
+      "enumerated": false,
+      "marker": "\u00b7"
+    },
+    {
+      "self_ref": "#/texts/147",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 10,
+          "bbox": {
+            "l": 125.82,
+            "t": 169.93200000000002,
+            "r": 484.508,
+            "b": 132.79499999999996,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            223
+          ]
+        }
+      ],
+      "orig": "Wilson shows that as n \u2192\u221e , the expected price converges to v . This is easy to see: with lots of bidders, someone will have a signal close to v , and you have to bid very close to your signal to have any chance of winning.",
+      "text": "Wilson shows that as n \u2192\u221e , the expected price converges to v . This is easy to see: with lots of bidders, someone will have a signal close to v , and you have to bid very close to your signal to have any chance of winning."
+    },
+    {
+      "self_ref": "#/texts/148",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 10,
+          "bbox": {
+            "l": 299.701,
+            "t": 100.30700000000002,
+            "r": 310.591,
+            "b": 90.67499999999995,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            2
+          ]
+        }
+      ],
+      "orig": "10",
+      "text": "10"
+    },
+    {
+      "self_ref": "#/texts/149",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 125.82,
+            "t": 659.332,
+            "r": 288.612,
+            "b": 648.824,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            23
+          ]
+        }
+      ],
+      "orig": "3.2 Milgrom (1979, EMA)",
+      "text": "3.2 Milgrom (1979, EMA)",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/150",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 125.82,
+            "t": 638.028,
+            "r": 484.517,
+            "b": 579.4,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            285
+          ]
+        }
+      ],
+      "orig": "Milgrom goes on to identify a necessary and su ffi cient condition for information aggregation with many bidders and a fi xed number of objects. Milgrom's basic requirement is, in the limit as n \u2192\u221e , that for all v 0 \u2208 \u2126 and all v < v 0 , and M > 0, there exists some s 0 \u2208 S such that",
+      "text": "Milgrom goes on to identify a necessary and su ffi cient condition for information aggregation with many bidders and a fi xed number of objects. Milgrom's basic requirement is, in the limit as n \u2192\u221e , that for all v 0 \u2208 \u2126 and all v < v 0 , and M > 0, there exists some s 0 \u2208 S such that"
+    },
+    {
+      "self_ref": "#/texts/151",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 125.82,
+            "t": 546.02,
+            "r": 484.51,
+            "b": 519.109,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            126
+          ]
+        }
+      ],
+      "orig": "That is, for any possible value v 0 , there must be arbitrarily strong signals that e ff ectively rule out any value v < v 0 .",
+      "text": "That is, for any possible value v 0 , there must be arbitrarily strong signals that e ff ectively rule out any value v < v 0 ."
+    },
+    {
+      "self_ref": "#/texts/152",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 272.219,
+            "t": 580.58,
+            "r": 339.232,
+            "b": 545.44,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            35
+          ]
+        }
+      ],
+      "orig": "P ( s 0 | v 0 ) P ( s 0 | v ) > M .",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/153",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 125.82,
+            "t": 516.707,
+            "r": 484.541,
+            "b": 479.955,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            164
+          ]
+        }
+      ],
+      "orig": "This condition builds on Wilson, and the intuition is again quite easy. As n \u2192\u221e , there is a very strong winner's curse. In a second price auction, the high bid is:",
+      "text": "This condition builds on Wilson, and the intuition is again quite easy. As n \u2192\u221e , there is a very strong winner's curse. In a second price auction, the high bid is:"
+    },
+    {
+      "self_ref": "#/texts/154",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 305.76,
+            "t": 461.6,
+            "r": 305.76,
+            "b": 448.189,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "6",
+      "text": "6"
+    },
+    {
+      "self_ref": "#/texts/155",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 125.82,
+            "t": 447.415,
+            "r": 484.48,
+            "b": 395.175,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            255
+          ]
+        }
+      ],
+      "orig": "While it is clear that s 1: n is likely to be very high as n \u2192\u221e , the only way anyone would ever bid v would be to have a signal so strong that conditioning on millions of other signals being lower than your own would not push down your estimate too much.",
+      "text": "While it is clear that s 1: n is likely to be very high as n \u2192\u221e , the only way anyone would ever bid v would be to have a signal so strong that conditioning on millions of other signals being lower than your own would not push down your estimate too much."
+    },
+    {
+      "self_ref": "#/texts/156",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 236.16,
+            "t": 487.146,
+            "r": 374.092,
+            "b": 446.08,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            45
+          ]
+        }
+      ],
+      "orig": "E V \u2219 V | s 1: n , max j = i S j = s 1: n \u00b8 .",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/157",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 125.82,
+            "t": 376.852,
+            "r": 388.324,
+            "b": 366.344,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            40
+          ]
+        }
+      ],
+      "orig": "3.3 Pesendorfer and Swinkels (1997, EMA)",
+      "text": "3.3 Pesendorfer and Swinkels (1997, EMA)",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/158",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 125.82,
+            "t": 355.488,
+            "r": 484.49,
+            "b": 345.855,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            75
+          ]
+        }
+      ],
+      "orig": "Pesendorfer and Swinkels consider a model that is quite similar to Milgrom.",
+      "text": "Pesendorfer and Swinkels consider a model that is quite similar to Milgrom."
+    },
+    {
+      "self_ref": "#/texts/159",
+      "parent": {
+        "$ref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 142.14,
+            "t": 333.792,
+            "r": 247.924,
+            "b": 315.401,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            22
+          ]
+        }
+      ],
+      "orig": "\u00b7 n bidders, k objects",
+      "text": "n bidders, k objects",
+      "enumerated": false,
+      "marker": "\u00b7"
+    },
+    {
+      "self_ref": "#/texts/160",
+      "parent": {
+        "$ref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 142.141,
+            "t": 312.432,
+            "r": 345.834,
+            "b": 294.04,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            46
+          ]
+        }
+      ],
+      "orig": "\u00b7 Each bidder has value V \u223c F ( \u00b7 ) on [0 , 1]",
+      "text": "Each bidder has value V \u223c F ( \u00b7 ) on [0 , 1]",
+      "enumerated": false,
+      "marker": "\u00b7"
+    },
+    {
+      "self_ref": "#/texts/161",
+      "parent": {
+        "$ref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 142.141,
+            "t": 291.012,
+            "r": 421.79,
+            "b": 272.62,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            68
+          ]
+        }
+      ],
+      "orig": "\u00b7 Signals S i \u223c G ( \u00b7| v ) on [0 , 1], where g ( \u00b7|\u00b7 ) has the MLRP.",
+      "text": "Signals S i \u223c G ( \u00b7| v ) on [0 , 1], where g ( \u00b7|\u00b7 ) has the MLRP.",
+      "enumerated": false,
+      "marker": "\u00b7"
+    },
+    {
+      "self_ref": "#/texts/162",
+      "parent": {
+        "$ref": "#/groups/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 142.14,
+            "t": 269.65100000000007,
+            "r": 419.873,
+            "b": 251.26,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            63
+          ]
+        }
+      ],
+      "orig": "\u00b7 Signals S 1 , ..., S n are independent conditional on V = v .",
+      "text": "Signals S 1 , ..., S n are independent conditional on V = v .",
+      "enumerated": false,
+      "marker": "\u00b7"
+    },
+    {
+      "self_ref": "#/texts/163",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 125.821,
+            "t": 247.12799999999993,
+            "r": 484.51,
+            "b": 196.89599999999996,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            247
+          ]
+        }
+      ],
+      "orig": "Remark 3 Clearly with a large number of independent signals, there is enough information to consistently estimate v . The question then is whether the bids will accurately aggregate this information - i.e. will the price be a consistent estimator?",
+      "text": "Remark 3 Clearly with a large number of independent signals, there is enough information to consistently estimate v . The question then is whether the bids will accurately aggregate this information - i.e. will the price be a consistent estimator?"
+    },
+    {
+      "self_ref": "#/texts/164",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 125.82,
+            "t": 184.42700000000002,
+            "r": 484.528,
+            "b": 120.55399999999997,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            350
+          ]
+        }
+      ],
+      "orig": "Pesendorfer and Swinkel's big idea is the following. While the winner's curse will make a bidder with s = 1 shade her bid as n \u2192 \u221e with a fi xed number of objects k , as k \u2192\u221e , there is also a loser's curse : if lowering your bid \u03b5 matters there must be k people with higher valuations . This operates against the winner's curse, counterbalancing it.",
+      "text": "Pesendorfer and Swinkel's big idea is the following. While the winner's curse will make a bidder with s = 1 shade her bid as n \u2192 \u221e with a fi xed number of objects k , as k \u2192\u221e , there is also a loser's curse : if lowering your bid \u03b5 matters there must be k people with higher valuations . This operates against the winner's curse, counterbalancing it."
+    },
+    {
+      "self_ref": "#/texts/165",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 299.702,
+            "t": 100.30600000000004,
+            "r": 310.592,
+            "b": 90.67399999999998,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            2
+          ]
+        }
+      ],
+      "orig": "11",
+      "text": "11"
+    },
+    {
+      "self_ref": "#/texts/166",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 12,
+          "bbox": {
+            "l": 125.82,
+            "t": 660.595,
+            "r": 484.448,
+            "b": 648.976,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            75
+          ]
+        }
+      ],
+      "orig": "Proposition 3 The unique equilibrium of k +1 st price auction is symmetric:",
+      "text": "Proposition 3 The unique equilibrium of k +1 st price auction is symmetric:"
+    },
+    {
+      "self_ref": "#/texts/167",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 12,
+          "bbox": {
+            "l": 170.1,
+            "t": 636.012,
+            "r": 440.171,
+            "b": 617.62,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            73
+          ]
+        }
+      ],
+      "orig": "b ( s i ) = E V [ V | s i , k th highest of other signals is also s i ] .",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/168",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 12,
+          "bbox": {
+            "l": 125.819,
+            "t": 611.568,
+            "r": 484.492,
+            "b": 580.0,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            132
+          ]
+        }
+      ],
+      "orig": "De fi nition 1 A sequence of auctions ( n m , k m ) has information aggregation if the price converges in probability to v as m \u2192\u221e .",
+      "text": "De fi nition 1 A sequence of auctions ( n m , k m ) has information aggregation if the price converges in probability to v as m \u2192\u221e ."
+    },
+    {
+      "self_ref": "#/texts/169",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 12,
+          "bbox": {
+            "l": 125.818,
+            "t": 574.007,
+            "r": 492.909,
+            "b": 550.815,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            128
+          ]
+        }
+      ],
+      "orig": "PS fi rst consider necessary conditions for information aggregation. Clearly, a requirement for information aggregation is that:",
+      "text": "PS fi rst consider necessary conditions for information aggregation. Clearly, a requirement for information aggregation is that:"
+    },
+    {
+      "self_ref": "#/texts/170",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 12,
+          "bbox": {
+            "l": 200.76,
+            "t": 537.468,
+            "r": 409.527,
+            "b": 515.81,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            45
+          ]
+        }
+      ],
+      "orig": "lim m \u2192\u221e b m (0) = 0 and lim m \u2192\u221e b m (1) = 1",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/171",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 12,
+          "bbox": {
+            "l": 125.82,
+            "t": 511.788,
+            "r": 484.495,
+            "b": 502.155,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            73
+          ]
+        }
+      ],
+      "orig": "Without this, there will be no convergence when v = 0 or when v = 1. Now,",
+      "text": "Without this, there will be no convergence when v = 0 or when v = 1. Now,"
+    },
+    {
+      "self_ref": "#/texts/172",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "formula",
+      "prov": [
+        {
+          "page_no": 12,
+          "bbox": {
+            "l": 172.56,
+            "t": 485.052,
+            "r": 437.695,
+            "b": 466.66,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            65
+          ]
+        }
+      ],
+      "orig": "b m (1) = E V [ V | s i = 1 , k th highest of other signals is 1]",
+      "text": ""
+    },
+    {
+      "self_ref": "#/texts/173",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 12,
+          "bbox": {
+            "l": 125.819,
+            "t": 465.792,
+            "r": 484.405,
+            "b": 433.84,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            142
+          ]
+        }
+      ],
+      "orig": "If k m 9 \u221e , then this expectation will shrink below 1. So we must have k m \u2192\u221e . And similarly, looking at b m (0), we must have n m -k m \u2192\u221e .",
+      "text": "If k m 9 \u221e , then this expectation will shrink below 1. So we must have k m \u2192\u221e . And similarly, looking at b m (0), we must have n m -k m \u2192\u221e ."
+    },
+    {
+      "self_ref": "#/texts/174",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 12,
+          "bbox": {
+            "l": 125.82,
+            "t": 438.287,
+            "r": 484.496,
+            "b": 415.095,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            109
+          ]
+        }
+      ],
+      "orig": "PS go on to show that these conditions are not just necessary, but su ffi -cient for information aggregation.",
+      "text": "PS go on to show that these conditions are not just necessary, but su ffi -cient for information aggregation."
+    },
+    {
+      "self_ref": "#/texts/175",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 12,
+          "bbox": {
+            "l": 125.82,
+            "t": 400.727,
+            "r": 484.456,
+            "b": 369.16,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            104
+          ]
+        }
+      ],
+      "orig": "Proposition 4 A sequence of auctions has information aggregation if and only if n m -k m \u2192\u221e and k m \u2192\u221e .",
+      "text": "Proposition 4 A sequence of auctions has information aggregation if and only if n m -k m \u2192\u221e and k m \u2192\u221e ."
+    },
+    {
+      "self_ref": "#/texts/176",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 12,
+          "bbox": {
+            "l": 125.82,
+            "t": 363.552,
+            "r": 484.503,
+            "b": 299.295,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            330
+          ]
+        }
+      ],
+      "orig": "The basic idea is that conditioning on k m -1 bidders having higher signals than s i gives a very strong signal about true value. So the bidder who actually has the k th highest sighnal will tend to be right on when he bids E V [ V | s i , k th highest of other signals is s i ]. Thus, we will end up with information aggregation.",
+      "text": "The basic idea is that conditioning on k m -1 bidders having higher signals than s i gives a very strong signal about true value. So the bidder who actually has the k th highest sighnal will tend to be right on when he bids E V [ V | s i , k th highest of other signals is s i ]. Thus, we will end up with information aggregation."
+    },
+    {
+      "self_ref": "#/texts/177",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 12,
+          "bbox": {
+            "l": 125.82,
+            "t": 277.12300000000005,
+            "r": 201.337,
+            "b": 264.523,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            10
+          ]
+        }
+      ],
+      "orig": "References",
+      "text": "References",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/178",
+      "parent": {
+        "$ref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 12,
+          "bbox": {
+            "l": 131.28,
+            "t": 250.48800000000006,
+            "r": 484.444,
+            "b": 227.29499999999996,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            124
+          ]
+        }
+      ],
+      "orig": "[1] Harris, Milton and Arthur Raviv (1981) 'Allocation Mechanisms and the Design of Auctions,' Econometrica , 49, 1477-1499.",
+      "text": "Harris, Milton and Arthur Raviv (1981) 'Allocation Mechanisms and the Design of Auctions,' Econometrica , 49, 1477-1499.",
+      "enumerated": true,
+      "marker": "[1]"
+    },
+    {
+      "self_ref": "#/texts/179",
+      "parent": {
+        "$ref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 12,
+          "bbox": {
+            "l": 131.28,
+            "t": 214.90700000000004,
+            "r": 484.501,
+            "b": 191.71500000000003,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            90
+          ]
+        }
+      ],
+      "orig": "[2] Kremer, Ilan (2002) 'Information Aggregation in Common Value Auctions,' Econometrica .",
+      "text": "Kremer, Ilan (2002) 'Information Aggregation in Common Value Auctions,' Econometrica .",
+      "enumerated": true,
+      "marker": "[2]"
+    },
+    {
+      "self_ref": "#/texts/180",
+      "parent": {
+        "$ref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 12,
+          "bbox": {
+            "l": 131.28,
+            "t": 179.32600000000002,
+            "r": 484.526,
+            "b": 156.13400000000001,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            109
+          ]
+        }
+      ],
+      "orig": "[3] Milgrom, Paul (1979) 'A Convergence Theorem for Bidding with Differential Information,' Econometrica, 47.",
+      "text": "Milgrom, Paul (1979) 'A Convergence Theorem for Bidding with Differential Information,' Econometrica, 47.",
+      "enumerated": true,
+      "marker": "[3]"
+    },
+    {
+      "self_ref": "#/texts/181",
+      "parent": {
+        "$ref": "#/groups/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 12,
+          "bbox": {
+            "l": 131.28,
+            "t": 143.74599999999998,
+            "r": 484.455,
+            "b": 120.553,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            85
+          ]
+        }
+      ],
+      "orig": "[4] Milgrom, Paul (2003) Putting Auction Theory to Work , Cambridge University Press.",
+      "text": "Milgrom, Paul (2003) Putting Auction Theory to Work , Cambridge University Press.",
+      "enumerated": true,
+      "marker": "[4]"
+    },
+    {
+      "self_ref": "#/texts/182",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 12,
+          "bbox": {
+            "l": 299.701,
+            "t": 100.30500000000006,
+            "r": 310.591,
+            "b": 90.673,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            2
+          ]
+        }
+      ],
+      "orig": "12",
+      "text": "12"
+    },
+    {
+      "self_ref": "#/texts/183",
+      "parent": {
+        "$ref": "#/groups/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 13,
+          "bbox": {
+            "l": 131.28,
+            "t": 658.608,
+            "r": 484.46,
+            "b": 635.415,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            110
+          ]
+        }
+      ],
+      "orig": "[5] Milgrom, Paul and Robert Weber (1982) 'A Theory of Auctions and Competitive Bidding,' Econometrica , 50, .",
+      "text": "Milgrom, Paul and Robert Weber (1982) 'A Theory of Auctions and Competitive Bidding,' Econometrica , 50, .",
+      "enumerated": true,
+      "marker": "[5]"
+    },
+    {
+      "self_ref": "#/texts/184",
+      "parent": {
+        "$ref": "#/groups/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 13,
+          "bbox": {
+            "l": 131.28,
+            "t": 622.547,
+            "r": 484.475,
+            "b": 599.355,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            114
+          ]
+        }
+      ],
+      "orig": "[6] Milgrom, Paul and Ilya Segal (2002) 'Envelope Theorems for Arbitrary Choice Sets,' Econometrica , 70, 583-601.",
+      "text": "Milgrom, Paul and Ilya Segal (2002) 'Envelope Theorems for Arbitrary Choice Sets,' Econometrica , 70, 583-601.",
+      "enumerated": true,
+      "marker": "[6]"
+    },
+    {
+      "self_ref": "#/texts/185",
+      "parent": {
+        "$ref": "#/groups/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 13,
+          "bbox": {
+            "l": 131.28,
+            "t": 586.487,
+            "r": 484.496,
+            "b": 563.294,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            77
+          ]
+        }
+      ],
+      "orig": "[7] Myerson, Roger (1981) 'Optimal Auction Design,' Math. Op. Res , 6, 58-73.",
+      "text": "Myerson, Roger (1981) 'Optimal Auction Design,' Math. Op. Res , 6, 58-73.",
+      "enumerated": true,
+      "marker": "[7]"
+    },
+    {
+      "self_ref": "#/texts/186",
+      "parent": {
+        "$ref": "#/groups/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 13,
+          "bbox": {
+            "l": 131.28,
+            "t": 550.426,
+            "r": 484.396,
+            "b": 527.234,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            134
+          ]
+        }
+      ],
+      "orig": "[8] Pesendorfer, Wolfgang and Jeroen Swinkels (1997) 'The Loser's Curse and Information Aggregation in Auctions,' Econometrica , 65, .",
+      "text": "Pesendorfer, Wolfgang and Jeroen Swinkels (1997) 'The Loser's Curse and Information Aggregation in Auctions,' Econometrica , 65, .",
+      "enumerated": true,
+      "marker": "[8]"
+    },
+    {
+      "self_ref": "#/texts/187",
+      "parent": {
+        "$ref": "#/groups/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 13,
+          "bbox": {
+            "l": 131.281,
+            "t": 514.366,
+            "r": 484.473,
+            "b": 491.173,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            103
+          ]
+        }
+      ],
+      "orig": "[9] Riley, John and William Samuelson (1981) 'Optimal Auction,' American Economic Review , 71, 381-392.",
+      "text": "Riley, John and William Samuelson (1981) 'Optimal Auction,' American Economic Review , 71, 381-392.",
+      "enumerated": true,
+      "marker": "[9]"
+    },
+    {
+      "self_ref": "#/texts/188",
+      "parent": {
+        "$ref": "#/groups/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 13,
+          "bbox": {
+            "l": 125.821,
+            "t": 478.305,
+            "r": 484.553,
+            "b": 455.113,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            122
+          ]
+        }
+      ],
+      "orig": "[10] Vickrey, William (1961) 'Counterspeculation, Auctions and Competitive Sealed Tenders,' Journal of Finance , 16, 8-39.",
+      "text": "Vickrey, William (1961) 'Counterspeculation, Auctions and Competitive Sealed Tenders,' Journal of Finance , 16, 8-39.",
+      "enumerated": true,
+      "marker": "[10]"
+    },
+    {
+      "self_ref": "#/texts/189",
+      "parent": {
+        "$ref": "#/groups/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 13,
+          "bbox": {
+            "l": 125.822,
+            "t": 442.245,
+            "r": 484.474,
+            "b": 419.073,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            96
+          ]
+        }
+      ],
+      "orig": "[11] Wilson, Robert (1977) 'A Bidding Model of Perfect Competition,' Review of Economic Studies.",
+      "text": "Wilson, Robert (1977) 'A Bidding Model of Perfect Competition,' Review of Economic Studies.",
+      "enumerated": true,
+      "marker": "[11]"
+    },
+    {
+      "self_ref": "#/texts/190",
+      "parent": {
+        "$ref": "#/groups/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 13,
+          "bbox": {
+            "l": 125.822,
+            "t": 406.184,
+            "r": 484.42,
+            "b": 382.992,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            86
+          ]
+        }
+      ],
+      "orig": "[12] Wilson, Robert (1992) 'Strategic Analysis of Auctions,' Handbook of Game Theory .",
+      "text": "Wilson, Robert (1992) 'Strategic Analysis of Auctions,' Handbook of Game Theory .",
+      "enumerated": true,
+      "marker": "[12]"
+    },
+    {
+      "self_ref": "#/texts/191",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 13,
+          "bbox": {
+            "l": 299.701,
+            "t": 100.303,
+            "r": 310.591,
+            "b": 90.67100000000005,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            2
+          ]
+        }
+      ],
+      "orig": "13",
+      "text": "13"
+    }
+  ],
+  "pictures": [],
+  "tables": [],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {
+    "1": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 1
+    },
+    "2": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 2
+    },
+    "3": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 3
+    },
+    "4": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 4
+    },
+    "5": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 5
+    },
+    "6": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 6
+    },
+    "7": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 7
+    },
+    "8": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 8
+    },
+    "9": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 9
+    },
+    "10": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 10
+    },
+    "11": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 11
+    },
+    "12": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 12
+    },
+    "13": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 13
+    }
+  }
+}

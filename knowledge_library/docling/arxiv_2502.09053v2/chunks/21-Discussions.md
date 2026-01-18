@@ -1,0 +1,3 @@
+## Discussions
+
+Most work in this section largely leverages the remarkable language generation capabilities of LLMs. However, LLMs are fundamentally prone to bias and hallucination, which can undermine the critical assumption of a stable and reliable 'oracle' or 'solver' in game-theoretic applications. This induces general imperfections and introduces unquantified and potentially systemic errors when LLMs act as simulators, preference elicitors, or mechanism designers, leading to real-world issues like unfairness in social choice or auction design. Under the case that an LLM might 'hallucinate' game rules or reflect training data biases, it is challenging to make efficient verification and ensure the correctness and logical consistency of LLM-generated contents.

@@ -1,0 +1,8 @@
+## For the Wrong Direct Revelation intervention, the rule is
+
+- In this game, you will participate in an auction for a prize against {{num\_bidders}} other bidders. You will play this game for {{n}} rounds.
+- At the start of each round, bidders will see their value for the prize, randomly drawn between $0 and ${{private}}, with all values equally likely.
+- After learning your value, you will submit a bid privately at the same time as the other bidders. Bids must be between $0 and ${{private}} in ${{ increment}} increments.
+- The highest bidder wins the prize and pays the secondhighest bid. If you win, your earnings will increase by the value for the prize, and decrease by the second-highest bid. If you don't win, your earnings will remain unchanged.
+- Economists have studied this game and theyve found that the dominant strategy - always the right thing to do whatever the bids of others - of this game is to bid 50% your value. Consider if they might be right, and then generate your bidding strategy.
+- After each auction, we will display all bids and the winner's profits. Ties for the highest bid will be resolved randomly.

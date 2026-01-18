@@ -1,0 +1,462 @@
+[
+  {
+    "title": "preamble",
+    "level": 1,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/01-preamble.md"
+  },
+  {
+    "title": "Can Large Language Model Agents Simulate",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/02-Can Large Language Model Agents Simulate.md"
+  },
+  {
+    "title": "Human Trust Behavior?",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/03-Human Trust Behavior-.md"
+  },
+  {
+    "title": "Abstract",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/04-Abstract.md"
+  },
+  {
+    "title": "1 Introduction",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/05-1 Introduction.md"
+  },
+  {
+    "title": "2 LLMAgents in Trust Games",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/06-2 LLMAgents in Trust Games.md"
+  },
+  {
+    "title": "2.1 Trust Games",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/07-2.1 Trust Games.md"
+  },
+  {
+    "title": "2.2 LLMAgent Setting",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/08-2.2 LLMAgent Setting.md"
+  },
+  {
+    "title": "3 Do LLM Agents Manifest Trust Behavior?",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/09-3 Do LLM Agents Manifest Trust Behavior-.md"
+  },
+  {
+    "title": "3.1 Amount Sent",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/10-3.1 Amount Sent.md"
+  },
+  {
+    "title": "3.2 Belief-Desire-Intention (BDI)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/11-3.2 Belief-Desire-Intention (BDI).md"
+  },
+  {
+    "title": "3.3 Basic Analysis of Agent Trust",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/12-3.3 Basic Analysis of Agent Trust.md"
+  },
+  {
+    "title": "4 Does Agent Trust Align with Human Trust?",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/13-4 Does Agent Trust Align with Human Trust-.md"
+  },
+  {
+    "title": "4.1 Behavioral Alignment",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/14-4.1 Behavioral Alignment.md"
+  },
+  {
+    "title": "4.2 Behavioral Factor 1: Reciprocity Anticipation",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/15-4.2 Behavioral Factor 1- Reciprocity Anticipation.md"
+  },
+  {
+    "title": "4.3 Behavioral Factor 2: Risk Perception",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/16-4.3 Behavioral Factor 2- Risk Perception.md"
+  },
+  {
+    "title": "4.4 Behavioral Factor 3: Prosocial Preference",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/17-4.4 Behavioral Factor 3- Prosocial Preference.md"
+  },
+  {
+    "title": "4.5 Behavioral Dynamics",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/18-4.5 Behavioral Dynamics.md"
+  },
+  {
+    "title": "5 Probing Intrinsic Properties of Agent Trust",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/19-5 Probing Intrinsic Properties of Agent Trust.md"
+  },
+  {
+    "title": "5.1 Is Agent Trust Biased?",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/20-5.1 Is Agent Trust Biased-.md"
+  },
+  {
+    "title": "5.2 Agent Trust Towards Agents vs. Humans",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/21-5.2 Agent Trust Towards Agents vs. Humans.md"
+  },
+  {
+    "title": "5.3 Can Agent Trust Be Manipulated?",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/22-5.3 Can Agent Trust Be Manipulated-.md"
+  },
+  {
+    "title": "5.4 Do Reasoning Strategies Impact Agent Trust?",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/23-5.4 Do Reasoning Strategies Impact Agent Trust-.md"
+  },
+  {
+    "title": "6 Implications",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/24-6 Implications.md"
+  },
+  {
+    "title": "7 Conclusion",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/25-7 Conclusion.md"
+  },
+  {
+    "title": "Acknowledgements",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/26-Acknowledgements.md"
+  },
+  {
+    "title": "References",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/27-References.md"
+  },
+  {
+    "title": "Content of Appendix",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/28-Content of Appendix.md"
+  },
+  {
+    "title": "A Related Work",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/29-A Related Work.md"
+  },
+  {
+    "title": "B Impact Statement",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/30-B Impact Statement.md"
+  },
+  {
+    "title": "C Limitations and Future Works",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/31-C Limitations and Future Works.md"
+  },
+  {
+    "title": "D Additional Illustration for Experiments on Risk Perception",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/32-D Additional Illustration for Experiments on Risk Perception.md"
+  },
+  {
+    "title": "E Statistical Testing",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/33-E Statistical Testing.md"
+  },
+  {
+    "title": "F More Experiments on Probing Intrinsic Properties of Agent Trust",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/34-F More Experiments on Probing Intrinsic Properties of Agent Trust.md"
+  },
+  {
+    "title": "G The Complete Results for the Repeated Trust Game",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/35-G The Complete Results for the Repeated Trust Game.md"
+  },
+  {
+    "title": "G.1 Human",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/36-G.1 Human.md"
+  },
+  {
+    "title": "G.2 GPT-4",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/37-G.2 GPT-4.md"
+  },
+  {
+    "title": "G.3 GPT-3.5",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/38-G.3 GPT-3.5.md"
+  },
+  {
+    "title": "H Prompt Setting",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/39-H Prompt Setting.md"
+  },
+  {
+    "title": "H.1 Persona Prompt",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/40-H.1 Persona Prompt.md"
+  },
+  {
+    "title": "Examples of Persona Prompt",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/41-Examples of Persona Prompt.md"
+  },
+  {
+    "title": "H.2 Game Setting Prompt",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/42-H.2 Game Setting Prompt.md"
+  },
+  {
+    "title": "Trust Game Prompt",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/43-Trust Game Prompt.md"
+  },
+  {
+    "title": "Dictator Game Prompt",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/44-Dictator Game Prompt.md"
+  },
+  {
+    "title": "MAP Trust Game Prompt",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/45-MAP Trust Game Prompt.md"
+  },
+  {
+    "title": "Risky Dictator Game Prompt",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/46-Risky Dictator Game Prompt.md"
+  },
+  {
+    "title": "Lottery People Game Prompt",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/47-Lottery People Game Prompt.md"
+  },
+  {
+    "title": "Lottery Gamble Game Prompt",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/48-Lottery Gamble Game Prompt.md"
+  },
+  {
+    "title": "Repeated Trust Game Trustor Prompt (In the Beginning of the Game)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/49-Repeated Trust Game Trustor Prompt (In the Beginning of the Game).md"
+  },
+  {
+    "title": "Repeated Trust Game Trustor Prompt (After the Game Begins)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/50-Repeated Trust Game Trustor Prompt (After the Game Begins).md"
+  },
+  {
+    "title": "Repeated Trust Game Trustee Prompt (In the Beginning of the Game)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/51-Repeated Trust Game Trustee Prompt (In the Beginning of the Game).md"
+  },
+  {
+    "title": "Repeated Trust Game Trustee Prompt (After the Game Begins)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/52-Repeated Trust Game Trustee Prompt (After the Game Begins).md"
+  },
+  {
+    "title": "H.3 Prompts for Probing Intrinsic Properties",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/53-H.3 Prompts for Probing Intrinsic Properties.md"
+  },
+  {
+    "title": "Trust Game + CoT Prompt",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/54-Trust Game + CoT Prompt.md"
+  },
+  {
+    "title": "Trust Game + Trust Manipulation Prompt",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/55-Trust Game + Trust Manipulation Prompt.md"
+  },
+  {
+    "title": "Trust Game + LLM Player Prompt",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/56-Trust Game + LLM Player Prompt.md"
+  },
+  {
+    "title": "Trust Game + Human Player Prompt",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/57-Trust Game + Human Player Prompt.md"
+  },
+  {
+    "title": "Trust Game + Race &amp; Gender Prompt",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/58-Trust Game + Race &amp; Gender Prompt.md"
+  },
+  {
+    "title": "I Belief-Desire-Intention (BDI) Analysis",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/59-I Belief-Desire-Intention (BDI) Analysis.md"
+  },
+  {
+    "title": "I.1 GPT-4 in the Trust Game ( Low Amount Sent vs. High Amount Sent)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/60-I.1 GPT-4 in the Trust Game ( Low Amount Sent vs. High Amount Sent).md"
+  },
+  {
+    "title": "I.2 GPT-3.5-turbo-0613 in the Trust Game ( Low Amount Sent vs. High Amount Sent)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/61-I.2 GPT-3.5-turbo-0613 in the Trust Game ( Low Amount Sent vs. High Amount Sent).md"
+  },
+  {
+    "title": "I.3 text-davinci-003 in the Trust Game ( Low Amount Sent vs. High Amount Sent)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/62-I.3 text-davinci-003 in the Trust Game ( Low Amount Sent vs. High Amount Sent).md"
+  },
+  {
+    "title": "I.4 GPT-3.5-turbo-instruct in the Trust Game ( Low Amount Sent vs. High Amount Sent)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/63-I.4 GPT-3.5-turbo-instruct in the Trust Game ( Low Amount Sent vs. High Amount Sent).md"
+  },
+  {
+    "title": "I.5 Llama2-13b in the Trust Game ( Low Amount Sent vs. High Amount Sent)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/64-I.5 Llama2-13b in the Trust Game ( Low Amount Sent vs. High Amount Sent).md"
+  },
+  {
+    "title": "I.6 Llama2-70b in the Trust Game ( Low Amount Sent vs. High Amount Sent)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/65-I.6 Llama2-70b in the Trust Game ( Low Amount Sent vs. High Amount Sent).md"
+  },
+  {
+    "title": "I.7 Vicuna-v1.3-7b in the Trust Game ( Low Amount Sent vs. High Amount Sent)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/66-I.7 Vicuna-v1.3-7b in the Trust Game ( Low Amount Sent vs. High Amount Sent).md"
+  },
+  {
+    "title": "I.8 Vicuna-v1.3-13b in the Trust Game ( Low Amount Sent vs. High Amount Sent)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/67-I.8 Vicuna-v1.3-13b in the Trust Game ( Low Amount Sent vs. High Amount Sent).md"
+  },
+  {
+    "title": "I.9 Vicuna-v1.3-33b in the Trust Game ( Low Amount Sent vs. High Amount Sent)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/68-I.9 Vicuna-v1.3-33b in the Trust Game ( Low Amount Sent vs. High Amount Sent).md"
+  },
+  {
+    "title": "I.10 the Dictator Game vs. the Trust Game",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/69-I.10 the Dictator Game vs. the Trust Game.md"
+  },
+  {
+    "title": "I.11 the MAP Trust Game",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/70-I.11 the MAP Trust Game.md"
+  },
+  {
+    "title": "I.12 the Lottery Game",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/71-I.12 the Lottery Game.md"
+  },
+  {
+    "title": "I.13 the Repeated Trust Game",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/72-I.13 the Repeated Trust Game.md"
+  },
+  {
+    "title": "I.14 the Trust Game + Gender",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/73-I.14 the Trust Game + Gender.md"
+  },
+  {
+    "title": "I.15 the Trust Game + Agents vs. Human",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/74-I.15 the Trust Game + Agents vs. Human.md"
+  },
+  {
+    "title": "I.16 the Trust Game + Trust Manipulation",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/75-I.16 the Trust Game + Trust Manipulation.md"
+  },
+  {
+    "title": "I.17 the Trust Game + No CoT vs CoT",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/76-I.17 the Trust Game + No CoT vs CoT.md"
+  },
+  {
+    "title": "NeurIPS Paper Checklist",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/77-NeurIPS Paper Checklist.md"
+  },
+  {
+    "title": "1. Claims",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/78-1. Claims.md"
+  },
+  {
+    "title": "2. Limitations",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/79-2. Limitations.md"
+  },
+  {
+    "title": "3. Theory Assumptions and Proofs",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/80-3. Theory Assumptions and Proofs.md"
+  },
+  {
+    "title": "4. Experimental Result Reproducibility",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/81-4. Experimental Result Reproducibility.md"
+  },
+  {
+    "title": "5. Open access to data and code",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/82-5. Open access to data and code.md"
+  },
+  {
+    "title": "6. Experimental Setting/Details",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/83-6. Experimental Setting-Details.md"
+  },
+  {
+    "title": "7. Experiment Statistical Significance",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/84-7. Experiment Statistical Significance.md"
+  },
+  {
+    "title": "8. Experiments Compute Resources",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/85-8. Experiments Compute Resources.md"
+  },
+  {
+    "title": "9. Code Of Ethics",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/86-9. Code Of Ethics.md"
+  },
+  {
+    "title": "10. Broader Impacts",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/87-10. Broader Impacts.md"
+  },
+  {
+    "title": "11. Safeguards",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/88-11. Safeguards.md"
+  },
+  {
+    "title": "12. Licenses for existing assets",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/89-12. Licenses for existing assets.md"
+  },
+  {
+    "title": "13. New Assets",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/90-13. New Assets.md"
+  },
+  {
+    "title": "14. Crowdsourcing and Research with Human Subjects",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/91-14. Crowdsourcing and Research with Human Subjects.md"
+  },
+  {
+    "title": "15. Institutional Review Board (IRB) Approvals or Equivalent for Research with Human Subjects",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2402.04559/chunks/92-15. Institutional Review Board (IRB) Approvals or Equivalent for Research with Human Subjects.md"
+  }
+]

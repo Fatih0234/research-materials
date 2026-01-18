@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Strategizing with AI:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.03158/chunks/01-Strategizing with AI-.md"
+  },
+  {
+    "title": "Insights from a Beauty Contest Experiment",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.03158/chunks/02-Insights from a Beauty Contest Experiment.md"
+  },
+  {
+    "title": "Abstract",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.03158/chunks/03-Abstract.md"
+  },
+  {
+    "title": "1 Introduction",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.03158/chunks/04-1 Introduction.md"
+  },
+  {
+    "title": "Q1. Does LLM recognize the rules of the game and act in accordance with the rules?",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.03158/chunks/05-Q1. Does LLM recognize the rules of the game and act in accordance with the rules-.md"
+  },
+  {
+    "title": "Q2. Does LLM recognize the strategic context of the game?",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.03158/chunks/06-Q2. Does LLM recognize the strategic context of the game-.md"
+  },
+  {
+    "title": "Q4. Can LLM find an analytical solution to the game?",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.03158/chunks/07-Q4. Can LLM find an analytical solution to the game-.md"
+  },
+  {
+    "title": "Q5. Can LLM correctly use the analytical solution when choosing its strategy?",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.03158/chunks/08-Q5. Can LLM correctly use the analytical solution when choosing its strategy-.md"
+  },
+  {
+    "title": "Q6. Do different LLMs perform differently?",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.03158/chunks/09-Q6. Do different LLMs perform differently-.md"
+  },
+  {
+    "title": "Q7. Are LLM's strategies similar to strategies played by human players?",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.03158/chunks/10-Q7. Are LLM's strategies similar to strategies played by human players-.md"
+  },
+  {
+    "title": "2 The Experimental Design",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.03158/chunks/11-2 The Experimental Design.md"
+  },
+  {
+    "title": "3 Results",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.03158/chunks/12-3 Results.md"
+  },
+  {
+    "title": "3.1 Main Results",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.03158/chunks/13-3.1 Main Results.md"
+  },
+  {
+    "title": "3.2 Llama Results",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.03158/chunks/14-3.2 Llama Results.md"
+  },
+  {
+    "title": "3.3 Robustness checks",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.03158/chunks/15-3.3 Robustness checks.md"
+  },
+  {
+    "title": "4 Discussion",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.03158/chunks/16-4 Discussion.md"
+  },
+  {
+    "title": "5 Conclusion",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.03158/chunks/17-5 Conclusion.md"
+  },
+  {
+    "title": "Acknowledgements",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.03158/chunks/18-Acknowledgements.md"
+  },
+  {
+    "title": "Funding",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.03158/chunks/19-Funding.md"
+  },
+  {
+    "title": "Declaration of generative AI and AI-assisted technologies in the writing process",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.03158/chunks/20-Declaration of generative AI and AI-assisted technologies in the writing process.md"
+  },
+  {
+    "title": "Data availability",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.03158/chunks/21-Data availability.md"
+  },
+  {
+    "title": "References",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2502.03158/chunks/22-References.md"
+  }
+]

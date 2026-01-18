@@ -1,0 +1,167 @@
+[
+  {
+    "title": "preamble",
+    "level": 1,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/01-preamble.md"
+  },
+  {
+    "title": "BIS Working Papers No 1310 AI agents for cash",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/02-BIS Working Papers No 1310 AI agents for cash.md"
+  },
+  {
+    "title": "management in payment systems",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/03-management in payment systems.md"
+  },
+  {
+    "title": "AI agents for cash management in payment systems *",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/04-AI agents for cash management in payment systems -.md"
+  },
+  {
+    "title": "1 Bank for International Settlements 2 Bank of Canada",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/05-1 Bank for International Settlements 2 Bank of Canada.md"
+  },
+  {
+    "title": "Abstract",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/06-Abstract.md"
+  },
+  {
+    "title": "1 Introduction",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/07-1 Introduction.md"
+  },
+  {
+    "title": "2 Key decisions in payment systems",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/08-2 Key decisions in payment systems.md"
+  },
+  {
+    "title": "3 AI agents",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/09-3 AI agents.md"
+  },
+  {
+    "title": "4 AI agents as cash managers",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/10-4 AI agents as cash managers.md"
+  },
+  {
+    "title": "4.1 Precautionary decision",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/11-4.1 Precautionary decision.md"
+  },
+  {
+    "title": "Box 1: Precautionary decision",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/12-Box 1- Precautionary decision.md"
+  },
+  {
+    "title": "Input to the model:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/13-Input to the model-.md"
+  },
+  {
+    "title": "Output from the model:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/14-Output from the model-.md"
+  },
+  {
+    "title": "4.2 Navigating priorities",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/15-4.2 Navigating priorities.md"
+  },
+  {
+    "title": "Box 2: Navigating priorities",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/16-Box 2- Navigating priorities.md"
+  },
+  {
+    "title": "Input to the model:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/17-Input to the model-.md"
+  },
+  {
+    "title": "Output from the model:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/18-Output from the model-.md"
+  },
+  {
+    "title": "Model reasoning for 10 seconds (brief summary below) :",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/19-Model reasoning for 10 seconds (brief summary below) -.md"
+  },
+  {
+    "title": "4.3 Mitigating the liquidity-delay trade-off",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/20-4.3 Mitigating the liquidity-delay trade-off.md"
+  },
+  {
+    "title": "Box 3: Mitigating liquidity-delay trade-off",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/21-Box 3- Mitigating liquidity-delay trade-off.md"
+  },
+  {
+    "title": "Input to the model:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/22-Input to the model-.md"
+  },
+  {
+    "title": "Output from the model:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/23-Output from the model-.md"
+  },
+  {
+    "title": "Model reasoning for 55 seconds (brief summary below) :",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/24-Model reasoning for 55 seconds (brief summary below) -.md"
+  },
+  {
+    "title": "4.4 Robustness checks",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/25-4.4 Robustness checks.md"
+  },
+  {
+    "title": "Box 1: Precautionary decision (robustness)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/26-Box 1- Precautionary decision (robustness).md"
+  },
+  {
+    "title": "Box 2: Navigating priorities (robustness)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/27-Box 2- Navigating priorities (robustness).md"
+  },
+  {
+    "title": "4.5 AI agent in action",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/28-4.5 AI agent in action.md"
+  },
+  {
+    "title": "5 Discussion",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/29-5 Discussion.md"
+  },
+  {
+    "title": "6 Potential limitations and associated risks",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/30-6 Potential limitations and associated risks.md"
+  },
+  {
+    "title": "7 Conclusion and next steps",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/31-7 Conclusion and next steps.md"
+  },
+  {
+    "title": "References",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/32-References.md"
+  },
+  {
+    "title": "Previous volumes in this series",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bis_org_work1310/chunks/33-Previous volumes in this series.md"
+  }
+]

@@ -1,0 +1,39 @@
+## References
+
+- [1] A. Zou, Z. Wang, N. Carlini, M. Nasr, J. Z. Kolter, and M. Fredrikson, 'Universal and transferable adversarial attacks on aligned language models,' arXiv preprint arXiv:2307.15043 , 2023.
+- [2] P. Chao, A. Robey, E. Dobriban, H. Hassani, G. J. Pappas, and E. Wong, 'Jailbreaking black box large language models in twenty queries,' in IEEE Conference on Secure and Trustworthy Machine Learning, SaTML 2025, Copenhagen, Denmark, April 9-11, 2025 . IEEE, 2025, pp. 23-42.
+- [3] Q. Ren, H. Li, D. Liu, Z. Xie, X. Lu, Y. Qiao, L. Sha, J. Yan, L. Ma, and J. Shao, 'Derail yourself: Multi-turn LLM jailbreak attack through self-discovered clues,' arXiv preprint arXiv:2410.10700 , 2024.
+- [4] M. Russinovich, A. Salem, and R. Eldan, 'Great, now write an article about that: The crescendo multi-turn LLM jailbreak attack,' arXiv preprint arXiv:2404.01833 , 2024.
+- [5] Z. Zhou, J. Xiang, H. Chen, Q. Liu, Z. Li, and S. Su, 'Speak out of turn: Safety vulnerability of large language models in multi-turn dialogue,' arXiv preprint arXiv:2402.17262 , 2024.
+- [6] J. Dai, X. Pan, R. Sun, J. Ji, X. Xu, M. Liu, Y. Wang, and Y. Yang, 'Safe RLHF: safe reinforcement learning from human feedback,' in ICLR 2024 . OpenReview.net, 2024.
+- [7] R. Liu, R. Yang, C. Jia, G. Zhang, D. Yang, and S. Vosoughi, 'Training socially aligned language models on simulated social interactions,' in ICLR 2024 . OpenReview.net, 2024.
+- [8] S. Yi, Y. Liu, Z. Sun, T. Cong, X. He, J. Song, K. Xu, and Q. Li, 'Jailbreak attacks and defenses against large language models: A survey,' arXiv preprint arXiv:2407.04295 , 2024.
+- [9] Y. Li, H. Guo, K. Zhou, W. X. Zhao, and J. Wen, 'Images are achilles' heel of alignment: Exploiting visual vulnerabilities for jailbreaking multimodal large language models,' in ECCV 2024 , ser. Lecture Notes in Computer Science, vol. 15131. Springer, 2024, pp. 174189.
+- [10] X. Qi, K. Huang, A. Panda, P. Henderson, M. Wang, and P. Mittal, 'Visual adversarial examples jailbreak aligned large language models,' in IAAI 2024 . AAAI Press, 2024, pp. 21 527-21 536.
+- [11] Y. Zeng, H. Lin, J. Zhang, D. Yang, R. Jia, and W. Shi, 'How johnny can persuade LLMs to jailbreak them: Rethinking persuasion to challenge AI safety by humanizing LLMs,' in ACL 2024 . Association for Computational Linguistics, 2024, pp. 14 322-14 350.
+- [12] H. Zhang, Z. Guo, H. Zhu, B. Cao, L. Lin, J. Jia, J. Chen, and D. Wu, 'Jailbreak open-sourced large language models via enforced decoding,' in ACL 2024 . Association for Computational Linguistics, 2024, pp. 5475-5493.
+- [13] M. Phute, A. Helbling, M. Hull, S. Peng, S. Szyller, C. Cornelius, and D. H. Chau, 'LLM self defense: By self examination, LLMs know they are being tricked,' in Tiny Papers @ ICLR 2024 . OpenReview.net, 2024.
+- [14] Z. Wang, F. Yang, L. Wang, P. Zhao, H. Wang, L. Chen, Q. Lin, and K. Wong, 'SELF-GUARD: Empower the LLM to safeguard itself,' in NAACL 2024 . Association for Computational Linguistics, 2024, pp. 1648-1668.
+- [15] Y. Wang, Z. Shi, A. Bai, and C. Hsieh, 'Defending LLMs against jailbreaking attacks via backtranslation,' in Findings of ACL 2024 . Association for Computational Linguistics, 2024, pp. 16 031-16 046.
+- [16] Z. Xu, F. Jiang, L. Niu, J. Jia, B. Y. Lin, and R. Poovendran, 'Safedecoding: Defending against jailbreak attacks via safety-aware decoding,' in ACL 2024 . Association for Computational Linguistics, 2024, pp. 5587-5605.
+- [17] P. Ding, J. Kuang, D. Ma, X. Cao, Y. Xian, J. Chen, and S. Huang, 'A wolf in sheep's clothing: Generalized nested jailbreak prompts can fool large language models easily,' in NAACL 2024 . Association for Computational Linguistics, 2024, pp. 2136-2153. [Online]. Available: https://doi.org/10.18653/v1/2024.naacl-long.118
+- [18] N. Li, Z. Han, I. Steneker, W. Primack, R. Goodside, H. Zhang, Z. Wang, C. Menghini, and S. Yue, 'LLM defenses are not robust to multi-turn human jailbreaks yet,' arXiv preprint arXiv:2408.15221 , 2024.
+- [19] J. Wei, M. Bosma, V. Y. Zhao, K. Guu, A. W. Yu, B. Lester, N. Du, A. M. Dai, and Q. V. Le, 'Finetuned language models are zero-shot learners,' in The Tenth International Conference on Learning Representations, ICLR 2022, Virtual Event, April 25-29, 2022 . OpenReview.net, 2022.
+- [20] R. Rafailov, A. Sharma, E. Mitchell, C. D. Manning, S. Ermon, and C. Finn, 'Direct preference optimization: Your language model is secretly a reward model,' in NeurIPS 2023 , 2023.
+- [21] OpenAI. (2025) Usage policies. Accessed: 2025-10-12. [Online]. Available: https://openai.com/policies/usage-policies
+- [22] J. Ji, M. Liu, J. Dai, X. Pan, C. Zhang, C. Bian, B. Chen, R. Sun, Y. Wang, and Y. Yang, 'Beavertails: Towards improved safety alignment of LLM via a human-preference dataset,' in NeurIPS 2023 , 2023.
+- [23] M. Nagireddy, B. G. Pegueroles, and I. Baldini, 'DARE to diversify: Data driven and diverse LLM red teaming,' in KDD 2024 . ACM, 2024, pp. 6420-6421.
+- [24] S. Ge, C. Zhou, R. Hou, M. Khabsa, Y. Wang, Q. Wang, J. Han, and Y. Mao, 'MART: improving LLM safety with multi-round automatic red-teaming,' in NAACL 2024 . Association for Computational Linguistics, 2024, pp. 1927-1937.
+- [25] B. Radharapu, K. Robinson, L. Aroyo, and P. Lahoti, 'AART: AIassisted red-teaming with diverse data generation for new LLMpowered applications,' in EMNLP 2023 - Industry Track . Association for Computational Linguistics, 2023, pp. 380-395.
+- [26] G. Guo, A. Aleti, N. Neelofar, and C. Tantithamthavorn, 'Mortar: Metamorphic multi-turn testing for LLM-based dialogue systems,' arXiv preprint arXiv:2412.15557 , 2024.
+- [27] G. Alon and M. Kamfonas, 'Detecting language model attacks with perplexity,' arXiv preprint arXiv:2308.14132 , 2023.
+- [28] X. Liu, N. Xu, M. Chen, and C. Xiao, 'Autodan: Generating stealthy jailbreak prompts on aligned large language models,' in ICLR 2024 . OpenReview.net, 2024.
+- [29] Z. Wei, Y. Wang, A. Li, Y. Mo, and Y. Wang, 'Jailbreak and guard aligned language models with only few in-context demonstrations,' arXiv preprint arXiv:2310.06387 , 2023.
+- [30] Z. Xiao, Y. Yang, G. Chen, and Y. Chen, 'Distract large language models for automatic jailbreak attack,' in EMNLP 2024 . Association for Computational Linguistics, 2024, pp. 16 230-16 244.
+- [31] A. Yang, B. Xiao, B. Wang, B. Zhang, C. Bian, C. Yin, C. Lv, D. Pan, D. Wang, D. Yan et al. , 'Baichuan 2: Open large-scale language models,' arXiv preprint arXiv:2309.10305 , 2023.
+- [32] X. Shen, Z. Chen, M. Backes, Y. Shen, and Y. Zhang, ''Do Anything Now': Characterizing and evaluating in-the-wild jailbreak prompts on large language models,' in CCS 2024 . ACM, 2024, pp. 1671-1685.
+- [33] A. Dubey, A. Jauhri, A. Pandey, A. Kadian, A. Al-Dahle, A. Letman, A. Mathur, A. Schelten, A. Yang, A. Fan et al. , 'The Llama 3 herd of models,' arXiv preprint arXiv:2407.21783 , 2024.
+- [34] A. Souly, Q. Lu, D. Bowen, T. Trinh, E. Hsieh, S. Pandey, P. Abbeel, J. Svegliato, S. Emmons, O. Watkins, and S. Toyer, 'A strongreject for empty jailbreaks,' in NeurIPS 2024 , A. Globersons, L. Mackey, D. Belgrave, A. Fan, U. Paquet, J. M. Tomczak, and C. Zhang, Eds., 2024.
+- [35] G. Team, 'Gemma: Open models based on gemini research and technology,' 2024. [Online]. Available: https://arxiv.org/abs/2403. 08295
+- [36] Y. Zeng, Y. Wu, X. Zhang, H. Wang, and Q. Wu, 'Autodefense: Multi-agent LLM defense against jailbreak attacks,' arXiv preprint arXiv:2403.04783 , 2024.
+- [37] P. Laban, H. Hayashi, Y. Zhou, and J. Neville, 'Llms get lost in multi-turn conversation,' arXiv preprint arXiv:2505.06120 , 2025.

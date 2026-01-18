@@ -1,0 +1,207 @@
+[
+  {
+    "title": "preamble",
+    "level": 1,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/01-preamble.md"
+  },
+  {
+    "title": "WORKING PAPER SERIES",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/02-WORKING PAPER SERIES.md"
+  },
+  {
+    "title": "FOMC In Silico: A Multi-Agent System for Monetary Policy Decision Modeling",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/03-FOMC In Silico- A Multi-Agent System for Monetary Policy Decision Modeling.md"
+  },
+  {
+    "title": "FOMC In Silico : A Multi-Agent System for Monetary Policy Decision Modeling",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/04-FOMC In Silico - A Multi-Agent System for Monetary Policy Decision Modeling.md"
+  },
+  {
+    "title": "Abstract",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/05-Abstract.md"
+  },
+  {
+    "title": "1 Introduction",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/06-1 Introduction.md"
+  },
+  {
+    "title": "2 Modeling FOMC Meetings: Background",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/07-2 Modeling FOMC Meetings- Background.md"
+  },
+  {
+    "title": "3 LLM Simulation Framework",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/08-3 LLM Simulation Framework.md"
+  },
+  {
+    "title": "Phase 1: Data Inputs",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/09-Phase 1- Data Inputs.md"
+  },
+  {
+    "title": "Phase 2: Individual Policy Formation",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/10-Phase 2- Individual Policy Formation.md"
+  },
+  {
+    "title": "Governors",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/11-Governors.md"
+  },
+  {
+    "title": "Chair",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/12-Chair.md"
+  },
+  {
+    "title": "3.1 Phase 3: Committee Deliberation and Voting",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/13-3.1 Phase 3- Committee Deliberation and Voting.md"
+  },
+  {
+    "title": "3.2 Implementation Framework",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/14-3.2 Implementation Framework.md"
+  },
+  {
+    "title": "3.3 Monte Carlo Simulation",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/15-3.3 Monte Carlo Simulation.md"
+  },
+  {
+    "title": "4 Results",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/16-4 Results.md"
+  },
+  {
+    "title": "4.1 Initial Beliefs",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/17-4.1 Initial Beliefs.md"
+  },
+  {
+    "title": "4.2 Baseline Scenario",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/18-4.2 Baseline Scenario.md"
+  },
+  {
+    "title": "4.3 Political Pressure Scenario",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/19-4.3 Political Pressure Scenario.md"
+  },
+  {
+    "title": "4.4 Data Revision Scenario",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/20-4.4 Data Revision Scenario.md"
+  },
+  {
+    "title": "Committee Initial Rate Beliefs (100 Iterations)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/21-Committee Initial Rate Beliefs (100 Iterations).md"
+  },
+  {
+    "title": "5 Conclusion",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/22-5 Conclusion.md"
+  },
+  {
+    "title": "References",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/23-References.md"
+  },
+  {
+    "title": "Prompts",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/24-Prompts.md"
+  },
+  {
+    "title": "Part 1: Individual Opinion Formation",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/25-Part 1- Individual Opinion Formation.md"
+  },
+  {
+    "title": "Main Opinion Generation Prompt",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/26-Main Opinion Generation Prompt.md"
+  },
+  {
+    "title": "5.1 Robustness Checks",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/27-5.1 Robustness Checks.md"
+  },
+  {
+    "title": "Panel B: Interpretation",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/28-Panel B- Interpretation.md"
+  },
+  {
+    "title": "Agent Profiles",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/29-Agent Profiles.md"
+  },
+  {
+    "title": "Jerome H. Powell - Chair of the Board of Governors (Term as Chair until 2026; Board Member through 2028)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/30-Jerome H. Powell - Chair of the Board of Governors (Term as Chair until 2026; Board Member through 2028).md"
+  },
+  {
+    "title": "Philip N. Jefferson - Vice Chair of the Board of Governors (Term until 2027; Board Member through 2036)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/31-Philip N. Jefferson - Vice Chair of the Board of Governors (Term until 2027; Board Member through 2036).md"
+  },
+  {
+    "title": "Michael S. Barr - Governor (Term through 2032; Former Vice Chair for Supervision until February 2025)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/32-Michael S. Barr - Governor (Term through 2032; Former Vice Chair for Supervision until February 2025).md"
+  },
+  {
+    "title": "Michelle W. Bowman - Governor and Vice Chair for Supervision (Term through 2034)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/33-Michelle W. Bowman - Governor and Vice Chair for Supervision (Term through 2034).md"
+  },
+  {
+    "title": "Lisa D. Cook - Governor (Term through 2038)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/34-Lisa D. Cook - Governor (Term through 2038).md"
+  },
+  {
+    "title": "Adriana D. Kugler - Governor (Term through 2026)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/35-Adriana D. Kugler - Governor (Term through 2026).md"
+  },
+  {
+    "title": "Christopher J. Waller - Governor (Term through 2030)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/36-Christopher J. Waller - Governor (Term through 2030).md"
+  },
+  {
+    "title": "John C. Williams - President, Federal Reserve Bank of New York (Term began 2018)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/37-John C. Williams - President, Federal Reserve Bank of New York (Term began 2018).md"
+  },
+  {
+    "title": "Susan M. Collins - President, Federal Reserve Bank of Boston (Term began 2022)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/38-Susan M. Collins - President, Federal Reserve Bank of Boston (Term began 2022).md"
+  },
+  {
+    "title": "Austan D. Goolsbee - President, Federal Reserve Bank of Chicago (Term began 2023)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/39-Austan D. Goolsbee - President, Federal Reserve Bank of Chicago (Term began 2023).md"
+  },
+  {
+    "title": "Alberto G. Musalem - President, Federal Reserve Bank of St. Louis (Term began 2024)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/40-Alberto G. Musalem - President, Federal Reserve Bank of St. Louis (Term began 2024).md"
+  },
+  {
+    "title": "Jeffrey R. Schmid - President, Federal Reserve Bank of Kansas City (Term began 2023)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www2_gwu_edu_2025_005/chunks/41-Jeffrey R. Schmid - President, Federal Reserve Bank of Kansas City (Term began 2023).md"
+  }
+]

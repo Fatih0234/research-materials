@@ -1,0 +1,3 @@
+## AUTHORS CONTRIBUTIONS
+
+So Kuroki co-led the project, ported OASIS, StockAgent, CognitiveBiases, EmotionBench and EmergentAnalogies, and conducted the corresponding experiments. Yingtao Tian ported EconAgent and CoMPosT, and conducted the corresponding experiments. Kou Misaki ported AuctionArena and PsychoBench, and conducted the corresponding experiments. Takashi Ikegami provided technical advice and directional suggestions. Takuya Akiba led the framework design, ported Sotopia, and conducted the corresponding experiments. Yujin Tang started and co-led the project, designed the experiments, and contributed significantly to the writing. All authors contributed to the framework design and paper writing.

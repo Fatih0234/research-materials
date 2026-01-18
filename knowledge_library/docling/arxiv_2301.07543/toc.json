@@ -1,0 +1,77 @@
+[
+  {
+    "title": "Large Language Models as Simulated Economic Agents: What Can We Learn from Homo Silicus ? \u2217",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2301.07543/chunks/01-Large Language Models as Simulated Economic Agents- What Can We Learn from Homo Silicus - \u2217.md"
+  },
+  {
+    "title": "Abstract",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2301.07543/chunks/02-Abstract.md"
+  },
+  {
+    "title": "1 Introduction",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2301.07543/chunks/03-1 Introduction.md"
+  },
+  {
+    "title": "2 Background and conceptual issues",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2301.07543/chunks/04-2 Background and conceptual issues.md"
+  },
+  {
+    "title": "2.1 The 'Garbage in, Garbage out' critique",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2301.07543/chunks/05-2.1 The 'Garbage in, Garbage out' critique.md"
+  },
+  {
+    "title": "2.2 Are these just simulations?",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2301.07543/chunks/06-2.2 Are these just simulations-.md"
+  },
+  {
+    "title": "2.3 The 'performativity' problem",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2301.07543/chunks/07-2.3 The 'performativity' problem.md"
+  },
+  {
+    "title": "2.4 What counts as an 'observation' and the need to endow beliefs",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2301.07543/chunks/08-2.4 What counts as an 'observation' and the need to endow beliefs.md"
+  },
+  {
+    "title": "3 Experiments",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2301.07543/chunks/09-3 Experiments.md"
+  },
+  {
+    "title": "3.1 A social preferences experiment: Charness and Rabin (2002)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2301.07543/chunks/10-3.1 A social preferences experiment- Charness and Rabin (2002).md"
+  },
+  {
+    "title": "3.2 Fairness as a constraint on profit-seeking: Kahneman et al. (1986)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2301.07543/chunks/11-3.2 Fairness as a constraint on profit-seeking- Kahneman et al. (1986).md"
+  },
+  {
+    "title": "3.3 Status Quo bias in decision-making: Samuelson and Zeckhauser (1988)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2301.07543/chunks/12-3.3 Status Quo bias in decision-making- Samuelson and Zeckhauser (1988).md"
+  },
+  {
+    "title": "3.4 Labor-labor substitution in the presence of a minimum wage: Horton (2023)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2301.07543/chunks/13-3.4 Labor-labor substitution in the presence of a minimum wage- Horton (2023).md"
+  },
+  {
+    "title": "4 Conclusion",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2301.07543/chunks/14-4 Conclusion.md"
+  },
+  {
+    "title": "References",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2301.07543/chunks/15-References.md"
+  }
+]

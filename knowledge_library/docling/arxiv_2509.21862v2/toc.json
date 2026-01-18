@@ -1,0 +1,232 @@
+[
+  {
+    "title": "REIMAGINING AGENT-BASED MODELING WITH LARGE LANGUAGE MODEL AGENTS VIA SHACHI",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/01-REIMAGINING AGENT-BASED MODELING WITH LARGE LANGUAGE MODEL AGENTS VIA SHACHI.md"
+  },
+  {
+    "title": "ABSTRACT",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/02-ABSTRACT.md"
+  },
+  {
+    "title": "1 INTRODUCTION",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/03-1 INTRODUCTION.md"
+  },
+  {
+    "title": "2 RELATED WORKS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/04-2 RELATED WORKS.md"
+  },
+  {
+    "title": "3 SHACHI: A METHODOLOGY FOR MODULAR AGENT-BASED MODELING",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/05-3 SHACHI- A METHODOLOGY FOR MODULAR AGENT-BASED MODELING.md"
+  },
+  {
+    "title": "3.1 DECOUPLING AGENT FROM ENVIRONMENT",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/06-3.1 DECOUPLING AGENT FROM ENVIRONMENT.md"
+  },
+  {
+    "title": "3.2 COMPOSING THE COGNITIVE ARCHITECTURE",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/07-3.2 COMPOSING THE COGNITIVE ARCHITECTURE.md"
+  },
+  {
+    "title": "3.3 ANALYZING SYSTEMATICALLY ACROSS SOCIAL COMPLEXITY",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/08-3.3 ANALYZING SYSTEMATICALLY ACROSS SOCIAL COMPLEXITY.md"
+  },
+  {
+    "title": "4 EXPERIMENTS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/09-4 EXPERIMENTS.md"
+  },
+  {
+    "title": "4.1 FOUNDATIONAL VALIDATION",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/10-4.1 FOUNDATIONAL VALIDATION.md"
+  },
+  {
+    "title": "4.2 SCIENTIFIC INQUIRIES",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/11-4.2 SCIENTIFIC INQUIRIES.md"
+  },
+  {
+    "title": "4.2.1 CARRYING MEMORY TO THE NEXT LIFE",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/12-4.2.1 CARRYING MEMORY TO THE NEXT LIFE.md"
+  },
+  {
+    "title": "4.2.2 LIVING IN MULTIPLE WORLDS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/13-4.2.2 LIVING IN MULTIPLE WORLDS.md"
+  },
+  {
+    "title": "Text box 1: Extracted behaviors in OASIS when agents live in both StockAgent and OASIS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/14-Text box 1- Extracted behaviors in OASIS when agents live in both StockAgent and OASIS.md"
+  },
+  {
+    "title": "4.2.3 ESTABLISHING EXTERNAL VALIDITY: SIMULATING A U.S. TARIFF SHOCK",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/15-4.2.3 ESTABLISHING EXTERNAL VALIDITY- SIMULATING A U.S. TARIFF SHOCK.md"
+  },
+  {
+    "title": "5 CONCLUSION",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/16-5 CONCLUSION.md"
+  },
+  {
+    "title": "ACKNOWLEDGEMENTS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/17-ACKNOWLEDGEMENTS.md"
+  },
+  {
+    "title": "AUTHORS CONTRIBUTIONS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/18-AUTHORS CONTRIBUTIONS.md"
+  },
+  {
+    "title": "REFERENCES",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/19-REFERENCES.md"
+  },
+  {
+    "title": "A TASKS IN SHACHI",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/20-A TASKS IN SHACHI.md"
+  },
+  {
+    "title": "B DETAILED TASK IMPLEMENTATION",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/21-B DETAILED TASK IMPLEMENTATION.md"
+  },
+  {
+    "title": "B.1 PSYCHOBENCH (LEVEL I)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/22-B.1 PSYCHOBENCH (LEVEL I).md"
+  },
+  {
+    "title": "B.2 COMPOST (LEVEL I)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/23-B.2 COMPOST (LEVEL I).md"
+  },
+  {
+    "title": "B.3 COGNITIVEBIASES (LEVEL I)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/24-B.3 COGNITIVEBIASES (LEVEL I).md"
+  },
+  {
+    "title": "B.4 EMOTIONBENCH (LEVEL I)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/25-B.4 EMOTIONBENCH (LEVEL I).md"
+  },
+  {
+    "title": "B.5 EMERGENTANALOGIES (LEVEL I)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/26-B.5 EMERGENTANALOGIES (LEVEL I).md"
+  },
+  {
+    "title": "B.6 ECONAGENT (LEVEL II)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/27-B.6 ECONAGENT (LEVEL II).md"
+  },
+  {
+    "title": "B.7 STOCKAGENT (LEVEL II)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/28-B.7 STOCKAGENT (LEVEL II).md"
+  },
+  {
+    "title": "B.8 AUCTIONARENA (LEVEL II)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/29-B.8 AUCTIONARENA (LEVEL II).md"
+  },
+  {
+    "title": "B.9 SOTOPIA (LEVEL III)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/30-B.9 SOTOPIA (LEVEL III).md"
+  },
+  {
+    "title": "B.10 OASIS (LEVEL III)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/31-B.10 OASIS (LEVEL III).md"
+  },
+  {
+    "title": "C EXTRA SETUPS AND RESULTS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/32-C EXTRA SETUPS AND RESULTS.md"
+  },
+  {
+    "title": "C.1 IMPACT OF BACKEND LLMS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/33-C.1 IMPACT OF BACKEND LLMS.md"
+  },
+  {
+    "title": "C.2 DETAILED RESULTS FROM REPRODUCING PRIOR WORKS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/34-C.2 DETAILED RESULTS FROM REPRODUCING PRIOR WORKS.md"
+  },
+  {
+    "title": "C.3 DETAILED RESULTS FROM GENERALIZATION",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/35-C.3 DETAILED RESULTS FROM GENERALIZATION.md"
+  },
+  {
+    "title": "C.4 DETAILED SETTINGS FROM REAL-WORLD VALIDATION (U.S. TARIFF SHOCK)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/36-C.4 DETAILED SETTINGS FROM REAL-WORLD VALIDATION (U.S. TARIFF SHOCK).md"
+  },
+  {
+    "title": "Text box 2: Paper summary by gpt-4o",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/37-Text box 2- Paper summary by gpt-4o.md"
+  },
+  {
+    "title": "Text box 3: Prompt used to find the stocks matching Stocks A and B",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/38-Text box 3- Prompt used to find the stocks matching Stocks A and B.md"
+  },
+  {
+    "title": "D CODE EXAMPLES",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/39-D CODE EXAMPLES.md"
+  },
+  {
+    "title": "D.1 GYM-STYLE INTERFACE",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/40-D.1 GYM-STYLE INTERFACE.md"
+  },
+  {
+    "title": "D.2 TOOL USAGE",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/41-D.2 TOOL USAGE.md"
+  },
+  {
+    "title": "D.3 INTER-AGENT INTERACTION DESIGN",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/42-D.3 INTER-AGENT INTERACTION DESIGN.md"
+  },
+  {
+    "title": "D.4 TWO-STAGE PARSING",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/43-D.4 TWO-STAGE PARSING.md"
+  },
+  {
+    "title": "E MORE RELATED WORKS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/44-E MORE RELATED WORKS.md"
+  },
+  {
+    "title": "E.1 ABM WITHOUT LLMS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/45-E.1 ABM WITHOUT LLMS.md"
+  },
+  {
+    "title": "E.2 ABM WITH LLMS",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2509.21862v2/chunks/46-E.2 ABM WITH LLMS.md"
+  }
+]

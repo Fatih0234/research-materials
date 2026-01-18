@@ -1,0 +1,192 @@
+[
+  {
+    "title": "JSONSchemaBench: A Rigorous Benchmark of Structured Outputs for Language Models",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/01-JSONSchemaBench- A Rigorous Benchmark of Structured Outputs for Language Models.md"
+  },
+  {
+    "title": "Abstract",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/02-Abstract.md"
+  },
+  {
+    "title": "1 Introduction",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/03-1 Introduction.md"
+  },
+  {
+    "title": "2 Background and Related Work",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/04-2 Background and Related Work.md"
+  },
+  {
+    "title": "Algorithm 1 Constrained Decoding",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/05-Algorithm 1 Constrained Decoding.md"
+  },
+  {
+    "title": "3 The JSONSchemaBench",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/06-3 The JSONSchemaBench.md"
+  },
+  {
+    "title": "3.1 Data Collection",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/07-3.1 Data Collection.md"
+  },
+  {
+    "title": "4 Efficiency",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/08-4 Efficiency.md"
+  },
+  {
+    "title": "4.1 Setup",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/09-4.1 Setup.md"
+  },
+  {
+    "title": "5 Coverage",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/10-5 Coverage.md"
+  },
+  {
+    "title": "5.1 Setup",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/11-5.1 Setup.md"
+  },
+  {
+    "title": "5.2 Results",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/12-5.2 Results.md"
+  },
+  {
+    "title": "5.3 JSON Schema Test Suite: Complementary Evaluation",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/13-5.3 JSON Schema Test Suite- Complementary Evaluation.md"
+  },
+  {
+    "title": "5.3.1 Results",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/14-5.3.1 Results.md"
+  },
+  {
+    "title": "6 Quality",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/15-6 Quality.md"
+  },
+  {
+    "title": "6.1 Setup",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/16-6.1 Setup.md"
+  },
+  {
+    "title": "6.2 Results",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/17-6.2 Results.md"
+  },
+  {
+    "title": "7 Conclusion",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/18-7 Conclusion.md"
+  },
+  {
+    "title": "References",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/19-References.md"
+  },
+  {
+    "title": "A JSON Schema Collections Details",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/20-A JSON Schema Collections Details.md"
+  },
+  {
+    "title": "Sources:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/21-Sources-.md"
+  },
+  {
+    "title": "A.1 Data Processing",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/22-A.1 Data Processing.md"
+  },
+  {
+    "title": "1. Validation",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/23-1. Validation.md"
+  },
+  {
+    "title": "2. Cleaning",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/24-2. Cleaning.md"
+  },
+  {
+    "title": "A.2 Draft versions",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/25-A.2 Draft versions.md"
+  },
+  {
+    "title": "A.3 Feature Distribution",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/26-A.3 Feature Distribution.md"
+  },
+  {
+    "title": "B Coverage Experiment Details",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/27-B Coverage Experiment Details.md"
+  },
+  {
+    "title": "C Theoretical Coverage Details",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/28-C Theoretical Coverage Details.md"
+  },
+  {
+    "title": "D JSON Schema Test Suite Experiment Details",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/29-D JSON Schema Test Suite Experiment Details.md"
+  },
+  {
+    "title": "0.00 0.50 1.00** 1.00**",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/30-0.00 0.50 1.00-- 1.00--.md"
+  },
+  {
+    "title": "E Efficiency Experiment Details",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/31-E Efficiency Experiment Details.md"
+  },
+  {
+    "title": "F Quality Experiment Details",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/32-F Quality Experiment Details.md"
+  },
+  {
+    "title": "Prompt Template for GSM8K",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/33-Prompt Template for GSM8K.md"
+  },
+  {
+    "title": "System Message:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/34-System Message-.md"
+  },
+  {
+    "title": "Demo Examples:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/35-Demo Examples-.md"
+  },
+  {
+    "title": "Input: \"[example question]\" ## Output: \"reasoning\": \"[example reasoning]\", \"answer\": [example answer] ...",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/36-Input- -[example question]- ## Output- -reasoning-- -[example reasoning]-, -answer-- [example answer] ....md"
+  },
+  {
+    "title": "G Engine calling Snippet",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/37-G Engine calling Snippet.md"
+  },
+  {
+    "title": "import xgrammar",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.10868v3/chunks/38-import xgrammar.md"
+  }
+]

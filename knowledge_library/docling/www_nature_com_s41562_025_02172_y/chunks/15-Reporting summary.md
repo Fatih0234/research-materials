@@ -1,0 +1,3 @@
+## Reporting summary
+
+Further information on research design is available in the Nature Portfolio Reporting Summary linked to this article.

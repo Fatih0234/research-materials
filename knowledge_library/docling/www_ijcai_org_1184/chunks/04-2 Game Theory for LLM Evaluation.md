@@ -1,0 +1,3 @@
+## 2 Game Theory for LLM Evaluation
+
+In this section, we explore the integration of LLMs within the context of game theory, focusing on their evaluation as game players. Behavioral evaluations reveal that LLMs face challenges in identifying optimal actions in classic matrix games, yet they can demonstrate human-like strategies in more complex game scenarios. Several studies have explored methods to enhance LLMs' performance as game players, and two significant points can be identified from that: recursive thinking and auxiliary modules. Finally, we also discuss the role of LLMs in games beyond their function as players.

@@ -1,0 +1,3 @@
+## Competing interests
+
+The authors declare no competing interests.

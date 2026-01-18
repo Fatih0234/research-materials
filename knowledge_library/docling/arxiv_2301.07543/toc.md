@@ -1,0 +1,17 @@
+# Table of Contents
+
+  - [Large Language Models as Simulated Economic Agents: What Can We Learn from Homo Silicus ? ∗](knowledge_library/docling/arxiv_2301.07543/chunks/01-Large Language Models as Simulated Economic Agents- What Can We Learn from Homo Silicus - ∗.md)
+  - [Abstract](knowledge_library/docling/arxiv_2301.07543/chunks/02-Abstract.md)
+  - [1 Introduction](knowledge_library/docling/arxiv_2301.07543/chunks/03-1 Introduction.md)
+  - [2 Background and conceptual issues](knowledge_library/docling/arxiv_2301.07543/chunks/04-2 Background and conceptual issues.md)
+  - [2.1 The 'Garbage in, Garbage out' critique](knowledge_library/docling/arxiv_2301.07543/chunks/05-2.1 The 'Garbage in, Garbage out' critique.md)
+  - [2.2 Are these just simulations?](knowledge_library/docling/arxiv_2301.07543/chunks/06-2.2 Are these just simulations-.md)
+  - [2.3 The 'performativity' problem](knowledge_library/docling/arxiv_2301.07543/chunks/07-2.3 The 'performativity' problem.md)
+  - [2.4 What counts as an 'observation' and the need to endow beliefs](knowledge_library/docling/arxiv_2301.07543/chunks/08-2.4 What counts as an 'observation' and the need to endow beliefs.md)
+  - [3 Experiments](knowledge_library/docling/arxiv_2301.07543/chunks/09-3 Experiments.md)
+  - [3.1 A social preferences experiment: Charness and Rabin (2002)](knowledge_library/docling/arxiv_2301.07543/chunks/10-3.1 A social preferences experiment- Charness and Rabin (2002).md)
+  - [3.2 Fairness as a constraint on profit-seeking: Kahneman et al. (1986)](knowledge_library/docling/arxiv_2301.07543/chunks/11-3.2 Fairness as a constraint on profit-seeking- Kahneman et al. (1986).md)
+  - [3.3 Status Quo bias in decision-making: Samuelson and Zeckhauser (1988)](knowledge_library/docling/arxiv_2301.07543/chunks/12-3.3 Status Quo bias in decision-making- Samuelson and Zeckhauser (1988).md)
+  - [3.4 Labor-labor substitution in the presence of a minimum wage: Horton (2023)](knowledge_library/docling/arxiv_2301.07543/chunks/13-3.4 Labor-labor substitution in the presence of a minimum wage- Horton (2023).md)
+  - [4 Conclusion](knowledge_library/docling/arxiv_2301.07543/chunks/14-4 Conclusion.md)
+  - [References](knowledge_library/docling/arxiv_2301.07543/chunks/15-References.md)

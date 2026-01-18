@@ -1,0 +1,83 @@
+## References
+
+- [Akata et al. , 2023] Elif Akata, Lion Schulz, et al. Playing repeated games with large language models. arXiv preprint , 2023.
+- [Alamdari et al. , 2024] Parand A Alamdari, Soroush Ebadian, and Ariel D Procaccia. Policy aggregation. arXiv preprint , 2024.
+- [Chakraborty et al. , 2024a] Souradip Chakraborty, Amrit Bedi, et al. Parl: A unified framework for policy alignment in reinforcement learning from human feedback. In ICLR , 2024.
+- [Chakraborty et al. , 2024b] Souradip Chakraborty, Jiahao Qiu, et al. Maxmin-rlhf: Towards equitable alignment of large language models with diverse human preferences. In ICML , 2024.
+- [Chen et al. , 2023] Jiangjie Chen, Siyu Yuan, et al. Put your money where your mouth is: Evaluating strategic planning and execution of llm agents in an auction arena. arXiv preprint , 2023.
+- [Chen et al. , 2024a] Daiwei Chen, Yi Chen, Aniket Rege, and Ramya Korlakai Vinayak. Pal: Pluralistic alignment framework for learning from heterogeneous preferences. arXiv preprint , 2024.
+- [Chen et al. , 2024b] Zixiang Chen, Yihe Deng, et al. Self-play finetuning converts weak language models to strong language models. In ICML , 2024.
+- [Chen et al. , 2025] Sijin Chen, Omar Hagrass, and Jason M Klusowski. Decoding game: On minimax optimality of heuristic text generation strategies. In ICLR , 2025.
+- [Cheng et al. , 2024a] Pengyu Cheng, Tianhao Hu, et al. Self-playing adversarial language game enhances llm reasoning. In NeurIPS , 2024.
+- [Cheng et al. , 2024b] Pengyu Cheng, Yifan Yang, et al. Adversarial preference optimization: Enhancing your alignment via rm-llm game. In ACL 2024 Findings , 2024.
+- [Conitzer et al. , 2024] Vincent Conitzer, Rachel Freedman, et al. Position: Social choice should guide ai alignment in dealing with diverse human feedback. In ICML , 2024.
+- [Deng et al. , 2024] Yuan Deng, Vahab Mirrokni, et al. Llms at the bargaining table. In ICML Workshop , volume 2024, 2024.
+- [Deng et al. , 2025] Shilong Deng, Yongzhao Wang, and Rahul Savani. From natural language to extensive-form game representations. arXiv preprint , 2025.
+- [Du and Zhang, 2024] Silin Du and Xiaowei Zhang. Helmsman of the masses? evaluate the opinion leadership of large language models in the werewolf game. arXiv preprint , 2024.
+- [Duan et al. , 2024a] Jinhao Duan, Shiqi Wang, et al. Reta: Recursively thinking ahead to improve the strategic reasoning of large language models. In NAACL , 2024.
+- [Duan et al. , 2024b] Jinhao Duan, Renming Zhang, et al. Gtbench: Uncovering the strategic reasoning limitations of llms via gametheoretic evaluations. In NeurIPS , 2024.
+- [Dubey et al. , 2024] Avinava Dubey, Zhe Feng, et al. Auctions with llm summaries. In KDD , 2024.
+- [Duetting et al. , 2024] Paul Duetting, Vahab Mirrokni, et al. Mechanism design for large language models. In WWW , 2024.
+- [Enouen et al. , 2024] James Enouen, Hootan Nakhost, et al. Textgenshap: Scalable post-hoc explanations in text generation with long documents. In ACL Findings , 2024.
+- [Esmaeili et al. , 2024] Seyed A Esmaeili, Kshipra Bhawalkar, et al. How to strategize human content creation in the era of genai? arXiv preprint , 2024.
+- [Fan et al. , 2024] Caoyun Fan, Jindou Chen, Yaohui Jin, and Hao He. Can large language models serve as rational players in game theory? a systematic analysis. In AAAI , 2024.
+- [Feizi et al. , 2023] Soheil Feizi, MohammadTaghi Hajiaghayi, Keivan Rezaei, and Suho Shin. Online advertisements with llms: Opportunities and challenges. arXiv preprint , 2023.
+- [Feng et al. , 2024] Xiachong Feng, Longxu Dou, et al. A survey on large language model-based social agents in game-theoretic scenarios. arXiv preprint , 2024.
+- [Fish et al. , 2024a] Sara Fish, Paul G¨ olz, et al. Generative social choice. In EC , 2024.
+- [Fish et al. , 2024b] Sara Fish, Yannai A Gonczarowski, and Ran I Shorrer. Algorithmic collusion by large language models. arXiv preprint , 2024.
+- [Fleisig et al. , 2023] Eve Fleisig, Rediet Abebe, and Dan Klein. When the majority is wrong: Modeling annotator disagreement for subjective tasks. In EMNLP , 2023.
+- [Gandhi et al. , 2023] Kanishk Gandhi, Dorsa Sadigh, and Noah D Goodman. Strategic reasoning with language models. In NeurIPS , 2023.
+- [Ge et al. , 2024] Luise Ge, Daniel Halpern, et al. Axioms for ai alignment from human feedback. In NeurIPS , 2024.
+- [Gemp et al. , 2024] Ian Gemp, Yoram Bachrach, et al. States as strings as strategies: Steering language models with gametheoretic solvers. arXiv preprint , 2024.
+- [Goldshmidt and Horovicz, 2024] Roni Goldshmidt and Miriam Horovicz. Tokenshap: Interpreting large language models with monte carlo shapley value estimation. In ACL Workshop NLP4Science , 2024.
+- [Goodfellow et al. , 2020] Ian Goodfellow, Jean Pouget-Abadie, et al. Generative adversarial networks. Communications of the ACM , 2020.
+- [Guo et al. , 2024] Shangmin Guo, Haoran Bu, et al. Economics arena for large language models. arXiv preprint , 2024.
+- [Hajiaghayi et al. , 2024] MohammadTaghi Hajiaghayi, S´ ebastien Lahaie, et al. Ad auctions for llms via retrieval augmented generation. In NeurIPS , 2024.
+- [Herr et al. , 2024] Nathan Herr, Fernando Acero, et al. Are large language models strategic decision makers? a study of performance and bias in two-player non-zero-sum games. arXiv preprint , 2024.
+- [Horton, 2023] John J Horton. Large language models as simulated economic agents: What can we learn from homo silicus? Technical report, National Bureau of Economic Research, 2023.
+- [Hu et al. , 2024] Sihao Hu, Tiansheng Huang, et al. A survey on large language model-based game agents. arXiv preprint , 2024.
+- [Hua et al. , 2024] Wenyue Hua, Ollie Liu, et al. Game-theoretic llm: Agent workflow for negotiation games. arXiv preprint , 2024.
+- [Huang et al. , 2024] Jen-tse Huang, Eric John Li, et al. How far are we on the decision-making of llms? evaluating llms' gaming ability in multi-agent environments. arXiv preprint , 2024.
+- [Jacob et al. , 2023] Athul Paul Jacob, Yikang Shen, et al. The consensus game: Language model generation via equilibrium search. In ICLR , 2023.
+
+- [Klingefjord et al. , 2024] Oliver Klingefjord, Ryan Lowe, and Joe Edelman. What are human values, and how do we align ai to them? arXiv preprint , 2024.
+- [Lan et al. , 2024] Yihuai Lan, Zhiqiang Hu, et al. Llm-based agent society investigation: Collaboration and confrontation in avalon gameplay. In EMNLP , 2024.
+- [Laufer et al. , 2024] Benjamin Laufer, Jon Kleinberg, and Hoda Heidari. Fine-tuning games: Bargaining and adaptation for generalpurpose models. In WWW , 2024.
+- [Liu et al. , 2023] Hanxi Liu, Xiaokai Mao, et al. Prompt valuation based on shapley values. arXiv preprint , 2023.
+- [Lor` e and Heydari, 2024] Nunzio Lor` e and Babak Heydari. Strategic behavior of large language models and the role of game structure versus contextual framing. Scientific Reports , 2024.
+- [Lu et al. , 2024] Yuxuan Lu, Shengwei Xu, et al. Eliciting informative text evaluations with large language models. In EC , 2024.
+- [Mahmood, 2024] Rafid Mahmood. Pricing and competition for generative ai. In NeurIPS , 2024.
+- [Makar-Limanov et al. , 2024] Jacob Makar-Limanov, Arjun Prakash, et al. Sta-rlhf: Stackelberg aligned reinforcement learning with human feedback. In CoCoMARL , 2024.
+- [Mensfelt et al. , 2024] Agnieszka Mensfelt, Kostas Stathis, and Vince Trencsenyi. Autoformalizing and simulating game-theoretic scenarios using llm-augmented agents. arXiv preprint , 2024.
+- [Mishra, 2023] Abhilash Mishra. Ai alignment and social choice: Fundamental limitations and policy implications. arXiv preprint , 2023.
+- [Mohammadi, 2024] Behnam Mohammadi. Wait, it's all token noise? always has been: interpreting llm behavior using shapley value. Available at SSRN 4759713 , 2024.
+- [Munos et al. , 2024] Remi Munos, Michal Valko, et al. Nash learning from human feedback. In ICML , 2024.
+- [Nash Jr, 1950] John F Nash Jr. Equilibrium points in n-person games. Proceedings of the national academy of sciences , 1950.
+- [Park et al. , 2024] Chanwoo Park, Mingyang Liu, et al. Rlhf from heterogeneous feedback via personalization and preference aggregation. In ICML Workshop , 2024.
+- [Park et al. , 2025] Chanwoo Park, Xiangyu Liu, et al. Do llm agents have regret? a case study in online learning and games. In ICLR , 2025.
+- [Qiu, 2024] Tianyi Qiu. Representative social choice: From learning theory to ai alignment. NeurIPS 2024 Workshop , 2024.
+- [Rosset et al. , 2024] Corby Rosset, Ching-An Cheng, et al. Direct nash optimization: Teaching language models to self-improve with general preferences. arXiv preprint , 2024.
+- [Saig et al. , 2024] Eden Saig, Ohad Einav, and Inbal Talgam-Cohen. Incentivizing quality text generation via statistical contracts. In NeurIPS , 2024.
+- [Shapira et al. , 2024] Eilam Shapira, Omer Madmon, et al. Glee: A unified framework and benchmark for language-based economic environments. arXiv preprint , 2024.
+- [Shapley, 1953] Lloyd S Shapley. A value for n-person games. Contribution to the Theory of Games , 2, 1953.
+- [Soumalias et al. , 2024] Ermis Soumalias, Michael J Curry, and Sven Seuken. Truthful aggregation of llms with an application to online advertising. arXiv preprint , 2024.
+- [Sun et al. , 2024a] Haoran Sun, Yurong Chen, et al. Mechanism design for llm fine-tuning with multiple reward models. NeurIPS 2024 Workshop , 2024.
+- [Sun et al. , 2024b] Jie Sun, Tianyu Zhang, et al. Large language models empower personalized valuation in auction. arXiv preprint , 2024.
+- [Swamy et al. , 2024] Gokul Swamy, Christoph Dann, et al. A minimaximalist approach to reinforcement learning from human feedback. In ICML , 2024.
+- [Taitler and Ben-Porat, 2024] Boaz Taitler and Omer Ben-Porat. Braess's paradox of generative ai. arXiv preprint , 2024.
+- [Vickrey, 1961] William Vickrey. Counterspeculation, auctions, and competitive sealed tenders. The Journal of finance , 1961.
+- [Von Neumann and Morgenstern, 2007] John Von Neumann and Oskar Morgenstern. Theory of games and economic behavior: 60th anniversary commemorative edition. In Theory of games and economic behavior . Princeton university press, 2007.
+- [Wang et al. , 2023] Shenzhi Wang, Chang Liu, et al. Avalon's game of thoughts: Battle against deception through recursive contemplation. arXiv preprint , 2023.
+- [Wang et al. , 2024] Haochuan Wang, Xiachong Feng, et al. Tmgbench: A systematic game benchmark for evaluating strategic reasoning abilities of llms. arXiv preprint , 2024.
+- [Wu et al. , 2025] Yue Wu, Zhiqing Sun, et al. Self-play preference optimization for language model alignment. In ICLR , 2025.
+- [Xia et al. , 2024] Tian Xia, Zhiwei He, et al. Measuring bargaining abilities of llms: A benchmark and a buyer-enhancement method. In ACL Findings , 2024.
+- [Xu et al. , 2023] Yuzhuang Xu, Shuo Wang, et al. Exploring large language models for communication games: An empirical study on werewolf. arXiv preprint , 2023.
+- [Yao et al. , 2024] Fan Yao, Chuanhao Li, et al. Human vs. generative ai in content creation competition: Symbiosis or conflict? In ICML , 2024.
+- [Zhang and Duan, 2024] Guoxi Zhang and Jiuding Duan. Vickreyfeedback: Cost-efficient data construction for reinforcement learning from human feedback. In PRIMA . Springer, 2024.
+- [Zhang et al. , 2024a] Yadong Zhang, Shaoguang Mao, et al. K-level reasoning with large language models. arXiv preprint , 2024.
+- [Zhang et al. , 2024b] Yadong Zhang, Shaoguang Mao, et al. Llm as a mastermind: A survey of strategic reasoning with large language models. In COLM , 2024.
+- [Zhang et al. , 2024c] Yang Zhang, Yanfei Dong, and Kenji Kawaguchi. Investigating layer importance in large language models. In ACL Workshop BlackboxNLP , 2024.
+- [Zhang et al. , 2024d] Yuheng Zhang, Dian Yu, et al. Iterative nash policy optimization: Aligning llms with general preferences via no-regret learning. arXiv preprint , 2024.
+- [Zhang et al. , 2024e] Zhaowei Zhang, Fengshuo Bai, et al. Incentive compatibility for ai alignment in sociotechnical systems: Positions and prospects. arXiv preprint , 2024.
+- [Zheng et al. , 2024] Rui Zheng, Hongyi Guo, et al. Toward optimal llm alignments using two-player games. arXiv preprint , 2024.
+- [Zhi-Xuan et al. , 2024] Tan Zhi-Xuan, Micah Carroll, Matija Franklin, and Hal Ashton. Beyond preferences in ai alignment. Philosophical Studies , 2024.

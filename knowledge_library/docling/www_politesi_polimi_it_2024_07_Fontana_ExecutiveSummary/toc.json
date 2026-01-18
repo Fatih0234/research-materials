@@ -1,0 +1,87 @@
+[
+  {
+    "title": "preamble",
+    "level": 1,
+    "chunk_path": "knowledge_library/docling/www_politesi_polimi_it_2024_07_Fontana_ExecutiveSummary/chunks/01-preamble.md"
+  },
+  {
+    "title": "1. Introduction",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_politesi_polimi_it_2024_07_Fontana_ExecutiveSummary/chunks/02-1. Introduction.md"
+  },
+  {
+    "title": "2. Background",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_politesi_polimi_it_2024_07_Fontana_ExecutiveSummary/chunks/03-2. Background.md"
+  },
+  {
+    "title": "2.1. The Iterated Prisoner's Dilemma",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_politesi_polimi_it_2024_07_Fontana_ExecutiveSummary/chunks/04-2.1. The Iterated Prisoner's Dilemma.md"
+  },
+  {
+    "title": "2.1.1 Main strategies",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_politesi_polimi_it_2024_07_Fontana_ExecutiveSummary/chunks/05-2.1.1 Main strategies.md"
+  },
+  {
+    "title": "2.1.2 Behavioral characterization",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_politesi_polimi_it_2024_07_Fontana_ExecutiveSummary/chunks/06-2.1.2 Behavioral characterization.md"
+  },
+  {
+    "title": "2.2. Large Language Models",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_politesi_polimi_it_2024_07_Fontana_ExecutiveSummary/chunks/07-2.2. Large Language Models.md"
+  },
+  {
+    "title": "3. Proposed Solution and Implementation",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_politesi_polimi_it_2024_07_Fontana_ExecutiveSummary/chunks/08-3. Proposed Solution and Implementation.md"
+  },
+  {
+    "title": "3.1. LLMs and game setup",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_politesi_polimi_it_2024_07_Fontana_ExecutiveSummary/chunks/09-3.1. LLMs and game setup.md"
+  },
+  {
+    "title": "3.2. Meta-prompting",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_politesi_polimi_it_2024_07_Fontana_ExecutiveSummary/chunks/10-3.2. Meta-prompting.md"
+  },
+  {
+    "title": "3.3. Behaviors",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_politesi_polimi_it_2024_07_Fontana_ExecutiveSummary/chunks/11-3.3. Behaviors.md"
+  },
+  {
+    "title": "4. Experimental Results",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_politesi_polimi_it_2024_07_Fontana_ExecutiveSummary/chunks/12-4. Experimental Results.md"
+  },
+  {
+    "title": "4.1. SFEM analysis",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_politesi_polimi_it_2024_07_Fontana_ExecutiveSummary/chunks/13-4.1. SFEM analysis.md"
+  },
+  {
+    "title": "4.2. Behavioral profiling",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_politesi_polimi_it_2024_07_Fontana_ExecutiveSummary/chunks/14-4.2. Behavioral profiling.md"
+  },
+  {
+    "title": "5. Conclusions",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_politesi_polimi_it_2024_07_Fontana_ExecutiveSummary/chunks/15-5. Conclusions.md"
+  },
+  {
+    "title": "6. Acknowledgments",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_politesi_polimi_it_2024_07_Fontana_ExecutiveSummary/chunks/16-6. Acknowledgments.md"
+  },
+  {
+    "title": "References",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_politesi_polimi_it_2024_07_Fontana_ExecutiveSummary/chunks/17-References.md"
+  }
+]

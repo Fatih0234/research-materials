@@ -1,0 +1,3 @@
+## Acknowledgements
+
+This work was a community-driven project led by the CAMEL-AI.org, with funding support from Eigent.AI and King Abdullah University of Science and Technology (KAUST) - Center of Excellence for Generative AI, under award number 5940. We would like to acknowledge the invaluable contributions and participation of researchers from KAUST, Eigent.AI, Illinois Institute of Technology, University of Oxford, The Pennsylvania State University, The University of Chicago, Emory, California Institute of Technology, University of Michigan. Philip H.S. Torr, Adel Bibi and Jindong Gu are supported by the UKRI grant: Turing AI Fellowship EP/W002981/1, and EPSRC/MURI grant: EP/N019474/1, they would also like to thank the Royal Academy of Engineering.

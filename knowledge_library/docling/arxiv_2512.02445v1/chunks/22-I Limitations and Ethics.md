@@ -1,0 +1,11 @@
+## I Limitations and Ethics
+
+Limitations. Due to limited budget, we evaluated a limited set of models (excluding the Claude family). The evaluation setup requires multi-turn tool calls, and combined with long context and multiple random seeds, this results in large token consumption per sample. We focused on the simplest context padding (random tokens and coherent text), which could differ from real-world cases where context may consist of code or tool output logs. Understanding the reasons for capability degradation requires open-weight models to isolate effects of different parameters, which is impossible with the API-based models we used.
+
+Our results may conflate base-model behavior with providerlevel safety filters because models were accessed via different API providers (Table 2): OpenAI API for GPT-4.1-nano and GPT-5, OpenRouter for DeepSeek-V3.1 and Grok 4 Fast. We cannot fully disentangle provider-level filters from model behavior. Random padding was not regenerated per tokenizer for all models (Section F); only DeepSeek-V3.1 was re-tokenized, while others may experience token-count drift. Weinterpret cross-model comparisons under random padding with caution. Finally, we use the easiest subset of AgentHarm (with hints and detailed prompts), which bypasses planning ability. Our results represent an upper bound on performance; scenarios requiring complex planning may degrade sooner.
+
+Ethics. All harmful task evaluations use simulated and sandboxed tools as described in the AgentHarm benchmark (Andriushchenko et al. 2025). No real-world posts, emails, or harmful actions were executed. The benchmark datasets exclude personally identifiable information (PII). All experiments were conducted in controlled environments with appropriate safety guardrails. We will release padding generators, judge prompts, and anonymized tool-trace logs to enable reproducibility while maintaining safety standards.
+
+Figure 11: Refusal rate analysis for random padding with after padding position. Delayed tasks represents cases when model performed at least one tool calling before refusing task execution. Immediate represents refused sample when model refused to execute a task right after getting task description. Number above bar represents number of refusals for given context length.
+
+<!-- image -->

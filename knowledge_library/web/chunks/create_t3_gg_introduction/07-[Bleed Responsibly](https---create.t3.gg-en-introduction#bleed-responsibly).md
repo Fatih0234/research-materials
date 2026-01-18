@@ -1,0 +1,2 @@
+### [Bleed Responsibly](https://create.t3.gg/en/introduction#bleed-responsibly)
+We love our bleeding edge tech. The amount of speed and, honestly, fun that comes out of new shit is really cool. We think it’s important to bleed responsibly, using riskier tech in the less risky parts. This means we wouldn’t ⛔️ bet on risky new database tech (SQL is great!). But we happily ✅ bet on tRPC since it’s just functions that are trivial to move off.

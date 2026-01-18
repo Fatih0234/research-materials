@@ -1,0 +1,202 @@
+[
+  {
+    "title": "Siren: A Learning-Based Multi-Turn Attack Framework for Simulating Real-World Human Jailbreak Behaviors",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/01-Siren- A Learning-Based Multi-Turn Attack Framework for Simulating Real-World Human Jailbreak Behaviors.md"
+  },
+  {
+    "title": "1. Introduction",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/02-1. Introduction.md"
+  },
+  {
+    "title": "2. Related Work",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/03-2. Related Work.md"
+  },
+  {
+    "title": "2.1. LLM Safety and Red-Teaming",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/04-2.1. LLM Safety and Red-Teaming.md"
+  },
+  {
+    "title": "2.2. Single-Turn Jailbreak Attacks",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/05-2.2. Single-Turn Jailbreak Attacks.md"
+  },
+  {
+    "title": "2.3. Multi-Turn Jailbreak Attacks",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/06-2.3. Multi-Turn Jailbreak Attacks.md"
+  },
+  {
+    "title": "3. Methodology",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/07-3. Methodology.md"
+  },
+  {
+    "title": "3.1. Rationale for a Learning-Based Multi-Turn Attack Method",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/08-3.1. Rationale for a Learning-Based Multi-Turn Attack Method.md"
+  },
+  {
+    "title": "3.2. Problem Formulation",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/09-3.2. Problem Formulation.md"
+  },
+  {
+    "title": "3.3. Overview of the Siren Framework",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/10-3.3. Overview of the Siren Framework.md"
+  },
+  {
+    "title": "3.4. MiniMax-Driven Training Dataset Construction with Turn-Level LLM Feedback",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/11-3.4. MiniMax-Driven Training Dataset Construction with Turn-Level LLM Feedback.md"
+  },
+  {
+    "title": "3.5. Post-Training of Attacking LLMs",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/12-3.5. Post-Training of Attacking LLMs.md"
+  },
+  {
+    "title": "Query Decomposition Demonstration Examples",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/13-Query Decomposition Demonstration Examples.md"
+  },
+  {
+    "title": "Question:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/14-Question-.md"
+  },
+  {
+    "title": "Sub-question List:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/15-Sub-question List-.md"
+  },
+  {
+    "title": "Prompt for LLM-Assisted Data Augmentation",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/16-Prompt for LLM-Assisted Data Augmentation.md"
+  },
+  {
+    "title": "Question:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/17-Question-.md"
+  },
+  {
+    "title": "Sub-question List:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/18-Sub-question List-.md"
+  },
+  {
+    "title": "4. Experiment Settings",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/19-4. Experiment Settings.md"
+  },
+  {
+    "title": "4.1. Query Decomposition Strategies",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/20-4.1. Query Decomposition Strategies.md"
+  },
+  {
+    "title": "4.2. Training Data and Evaluation Benchmarks",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/21-4.2. Training Data and Evaluation Benchmarks.md"
+  },
+  {
+    "title": "Prompt for LLM-Assisted Evaluation (GPT-ASR)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/22-Prompt for LLM-Assisted Evaluation (GPT-ASR).md"
+  },
+  {
+    "title": "4.3. Attacking and Target LLMs",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/23-4.3. Attacking and Target LLMs.md"
+  },
+  {
+    "title": "4.4. Baselines",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/24-4.4. Baselines.md"
+  },
+  {
+    "title": "4.5. Evaluation Metric",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/25-4.5. Evaluation Metric.md"
+  },
+  {
+    "title": "Keyword List for Calculating KW-ASR",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/26-Keyword List for Calculating KW-ASR.md"
+  },
+  {
+    "title": "5. Results",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/27-5. Results.md"
+  },
+  {
+    "title": "5.1. Comparison with Single-Turn Baselines",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/28-5.1. Comparison with Single-Turn Baselines.md"
+  },
+  {
+    "title": "5.2. Comparison with the Multi-Turn Baseline",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/29-5.2. Comparison with the Multi-Turn Baseline.md"
+  },
+  {
+    "title": "5.3. Ablation Study",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/30-5.3. Ablation Study.md"
+  },
+  {
+    "title": "5.4. Case Study",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/31-5.4. Case Study.md"
+  },
+  {
+    "title": "5.5. Defense Analysis",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/32-5.5. Defense Analysis.md"
+  },
+  {
+    "title": "6. Discussion",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/33-6. Discussion.md"
+  },
+  {
+    "title": "6.1. Impact of Attacker Model Scale",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/34-6.1. Impact of Attacker Model Scale.md"
+  },
+  {
+    "title": "6.2. Metric Selection",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/35-6.2. Metric Selection.md"
+  },
+  {
+    "title": "6.3. Future Direction",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/36-6.3. Future Direction.md"
+  },
+  {
+    "title": "7. Conclusion",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/37-7. Conclusion.md"
+  },
+  {
+    "title": "Ethical Statement",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/38-Ethical Statement.md"
+  },
+  {
+    "title": "Acknowledgments",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/39-Acknowledgments.md"
+  },
+  {
+    "title": "References",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.14250v2/chunks/40-References.md"
+  }
+]

@@ -1,0 +1,21 @@
+## 6 Potential limitations and associated risks
+
+While AI could enhance operational efficiency and the accuracy of decision-making for cash management, its deployment is not without limitations. AI agents often rely on historical data and probabilistic models, which may lead to suboptimal performance in scenarios characterized by unprecedented or black swan events (Taleb, 2007) that are outside the range of the training data. For
+
+example, during extreme liquidity crises, abrupt market shifts, or unexpected regulatory changes, AI systems might lack the adaptability to recalibrate quickly, potentially resulting in incorrect or delayed decision outputs. Additionally, issues such as data quality, inherent model biases, and the opacity of complex algorithms (often referred to as the black box problem) can impede diagnostic processes and lead to errors that are difficult to trace and correct (FSB, 2024; BIS, 2024; Aldasoro et al., 2025).
+
+Moreover, the effectiveness of AI agents tends to diminish in environments where human judgment and contextual nuance are critical. For instance, in scenarios requiring nuanced interpretation of qualitative factors, such as sudden geopolitical events, automated systems may not capture the necessary subtleties compared with experienced human operators. These limitations underscore the importance of maintaining a human-in-the-loop approach, particularly for high-stakes decisions. As a field still in its early stages, further research is needed to better define the boundaries of AI capabilities in cash management and to explore techniques that integrate human oversight with advanced analytics. This would ensure that AI tools support, rather than replace, comprehensive risk management and strategic decision-making.
+
+AI-driven cash management also carries some risks. These include:
+
+- limited interpretability of complex AI models that can hinder decision-making rationale and potentially amplify errors during extreme market conditions
+- data quality issues and cyber vulnerabilities that could disrupt operations
+- widespread reliance on similar automated systems that might lead to synchronized behavior that intensifies market volatility and systemic risk
+- the progressive erosion or atrophy of skills that may come with increased reliance on AI agents, which may limit human staff's ability to perform that task in the future
+- over-reliance on a limited set of third-party providers (Gambacorta and Shreeti, 2025)
+
+Balancing productivity gains with stringent regulatory oversight and proactive risk management is therefore essential to safeguard financial stability and maintain consumer trust in an increasingly AI-enabled financial ecosystem.
+
+Across major jurisdictions, regulatory frameworks for AI in financial services are evolving rapidly to address the dual imperatives of innovation and risk management. The European Union's Artificial Intelligence Act categorizes applications by risk level and imposes rigorous transparency and conformity requirements on high-risk systems-especially those affecting critical financial decisions-to ensure data governance, accountability, and meaningful human oversight. In the United States, existing regulatory tools and voluntary guidelines from agencies such as the Consumer Financial Protection Bureau and the Securities and Exchange Commission guide AI integration. Regulators in other jurisdictions such as Australia and the United Kingdom underscore the need
+
+for robust internal governance and board-level oversight as banks and other financial institutions increasingly rely on AI for cash management and liquidity optimization.

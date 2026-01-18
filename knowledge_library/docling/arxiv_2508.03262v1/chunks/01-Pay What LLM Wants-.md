@@ -1,0 +1,1 @@
+## Pay What LLM Wants:

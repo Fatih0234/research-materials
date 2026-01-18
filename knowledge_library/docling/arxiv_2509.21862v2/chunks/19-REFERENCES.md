@@ -1,0 +1,59 @@
+## REFERENCES
+
+- Josh Achiam, Steven Adler, Sandhini Agarwal, Lama Ahmad, Ilge Akkaya, Florencia Leoni Aleman, Diogo Almeida, Janko Altenschmidt, Sam Altman, Shyamal Anadkat, et al. Gpt-4 technical report. arXiv preprint arXiv:2303.08774 , 2023.
+- Mary Amiti, Sang Hoon Kong, and David E Weinstein. Trade protection, stock-market returns, and welfare. Technical report, National Bureau of Economic Research, 2021.
+- Philip W Anderson. The economy as an evolving complex system . CRC Press, 2018.
+- Anthropic. Introducing the model context protocol. https://www.anthropic.com/news/ model-context-protocol , 2024. Accessed: 2025-05-09.
+- WBrian Arthur. Inductive reasoning and bounded rationality. The American economic review , 84(2): 406-411, 1994.
+- Robert Axelrod. The dissemination of culture: A model with local convergence and global polarization. Journal of conflict resolution , 41(2):203-226, 1997.
+- Robert Axelrod and William D Hamilton. The evolution of cooperation. science , 211(4489): 1390-1396, 1981.
+- Robert L Axtell. Zipf distribution of us firm sizes. science , 293(5536):1818-1820, 2001.
+- Eric Bonabeau. Agent-based modeling: Methods and techniques for simulating human systems. Proceedings of the national academy of sciences , 99(suppl\_3):7280-7287, 2002.
+- Nicolas Bonnotte. Unidimensional and evolution methods for optimal transportation . PhD thesis, Université Paris Sud-Paris XI; Scuola normale superiore (Pise, Italie), 2013.
+- Greg Brockman, Vicki Cheung, Ludwig Pettersson, Jonas Schneider, John Schulman, Jie Tang, and Wojciech Zaremba. Openai gym. arXiv preprint arXiv:1606.01540 , 2016.
+- Jiangjie Chen, Siyu Yuan, Rong Ye, Bodhisattwa Prasad Majumder, and Kyle Richardson. Put your money where your mouth is: Evaluating strategic planning and execution of llm agents in an auction arena. arXiv preprint arXiv:2310.05746 , 2023.
+- Myra Cheng, Tiziano Piccardi, and Diyi Yang. Compost: Characterizing and evaluating caricature in llm simulations. Annual Meeting of the Association for Computational Linguistics , 2023.
+- Michael D Cohen, James G March, and Johan P Olsen. A garbage can model of organizational choice. Administrative science quarterly , pp. 1-25, 1972.
+- Paul Davidsson. Agent based social simulation: A computer science view. Journal of artificial societies and social simulation , 5(1), 2002.
+
+- Joshua M Epstein and Robert Axtell. Growing artificial societies: social science from the bottom up . Brookings Institution Press, 1996.
+- Expected Parrot. EDSL: The Expected Document-Symbol Language. https://github.com/ expectedparrot/edsl , 2023. Accessed: 2025-09-22.
+- J Doyne Farmer and Duncan Foley. The economy needs agent-based modelling. Nature , 460(7256): 685-686, 2009.
+- Chen Gao, Xiaochong Lan, Nian Li, Yuan Yuan, Jingtao Ding, Zhilun Zhou, Fengli Xu, and Yong Li. Large language models empowered agent-based modeling and simulation: A survey and perspectives. Humanities and Social Sciences Communications , 11(1):1-24, 2024.
+- Nigel Gilbert. Agent-based models . Sage Publications, 2019.
+- Nigel Gilbert and Pietro Terna. How to build and use agent-based models in social science. Mind &amp; Society , 1:57-72, 2000.
+- Daya Guo, Dejian Yang, Haowei Zhang, Junxiao Song, Ruoyu Zhang, Runxin Xu, Qihao Zhu, Shirong Ma, Peiyi Wang, Xiao Bi, et al. Deepseek-r1: Incentivizing reasoning capability in llms via reinforcement learning. arXiv preprint arXiv:2501.12948 , 2025.
+- Edward J Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean Wang, Lu Wang, Weizhu Chen, et al. Lora: Low-rank adaptation of large language models. ICLR , 1(2):3, 2022.
+- Jen-tse Huang, Wenxuan Wang, Eric John Li, Man Ho Lam, Shujie Ren, Youliang Yuan, Wenxiang Jiao, Zhaopeng Tu, and Michael Lyu. On the humanity of conversational ai: Evaluating the psychological portrayal of llms. In The Twelfth International Conference on Learning Representations , 2023.
+- Jen-tse Huang, Man Ho Lam, Eric John Li, Shujie Ren, Wenxuan Wang, Wenxiang Jiao, Zhaopeng Tu, and Michael R. Lyu. Apathetic or empathetic? evaluating LLMs' emotional alignments with humans. In Advances in Neural Information Processing Systems 37 , 2024.
+- Alan Kirman. Ants, rationality, and recruitment. The Quarterly Journal of Economics , 108(1): 137-156, 1993.
+- Takeshi Kojima, Shixiang Shane Gu, Machel Reid, Yutaka Matsuo, and Yusuke Iwasawa. Large language models are zero-shot reasoners. Advances in neural information processing systems , 35: 22199-22213, 2022.
+- Nian Li, Chen Gao, Mingyu Li, Yong Li, and Qingmin Liao. Econagent: large language modelempowered agents for simulating macroeconomic activities. Annual Meeting of the Association for Computational Linguistics , 2024.
+- Simon Malberg, Roman Poletukhin, Carolin M Schuster, and Georg Groh. A comprehensive evaluation of cognitive biases in llms. arXiv preprint arXiv:2410.15413 , 2024.
+- Benjamin S Manning, Kehang Zhu, and John J Horton. Automated social science: Language models as scientist and subjects. Technical report, National Bureau of Economic Research, 2024.
+- Robert R McCrae and Paul T Costa Jr. Personality trait structure as a human universal. American psychologist , 52(5):509, 1997.
+- Eleni Nisioti, Claire Glanois, Elias Najarro, Andrew Dai, Elliot Meyerson, Joachim Winther Pedersen, Laetitia Teodorescu, Conor F Hayes, Shyam Sudhakaran, and Sebastian Risi. From text to life: On the reciprocal relationship between artificial life and large language models. In Artificial Life Conference Proceedings 36 , volume 2024, pp. 39, 2024.
+- Don Norman. Things that make us smart: Defending human attributes in the age of the machine . Diversion Books, 2014.
+- Arthur M Okun. Potential GNP: its measurement and significance . Cowles Foundation for Research in Economics at Yale University, 1963.
+
+- Joon Sung Park, Joseph O'Brien, Carrie Jun Cai, Meredith Ringel Morris, Percy Liang, and Michael S Bernstein. Generative agents: Interactive simulacra of human behavior. In Proceedings of the 36th annual acm symposium on user interface software and technology , pp. 1-22, 2023.
+- Edmund S Phelps. Phillips curves, expectations of inflation and optimal unemployment over time. Economica , pp. 254-281, 1967.
+- Rushi Qiang, Yuchen Zhuang, Yinghao Li, Dingu Sagar V K, Rongzhi Zhang, Changhao Li, Ian Shu-Hei Wong, Sherry Yang, Percy Liang, Chao Zhang, and Bo Dai. Mle-dojo: Interactive environments for empowering llm agents in machine learning engineering, 2025. URL https: //arxiv.org/abs/2505.07782 .
+- James M Sakoda. The checkerboard model of social interaction. The Journal of Mathematical Sociology , 1(1):119-132, 1971.
+- Thomas C Schelling. Dynamic models of segregation. Journal of mathematical sociology , 1(2): 143-186, 1971.
+- Mitja Steinbacher, Matthias Raddant, Fariba Karimi, Eva Camacho Cuena, Simone Alfarano, Giulia Iori, and Thomas Lux. Advances in the agent-based modeling of economic and social behavior. SN Business &amp; Economics , 1(7):99, 2021.
+- Rao Surapaneni, Miku Jha, Michael Vakoc, and Todd Segal. Announcing the agent2agent protocol (a2a). https://developers.googleblog.com/en/ a2a-a-new-era-of-agent-interoperability/ , April 2025. Accessed: 202505-09.
+- Ryosuke Takata, Atsushi Masumori, and Takashi Ikegami. Spontaneous emergence of agent individuality through social interactions in large language model-based communities. Entropy , 26(12): 1092, 2024.
+- Leigh Tesfatsion. Agent-based computational economics: A constructive approach to economic theory. Handbook of computational economics , 2:831-880, 2006.
+- Leigh Tesfatsion and Kenneth L Judd. Handbook of computational economics: agent-based computational economics , volume 2. Elsevier, 2006.
+- Alexander Sasha Vezhnevets, John P Agapiou, Avia Aharon, Ron Ziv, Jayd Matyas, Edgar A DuéñezGuzmán, William A Cunningham, Simon Osindero, Danny Karmon, and Joel Z Leibo. Generative agent-based modeling with actions grounded in physical, social, or digital space using concordia. arXiv preprint arXiv:2312.03664 , 2023.
+- Lev S Vygotsky. Thought and language , volume 29. MIT press, 2012.
+- Lei Wang, Chen Ma, Xueyang Feng, Zeyu Zhang, Hao Yang, Jingsen Zhang, Zhiyuan Chen, Jiakai Tang, Xu Chen, Yankai Lin, et al. A survey on large language model based autonomous agents. Frontiers of Computer Science , 18(6):186345, 2024.
+- Taylor Webb, Keith J Holyoak, and Hongjing Lu. Emergent analogical reasoning in large language models. Nature Human Behaviour , 7(9):1526-1541, 2023.
+- Patrick Y Wu, Jonathan Nagler, Joshua A Tucker, and Solomon Messing. Large language models can be used to estimate the latent positions of politicians. arXiv preprint arXiv:2303.12057 , 2023.
+- Qingyun Wu, Gagan Bansal, Jieyu Zhang, Yiran Wu, Beibin Li, Erkang Zhu, Li Jiang, Xiaoyun Zhang, Shaokun Zhang, Jiale Liu, et al. Autogen: Enabling next-gen llm applications via multi-agent conversations. In First Conference on Language Modeling , 2024.
+- Ziyi Yang, Zaibin Zhang, Zirui Zheng, Yuxian Jiang, Ziyue Gan, Zhiyu Wang, Zijian Ling, Jinsong Chen, Martz Ma, Bowen Dong, et al. Oasis: Open agents social interaction simulations on one million agents. arXiv preprint arXiv:2411.11581 , 2024.
+
+- Chong Zhang, Xinyi Liu, Zhongmou Zhang, Mingyu Jin, Lingyao Li, Zhenting Wang, Wenyue Hua, Dong Shu, Suiyuan Zhu, Xiaobo Jin, et al. When ai meets finance (stockagent): Large language model-based stock trading in simulated real-world environments. arXiv preprint arXiv:2407.18957 , 2024.
+- Stephan Zheng, Alexander Trott, Sunil Srinivasa, David C Parkes, and Richard Socher. The ai economist: Taxation policy design via two-level deep multiagent reinforcement learning. Science advances , 8(18):eabk2607, 2022.
+- Xuhui Zhou, Hao Zhu, Leena Mathur, Ruohong Zhang, Haofei Yu, Zhengyang Qi, Louis-Philippe Morency, Yonatan Bisk, Daniel Fried, Graham Neubig, et al. Sotopia: Interactive evaluation for social intelligence in language agents. International Conference on Learning Representations , 2024.

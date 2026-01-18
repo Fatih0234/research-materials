@@ -1,0 +1,112 @@
+[
+  {
+    "title": "When Refusals Fail: Unstable Safety Mechanisms in Long-Context LLM Agents",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.02445v1/chunks/01-When Refusals Fail- Unstable Safety Mechanisms in Long-Context LLM Agents.md"
+  },
+  {
+    "title": "Abstract",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.02445v1/chunks/02-Abstract.md"
+  },
+  {
+    "title": "1 Introduction",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.02445v1/chunks/03-1 Introduction.md"
+  },
+  {
+    "title": "2 Related Works",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.02445v1/chunks/04-2 Related Works.md"
+  },
+  {
+    "title": "3 Setup and Methodology",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.02445v1/chunks/05-3 Setup and Methodology.md"
+  },
+  {
+    "title": "4 Results",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.02445v1/chunks/06-4 Results.md"
+  },
+  {
+    "title": "5 Discussion",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.02445v1/chunks/07-5 Discussion.md"
+  },
+  {
+    "title": "Acknowledgments",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.02445v1/chunks/08-Acknowledgments.md"
+  },
+  {
+    "title": "References",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.02445v1/chunks/09-References.md"
+  },
+  {
+    "title": "A Results for different subsets for AgentHarm test dataset",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.02445v1/chunks/10-A Results for different subsets for AgentHarm test dataset.md"
+  },
+  {
+    "title": "B Experimental Details",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.02445v1/chunks/11-B Experimental Details.md"
+  },
+  {
+    "title": "C Additional Results by Harm Category",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.02445v1/chunks/12-C Additional Results by Harm Category.md"
+  },
+  {
+    "title": "D Model API Providers",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.02445v1/chunks/13-D Model API Providers.md"
+  },
+  {
+    "title": "E Judge Configuration Details",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.02445v1/chunks/14-E Judge Configuration Details.md"
+  },
+  {
+    "title": "F Creation of Different Paddings",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.02445v1/chunks/15-F Creation of Different Paddings.md"
+  },
+  {
+    "title": "G Examples of Different Paddings G.1 Random padding",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.02445v1/chunks/16-G Examples of Different Paddings G.1 Random padding.md"
+  },
+  {
+    "title": "G.2 Non-relevant padding",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.02445v1/chunks/17-G.2 Non-relevant padding.md"
+  },
+  {
+    "title": "G.3 Relevant padding (disinformation category)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.02445v1/chunks/18-G.3 Relevant padding (disinformation category).md"
+  },
+  {
+    "title": "G.4 Multi-task padding",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.02445v1/chunks/19-G.4 Multi-task padding.md"
+  },
+  {
+    "title": "Other tasks (should be ignored):",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.02445v1/chunks/20-Other tasks (should be ignored)-.md"
+  },
+  {
+    "title": "H Refusal Rate Analysis",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.02445v1/chunks/21-H Refusal Rate Analysis.md"
+  },
+  {
+    "title": "I Limitations and Ethics",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.02445v1/chunks/22-I Limitations and Ethics.md"
+  }
+]

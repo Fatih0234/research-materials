@@ -1,0 +1,162 @@
+[
+  {
+    "title": "Using Large Language Models to Simulate Multiple Humans and Replicate Human Subject Studies",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/01-Using Large Language Models to Simulate Multiple Humans and Replicate Human Subject Studies.md"
+  },
+  {
+    "title": "Abstract",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/02-Abstract.md"
+  },
+  {
+    "title": "1. Introduction",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/03-1. Introduction.md"
+  },
+  {
+    "title": "(a) Typical few-shot prompt for classification:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/04-(a) Typical few-shot prompt for classification-.md"
+  },
+  {
+    "title": "(b) TE prompt for simulating a named individual:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/05-(b) TE prompt for simulating a named individual-.md"
+  },
+  {
+    "title": "1.1. Related Work",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/06-1.1. Related Work.md"
+  },
+  {
+    "title": "2. Running TEs Using LMs",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/07-2. Running TEs Using LMs.md"
+  },
+  {
+    "title": "3. Models and Datasets",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/08-3. Models and Datasets.md"
+  },
+  {
+    "title": "4. The Ultimatum Game TE",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/09-4. The Ultimatum Game TE.md"
+  },
+  {
+    "title": "5. Garden Path Sentences TE",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/10-5. Garden Path Sentences TE.md"
+  },
+  {
+    "title": "6. Milgram Shock TE",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/11-6. Milgram Shock TE.md"
+  },
+  {
+    "title": "(a) Free-response prompt for subject behavior.",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/12-(a) Free-response prompt for subject behavior..md"
+  },
+  {
+    "title": "(b) 2-choice prompt for the shock classifier.",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/13-(b) 2-choice prompt for the shock classifier..md"
+  },
+  {
+    "title": "(b) Gender differences in acceptance probability distributions",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/14-(b) Gender differences in acceptance probability distributions.md"
+  },
+  {
+    "title": "7. Wisdom of Crowds TE",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/15-7. Wisdom of Crowds TE.md"
+  },
+  {
+    "title": "8. Risks and Limitations",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/16-8. Risks and Limitations.md"
+  },
+  {
+    "title": "9. Conclusion",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/17-9. Conclusion.md"
+  },
+  {
+    "title": "References",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/18-References.md"
+  },
+  {
+    "title": "A. Surnames",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/19-A. Surnames.md"
+  },
+  {
+    "title": "B. TE Input Summary Table",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/20-B. TE Input Summary Table.md"
+  },
+  {
+    "title": "C. Ultimatum Game TE",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/21-C. Ultimatum Game TE.md"
+  },
+  {
+    "title": "D. Garden Path TE",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/22-D. Garden Path TE.md"
+  },
+  {
+    "title": "(a) Average ratings for garden path sentences",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/23-(a) Average ratings for garden path sentences.md"
+  },
+  {
+    "title": "D.1. Further details: Garden Path Sentences.",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/24-D.1. Further details- Garden Path Sentences..md"
+  },
+  {
+    "title": "E. Wisdom of Crowds TE",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/25-E. Wisdom of Crowds TE.md"
+  },
+  {
+    "title": "F. Milgram Shock TE",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/26-F. Milgram Shock TE.md"
+  },
+  {
+    "title": "F.1. Algorithm details",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/27-F.1. Algorithm details.md"
+  },
+  {
+    "title": "F.2. Novel Destructive Obedience Experiment Developed by the Authors.",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/28-F.2. Novel Destructive Obedience Experiment Developed by the Authors..md"
+  },
+  {
+    "title": "(a) 2-choice prompt to determine whether the experiment was terminated",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/29-(a) 2-choice prompt to determine whether the experiment was terminated.md"
+  },
+  {
+    "title": "(b) 2-choice prompt to determine whether the shock was administered",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/30-(b) 2-choice prompt to determine whether the shock was administered.md"
+  },
+  {
+    "title": "(a) 2-choice prompt to determine whether the experiment was terminated",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/31-(a) 2-choice prompt to determine whether the experiment was terminated.md"
+  },
+  {
+    "title": "(b) 2-choice prompt to determine whether the driver was submerged",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/proceedings_mlr_press_aher23a/chunks/32-(b) 2-choice prompt to determine whether the driver was submerged.md"
+  }
+]

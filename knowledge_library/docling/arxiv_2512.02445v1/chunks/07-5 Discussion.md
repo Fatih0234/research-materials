@@ -1,0 +1,13 @@
+## 5 Discussion
+
+Models' capabilities do not reflect their claimed contextlength support. This is clearly visible for Grok 4 Fast, which claims to handle up to 2 million tokens but exhibits significant performance degradation already at 100K tokens. One possible explanation could be that the training procedure focuses on short sequences, with the longer task appearing as out-of-distribution input.
+
+Tested models show different behavior in long-context settings, for example refusals pattern. This may have been caused by differences in safety mechanisms and training. One possible consequence is that the development of safety measures for long-context tasks may not be easily generalizable across a wide range of models.
+
+While refusal rates provide useful insights into agent safety, we observed significant increases in refusal scores for some LLMs after certain amounts of padding, particularly in Figure 2. We think these refusals could be triggered by something other than safety training. This questions the usefulness of refusal rate as a safety metric, particularly without a mechanism to identify the trigger. Therefore, a more holistic approach is required for measuring agent safety.
+
+Refusal rate alone doesn't distinguish two failure modes: immediate refusal (upfront from task description) and delayed (after beginning execution). As we are expecting models to refuse immediately, delayed refusals are concerning as the model may have already performed information gathering or API calls before refusing. Our analysis Section H shows a small percentage of refused tasks are delayed, which could potentially bring harm
+
+Our study has several limitations. Due to budget constraints, we evaluated a limited set of models. We used the easiest subset of AgentHarm (with hints and detailed prompts), which bypasses planning ability; our results represent an upper bound on performance. Models were accessed via different API providers (OpenAI API for GPT-4.1-nano, OpenRouter for the rest), which may introduce providerlevel safety filters that we cannot fully disentangle from basemodel behavior. See Section I for additional details and ethics statement.
+
+Our findings show agentic models with long context windows are highly sensitive to context length, type, and position. Performance degrades sharply by ∼ 100K tokens even for models with &gt; 1M context window. Refusal rates shift unpredictably and placing context after the task description substantially reduces accuracy. These results show increasing context capacity does not ensure robustness. Long context introduces concrete safety and reliability risks for agentic systems.

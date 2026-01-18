@@ -1,0 +1,3 @@
+## 5 Conclusion and Future Directions
+
+This survey provides a comprehensive overview of the research progress at the intersection of LLMs and game theory. We summarized the role that game theory has been playing in developing LLMs from three key perspectives: providing standardized game-based evaluation, driving game-theoretic algorithmic innovations, and modeling the societal impact of LLMs. Furthermore, we highlighted the bidirectional relationship between LLMs and game theory, exploring how LLMs influence traditional game models. Building on this review, we have identified several promising future directions.

@@ -1,0 +1,3 @@
+## D Model API Providers
+
+We accessed the models through different API providers depending on availability and cost considerations. Table 2 lists the specific API endpoints used for each model in our experiments. GPT-4.1-nano was accessed through OpenAI's official API, while GPT-5, DeepSeek-V3.1 and Grok 4 Fast were accessed through OpenRouter, which provides unified access to multiple model providers. The specific model versions and endpoints shown in the table were selected to ensure reproducibility of our results and represent the state-of-the-art models available at the time of our experiments.

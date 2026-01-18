@@ -1,0 +1,137 @@
+## References
+
+- A. Adadi and M. Berrada. Peeking inside the black-box: a survey on explainable artificial intelligence (xai). IEEE access , 6:52138-52160, 2018.
+- B. Agüera y Arcas. Do large language models understand us? Daedalus , 151(2):183-197, 2022.
+- B. Agüera y Arcas and P. Norvig. Artificial general intelligence is already here. Noema , 2023.
+- G. V. Aher, R. I. Arriaga, and A. T. Kalai. Using large language models to simulate multiple humans and replicate human subject studies. In International Conference on Machine Learning , pages 337-371. PMLR, 2023.
+- I. Ajzen. The theory of planned behavior. Organizational behavior and human decision processes , 50(2):179-211, 1991.
+- A. Amirova, T. Fteropoulli, N. Ahmed, M. R. Cowie, and J. Z. Leibo. Framework-based qualitative analysis of free responses of large language models: Algorithmic fidelity. arXiv preprint arXiv:2309.06364 , 2023.
+- R. Anil, A. M. Dai, O. Firat, M. Johnson, D. Lepikhin, A. Passos, S. Shakeri, E. Taropa, P. Bailey , Z. Chen, et al. PALM 2 technical report. arXiv preprint arXiv:2305.10403 , 2023.
+- L. P. Argyle, E. C. Busby, N. Fulda, J. R. Gubler, C. Rytting, and D. Wingate. Out of one, many: Using language models to simulate human samples. Political Analysis , 31(3):337-351, 2023.
+- M. Atari, M. J. Xue, P. S. Park, D. Blasi, and J. Henrich. Which humans? 2023.
+- R. L. Axtell, J. M. Epstein, and H. P. Young. The emergence of classes in a multi-agent bargaining model. Social dynamics , 27:191-211, 2001.
+- A. Baddeley. Working memory. Science , 255 (5044):556-559, 1992.
+
+- Y. Bai, S. Kadavath, S. Kundu, A. Askell, J. Kernion, A. Jones, A. Chen, A. Goldie, A. Mirhoseini, C. McKinnon, et al. Constitutional ai: Harmlessness from ai feedback. arXiv preprint arXiv:2212.08073 , 2022.
+- L. F. Barrett. Are emotions natural kinds? Perspectives on psychological science , 1(1):28-58, 2006.
+- L. F. Barrett. The conceptual act theory: A précis. Emotion review , 6(4):292-297, 2014.
+- M. G. Bellemare, Y. Naddaf, J. Veness, and M. Bowling. The arcade learning environment: An evaluation platform for general agents. Journal of Artificial Intelligence Research , 47:253279, 2013.
+- A. Birhane, W. Isaac, V. Prabhakaran, M. Diaz, M. C. Elish, I. Gabriel, and S. Mohamed. Power to the people? opportunities and challenges for participatory AI. Equity and Access in Algorithms, Mechanisms, and Optimization , pages 1-8, 2022.
+- N. Bostrom. Superintelligence: Paths, Dangers, Strategies . Oxford University Press, Inc., USA, 1st edition, 2014. ISBN 0199678111.
+- J. Brand, A. Israeli, and D. Ngwe. Using GPT for market research. Available at SSRN 4395751 , 2023.
+- L. Brinkmann, F. Baumann, J.-F. Bonnefon, M. Derex, T. F. Müller, A.-M. Nussberger, A. Czaplicka, A. Acerbi, T. L. Griffiths, J. Henrich, J. Z. Leibo, R. McElreath, P.-Y. Oudeyer, J. Stray, and I. Rahwan. Machine culture. Nature Human Behaviour , pages 1-14, 2023.
+- E. Brooks, L. A. Walls, R. Lewis, and S. Singh. Large language models can implement policy iteration. In Thirty-seventh Conference on Neural Information Processing Systems , 2023.
+- T. Brown, B. Mann, N. Ryder, M. Subbiah, J. D. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell, et al. Language models are few-shot learners. Advances in neural information processing systems , 33:1877-1901, 2020.
+- S. Bubeck, V. Chandrasekaran, R. Eldan, J. Gehrke, E. Horvitz, E. Kamar, P. Lee, Y. T. Lee, Y. Li, S. Lundberg, et al. Sparks of artificial general intelligence: Early experiments with gpt-4. arXiv preprint arXiv:2303.12712 , 2023.
+- J. R. Carter and M. D. Irons. Are economists different, and if so, why? Journal of Economic Perspectives , 5(2):171-177, 1991.
+- P. Dayan. Goal-directed control and its antipodes. Neural Networks , 22(3):213-219, 2009.
+- P. Dayan and G. E. Hinton. Feudal reinforcement learning. Advances in neural information processing systems , 5, 1992.
+- M. DeLanda. Philosophy and simulation: the emergence of synthetic reason . Bloomsbury Publishing, 2011.
+- M. DeLanda. Assemblage theory . Edinburgh University Press, 2016.
+- D. Dillion, N. Tandon, Y. Gu, and K. Gray. Can AI language models replace human participants? Trends in Cognitive Sciences , 2023.
+- Q. Dong, L. Li, D. Dai, C. Zheng, Z. Wu, B. Chang, X. Sun, J. Xu, and Z. Sui. A survey for in-context learning. arXiv preprint arXiv:2301.00234 , 2022.
+- E. A. Duéñez-Guzmán, S. Sadedin, J. X. Wang, K. R. McKee, and J. Z. Leibo. A social path to human-like artificial intelligence. Nature Machine Intelligence , pages 1-8, 2023.
+- R. H. Fazio. Multiple processes by which attitudes guide behavior: The mode model as an integrative framework. In Advances in experimental social psychology , volume 23, pages 75-109. Elsevier, 1990.
+- R. H. Frank, T. Gilovich, and D. T. Regan. Does studying economics inhibit cooperation? Journal of economic perspectives , 7(2):159-171, 1993.
+- B. Gawronski and G. V. Bodenhausen. The associative-propositional evaluation model: Theory, evidence, and open questions. Advances in experimental social psychology , 44:59-127, 2011.
+
+- A. Goldstein, Z. Zada, E. Buchnik, M. Schain,
+- A. Price, B. Aubrey, S. A. Nastase, A. Feder,
+- D. Emanuel, A. Cohen, A. Jansen, H. Gazula,
+- G. Choe, A. Rao, C. Kim, C. Casto, L. Fanda,
+- W. Doyle, D. Friedman, P. Dugan, L. Melloni,
+- R. Reichart, S. Devore, A. Fliner, L. Hasenfratz,
+- O. Levy, A. Hassidim, M. Brenner, Y. Matias,
+- K. A. Norman, O. Devinsky, and U. Hasson. Shared computational principles for language processing in humans and deep language models. Nature neuroscience , 25(3):369-380, 2022.
+- A. G. Greenwald and M. R. Banaji. Implicit social cognition: attitudes, self-esteem, and stereotypes. Psychological review , 102(1):4, 1995.
+- I. Grossmann, M. Feinberg, D. C. Parker, N. A. Christakis, P. E. Tetlock, and W. A. Cunningham. AI and the transformation of social science research. Science , 380(6650):1108-1109, 2023.
+- G. Gygax and D. Cook. The Dungeon Master Guide, No. 2100, 2nd Edition (Advanced Dungeons and Dragons) . TSR, Inc, 1989. ISBN 0880387297.
+- G. K. Hadfield and B. R. Weingast. Law without the state: legal attributes and the coordination of decentralized collective punishment. Journal of Law and Courts , 1(1):3-34, 2013.
+- J. A. Harris, R. Boyd, and B. M. Wood. The role of causal knowledge in the evolution of traditional technology. Current Biology , 31(8):1798-1803, 2021.
+- J. Henrich. The secret of our success: How culture is driving human evolution, domesticating our species, and making us smarter . princeton University press, 2016.
+- U. Hertz, R. Koster, M. Janssen, and J. Z. Leibo. Beyond the matrix: Experimental approaches to studying social-ecological systems. 2023.
+- J. P. Higgins, S. Green, et al. Cochrane handbook for systematic reviews of interventions. 2008.
+- S. Hong, X. Zheng, J. Chen, Y. Cheng, C. Zhang, Z. Wang, S. K. S. Yau, Z. Lin, L. Zhou, C. Ran, et al. MetaGPT: Meta programming for multiagent collaborative framework. arXiv preprint arXiv:2308.00352 , 2023.
+- J. J. Horton. Large language models as simulated economic agents: What can we learn from homo silicus? arXiv e-prints , pages arXiv-2301, 2023.
+- W. Huang, F. Xia, T. Xiao, H. Chan, J. Liang, P. Florence, A. Zeng, J. Tompson, I. Mordatch, Y. Chebotar, et al. Inner monologue: Embodied reasoning through planning with language models. arXiv preprint arXiv:2207.05608 , 2022.
+- M. Jaderberg, W. M. Czarnecki, I. Dunning, L. Marris, G. Lever, A. G. Castaneda, C. Beattie, N. C. Rabinowitz, A. S. Morcos, A. Ruderman, N. Sonnerat, T. Green, L. Deason, J. Z. Leibo, D. Silver, D. Hassabis, K. Kavukcuoglu, and T. Graepel. Human-level performance in 3D multiplayer games with population-based reinforcement learning. Science , 364(6443): 859-865, 2019.
+- M. B. Johanson, E. Hughes, F. Timbers, and J. Z. Leibo. Emergent bartering behaviour in multiagent reinforcement learning. arXiv preprint arXiv:2205.06760 , 2022.
+- C. G. Jung. The archetypes and the collective unconscious . Routledge, 1959.
+- D. Kahneman, S. Frederick, et al. Representativeness revisited: Attribute substitution in intuitive judgment. Heuristics and biases: The psychology of intuitive judgment , 49(49-81):74, 2002.
+- Z. Kaiya, M. Naim, J. Kondic, M. Cortes, J. Ge, S. Luo, G. R. Yang, and A. Ahn. Lyfe agents: Generative agents for low-cost real-time social interactions. arXiv preprint arXiv:2310.02172 , 2023.
+- A. Koestler. The Ghost in the Machine . Hutchinson, 1967.
+- I. Lakatos. History of science and its rational reconstructions. In PSA: Proceedings of the biennial meeting of the philosophy of science association , volume 1970, pages 91-136. Cambridge University Press, 1970.
+- J. Z. Leibo, V. Zambaldi, M. Lanctot, J. Marecki, and T. Graepel. Multi-agent reinforcement
+
+- learning in sequential social dilemmas. In Proceedings of the 16th Conference on Autonomous Agents and MultiAgent Systems , pages 464-473, 2017.
+- J. Z. Leibo, E. Hughes, M. Lanctot, and T. Graepel. Autocurricula and the emergence of innovation from social interaction: A manifesto for multi-agent intelligence research. arXiv preprint arXiv:1903.00742 , 2019.
+- J. Z. Leibo, E. A. Dueñez-Guzman, A. Vezhnevets, J. P. Agapiou, P. Sunehag, R. Koster, J. Matyas, C. Beattie, I. Mordatch, and T. Graepel. Scalable evaluation of multi-agent reinforcement learning with Melting Pot. In International Conference on Machine Learning , pages 6187-6199. PMLR, 2021.
+- C. Li, Z. Gan, Z. Yang, J. Yang, L. Li, L. Wang, and J. Gao. Multimodal foundation models: From specialists to general-purpose assistants. arXiv preprint arXiv:2309.10020 , 10, 2023a.
+- G. Li, H. A. A. K. Hammoud, H. Itani, D. Khizbullin, and B. Ghanem. CAMEL: Communicative agents for "mind" exploration of large language model society. In Thirty-seventh Conference on Neural Information Processing Systems , 2023b.
+- T. Linzen and M. Baroni. Syntactic structure from deep learning. Annual Review of Linguistics , 7: 195-212, 2021.
+- R. D. Luce and H. Raiffa. Games and decisions: Introduction and critical survey . Courier Corporation, 1957.
+- M. W. Macy and R. Willer. From factors to actors: Computational sociology and agent-based modeling. Annual review of sociology , 28(1): 143-166, 2002.
+- J. G. March and J. P. Olsen. The Logic of Appropriateness. In The Oxford Handbook of Political Science . Oxford University Press, 2011. doi: 10. 1093/oxfordhb/9780199604456.013.0024.
+- J. L. McClelland, F. Hill, M. Rudolph, J. Baldridge, and H. Schütze. Placing language in an integrated understanding system: Next steps toward human-level performance in neural language models. Proceedings of the National
+- Academy of Sciences , 117(42):25966-25974, 2020.
+- M. McLuhan. The medium is the message. In Communication theory , pages 390-402. Routledge, 2017.
+- M. L. Minsky. The Society of Mind . Simon &amp; Schuster, New York, 1988. ISBN 978-0-67165713-0.
+- D. Nettle. Personality: What Makes You the Way You Are . Oxford University Press, 2007. ISBN 978-0199211432.
+- M. A. Olson and R. H. Fazio. Implicit and explicit measures of attitudes: The perspective of the mode model. In Attitudes , pages 39-84. Psychology Press, 2008.
+- N. Onuf. World of our making: Rules and rule in social theory and international relations . Routledge, 1989.
+- OpenAI. GPT-4 technical report. arXiv preprint arXiv:2303.08774 , 2023.
+- J. A. Ouellette and W. Wood. Habit and intention in everyday life: The multiple processes by which past behavior predicts future behavior. Psychological bulletin , 124(1):54, 1998.
+- J. S. Park, J. C. O'Brien, C. J. Cai, M. R. Morris, P. Liang, and M. S. Bernstein. Generative agents: Interactive simulacra of human behavior. arXiv preprint arXiv:2304.03442 , 2023.
+- J. Perolat, J. Z. Leibo, V. Zambaldi, C. Beattie, K. Tuyls, and T. Graepel. A multi-agent reinforcement learning model of common-pool resource appropriation. Advances in neural information processing systems , 30, 2017.
+- A. R. Poteete, M. A. Janssen, and E. Ostrom. Working together: collective action, the commons, and multiple methods in practice . Princeton University Press, 2010.
+- M. Risse. Political Theory of the Digital Age: Where Artificial Intelligence Might Take Us . Cambridge University Press, 2023.
+- H. M. Roff. Expected utilitarianism. arXiv preprint arXiv:2008.07321 , 2020.
+
+- M. Roser and M. S. Gazzaniga. Automatic brains-interpretive minds. Current Directions in Psychological Science , 13(2):56-59, 2004.
+- M. Safdari, G. Serapio-García, C. Crepy, S. Fitz, P. Romero, L. Sun, M. Abdulhai, A. Faust, and M. Matarić. Personality traits in large language models. arXiv preprint arXiv:2307.00184 , 2023.
+- S. Santurkar, E. Durmus, F. Ladhak, C. Lee, P. Liang, and T. Hashimoto. Whose opinions do language models reflect? arXiv preprint arXiv:2303.17548 , 2023.
+- J. Scheurer, M. Balesni, and M. Hobbhahn. Large language models can strategically deceive their users when put under pressure. arXiv preprint arXiv:2311.07590 , 2023.
+- T. Schick, J. Dwivedi-Yu, R. Dessì, R. Raileanu, M. Lomeli, L. Zettlemoyer, N. Cancedda, and T. Scialom. Toolformer: Language models can teach themselves to use tools. arXiv preprint arXiv:2302.04761 , 2023.
+- C. Schill, J. M. Anderies, T. Lindahl, C. Folke, S. Polasky, J. C. Cárdenas, A.-S. Crépin, M. A. Janssen, J. Norberg, and M. Schlüter. A more dynamic understanding of human behaviour for the anthropocene. Nature Sustainability , 2 (12):1075-1082, 2019.
+- W. Schneider and R. M. Shiffrin. Controlled and automatic human information processing: I. detection, search, and attention. Psychological review , 84(1):1, 1977.
+- M. Schrimpf, I. Blank, G. Tuckute, C. Kauf, E. A. Hosseini, N. Kanwisher, J. Tenenbaum, and E. Fedorenko. Artificial neural networks accurately predict language processing in the brain. BioRxiv , pages 2020-06, 2020.
+- M. Shanahan, K. McDonell, and L. Reynolds. Role play with large language models. Nature , pages 1-6, 2023.
+- D. Silver, S. Singh, D. Precup, and R. S. Sutton. Reward is enough. Artificial Intelligence , 299: 103535, 2021.
+- E. R. Smith. Distributed connectionist models in social psychology. Social and Personality Psychology Compass , 3(1):64-76, 2009.
+- C. H. Song, J. Wu, C. Washington, B. M. Sadler, W.-L. Chao, and Y. Su. Llm-planner: Few-shot grounded planning for embodied agents with large language models. In Proceedings of the IEEE/CVF International Conference on Computer Vision , pages 2998-3009, 2023.
+- C. R. Sunstein. Social norms and social roles. Colum. L. Rev. , 96:903, 1996.
+- C. R. Sunstein. How change happens . MIT Press, 2019.
+- R. S. Sutton, D. Precup, and S. Singh. Between mdps and semi-mdps: A framework for temporal abstraction in reinforcement learning. Artificial intelligence , 112(1-2):181-211, 1999.
+- L. Tesfatsion. Agent-based computational economics: Overview and brief history. Artificial Intelligence, Learning and Computation in Economics and Finance , pages 41-58, 2023.
+- H. Touvron, L. Martin, K. Stone, P. Albert, A. Almahairi, Y. Babaei, N. Bashlykov, S. Batra, P. Bhargava, S. Bhosale, et al. LLAMA 2: Open foundation and fine-tuned chat models. arXiv preprint arXiv:2307.09288 , 2023.
+- T. Ullman. Large language models fail on trivial alterations to theory-of-mind tasks. arXiv preprint arXiv:2302.08399 , 2023.
+19. Valve. Portal, 2007. URL https://www. thinkwithportals.com/ .
+- A. S. Vezhnevets, S. Osindero, T. Schaul, N. Heess, M. Jaderberg, D. Silver, and K. Kavukcuoglu. Feudal networks for hierarchical reinforcement learning. In International Conference on Machine Learning , pages 3540-3549. PMLR, 2017.
+- O. Vinyals, I. Babuschkin, W. M. Czarnecki, M. Mathieu, A. Dudzik, J. Chung, D. H. Choi, R. Powell, T. Ewalds, P. Georgiev, J. Oh, D. Horgan, M. Kroiss, I. Danihelka, A. Huang, L. Sifre, T. Cai, J. P. Agapiou, M. Jaderberg, A. S. Vezhnevets, R. Leblond, T. Pohlen, V. Dalibard, D. Budden, Y. Sulsky, J. Molloy,
+
+- T. L. Paine, C. Gulcehre, Z. Wang, T. Pfaff,
+- Y. Wu, R. Ring, D. Yogatama, D. Wunsch,
+- K. McKinney, O. Smith, T. Schaul, T. Lillicrap,
+- K. Kavukcuoglu, D. Hassabis, C. Apps, and
+- D. Silver. Grandmaster level in starcraft II using multi-agent reinforcement learning. Nature , 575(7782):350-354, 2019.
+- A. Walker and M. J. Wooldridge. Understanding the emergence of conventions in multi-agent systems. In ICMAS , volume 95, pages 384-389, 1995.
+- J. Wei, X. Wang, D. Schuurmans, M. Bosma, F. Xia, E. Chi, Q. V. Le, D. Zhou, et al. Chain-of-thought prompting elicits reasoning in large language models. Advances in Neural Information Processing Systems , 35:24824-24837, 2022.
+- K. Weick, K. Sutcliffe, and D. Obstfeld. Organizing and the process of sensemaking. ORGANIZATION SCIENCE , 16:409-421, 07 2005. doi: 10.1287/orsc.1050.0133.
+- L. Weidinger, J. Mellor, M. Rauh, C. Griffin, J. Uesato, P.-S. Huang, M. Cheng, M. Glaese, B. Balle, A. Kasirzadeh, et al. Ethical and social risks of harm from language models. arXiv preprint arXiv:2112.04359 , 2021.
+- L. Weidinger, M. Rauh, N. Marchal, A. Manzini, L. A. Hendricks, J. Mateos-Garcia, S. Bergman, J. Kay, C. Griffin, B. Bariach, I. Gabriel, V. Rieser, and W. Isaac. Sociotechnical safety evaluation of generative ai systems. arXiv preprint arXiv:2310.11986 , 2023.
+- A. Wendt. Anarchy is what states make of it: the social construction of power politics. International organization , 46(2):391-425, 1992.
+- A. E. Wendt. The agent-structure problem in international relations theory. International organization , 41(3):335-370, 1987.
+- K. D. Williams, C. K. Cheung, and W. Choi. Cyberostracism: effects of being ignored over the internet. Journal of personality and social psychology , 79(5):748, 2000.
+- D. S. Wilson, E. Ostrom, and M. E. Cox. Generalizing the core design principles for the efficacy
+15. of groups. Journal of economic behavior &amp; organization , 90:S21-S32, 2013.
+- T. D. Wilson, S. Lindsey, and T. Y. Schooler. A model of dual attitudes. Psychological review , 107(1):101, 2000.
+- P. Windrum, G. Fagiolo, and A. Moneta. Empirical validation of agent-based models: Alternatives and prospects. Journal of Artificial Societies and Social Simulation , 10(2):8, 2007.
+- B. Workshop, T. L. Scao, A. Fan, C. Akiki, E. Pavlick, S. Ilić, D. Hesslow, R. Castagné, A. S. Luccioni, F. Yvon, et al. BLOOM: A 176bparameter open-access multilingual language model. arXiv preprint arXiv:2211.05100 , 2022.
+- Y. Wu, Z. Jiang, A. Khan, Y. Fu, L. Ruis, E. Grefenstette, and T. Rocktäschel. ChatArena: Multiagent language game environments for large language models, 2023.
+- J. Yocum, P. Christoffersen, M. Damani, J. Svegliato, D. Hadfield-Menell, and S. Russell. Mitigating generative agent social dilemmas. In NeurIPS 2023 Foundation Models for Decision Making Workshop , 2023.
+- Z. Zada, A. Goldstein, S. Michelmann, E. Simony, A. Price, L. Hasenfratz, E. Barham, A. Zadbood, W. Doyle, D. Friedman, et al. A shared linguistic space for transmitting our thoughts from brain to brain in natural conversations. bioRxiv , 2023.
+- Z. Zhao, W. S. Lee, and D. Hsu. Large language models as commonsense knowledge for large-scale task planning. arXiv preprint arXiv:2305.14078 , 2023.
+- S. Zheng, A. Trott, S. Srinivasa, D. C. Parkes, and R. Socher. The AI economist: Taxation policy design via two-level deep multiagent reinforcement learning. Science advances , 8(18): eabk2607, 2022.
+- X. Zhou, H. Zhu, L. Mathur, R. Zhang, H. Yu, Z. Qi, L.-P. Morency, Y. Bisk, D. Fried, G. Neubig, et al. SOTOPIA: Interactive evaluation for social intelligence in language agents. arXiv preprint arXiv:2310.11667 , 2023.
+
+- E. W. Zuckerman. Construction, concentration, and (dis) continuities in social valuations. Annual Review of Sociology , 38:223-245, 2012.

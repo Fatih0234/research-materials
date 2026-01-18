@@ -1,0 +1,282 @@
+[
+  {
+    "title": "LLM-AUCTION: GENERATIVE AUCTION TOWARDS LLM-NATIVE ADVERTISING",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/01-LLM-AUCTION- GENERATIVE AUCTION TOWARDS LLM-NATIVE ADVERTISING.md"
+  },
+  {
+    "title": "ABSTRACT",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/02-ABSTRACT.md"
+  },
+  {
+    "title": "1 Introduction",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/03-1 Introduction.md"
+  },
+  {
+    "title": "2 Related Work",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/04-2 Related Work.md"
+  },
+  {
+    "title": "3 Preliminaries",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/05-3 Preliminaries.md"
+  },
+  {
+    "title": "4 LLM-Auction",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/06-4 LLM-Auction.md"
+  },
+  {
+    "title": "4.1 Allocation Rule",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/07-4.1 Allocation Rule.md"
+  },
+  {
+    "title": "4.1.1 Mechanism Reward Model",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/08-4.1.1 Mechanism Reward Model.md"
+  },
+  {
+    "title": "Algorithm 1 Iterative Reward-Preference Optimization (IRPO)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/09-Algorithm 1 Iterative Reward-Preference Optimization (IRPO).md"
+  },
+  {
+    "title": "4.1.2 Iterative Reward-Preference Optimization Algorithm",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/10-4.1.2 Iterative Reward-Preference Optimization Algorithm.md"
+  },
+  {
+    "title": "4.1.3 Properties of Allocation Rule",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/11-4.1.3 Properties of Allocation Rule.md"
+  },
+  {
+    "title": "4.2 First-Price Payment Rule",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/12-4.2 First-Price Payment Rule.md"
+  },
+  {
+    "title": "5 Experiments",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/13-5 Experiments.md"
+  },
+  {
+    "title": "5.1 LLM-Native Advertising Simulation Environment",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/14-5.1 LLM-Native Advertising Simulation Environment.md"
+  },
+  {
+    "title": "5.2 Experimental Setup",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/15-5.2 Experimental Setup.md"
+  },
+  {
+    "title": "5.2.1 Dataset",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/16-5.2.1 Dataset.md"
+  },
+  {
+    "title": "5.2.2 Baselines",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/17-5.2.2 Baselines.md"
+  },
+  {
+    "title": "User Profile:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/18-User Profile-.md"
+  },
+  {
+    "title": "User Query:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/19-User Query-.md"
+  },
+  {
+    "title": "Ad-Integrated Response:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/20-Ad-Integrated Response-.md"
+  },
+  {
+    "title": "User Click Feedback:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/21-User Click Feedback-.md"
+  },
+  {
+    "title": "5.2.3 Implementation Details",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/22-5.2.3 Implementation Details.md"
+  },
+  {
+    "title": "5.2.4 Evaluation Metrics",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/23-5.2.4 Evaluation Metrics.md"
+  },
+  {
+    "title": "5.3 Comparison of Allocation Efficiency",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/24-5.3 Comparison of Allocation Efficiency.md"
+  },
+  {
+    "title": "5.4 Verification of Mechanism Properties",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/25-5.4 Verification of Mechanism Properties.md"
+  },
+  {
+    "title": "5.4.1 Allocation Monotonicity",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/26-5.4.1 Allocation Monotonicity.md"
+  },
+  {
+    "title": "5.4.2 Allocation Continuity",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/27-5.4.2 Allocation Continuity.md"
+  },
+  {
+    "title": "5.5 Qualitative Results",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/28-5.5 Qualitative Results.md"
+  },
+  {
+    "title": "6 Conclusion",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/29-6 Conclusion.md"
+  },
+  {
+    "title": "References",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/30-References.md"
+  },
+  {
+    "title": "A Proofs of Theoretical Results",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/31-A Proofs of Theoretical Results.md"
+  },
+  {
+    "title": "A.1 Proofs of Section 4.1.3",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/32-A.1 Proofs of Section 4.1.3.md"
+  },
+  {
+    "title": "A.2 Proofs of Section 4.2",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/33-A.2 Proofs of Section 4.2.md"
+  },
+  {
+    "title": "B Additional Experimental Details",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/34-B Additional Experimental Details.md"
+  },
+  {
+    "title": "B.1 Prompt Templates in LLM-Native Advertising Simulation Environment",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/35-B.1 Prompt Templates in LLM-Native Advertising Simulation Environment.md"
+  },
+  {
+    "title": "Role You are an AI assistant with advertising and marketing capabilities. You need to provide useful answers to user's question while also inserting ads when appropriate. # Task In the process of answering a question, when the user's question is suitable for ad insertion, you can combine the provided JSON-format candidate ad list and the user profile to naturally insert ad content at an appropriate position, to maximize user experience and ad revenue. # Candidate Ad List {\"Ad ID\":\"}{ad\\_ids[0]}\",\"Ad Title\":\"{ad\\_titles[0]}\",\"Ad Bid\":\"{ad\\_bids[0]} {\"Ad ID\":\"}{ad\\_ids[1]}\",\"Ad Title\":\"{ad\\_titles[1]}\",\"Ad Bid\":\"{ad\\_bids[1]}",
+    "level": 1,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/36-Role You are an AI assistant with advertising and marketing capabilities. You need to provide useful answers to user's q-0ff290.md"
+  },
+  {
+    "title": "# Requirements",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/37-# Requirements.md"
+  },
+  {
+    "title": "section",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/38-section.md"
+  },
+  {
+    "title": "section",
+    "level": 1,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/39-section.md"
+  },
+  {
+    "title": "section",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/40-section.md"
+  },
+  {
+    "title": "section",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/41-section.md"
+  },
+  {
+    "title": "section",
+    "level": 1,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/42-section.md"
+  },
+  {
+    "title": "# Requirements",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/43-# Requirements.md"
+  },
+  {
+    "title": "AI Assistant's Answer",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/44-AI Assistant's Answer.md"
+  },
+  {
+    "title": "B.2 Implementation Details and Hyperparameters",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/45-B.2 Implementation Details and Hyperparameters.md"
+  },
+  {
+    "title": "B.2.1 Configuration of LLM-Native Advertising Simulation Environment",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/46-B.2.1 Configuration of LLM-Native Advertising Simulation Environment.md"
+  },
+  {
+    "title": "B.2.2 pCTR Model",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/47-B.2.2 pCTR Model.md"
+  },
+  {
+    "title": "B.2.3 Iterative Reward-Preference Optimization",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/48-B.2.3 Iterative Reward-Preference Optimization.md"
+  },
+  {
+    "title": "C Qualitative Analysis",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/49-C Qualitative Analysis.md"
+  },
+  {
+    "title": "User Query:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/50-User Query-.md"
+  },
+  {
+    "title": "Ad-Integrated Response (Pre-trained LLM):",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/51-Ad-Integrated Response (Pre-trained LLM)-.md"
+  },
+  {
+    "title": "Ad-Integrated Response (LLM-Auction):",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/52-Ad-Integrated Response (LLM-Auction)-.md"
+  },
+  {
+    "title": "User Query:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/53-User Query-.md"
+  },
+  {
+    "title": "Ad-Integrated Response (Pre-trained LLM):",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/54-Ad-Integrated Response (Pre-trained LLM)-.md"
+  },
+  {
+    "title": "Ad-Integrated Response (LLM-Auction):",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/55-Ad-Integrated Response (LLM-Auction)-.md"
+  },
+  {
+    "title": "User Query:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2512.10551/chunks/56-User Query-.md"
+  }
+]

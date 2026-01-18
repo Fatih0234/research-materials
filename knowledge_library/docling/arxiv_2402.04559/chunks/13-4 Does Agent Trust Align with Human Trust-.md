@@ -1,0 +1,3 @@
+## 4 Does Agent Trust Align with Human Trust?
+
+In this section, we aim to explore the fundamental relationship between agent and human trust, i.e. , whether or not agent trust aligns with human trust. This provides important insight regarding the feasibility of utilizing LLM agents to simulate human trust behavior as well as more complex human interactions that involve trust. First, we propose a new concept behavioral alignment and discuss its distinction from existing alignment definitions. Then, we conduct extensive studies to investigate whether or not LLM agents exhibit alignment with humans regarding trust behavior.

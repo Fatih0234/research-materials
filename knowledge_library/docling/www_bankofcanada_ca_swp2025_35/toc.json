@@ -1,0 +1,157 @@
+[
+  {
+    "title": "preamble",
+    "level": 1,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/01-preamble.md"
+  },
+  {
+    "title": "AI Agents for Cash Management in Payment Systems",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/02-AI Agents for Cash Management in Payment Systems.md"
+  },
+  {
+    "title": "Acknowledgements",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/03-Acknowledgements.md"
+  },
+  {
+    "title": "Abstract",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/04-Abstract.md"
+  },
+  {
+    "title": "R\u00e9sum\u00e9",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/05-R\u00e9sum\u00e9.md"
+  },
+  {
+    "title": "1 Introduction",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/06-1 Introduction.md"
+  },
+  {
+    "title": "2 Key decisions in payment systems",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/07-2 Key decisions in payment systems.md"
+  },
+  {
+    "title": "3 AI agents",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/08-3 AI agents.md"
+  },
+  {
+    "title": "4 AI agents as cash managers",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/09-4 AI agents as cash managers.md"
+  },
+  {
+    "title": "4.1 Precautionary decision",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/10-4.1 Precautionary decision.md"
+  },
+  {
+    "title": "Box 1: Precautionary decision",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/11-Box 1- Precautionary decision.md"
+  },
+  {
+    "title": "Input to the model:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/12-Input to the model-.md"
+  },
+  {
+    "title": "Output from the model:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/13-Output from the model-.md"
+  },
+  {
+    "title": "4.2 Navigating priorities",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/14-4.2 Navigating priorities.md"
+  },
+  {
+    "title": "Box 2: Navigating priorities",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/15-Box 2- Navigating priorities.md"
+  },
+  {
+    "title": "Input to the model:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/16-Input to the model-.md"
+  },
+  {
+    "title": "Output from the model:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/17-Output from the model-.md"
+  },
+  {
+    "title": "Model reasoning for 10 seconds (brief summary below) :",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/18-Model reasoning for 10 seconds (brief summary below) -.md"
+  },
+  {
+    "title": "4.3 Mitigating the liquidity-delay trade-off",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/19-4.3 Mitigating the liquidity-delay trade-off.md"
+  },
+  {
+    "title": "Box 3: Mitigating liquidity-delay trade-off",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/20-Box 3- Mitigating liquidity-delay trade-off.md"
+  },
+  {
+    "title": "Input to the model:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/21-Input to the model-.md"
+  },
+  {
+    "title": "Output from the model:",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/22-Output from the model-.md"
+  },
+  {
+    "title": "Model reasoning for 55 seconds (brief summary below) :",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/23-Model reasoning for 55 seconds (brief summary below) -.md"
+  },
+  {
+    "title": "4.4 Robustness checks",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/24-4.4 Robustness checks.md"
+  },
+  {
+    "title": "Box 1: Precautionary decision (robustness)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/25-Box 1- Precautionary decision (robustness).md"
+  },
+  {
+    "title": "Box 2: Navigating priorities (robustness)",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/26-Box 2- Navigating priorities (robustness).md"
+  },
+  {
+    "title": "4.5 AI agent in action",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/27-4.5 AI agent in action.md"
+  },
+  {
+    "title": "5 Discussion",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/28-5 Discussion.md"
+  },
+  {
+    "title": "6 Potential limitations and associated risks",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/29-6 Potential limitations and associated risks.md"
+  },
+  {
+    "title": "7 Conclusion and next steps",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/30-7 Conclusion and next steps.md"
+  },
+  {
+    "title": "References",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_bankofcanada_ca_swp2025_35/chunks/31-References.md"
+  }
+]

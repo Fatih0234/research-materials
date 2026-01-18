@@ -1,0 +1,3 @@
+## **Strategic Reasoning in LLMs: Study Overview**
+A [team of researchers ](https://arxiv.org/pdf/2507.02618)employed evolutionary game theory to assess how well large language models (LLMs) can plan strategically. They ran 140,000 iterations of the classic Prisoner’s Dilemma, a two-player game involving choices to cooperate or defect. Payoffs depended on mutual decisions, incentivizing strategic foresight.
+Before making each move, models produced written rationales. These explanations revealed that AI agents not only examined opponent behavior patterns but also estimated the probability of match termination—a sophisticated step toward long-term strategy development.

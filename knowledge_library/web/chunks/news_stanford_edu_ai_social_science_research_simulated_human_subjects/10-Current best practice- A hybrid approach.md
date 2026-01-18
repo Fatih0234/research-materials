@@ -1,0 +1,13 @@
+## Current best practice? A hybrid approach
+Despite the challenges, today’s LLMs can still play a role in social science research. [David Broska](https://sociology.stanford.edu/people/david-sebastian-broska), a sociology graduate student at Stanford, has developed a[ general methodology](https://journals.sagepub.com/doi/abs/10.1177/00491241251326865) for using LLMs responsibly that combines human subjects and LLM predictions in a mixed subjects design.
+“We now have two data types,” he says. “One is human responses, which are very informative but expensive, and the other, LLM predictions, is not so informative but cheap.”
+![Image of graduate student David Broska sharing his research during an HAI event.](https://news.stanford.edu/__data/assets/image/0019/174133/hai_digitalistpapersevent_9-24-24_patrickbeaudouin_img_63274.jpg)
+At a recent HAI event, Stanford sociology graduate student David Broska shared his research outlining a hybrid approach to AI and traditional social science research. | Courtesy Stanford HAI
+The idea is to first run a small pilot study with humans and also run the same experiment with an LLM to see how interchangeable the results are. The approach, called prediction-powered inference, combines the two data resources effectively while preventing the LLM from introducing bias. “We want to keep what the human subjects tell us and increase our confidence in the overall treatment effect while also statistically preventing the LLM from diminishing the credibility of our results,” he says.
+An initial hybrid pilot study can also provide a power analysis – a concrete estimate of the proportion of human and LLM subjects that will be most likely to generate a statistically meaningful result, Broska says. This sets researchers up for success in a hybrid study that could potentially be less expensive.
+> At the end of the day, if you’re studying human behavior, your experiment needs to ground out in human data.
+> David BroskaStanford Sociology Graduate Student
+More broadly, Hewitt sees cases where LLM simulations are already useful. “If I was designing a study right now to test an intervention for shifting people’s attitudes about climate in relation to a news event or new policy, or to increase public trust in vaccines, I would definitely first simulate that experiment in an LLM and use the results to augment my intuition.”
+Trust in the model is less important if the LLM is only helping with selecting experimental conditions or the wording of a survey question, Hewitt says. Human subjects are still paramount.
+“At the end of the day, if you’re studying human behavior, your experiment needs to ground out in human data.”
+* * *

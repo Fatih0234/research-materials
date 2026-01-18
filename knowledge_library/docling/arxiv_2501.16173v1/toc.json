@@ -1,0 +1,87 @@
+[
+  {
+    "title": "Will Systems of LLM Agents Cooperate: An Investigation into a Social Dilemma",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.16173v1/chunks/01-Will Systems of LLM Agents Cooperate- An Investigation into a Social Dilemma.md"
+  },
+  {
+    "title": "Abstract",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.16173v1/chunks/02-Abstract.md"
+  },
+  {
+    "title": "1 Introduction",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.16173v1/chunks/03-1 Introduction.md"
+  },
+  {
+    "title": "2 Related Work",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.16173v1/chunks/04-2 Related Work.md"
+  },
+  {
+    "title": "3 Method",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.16173v1/chunks/05-3 Method.md"
+  },
+  {
+    "title": "3.1 Iterated Prisoner's Dilemma Tournament",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.16173v1/chunks/06-3.1 Iterated Prisoner's Dilemma Tournament.md"
+  },
+  {
+    "title": "3.2 Strategy generation",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.16173v1/chunks/07-3.2 Strategy generation.md"
+  },
+  {
+    "title": "3.3 Attitude-Agents",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.16173v1/chunks/08-3.3 Attitude-Agents.md"
+  },
+  {
+    "title": "3.4 Moran Process",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.16173v1/chunks/09-3.4 Moran Process.md"
+  },
+  {
+    "title": "4 Results",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.16173v1/chunks/10-4 Results.md"
+  },
+  {
+    "title": "4.1 Validation",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.16173v1/chunks/11-4.1 Validation.md"
+  },
+  {
+    "title": "4.2 Head-to-head Comparison",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.16173v1/chunks/12-4.2 Head-to-head Comparison.md"
+  },
+  {
+    "title": "4.3 Equilibria",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.16173v1/chunks/13-4.3 Equilibria.md"
+  },
+  {
+    "title": "5 Discussion",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.16173v1/chunks/14-5 Discussion.md"
+  },
+  {
+    "title": "6 Conclusion",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.16173v1/chunks/15-6 Conclusion.md"
+  },
+  {
+    "title": "Acknowledgments",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.16173v1/chunks/16-Acknowledgments.md"
+  },
+  {
+    "title": "References",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2501.16173v1/chunks/17-References.md"
+  }
+]

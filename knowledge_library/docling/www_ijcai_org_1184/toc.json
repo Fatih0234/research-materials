@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Game Theory Meets Large Language Models: A Systematic Survey",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_ijcai_org_1184/chunks/01-Game Theory Meets Large Language Models- A Systematic Survey.md"
+  },
+  {
+    "title": "Abstract",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_ijcai_org_1184/chunks/02-Abstract.md"
+  },
+  {
+    "title": "1 Introduction",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_ijcai_org_1184/chunks/03-1 Introduction.md"
+  },
+  {
+    "title": "2 Game Theory for LLM Evaluation",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_ijcai_org_1184/chunks/04-2 Game Theory for LLM Evaluation.md"
+  },
+  {
+    "title": "2.1 Evaluation of LLMs' Behavioral Performance",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_ijcai_org_1184/chunks/05-2.1 Evaluation of LLMs' Behavioral Performance.md"
+  },
+  {
+    "title": "2.2 Enhancing LLMs' Game Performance",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_ijcai_org_1184/chunks/06-2.2 Enhancing LLMs' Game Performance.md"
+  },
+  {
+    "title": "2.3 Beyond as a Game Player",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_ijcai_org_1184/chunks/07-2.3 Beyond as a Game Player.md"
+  },
+  {
+    "title": "3 Game Theory for Algorithmic Innovation",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_ijcai_org_1184/chunks/08-3 Game Theory for Algorithmic Innovation.md"
+  },
+  {
+    "title": "3.1 Game Theory for Phenomenological Understanding LLMs",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_ijcai_org_1184/chunks/09-3.1 Game Theory for Phenomenological Understanding LLMs.md"
+  },
+  {
+    "title": "3.2 Game Theory for Stimulating LLM Algorithms",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_ijcai_org_1184/chunks/10-3.2 Game Theory for Stimulating LLM Algorithms.md"
+  },
+  {
+    "title": "4 Game Theory for LLM-Related Modeling",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_ijcai_org_1184/chunks/11-4 Game Theory for LLM-Related Modeling.md"
+  },
+  {
+    "title": "4.1 Competitions between LLM and Human",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_ijcai_org_1184/chunks/12-4.1 Competitions between LLM and Human.md"
+  },
+  {
+    "title": "4.2 Game Scenarios Emerging with LLMs",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_ijcai_org_1184/chunks/13-4.2 Game Scenarios Emerging with LLMs.md"
+  },
+  {
+    "title": "4.3 LLMExtending Classic Game Models",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_ijcai_org_1184/chunks/14-4.3 LLMExtending Classic Game Models.md"
+  },
+  {
+    "title": "5 Conclusion and Future Directions",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_ijcai_org_1184/chunks/15-5 Conclusion and Future Directions.md"
+  },
+  {
+    "title": "LLM-based Agents with Comprehensive Game Abilities.",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_ijcai_org_1184/chunks/16-LLM-based Agents with Comprehensive Game Abilities..md"
+  },
+  {
+    "title": "Acknowledgments",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_ijcai_org_1184/chunks/17-Acknowledgments.md"
+  },
+  {
+    "title": "References",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/www_ijcai_org_1184/chunks/18-References.md"
+  }
+]

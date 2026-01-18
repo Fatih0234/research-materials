@@ -1,0 +1,8 @@
+## [On Campus](https://news.stanford.edu/on-campus)
+  * [Community Engagement](https://news.stanford.edu/on-campus/topic/community-engagement)
+  * [Arts](https://news.stanford.edu/on-campus/topic/arts)
+  * [Athletics](https://news.stanford.edu/on-campus/topic/athletics)
+  * [Campus resources](https://news.stanford.edu/on-campus/topic/campus-resources)
+  * [Campus Safety](https://news.stanford.edu/on-campus/topic/campus-safety)
+  * [Community & Culture](https://news.stanford.edu/on-campus/topic/community-and-culture)
+  * [Events](https://news.stanford.edu/on-campus/topic/events)

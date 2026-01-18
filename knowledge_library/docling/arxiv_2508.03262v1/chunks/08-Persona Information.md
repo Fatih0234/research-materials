@@ -1,0 +1,3 @@
+## Persona Information
+
+Anonymous (2023) collected personas from 522 Korean adults (Male 254, Female 268; Ages between 30-39). As shown in Figure 1, they investigated a total of 65 items including: basic demographic information, attitudes and preferences toward cultural arts, cultural arts knowledge level, cultural education experience, institutional usage experience and satisfaction, social norms and attitudes, and family background information. Through this comprehensive approach, they constructed personas that holistically reflect each individual's cultural capital level and socioeconomic background. We asked the authors and received the data. For detailed persona questionnaire, see supplementary material.

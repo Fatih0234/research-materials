@@ -1,0 +1,3 @@
+## A Results for different subsets for AgentHarm test dataset
+
+As shown in Figure 5, different subset variations mainly differ by a linear shift in the score used for evaluation (see Section A), where the 'hint and detailed prompt' subset is the simplest, and the 'only task description' subset is the most challenging. For our main experiments, we focused only on the subset with a detailed prompt and hint because we wanted to isolate the effect of the padding itself, minimizing capability issues. For this reason, we used the simplest subset. Besides the hint and detailed prompt, this subset also shows the lowest refusal rate, which allows us to further explore model behavior with larger padding.

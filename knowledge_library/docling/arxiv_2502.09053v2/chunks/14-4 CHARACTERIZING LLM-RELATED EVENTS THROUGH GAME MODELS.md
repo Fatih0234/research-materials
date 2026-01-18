@@ -1,0 +1,5 @@
+## 4 CHARACTERIZING LLM-RELATED EVENTS THROUGH GAME MODELS
+
+As LLMs evolve from mere tools to active institutional players within markets, platforms, and information ecosystems, their behavior is no longer driven solely by technical objectives. Game theory provides a rigorous framework for analyzing the increasingly complex strategic interactions surrounding the development, deployment, and societal integration of LLMs. This section reviews recent advances in game-theoretic modeling applied to LLMs and categorizes them into two complementary streams: Subsection 4.1 addresses strategic games arising directly from the development and deployment lifecycle of LLMs, encompassing data acquisition, fine-tuning, platform economics, and content monetization. In contrast, Subsection 4.2 examines broader societal impacts of LLMs, including platform-creator dynamics, policy-induced externalities, and economic coordination challenges. The key problem settings, game notions, and summarized insights are presented in Table 3.
+
+Manuscript submitted to ACM

@@ -1,0 +1,197 @@
+[
+  {
+    "title": "preamble",
+    "level": 1,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/01-preamble.md"
+  },
+  {
+    "title": "Generative agent-based modeling with actions grounded in physical, social, or digital space using Concordia",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/02-Generative agent-based modeling with actions grounded in physical, social, or digital space using Concordia.md"
+  },
+  {
+    "title": "Contents",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/03-Contents.md"
+  },
+  {
+    "title": "1. Introduction",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/04-1. Introduction.md"
+  },
+  {
+    "title": "2. Concordia",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/05-2. Concordia.md"
+  },
+  {
+    "title": "2.1. Generative agents",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/06-2.1. Generative agents.md"
+  },
+  {
+    "title": "2.2. Generative environments",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/07-2.2. Generative environments.md"
+  },
+  {
+    "title": "2.3. Experiment design using Concordia",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/08-2.3. Experiment design using Concordia.md"
+  },
+  {
+    "title": "3. Interpretations",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/09-3. Interpretations.md"
+  },
+  {
+    "title": "3.1. Neuroscience interpretation of the generative agent architecture",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/10-3.1. Neuroscience interpretation of the generative agent architecture.md"
+  },
+  {
+    "title": "3.2. A theory of social construction",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/11-3.2. A theory of social construction.md"
+  },
+  {
+    "title": "3.3. Concordia agents do not make decisions by optimizing",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/12-3.3. Concordia agents do not make decisions by optimizing.md"
+  },
+  {
+    "title": "3.3.1. Concordia agents are not reinforcement learners",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/13-3.3.1. Concordia agents are not reinforcement learners.md"
+  },
+  {
+    "title": "3.3.2. Concordia agents are not rational utility maximizers",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/14-3.3.2. Concordia agents are not rational utility maximizers.md"
+  },
+  {
+    "title": "4. Applications",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/15-4. Applications.md"
+  },
+  {
+    "title": "4.1. Synthetic user studies in digital action space",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/16-4.1. Synthetic user studies in digital action space.md"
+  },
+  {
+    "title": "4.1.1. PhoneGameMaster and PhoneUniverse",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/17-4.1.1. PhoneGameMaster and PhoneUniverse.md"
+  },
+  {
+    "title": "4.1.2. Digital function representations",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/18-4.1.2. Digital function representations.md"
+  },
+  {
+    "title": "4.2. Data generation and service evaluation",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/19-4.2. Data generation and service evaluation.md"
+  },
+  {
+    "title": "4.3. Sequential social dilemmas experiments in silico",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/20-4.3. Sequential social dilemmas experiments in silico.md"
+  },
+  {
+    "title": "4.4. Concordia can implement classic and contemporary psychological models",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/21-4.4. Concordia can implement classic and contemporary psychological models.md"
+  },
+  {
+    "title": "4.5. AI assistants with transparent auditing and credit assignment",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/22-4.5. AI assistants with transparent auditing and credit assignment.md"
+  },
+  {
+    "title": "4.6. Emergence and multi-scale modeling with Concordia",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/23-4.6. Emergence and multi-scale modeling with Concordia.md"
+  },
+  {
+    "title": "5. Future work",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/24-5. Future work.md"
+  },
+  {
+    "title": "6. Conclusion",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/25-6. Conclusion.md"
+  },
+  {
+    "title": "A. Implementation details",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/26-A. Implementation details.md"
+  },
+  {
+    "title": "A.1. Agents",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/27-A.1. Agents.md"
+  },
+  {
+    "title": "A.2. Game master implementation",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/28-A.2. Game master implementation.md"
+  },
+  {
+    "title": "A.3. GM components",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/29-A.3. GM components.md"
+  },
+  {
+    "title": "A.3.1. Turn taking and simultanious action",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/30-A.3.1. Turn taking and simultanious action.md"
+  },
+  {
+    "title": "A.4. Nested games",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/31-A.4. Nested games.md"
+  },
+  {
+    "title": "A.5. Concurrency",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/32-A.5. Concurrency.md"
+  },
+  {
+    "title": "A.6. Sampling initial memories and backstories",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/33-A.6. Sampling initial memories and backstories.md"
+  },
+  {
+    "title": "A.7. Digital Activity Simulation",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/34-A.7. Digital Activity Simulation.md"
+  },
+  {
+    "title": "A.7.1. Creating Phone Apps",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/35-A.7.1. Creating Phone Apps.md"
+  },
+  {
+    "title": "A.7.2. Phone",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/36-A.7.2. Phone.md"
+  },
+  {
+    "title": "A.7.3. Triggering the nested PhoneGameMaster",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/37-A.7.3. Triggering the nested PhoneGameMaster.md"
+  },
+  {
+    "title": "A.8. Examples",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/38-A.8. Examples.md"
+  },
+  {
+    "title": "References",
+    "level": 2,
+    "chunk_path": "knowledge_library/docling/arxiv_2312.03664v2/chunks/39-References.md"
+  }
+]

@@ -1,0 +1,5 @@
+## Discussions
+
+Game-theoretic modeling provides a structured lens for analyzing strategic behaviors in the LLM ecosystem and understanding their broader societal implications. However, most existing results depend on simplified environments, typically involving a small number of rational agents with limited action spaces and clearly defined payoffs. These abstractions can overlook emergent behaviors from large-scale interactions and fail to account for bounded rationality, institutional dynamics, and ambiguous motivations. Bridging the gap between theoretical predictions and empirical observations remains a challenging yet promising direction for future research.
+
+Thus far, we have explored how game theory is applied to evaluate, enhance, and characterize LLMs. As shown in our taxonomy, our survey considers a bi-directional relationship between the research on game theory and LLMs. In the next section, we will introduce studies that approach this intersection from a complementary perspective, discussing how they leverage LLMs' capabilities to advance classical game theory.
