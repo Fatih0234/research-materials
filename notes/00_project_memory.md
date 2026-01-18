@@ -1128,3 +1128,258 @@ No new information added beyond extraction. All prompts conservative (exact word
 **Updated:** This project memory with C2.6 outcomes
 **TODO:** Expand xie_53.jsonl to full 53 personas in future iteration
 **Next Up:** Continue paper extraction (C3: Akata et al.) OR pivot to runner implementation
+
+---
+
+## Iteration C2.7 Outcomes: TrustBench MVP Runner Implementation & Smoke Test
+
+**Completed:** 2026-01-18
+**Goal:** Implement executable TrustBench MVP runner with dry-run smoke test
+**Scope:** Minimal runner supporting Xie Trust Game (trustor-only) based on specs created in C2.5-C2.6
+
+### Files Created
+
+**Core Runner Package (src/trustbench/):**
+
+1. **`src/trustbench/__init__.py`** - Package initialization
+2. **`src/trustbench/config.py`** - Config loader with YAML validation (171 lines)
+   - Validates all required fields from experiment config schema
+   - Generates experiment hash for output directory organization
+   - Saves resolved config to results/<hash>/config.resolved.yaml
+3. **`src/trustbench/prompts/loader.py`** - Prompt template loader and renderer (140 lines)
+   - Loads v001_trustor.md and v001_trustee.md templates
+   - Renders prompts with persona + partner framing + game params
+   - Handles baseline/llm_partner/human_partner treatments
+4. **`src/trustbench/personas/loader.py`** - Persona sampler (84 lines)
+   - Loads personas from JSONL file
+   - Supports sequential/random/stratified sampling
+   - Validates required fields (persona_id, persona_text)
+5. **`src/trustbench/llm/openrouter_client.py`** - OpenRouter + dry-run client (158 lines)
+   - OpenRouterClient: Real API calls with retry logic and error handling
+   - DryRunClient: Deterministic fake outputs for testing without API costs
+   - Returns structured response: raw_text, request_id, latency, usage, error
+6. **`src/trustbench/parsing/trust_game_parser.py`** - Trust Game parser (165 lines)
+   - parse_trustor_output: Extract amount sent from "Finally, I will give X dollars"
+   - parse_trustee_output: Extract amount returned from "Finally, I will return Y dollars"
+   - Supports negative numbers for validation (mark as out_of_range)
+   - calculate_payoffs: Trustor payoff = 10 - sent + returned; Trustee = 3*sent - returned
+7. **`src/trustbench/runs/runner.py`** - Main experiment runner (239 lines)
+   - Loads config, personas, prompts
+   - Runs episodes for all model × framing × persona conditions
+   - Streams episode records to JSONL (results/<hash>/episodes_<run_id>.jsonl)
+   - Supports dry-run mode (no API calls) and episode limit for testing
+8. **`src/trustbench/runs/aggregate.py`** - Aggregation calculator (153 lines)
+   - Groups episodes by condition (model_id + partner_framing)
+   - Calculates trustor stats: VRR, mean_sent, sd_sent, median_sent, distribution bins
+   - Writes aggregates to JSON and CSV formats
+
+**Scripts:**
+
+9. **`scripts/run_trustbench.py`** - CLI runner script (94 lines)
+   - Command-line interface: --config, --dry-run, --limit
+   - Loads config, runs episodes, computes aggregates
+   - Prints summary with per-condition statistics
+
+**Tests:**
+
+10. **`tests/test_parser.py`** - Parser test suite (149 lines)
+    - 9 trustor parser tests (standard format, dollar sign, decimal, zero, max, out of range high/low, no numeric value, alternative format)
+    - 4 trustee parser tests (standard, return all, return nothing, out of range)
+    - **All tests pass ✅**
+11. **`tests/test_payoffs.py`** - Payoff calculation tests (149 lines)
+    - 8 payoff tests covering valid/invalid scenarios, edge cases, formula verification
+    - **All tests pass ✅**
+
+### Implementation Highlights
+
+**A) Config Handling:**
+- Validates required fields against spec (experiment_id, models, personas, game, treatments, sampling, output)
+- Generates unique experiment hash from config + prompts for deterministic output directories
+- Writes resolved config with metadata to results/<hash>/config.resolved.yaml
+
+**B) Prompt Rendering:**
+- Programmatic prompt builder (not template file substitution)
+- Handles 3 partner framing variants: baseline, llm_partner, human_partner
+- Injects persona text + roleplay instruction + game instructions
+- Placeholders: {PERSONA_TEXT}, {ENDOWMENT}=10, {MULTIPLIER}=3
+
+**C) Persona Handling:**
+- Loads data/personas/xie_53.jsonl (10 personas available)
+- Sequential sampling (first N personas)
+- Warns if n_sample > available personas, uses all available
+
+**D) LLM Client:**
+- OpenRouterClient: Uses openai SDK with base_url=https://openrouter.ai/api/v1
+- DryRunClient: Generates deterministic fake outputs matching format
+- Retry logic with exponential backoff on failures
+- Returns structured metadata: latency, usage, errors
+
+**E) Parsing & Validation:**
+- Regex: `r"Finally,?\s+I\s+will\s+give\s+(\$?\s*-?\d+(?:\.\d+)?)\s*dollars?"`
+- Validates 0 ≤ amount_sent ≤ endowment
+- Parse status: success | format_error | value_out_of_range | no_numeric_value
+- Supports negative numbers (correctly marks as out_of_range, not unparseable)
+
+**F) Episode Records:**
+- Stream-write to JSONL (one episode per line)
+- Full episode schema from specs/01_runner_schema.json
+- Includes: prompts (rendered), raw_outputs, parsed_actions, payoffs, vrr_flags, errors, llm_metadata
+
+**G) Aggregates:**
+- Per-condition stats (model × framing)
+- VRR = n_valid / n_episodes
+- Distribution bins: [0-1), [1-2), ..., [9-10], [10]
+- Output formats: JSON (detailed) + CSV (summary table)
+
+**H) Dry-Run Mode:**
+- Bypasses OpenRouter API calls
+- Generates deterministic fake outputs with valid format
+- Trustor fake outputs: random amount 0-10 in "Finally, I will give X dollars" format
+- Enables testing without API costs or API key
+
+### Smoke Test Results
+
+**Command:**
+```bash
+uv run python3 scripts/run_trustbench.py --config configs/xie_mvp.yaml --dry-run --limit 5
+```
+
+**Output:**
+- ✅ Loaded config successfully
+- ✅ Warning: Requested 20 personas but only 10 available (used all 10)
+- ✅ Generated 5 episodes (GPT-4 Turbo × baseline × 5 personas)
+- ✅ Episodes written to: results/7c1cfc5eb5c5/episodes_20260118_221323.jsonl
+- ✅ Aggregates written to JSON and CSV
+- ✅ VRR: 100.0% (all 5 episodes valid)
+- ✅ Mean sent: $5.00 (SD: $4.69)
+- ✅ Median: $3.0, Range: [$0.0, $10.0]
+
+**Files Created:**
+- results/7c1cfc5eb5c5/config.resolved.yaml (253 bytes)
+- results/7c1cfc5eb5c5/episodes_20260118_221323.jsonl (16 KB, 5 episodes)
+- results/7c1cfc5eb5c5/aggregates_20260118_221323.json (914 bytes)
+- results/7c1cfc5eb5c5/aggregates_20260118_221323.csv (201 bytes)
+
+### How to Run
+
+**Dry-run mode (no API calls, testing):**
+```bash
+uv run python3 scripts/run_trustbench.py --config configs/xie_mvp.yaml --dry-run --limit 5
+```
+
+**Limited episodes (5 episodes for quick test):**
+```bash
+uv run python3 scripts/run_trustbench.py --config configs/xie_mvp.yaml --dry-run --limit 5
+```
+
+**Full run (requires OPENROUTER_API_KEY env var):**
+```bash
+export OPENROUTER_API_KEY=your_key_here
+uv run python3 scripts/run_trustbench.py --config configs/xie_mvp.yaml
+```
+
+**Expected episodes for full run:**
+- 3 models × 2 framings × 20 personas = 120 episodes
+- Estimated cost: ~$1-2 (GPT-4 + Claude + Llama)
+
+**Run tests:**
+```bash
+uv run python3 tests/test_parser.py
+uv run python3 tests/test_payoffs.py
+```
+
+### Output Structure
+
+**Episode record (JSONL):**
+```json
+{
+  "experiment_id": "xie_mvp_2026",
+  "run_id": "20260118_221323",
+  "episode_id": "<uuid>",
+  "timestamp": "2026-01-18T22:13:23.350912Z",
+  "game_params": {"endowment": 10, "multiplier": 3, "rounds": 1},
+  "persona": {"persona_id": "xie_001", "persona_text": "..."},
+  "partner_framing": "baseline",
+  "model_info": {"provider": "openrouter", "model_id": "...", "temperature": 1.0, ...},
+  "prompts": {"trustor_prompt": "...", "prompt_version_trustor": "v001", ...},
+  "raw_outputs": {"trustor_raw": "...", "trustee_raw": null},
+  "parsed_actions": {"amount_sent": 5.0, "parse_status_trustor": "success", ...},
+  "payoffs": {"trustor_payoff": 5.0, "trustee_payoff": 15.0},
+  "vrr_flags": {"valid_trustor": true, "valid_trustee": null},
+  "errors": {"parse_errors": [], "api_errors": []},
+  "llm_metadata": {"request_id": "...", "latency": 0.1, "usage": {...}}
+}
+```
+
+**Aggregate stats (JSON):**
+```json
+{
+  "condition": "gpt-4-turbo_baseline",
+  "model_id": "openrouter/openai/gpt-4-turbo",
+  "partner_framing": "baseline",
+  "n_episodes": 5,
+  "n_valid": 5,
+  "trustor_stats": {
+    "vrr": 1.0,
+    "mean_sent": 5.0,
+    "sd_sent": 4.69,
+    "median_sent": 3.0,
+    "distribution_bins": [1, 0, 0, 2, 0, 0, 0, 0, 0, 0, 2]
+  }
+}
+```
+
+### Deviations from Spec
+
+**Minor deviations (necessary for MVP):**
+
+1. **Config path mismatch:**
+   - Config specifies `personas.source_path: "data/personas/xie_personas.json"`
+   - Actual file: `data/personas/xie_53.jsonl`
+   - Fixed in runner code (hardcoded correct path)
+
+2. **Trustee not implemented:**
+   - MVP implements trustor-only (as specified in config: `roles: [trustor]`)
+   - Trustee fields present in schema but nullable
+   - Payoffs calculated assuming trustee returns 0 (worst case)
+
+3. **No jsonschema validation:**
+   - Implemented strict field checks instead of jsonschema library validation
+   - All required fields validated, same result as schema validation
+
+### Known Limitations (Documented for Extensions)
+
+1. **10 personas instead of 53:** Dataset has 10/53 personas (sufficient for MVP, need to expand)
+2. **Trustor-only:** Trustee role not implemented (deferred to v2.0)
+3. **No BDI explicit prompting:** BDI reasoning emerges naturally but not explicitly prompted
+4. **No statistical tests:** Aggregates computed but t-tests deferred to analysis notebook
+5. **No self-consistency:** Single response per episode (not n>1 sampling)
+
+### Next Steps
+
+**Immediate (if API key available):**
+- Run small live test: `--limit 10` without --dry-run to validate OpenRouter integration
+- Verify real LLM outputs parse correctly
+
+**Extensions (prioritized):**
+1. Expand personas to 53 (generate remaining 43 using GPT-4)
+2. Run full xie_mvp.yaml (120 episodes, ~$1-2 cost)
+3. Implement trustee role for two-sided trust
+4. Add statistical comparison (t-tests, effect sizes)
+5. Continue paper extraction (C3: Akata et al. Social CoT)
+
+---
+
+## End of Iteration C2.7
+
+**Completed:** TrustBench MVP runner implementation with dry-run smoke test
+**Created:**
+  - src/trustbench/ package (8 modules, ~1,100 lines)
+  - scripts/run_trustbench.py (CLI runner)
+  - tests/ (parser + payoff tests, all passing)
+**Tested:**
+  - ✅ Parser tests (13/13 passing)
+  - ✅ Payoff tests (8/8 passing)
+  - ✅ Dry-run smoke test (5 episodes, 100% VRR)
+**Updated:** This project memory with C2.7 outcomes
+**Next Up:** Run live small test with 1 model + real API (if key available) OR expand personas to 53 and run full MVP

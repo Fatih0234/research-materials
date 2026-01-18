@@ -1,0 +1,49 @@
+[
+  {
+    "run_id": "20260118_221323",
+    "experiment_id": "xie_mvp_2026",
+    "condition": "gpt-4-turbo_baseline",
+    "model_id": "openrouter/openai/gpt-4-turbo",
+    "partner_framing": "baseline",
+    "n_episodes": 5,
+    "n_valid": 5,
+    "timestamp": "2026-01-18T22:13:23.351617Z",
+    "trustor_stats": {
+      "vrr": 1.0,
+      "mean_sent": 5.0,
+      "sd_sent": 4.69041575982343,
+      "median_sent": 3.0,
+      "min_sent": 0.0,
+      "max_sent": 10.0,
+      "distribution_bins": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    "trustee_stats": null,
+    "human_baseline": {
+      "source": "Cox 2004",
+      "mean_sent": 6.0,
+      "n": null
+    },
+    "comparison_ready": {
+      "sent_values": [
+        10.0,
+        0.0,
+        3.0,
+        2.0,
+        10.0
+      ],
+      "return_ratios": null
+    }
+  }
+]

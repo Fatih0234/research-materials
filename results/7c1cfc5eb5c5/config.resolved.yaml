@@ -1,0 +1,53 @@
+experiment_id: xie_mvp_2026
+openrouter:
+  api_key_env_var: OPENROUTER_API_KEY
+  base_url: https://openrouter.ai/api/v1
+models:
+- model_id: openrouter/openai/gpt-4-turbo
+  label: GPT-4 Turbo
+  paper_equivalent: gpt-4
+- model_id: openrouter/anthropic/claude-3.5-sonnet
+  label: Claude 3.5 Sonnet
+  paper_equivalent: null
+- model_id: openrouter/meta-llama/llama-3-70b-instruct
+  label: Llama 3 70B Instruct
+  paper_equivalent: llama2-70b
+personas:
+  source_path: data/personas/xie_personas.json
+  n_sample: 20
+  sampling_strategy: sequential
+  seed: null
+game:
+  variant: trust_game
+  endowment: 10
+  multiplier: 3
+  rounds: 1
+  roles:
+  - trustor
+treatments:
+  partner_framing:
+  - baseline
+  - llm_partner
+sampling:
+  temperature: 1.0
+  top_p: null
+  max_tokens: null
+  seed: null
+  n_retries: 3
+  retry_delay_seconds: 1.0
+prompts:
+  template_dir: prompts/
+  trustor_template: trust_game_trustor_v1.txt
+  persona_template: persona_v1.txt
+output:
+  episodes_dir: results/episodes
+  aggregates_dir: results/aggregates
+  run_label: xie_mvp
+human_baseline:
+  source: Cox 2004
+  mean_sent: 6.0
+  n: null
+_meta:
+  config_path: /Volumes/T7/llm-applied-economics/configs/xie_mvp.yaml
+  experiment_hash: 7c1cfc5eb5c5
+  output_dir: /Volumes/T7/llm-applied-economics/results/7c1cfc5eb5c5
