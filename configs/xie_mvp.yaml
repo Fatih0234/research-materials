@@ -26,7 +26,7 @@ models:
 
 # Persona configuration
 personas:
-  source_path: "data/personas/xie_personas.json"  # To be created (53 personas from Xie et al.)
+  source_path: "data/personas/xie_53.jsonl"  # Imported 53 personas from Xie et al. artifacts
   n_sample: 20  # Reduced from 53 for MVP (cost control)
   sampling_strategy: "sequential"  # Use first 20 personas
   seed: null  # No random sampling for reproducibility

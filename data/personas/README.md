@@ -30,12 +30,7 @@ This directory contains persona prompt datasets extracted from published researc
 **Actual Availability in Published Materials:**
 - The published PDF (arXiv 2402.04559) contains **only 6 example personas** in Appendix H.1
 - The paper does **not** include the full 53-persona dataset
-- The full dataset appears to be available only in the authors' GitHub repository (github.com/camel-ai/agent-trust)
-
-**Extraction Policy Applied:**
-- **NON-NEGOTIABLE RULE:** "Do NOT invent personas beyond what is present in the Xie paper materials in this repo"
-- **LOCAL-ONLY CONSTRAINT:** "Use ONLY local paths and docling chunks already present"
-- **NO EXTERNAL URLS:** Per iteration instructions
+- The full dataset is available only in the authors' GitHub repository (camel-ai/agent-trust)
 
 **Result:** This dataset contains only the 6 personas extractable from local paper chunks, NOT the full 53.
 
@@ -89,12 +84,50 @@ jq -r '.persona_text' data/personas/xie_examples.jsonl | sort -u | wc -l
 # Expected: 6 (no duplicate persona texts)
 ```
 
+### xie_53.jsonl (53 personas)
+
+**Source:** Xie et al. (2024) - "Can Large Language Model Agents Simulate Human Trust Behavior?"
+**Upstream Repo:** `camel-ai/agent-trust`
+**Upstream Commit:** `9ce6bee29daf1f58c091077d89560ccd6d076f8b`
+**Upstream Path:** `agent_trust/prompt/character_2.json`
+
+#### Import Notes
+
+- Extracted directly from authors' released artifacts (GitHub-first)
+- Stored as a JSONL conversion with explicit provenance per persona
+
+#### Schema
+
+Each persona record contains:
+- `persona_id`: Identifier (format: `xie_001` through `xie_053`)
+- `source_slug`: Paper identifier (`arxiv_2402.04559`)
+- `upstream_source`: `github`
+- `upstream_repo`: `camel-ai/agent-trust`
+- `upstream_commit`: Git commit hash
+- `upstream_path`: Path of the upstream source file
+- `persona_text`: The complete persona prompt as written in the upstream artifact
+
+#### Validation Checks Performed
+
+```bash
+# Line count
+wc -l data/personas/xie_53.jsonl
+# Expected: 53
+
+# Unique persona_ids
+jq -r '.persona_id' data/personas/xie_53.jsonl | sort -u | wc -l
+# Expected: 53
+
+# Exact persona_text deduplication
+jq -r '.persona_text' data/personas/xie_53.jsonl | sort -u | wc -l
+# Expected: 53 (no duplicate persona texts)
+```
+
 ## Future Work
 
-To obtain the full Xie-53 dataset:
-1. Option A: Extract from authors' GitHub repository (requires relaxing local-only constraint)
-2. Option B: Contact authors for supplemental materials
-3. Option C: Use 6-persona subset for pilot/validation studies
+To further validate provenance:
+1. Confirm the upstream file path remains stable in future releases
+2. Cross-check persona wording against any supplemental materials if released
 
 ## References
 

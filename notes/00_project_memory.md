@@ -1524,3 +1524,12 @@ python scripts/run_trustbench.py \
 **Decision Required:**
   - Accept 6-persona micro-scope OR obtain full 53 from external source
 **Next Up:** Run 6-persona micro-validation OR decide on persona expansion strategy
+
+---
+
+## Iteration C2.9 outcomes
+
+**Imported:** Full 53-persona pool from authors' GitHub artifacts (camel-ai/agent-trust @ 9ce6bee29daf1f58c091077d89560ccd6d076f8b, `agent_trust/prompt/character_2.json`)
+**Created:** `data/personas/xie_53.jsonl` with explicit per-persona provenance fields
+**Updated:** `data/personas/README.md` and `configs/xie_mvp.yaml` to point to the upstream persona pool (sample n=20)
+**Replication note:** The paper includes persona prompt examples but not the full 53-persona list; we use the authors’ released artifact version with recorded provenance.
