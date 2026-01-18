@@ -13,7 +13,7 @@ models:
   label: Llama 3 70B Instruct
   paper_equivalent: llama2-70b
 personas:
-  source_path: data/personas/xie_personas.json
+  source_path: data/personas/xie_53.jsonl
   n_sample: 20
   sampling_strategy: sequential
   seed: null

@@ -1,0 +1,2 @@
+condition,model_id,partner_framing,n_episodes,n_valid,vrr,mean_sent,sd_sent,median_sent,min_sent,max_sent
+gpt-4-turbo_baseline,openrouter/openai/gpt-4-turbo,baseline,20,0,0.000,N/A,N/A,N/A,N/A,N/A
