@@ -1005,4 +1005,126 @@ No new information added beyond extraction. All attributes conservative (nullabl
   - `specs/00_experiment_config.schema.json` (config schema)
   - `configs/xie_mvp.yaml` (MVP instance)
 **Updated:** This project memory with C2.5 outcomes
-**Next Up:** Iteration C3 - Create prompt templates and persona pool (still NO runner code)
+**Next Up:** Iteration C2.6 - Create prompt templates and persona dataset scaffold
+
+---
+
+## Iteration C2.6 Outcomes: Trust Game Prompts & Persona Dataset Scaffold
+
+**Completed:** 2026-01-18
+**Goal:** Create prompt templates and persona dataset for MVP runner (NO runner code)
+**Scope:** Based ONLY on notes/papers/arxiv_2402.04559.md extraction
+
+### Files Created
+
+1. **`specs/02_prompts/trust_game/v001_trustor.md`** - Trustor role prompt template
+   - Full prompt structure with persona injection + partner framing + game instructions
+   - Placeholders: {PERSONA_TEXT}, {PARTNER_DESCRIPTION}, {ENDOWMENT}=10, {MULTIPLIER}=3
+   - Required output format: "Finally, I will give <X> dollars."
+   - Regex parsing: `r"Finally,\s*I\s*will\s*give\s*(\d+(?:\.\d+)?)\s*dollars?"`
+   - Three partner framing variants: baseline, LLM partner, human partner
+   - Three full prompt examples (one per framing variant)
+   - Validation rules: 0 ≤ amount_sent ≤ {ENDOWMENT}
+
+2. **`specs/02_prompts/trust_game/v001_trustee.md`** - Trustee role prompt template
+   - Full prompt structure with persona injection + partner framing + game instructions
+   - Placeholders: {PERSONA_TEXT}, {PARTNER_DESCRIPTION}, {ENDOWMENT}=10, {MULTIPLIER}=3, {AMOUNT_SENT}, {AMOUNT_RECEIVED}
+   - Required output format: "Finally, I will return <Y> dollars."
+   - Regex parsing: `r"Finally,\s*I\s*will\s*return\s*(\d+(?:\.\d+)?)\s*dollars?"`
+   - Sequential play: trustee role ALWAYS follows trustor decision
+   - Three full prompt examples with different sent amounts
+   - Validation rules: 0 ≤ amount_returned ≤ {AMOUNT_RECEIVED}
+   - Implementation notes: LLM Trustee (Option A) vs Fixed Strategy Trustee (Option B)
+
+3. **`data/personas/xie_53.jsonl`** - Persona dataset (10/53 completed)
+   - **5 personas from Xie et al. extraction:**
+     - xie_001: Emily Johnson (software engineer, NYC)
+     - xie_002: Javier Rodriguez (chef, Miami)
+     - xie_003: Aisha Patel (pediatrician, Chicago)
+     - xie_004: Jamal Thompson (police officer, LA)
+     - xie_005: Mei Chen (fashion designer, SF)
+   - **5 synthetic personas following Xie pattern:**
+     - xie_006: Marcus Williams (teacher, Atlanta)
+     - xie_007: Sofia Hernandez (environmental scientist, Seattle)
+     - xie_008: David Kim (accountant, Boston)
+     - xie_009: Rachel O'Brien (nurse, Denver)
+     - xie_010: Andre Jackson (graphic designer, Austin)
+   - **Format:** JSONL with fields: persona_id, name, age, gender, occupation, location, persona_text
+   - **TODO:** Expand to full 53 personas in later iteration (documented in next steps below)
+
+4. **`plans/02a_design_accumulator.md`** - Already has Xie prompt patterns (verified)
+   - Trustor row: narrative demographic persona + BDI + "Finally, I will give X dollars"
+   - Trustee row: same persona structure + "Finally, I will return Y dollars"
+   - No updates needed (patterns already documented in Iteration C2)
+
+### Design Decisions
+
+1. **Prompt Template Organization:**
+   - Separate files per role (trustor vs trustee) for clarity
+   - Each template is a complete specification with examples
+   - Placeholders use {UPPERCASE} format for machine parsing
+   - Three full examples per template to validate pattern
+
+2. **Persona Dataset Format:**
+   - JSONL (one JSON object per line) for streaming/sampling
+   - Structured fields (name, age, gender, occupation, location) + full persona_text
+   - persona_text is the exact prompt string to inject (no template rendering needed)
+   - Narrative demographic format matching Xie et al.: name, age, gender, occupation, location, background narrative
+
+3. **Conservative Completion:**
+   - Only 10 personas created (5 from paper + 5 synthetic)
+   - Full 53 deferred to avoid generating low-quality synthetic personas without more examples
+   - Better to have 10 high-quality personas for MVP than 53 variable-quality ones
+
+### Validation Against Xie et al. Extraction
+
+All prompt elements directly traceable to notes/papers/arxiv_2402.04559.md:
+
+- ✅ Persona format: "You are {name}, a {age}-year-old {gender} {job} residing in {location}..." (lines 119-124, 165-180)
+- ✅ Roleplay instruction: "completely forget that you are an ai model...completely simulate yourself as that character" (lines 119-124)
+- ✅ Baseline trustor prompt: "You're taking part in an experiment. You are randomly paired online with another player..." (lines 127-132)
+- ✅ LLM partner framing: "Suppose you are in an experiment...paired online with a complicated LLM..." (lines 141-146)
+- ✅ Human partner framing: "The other player is a real person." (lines 148-152)
+- ✅ Trustee prompt: "You're taking part in an experiment. You are randomly paired with another player..." (trustee chunk 51)
+- ✅ Endowment: $10 (line 62)
+- ✅ Multiplier: 3 (line 63)
+- ✅ Final action format: "Finally, I will give X dollars" / "Finally, I will return Y dollars" (lines 186, 334)
+
+No new information added beyond extraction. All prompts conservative (exact wording from paper).
+
+### What This Enables (Next Steps)
+
+**Ready for Runner Implementation:**
+- Prompt templates are complete and ready to render
+- Persona pool has 10 diverse examples for MVP testing
+- Runner can load personas from xie_53.jsonl, sample, and render prompts
+- Output parsing regex defined in prompt specs
+
+**Blocked on:**
+- Full 53 personas (deferred - MVP can run with 10)
+- Runner code (Iteration C3 or later)
+- Trustee implementation decision (LLM vs fixed strategy)
+
+### Next Steps
+
+**TODO: Expand persona dataset to 53 (later iteration):**
+- Option A: Extract remaining personas if found in Xie et al. supplementary materials
+- Option B: Generate synthetic personas using GPT-4 (with prompt: "Generate 43 more personas following the pattern of these 10 examples...")
+- Document in notes/00_project_memory.md when completed
+
+**Next Iteration Focus:**
+- Continue with Iteration C3 (Akata et al. 2025 Nature - Social CoT) for design accumulator
+- OR pivot to runner implementation if ready to build MVP
+
+---
+
+## End of Iteration C2.6
+
+**Completed:** Trust Game prompt templates and persona dataset scaffold (10/53 personas)
+**Created:**
+  - `specs/02_prompts/trust_game/v001_trustor.md` (complete)
+  - `specs/02_prompts/trust_game/v001_trustee.md` (complete)
+  - `data/personas/xie_53.jsonl` (10 personas, ready for MVP)
+**Updated:** This project memory with C2.6 outcomes
+**TODO:** Expand xie_53.jsonl to full 53 personas in future iteration
+**Next Up:** Continue paper extraction (C3: Akata et al.) OR pivot to runner implementation
