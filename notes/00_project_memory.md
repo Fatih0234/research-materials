@@ -1383,3 +1383,144 @@ uv run python3 tests/test_payoffs.py
   - ✅ Dry-run smoke test (5 episodes, 100% VRR)
 **Updated:** This project memory with C2.7 outcomes
 **Next Up:** Run live small test with 1 model + real API (if key available) OR expand personas to 53 and run full MVP
+
+---
+
+## Iteration C2.8: Persona Dataset Expansion Attempt
+
+**Date:** 2026-01-18
+**Objective:** Replace partial persona file with complete 53-persona dataset using ONLY local repo content
+
+### Findings: The Xie-53 Gap
+
+**Paper Statement (Section 2.2):**
+- Xie et al. (2024) claims: "We ask GPT-4 to generate 53 types of personas based on a given template."
+- Promises: "Examples of the personas are shown in Appendix H.1."
+
+**Actual Local Availability:**
+- ❌ Published PDF (arxiv_2402.04559) contains **only 6 example personas** in appendix
+- ❌ Full 53-persona dataset **not included** in published paper materials
+- ✅ Only 6 personas extractable from local docling chunks
+
+**Extraction Process:**
+1. Read TOC (`knowledge_library/docling/arxiv_2402.04559/toc.md`)
+2. Identified persona chunks: 41, 54, 55, 57
+3. Extracted using grep: `"You are [A-Z]"` pattern
+4. Found 8 total instances → 6 unique personas (2 duplicates of Emily Wilson)
+
+**Constraint Enforcement:**
+- ✅ Used ONLY local paths (no external URLs)
+- ✅ Did NOT invent personas beyond paper materials
+- ✅ Applied TOC-first → chunk-based extraction
+- ❌ Could NOT achieve 53-persona deliverable (data not present)
+
+### Deliverables Created
+
+1. **`data/personas/xie_examples.jsonl`** (6 personas, not 53)
+   - Personas: Emily Johnson, Javier Rodriguez, Aisha Patel, Jamal Thompson, Mei Chen, Emily Wilson
+   - Source chunks documented in `source_paths` field
+   - Schema: persona_id, source_slug, source_paths, persona_text, name, age, gender, occupation, location
+
+2. **`data/personas/README.md`** (full provenance documentation)
+   - Extraction methodology
+   - Critical limitation section documenting the Xie-53 gap
+   - Provenance table mapping persona_id → source chunks
+   - Future work options (GitHub repo extraction, author contact, or pilot with 6)
+
+3. **`notes/00_project_memory.md`** (this update)
+
+### Chunks Consulted
+
+**Primary:**
+- `chunks/41-Examples of Persona Prompt.md` (5 personas)
+
+**Secondary (examples in prompts):**
+- `chunks/54-Trust Game + CoT Prompt.md` (1 persona)
+- `chunks/55-Trust Game + Trust Manipulation Prompt.md` (1 persona)
+- `chunks/57-Trust Game + Human Player Prompt.md` (1 persona)
+
+**Metadata:**
+- `chunks/08-2.2 LLMAgent Setting.md` (describes 53-persona generation process)
+- `chunks/40-H.1 Persona Prompt.md` (empty heading)
+
+### Validation Results
+
+```bash
+wc -l data/personas/xie_examples.jsonl
+# Output: 6 data/personas/xie_examples.jsonl
+
+# All persona_ids unique: xie_ex_001 through xie_ex_006
+# All persona_text unique (no duplicates)
+# All source_paths traceable to local chunks
+```
+
+### Impact on Next Steps
+
+**Original Plan (from C2.8 instruction):**
+- "Next step: Run live micro-run with 1 model × 2 framings × 10 personas to validate VRR"
+
+**Revised Plan (given 6-persona limitation):**
+- **Option A:** Run micro-validation with 6 personas (1 model × 2 framings × 6 personas = 12 episodes)
+- **Option B:** Obtain full 53 from authors' GitHub (github.com/camel-ai/agent-trust) - requires relaxing local-only constraint
+- **Option C:** Generate remaining 47 using GPT-4 + template (becomes synthetic, not extracted)
+
+**Recommendation:** Use Option A (6-persona micro-run) to validate runner infrastructure before deciding on full persona strategy.
+
+### Known Limitations Updated
+
+**Previous (C2.7):**
+1. 10 personas instead of 53: Dataset has 10/53 personas
+
+**Current (C2.8):**
+1. **6 personas instead of 53:** Only 6 example personas extractable from published Xie et al. paper (local-only constraint)
+2. Trustor-only: Trustee role not implemented (deferred to v2.0)
+3. No BDI explicit prompting: BDI reasoning emerges naturally but not explicitly prompted
+4. No statistical tests: Aggregates computed but t-tests deferred to analysis notebook
+5. No self-consistency: Single response per episode (not n>1 sampling)
+
+### Caveats
+
+1. **Full Xie replication impossible with local-only constraint** - Published paper lacks full dataset
+2. **6-persona subset still scientifically valid** - Sufficient for:
+   - Runner infrastructure validation
+   - Micro-scale LLM comparison (e.g., GPT-4 vs Claude vs Gemini)
+   - Pilot framing treatment test (baseline vs human-partner)
+3. **GitHub extraction possible but out-of-scope** - Would require web fetch/clone (violates C2.8 local-only rule)
+
+### Files Modified
+
+- ✅ `data/personas/xie_examples.jsonl` (created)
+- ✅ `data/personas/README.md` (created)
+- ✅ `notes/00_project_memory.md` (this update)
+
+### Next Execution Step
+
+**Immediate:**
+Run micro-validation with available 6 personas:
+```bash
+python scripts/run_trustbench.py \
+  --config configs/xie_micro.yaml \
+  --persona-file data/personas/xie_examples.jsonl \
+  --limit 12 \
+  --dry-run
+```
+
+**Post-validation:**
+- If VRR high + outputs valid → proceed with live API run
+- If issues found → debug runner before scaling up
+- Decision point: expand personas (how?) vs use 6-persona subset for scoped study
+
+---
+
+## End of Iteration C2.8
+
+**Completed:** Persona dataset extraction with local-only constraint
+**Created:**
+  - data/personas/xie_examples.jsonl (6 personas)
+  - data/personas/README.md (provenance documentation)
+**Found:**
+  - Critical gap: Published paper contains only 6/53 personas
+  - Full dataset likely in GitHub repo (outside local-only scope)
+**Decision Required:**
+  - Accept 6-persona micro-scope OR obtain full 53 from external source
+**Next Up:** Run 6-persona micro-validation OR decide on persona expansion strategy
