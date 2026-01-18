@@ -1,0 +1,389 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TrustBench Runner Schemas",
+  "description": "JSON schemas for Trust Game episode records and aggregate statistics",
+
+  "definitions": {
+    "episode_record": {
+      "type": "object",
+      "description": "Single Trust Game episode record (one persona, one role, one round). Written as JSONL to results/episodes/<run_id>.jsonl",
+      "required": [
+        "experiment_id",
+        "run_id",
+        "episode_id",
+        "timestamp",
+        "game_params",
+        "persona",
+        "partner_framing",
+        "model_info",
+        "prompts",
+        "raw_outputs",
+        "parsed_actions",
+        "payoffs",
+        "vrr_flags",
+        "errors"
+      ],
+      "properties": {
+        "experiment_id": {
+          "type": "string",
+          "description": "Experiment identifier (e.g., 'xie_replication_2026')"
+        },
+        "run_id": {
+          "type": "string",
+          "description": "Run identifier (timestamp-based or UUID)"
+        },
+        "episode_id": {
+          "type": "string",
+          "description": "Unique episode identifier (UUID)"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp of episode execution"
+        },
+
+        "game_params": {
+          "type": "object",
+          "required": ["endowment", "multiplier", "rounds"],
+          "properties": {
+            "endowment": {
+              "type": "number",
+              "description": "Trustor endowment in dollars",
+              "const": 10
+            },
+            "multiplier": {
+              "type": "number",
+              "description": "Amount sent multiplier",
+              "const": 3
+            },
+            "rounds": {
+              "type": "integer",
+              "description": "Number of rounds (1 for one-shot)",
+              "const": 1
+            }
+          }
+        },
+
+        "persona": {
+          "type": "object",
+          "required": ["persona_id", "persona_text"],
+          "properties": {
+            "persona_id": {
+              "type": "string",
+              "description": "Unique persona identifier (e.g., 'persona_001')"
+            },
+            "persona_text": {
+              "type": "string",
+              "description": "Full persona prompt text (name, age, gender, occupation, background)"
+            }
+          }
+        },
+
+        "partner_framing": {
+          "type": "string",
+          "enum": ["baseline", "llm_partner", "human_partner"],
+          "description": "Partner framing treatment: 'baseline' (no framing), 'llm_partner' (partner is LLM), 'human_partner' (partner is human)"
+        },
+
+        "model_info": {
+          "type": "object",
+          "required": ["provider", "model_id", "temperature"],
+          "properties": {
+            "provider": {
+              "type": "string",
+              "description": "API provider (always 'openrouter' for TrustBench MVP)",
+              "const": "openrouter"
+            },
+            "model_id": {
+              "type": "string",
+              "description": "Full OpenRouter model identifier (e.g., 'openrouter/openai/gpt-4-turbo')"
+            },
+            "temperature": {
+              "type": "number",
+              "description": "Sampling temperature (1.0 for high persona diversity)"
+            },
+            "top_p": {
+              "type": ["number", "null"],
+              "description": "Nucleus sampling parameter (null if not used)"
+            },
+            "max_tokens": {
+              "type": ["integer", "null"],
+              "description": "Maximum completion tokens (null if unlimited)"
+            },
+            "seed": {
+              "type": ["integer", "null"],
+              "description": "Random seed for reproducibility (null if not set)"
+            }
+          }
+        },
+
+        "prompts": {
+          "type": "object",
+          "required": ["trustor_prompt", "prompt_version_trustor"],
+          "properties": {
+            "trustor_prompt": {
+              "type": "string",
+              "description": "Full rendered trustor prompt (persona + game instructions + partner framing)"
+            },
+            "trustee_prompt": {
+              "type": ["string", "null"],
+              "description": "Full rendered trustee prompt (null if trustee not implemented)"
+            },
+            "prompt_version_trustor": {
+              "type": "string",
+              "description": "Trustor prompt template version ID (e.g., 'v1.0_xie_baseline')"
+            },
+            "prompt_version_trustee": {
+              "type": ["string", "null"],
+              "description": "Trustee prompt template version ID (null if trustee not implemented)"
+            }
+          }
+        },
+
+        "raw_outputs": {
+          "type": "object",
+          "required": ["trustor_raw"],
+          "properties": {
+            "trustor_raw": {
+              "type": "string",
+              "description": "Raw LLM output for trustor role (full text with BDI reasoning)"
+            },
+            "trustee_raw": {
+              "type": ["string", "null"],
+              "description": "Raw LLM output for trustee role (null if trustee not implemented)"
+            }
+          }
+        },
+
+        "parsed_actions": {
+          "type": "object",
+          "required": ["amount_sent", "parse_status_trustor"],
+          "properties": {
+            "amount_sent": {
+              "type": ["number", "null"],
+              "description": "Amount sent by trustor in dollars (null if parsing failed)"
+            },
+            "amount_returned": {
+              "type": ["number", "null"],
+              "description": "Amount returned by trustee in dollars (null if trustee not implemented or parsing failed)"
+            },
+            "parse_status_trustor": {
+              "type": "string",
+              "enum": ["success", "format_error", "value_out_of_range", "no_numeric_value"],
+              "description": "Parsing status for trustor output"
+            },
+            "parse_status_trustee": {
+              "type": ["string", "null"],
+              "enum": ["success", "format_error", "value_out_of_range", "no_numeric_value", null],
+              "description": "Parsing status for trustee output (null if trustee not implemented)"
+            }
+          }
+        },
+
+        "payoffs": {
+          "type": "object",
+          "required": ["trustor_payoff"],
+          "properties": {
+            "trustor_payoff": {
+              "type": ["number", "null"],
+              "description": "Trustor final payoff: endowment - amount_sent + amount_returned (null if incomplete)"
+            },
+            "trustee_payoff": {
+              "type": ["number", "null"],
+              "description": "Trustee final payoff: (multiplier * amount_sent) - amount_returned (null if trustee not implemented or incomplete)"
+            }
+          }
+        },
+
+        "vrr_flags": {
+          "type": "object",
+          "required": ["valid_trustor"],
+          "properties": {
+            "valid_trustor": {
+              "type": "boolean",
+              "description": "True if amount_sent is in valid range [0, endowment]"
+            },
+            "valid_trustee": {
+              "type": ["boolean", "null"],
+              "description": "True if amount_returned is in valid range [0, multiplier * amount_sent] (null if trustee not implemented)"
+            }
+          }
+        },
+
+        "errors": {
+          "type": "object",
+          "required": ["parse_errors"],
+          "properties": {
+            "parse_errors": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "List of parsing error messages (empty array if no errors)"
+            },
+            "api_errors": {
+              "type": ["array", "null"],
+              "items": {
+                "type": "string"
+              },
+              "description": "List of API call error messages (null if no API errors)"
+            }
+          }
+        }
+      }
+    },
+
+    "aggregate_stats": {
+      "type": "object",
+      "description": "Aggregate statistics for a condition (model + partner_framing). Written to results/aggregates/<run_id>.json",
+      "required": [
+        "run_id",
+        "experiment_id",
+        "condition",
+        "model_id",
+        "partner_framing",
+        "n_episodes",
+        "n_valid",
+        "trustor_stats",
+        "timestamp"
+      ],
+      "properties": {
+        "run_id": {
+          "type": "string",
+          "description": "Run identifier matching episode records"
+        },
+        "experiment_id": {
+          "type": "string",
+          "description": "Experiment identifier matching episode records"
+        },
+        "condition": {
+          "type": "string",
+          "description": "Condition label (e.g., 'gpt4_baseline', 'claude3.5_llm_partner')"
+        },
+        "model_id": {
+          "type": "string",
+          "description": "Full OpenRouter model identifier"
+        },
+        "partner_framing": {
+          "type": "string",
+          "enum": ["baseline", "llm_partner", "human_partner"],
+          "description": "Partner framing treatment"
+        },
+        "n_episodes": {
+          "type": "integer",
+          "description": "Total number of episodes in this condition"
+        },
+        "n_valid": {
+          "type": "integer",
+          "description": "Number of episodes with valid trustor responses"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp of aggregation"
+        },
+
+        "trustor_stats": {
+          "type": "object",
+          "required": ["vrr", "mean_sent", "sd_sent", "median_sent", "min_sent", "max_sent"],
+          "properties": {
+            "vrr": {
+              "type": "number",
+              "description": "Valid Response Rate: n_valid / n_episodes"
+            },
+            "mean_sent": {
+              "type": ["number", "null"],
+              "description": "Mean amount sent (excluding invalid responses). Null if n_valid = 0."
+            },
+            "sd_sent": {
+              "type": ["number", "null"],
+              "description": "Standard deviation of amount sent (excluding invalid responses). Null if n_valid < 2."
+            },
+            "median_sent": {
+              "type": ["number", "null"],
+              "description": "Median amount sent (excluding invalid responses). Null if n_valid = 0."
+            },
+            "min_sent": {
+              "type": ["number", "null"],
+              "description": "Minimum amount sent (excluding invalid responses). Null if n_valid = 0."
+            },
+            "max_sent": {
+              "type": ["number", "null"],
+              "description": "Maximum amount sent (excluding invalid responses). Null if n_valid = 0."
+            },
+            "distribution_bins": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              },
+              "description": "Histogram bins: counts for [0-1), [1-2), [2-3), ..., [9-10], [10]. Length 11."
+            }
+          }
+        },
+
+        "trustee_stats": {
+          "type": ["object", "null"],
+          "description": "Trustee statistics (null if trustee not implemented)",
+          "properties": {
+            "n_valid_trustee": {
+              "type": "integer",
+              "description": "Number of episodes with valid trustee responses"
+            },
+            "mean_returned": {
+              "type": ["number", "null"],
+              "description": "Mean amount returned (excluding invalid responses). Null if n_valid_trustee = 0."
+            },
+            "mean_return_ratio": {
+              "type": ["number", "null"],
+              "description": "Mean return ratio: amount_returned / (multiplier * amount_sent). Null if n_valid_trustee = 0 or any amount_sent = 0."
+            },
+            "sd_return_ratio": {
+              "type": ["number", "null"],
+              "description": "Standard deviation of return ratio. Null if n_valid_trustee < 2 or any amount_sent = 0."
+            }
+          }
+        },
+
+        "human_baseline": {
+          "type": ["object", "null"],
+          "description": "Human baseline comparison data (optional)",
+          "properties": {
+            "source": {
+              "type": "string",
+              "description": "Citation for human baseline (e.g., 'Cox 2004')"
+            },
+            "human_mean_sent": {
+              "type": "number",
+              "description": "Mean amount sent by humans in comparable Trust Game"
+            },
+            "human_n": {
+              "type": ["integer", "null"],
+              "description": "Sample size for human baseline (null if not reported)"
+            }
+          }
+        },
+
+        "comparison_ready": {
+          "type": "object",
+          "description": "Fields prepared for statistical comparisons (e.g., t-tests)",
+          "properties": {
+            "sent_values": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "description": "Array of all valid amount_sent values (for t-tests, effect sizes)"
+            },
+            "return_ratios": {
+              "type": ["array", "null"],
+              "items": {
+                "type": "number"
+              },
+              "description": "Array of all valid return ratios (null if trustee not implemented)"
+            }
+          }
+        }
+      }
+    }
+  }
+}

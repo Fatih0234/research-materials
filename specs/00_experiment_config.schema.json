@@ -1,0 +1,246 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TrustBench Experiment Configuration Schema",
+  "description": "JSON schema for TrustBench experiment runner configuration files",
+  "type": "object",
+  "required": [
+    "experiment_id",
+    "openrouter",
+    "models",
+    "personas",
+    "game",
+    "treatments",
+    "sampling",
+    "output"
+  ],
+  "properties": {
+    "experiment_id": {
+      "type": "string",
+      "description": "Unique experiment identifier (e.g., 'xie_replication_2026')"
+    },
+
+    "openrouter": {
+      "type": "object",
+      "required": ["api_key_env_var"],
+      "properties": {
+        "api_key_env_var": {
+          "type": "string",
+          "description": "Environment variable name containing OpenRouter API key",
+          "default": "OPENROUTER_API_KEY"
+        },
+        "base_url": {
+          "type": "string",
+          "description": "OpenRouter API base URL (override for testing)",
+          "default": "https://openrouter.ai/api/v1"
+        }
+      }
+    },
+
+    "models": {
+      "type": "array",
+      "description": "List of models to test (OpenRouter format)",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["model_id"],
+        "properties": {
+          "model_id": {
+            "type": "string",
+            "description": "Full OpenRouter model identifier (e.g., 'openrouter/openai/gpt-4-turbo')"
+          },
+          "label": {
+            "type": "string",
+            "description": "Human-readable label for this model (e.g., 'GPT-4 Turbo')"
+          },
+          "paper_equivalent": {
+            "type": ["string", "null"],
+            "description": "Which model from Xie et al. (2024) this corresponds to (e.g., 'gpt-4', 'gpt-3.5-turbo-0613')"
+          }
+        }
+      }
+    },
+
+    "personas": {
+      "type": "object",
+      "required": ["source_path", "n_sample"],
+      "properties": {
+        "source_path": {
+          "type": "string",
+          "description": "Path to persona pool file (JSON or JSONL). Each entry must have 'persona_id' and 'persona_text' fields."
+        },
+        "n_sample": {
+          "type": "integer",
+          "description": "Number of personas to sample per condition (Xie et al. used 53)",
+          "minimum": 1
+        },
+        "sampling_strategy": {
+          "type": "string",
+          "enum": ["random", "stratified", "sequential"],
+          "description": "How to sample personas from pool. Default: 'sequential' (first N personas)",
+          "default": "sequential"
+        },
+        "seed": {
+          "type": ["integer", "null"],
+          "description": "Random seed for persona sampling (null for no seeding)"
+        }
+      }
+    },
+
+    "game": {
+      "type": "object",
+      "required": ["variant", "endowment", "multiplier", "rounds"],
+      "properties": {
+        "variant": {
+          "type": "string",
+          "enum": ["trust_game", "dictator_game"],
+          "description": "Game variant (MVP: 'trust_game' only)"
+        },
+        "endowment": {
+          "type": "number",
+          "description": "Trustor endowment in dollars",
+          "default": 10
+        },
+        "multiplier": {
+          "type": "number",
+          "description": "Amount sent multiplier",
+          "default": 3
+        },
+        "rounds": {
+          "type": "integer",
+          "description": "Number of rounds (1 for one-shot, >1 for repeated)",
+          "minimum": 1,
+          "default": 1
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["trustor", "trustee"]
+          },
+          "description": "Which roles to run (MVP: ['trustor'] only; future: ['trustor', 'trustee'])",
+          "default": ["trustor"]
+        }
+      }
+    },
+
+    "treatments": {
+      "type": "object",
+      "required": ["partner_framing"],
+      "properties": {
+        "partner_framing": {
+          "type": "array",
+          "description": "Partner framing treatments to test",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "enum": ["baseline", "llm_partner", "human_partner"]
+          }
+        }
+      }
+    },
+
+    "sampling": {
+      "type": "object",
+      "required": ["temperature"],
+      "properties": {
+        "temperature": {
+          "type": "number",
+          "description": "Sampling temperature (Xie et al. used 1.0 for high persona diversity)",
+          "minimum": 0,
+          "maximum": 2,
+          "default": 1.0
+        },
+        "top_p": {
+          "type": ["number", "null"],
+          "description": "Nucleus sampling parameter (null to disable)",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "max_tokens": {
+          "type": ["integer", "null"],
+          "description": "Maximum completion tokens (null for unlimited)",
+          "minimum": 1
+        },
+        "seed": {
+          "type": ["integer", "null"],
+          "description": "Random seed for LLM sampling (null for no seeding)"
+        },
+        "n_retries": {
+          "type": "integer",
+          "description": "Number of retries for API failures",
+          "minimum": 0,
+          "default": 3
+        },
+        "retry_delay_seconds": {
+          "type": "number",
+          "description": "Delay between retries (exponential backoff)",
+          "minimum": 0,
+          "default": 1.0
+        }
+      }
+    },
+
+    "prompts": {
+      "type": "object",
+      "description": "Prompt template configuration (optional overrides)",
+      "properties": {
+        "template_dir": {
+          "type": "string",
+          "description": "Directory containing prompt templates (default: 'prompts/')"
+        },
+        "trustor_template": {
+          "type": "string",
+          "description": "Trustor prompt template filename (default: 'trust_game_trustor_v1.txt')"
+        },
+        "trustee_template": {
+          "type": "string",
+          "description": "Trustee prompt template filename (default: 'trust_game_trustee_v1.txt')"
+        },
+        "persona_template": {
+          "type": "string",
+          "description": "Persona injection template filename (default: 'persona_v1.txt')"
+        }
+      }
+    },
+
+    "output": {
+      "type": "object",
+      "required": ["episodes_dir", "aggregates_dir"],
+      "properties": {
+        "episodes_dir": {
+          "type": "string",
+          "description": "Directory for episode JSONL files",
+          "default": "results/episodes"
+        },
+        "aggregates_dir": {
+          "type": "string",
+          "description": "Directory for aggregate JSON files",
+          "default": "results/aggregates"
+        },
+        "run_label": {
+          "type": ["string", "null"],
+          "description": "Optional run label (appended to run_id for human readability)"
+        }
+      }
+    },
+
+    "human_baseline": {
+      "type": ["object", "null"],
+      "description": "Optional human baseline comparison data",
+      "properties": {
+        "source": {
+          "type": "string",
+          "description": "Citation for human baseline (e.g., 'Cox 2004')"
+        },
+        "mean_sent": {
+          "type": "number",
+          "description": "Mean amount sent by humans in comparable Trust Game"
+        },
+        "n": {
+          "type": ["integer", "null"],
+          "description": "Sample size for human baseline (null if not reported)"
+        }
+      }
+    }
+  }
+}

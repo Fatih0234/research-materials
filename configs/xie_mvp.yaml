@@ -1,0 +1,87 @@
+# TrustBench MVP Config: Xie et al. (2024) Minimal Replication
+# Implements one-shot Trust Game with baseline + llm_partner framing
+# Target: GPT-4, Claude-3.5, Llama-3-70b
+# Personas: 20 (reduced from Xie's 53 for MVP cost control)
+
+experiment_id: "xie_mvp_2026"
+
+# OpenRouter API configuration
+openrouter:
+  api_key_env_var: "OPENROUTER_API_KEY"
+  base_url: "https://openrouter.ai/api/v1"
+
+# Models to test (OpenRouter identifiers)
+models:
+  - model_id: "openrouter/openai/gpt-4-turbo"
+    label: "GPT-4 Turbo"
+    paper_equivalent: "gpt-4"  # Xie et al. tested GPT-4
+
+  - model_id: "openrouter/anthropic/claude-3.5-sonnet"
+    label: "Claude 3.5 Sonnet"
+    paper_equivalent: null  # Not tested in Xie et al., added for comparison
+
+  - model_id: "openrouter/meta-llama/llama-3-70b-instruct"
+    label: "Llama 3 70B Instruct"
+    paper_equivalent: "llama2-70b"  # Closest equivalent to Xie's Llama2-70b
+
+# Persona configuration
+personas:
+  source_path: "data/personas/xie_personas.json"  # To be created (53 personas from Xie et al.)
+  n_sample: 20  # Reduced from 53 for MVP (cost control)
+  sampling_strategy: "sequential"  # Use first 20 personas
+  seed: null  # No random sampling for reproducibility
+
+# Trust Game parameters
+game:
+  variant: "trust_game"  # One-shot Trust Game (MVP)
+  endowment: 10  # Trustor receives $10 (Xie et al. standard)
+  multiplier: 3  # Amount sent is tripled (Xie et al. standard)
+  rounds: 1  # One-shot game (repeated games deferred to extensions)
+  roles:
+    - "trustor"  # MVP: trustor only (trustee role deferred)
+
+# Treatments to test
+treatments:
+  partner_framing:
+    - "baseline"  # No partner framing (Xie et al. baseline)
+    - "llm_partner"  # Partner is LLM (Xie et al. treatment)
+    # "human_partner" omitted for MVP (can be added later)
+
+# Sampling parameters (aligned with Xie et al.)
+sampling:
+  temperature: 1.0  # High diversity for persona simulation (Xie et al. used 1.0)
+  top_p: null  # Not specified in Xie et al., leave unset
+  max_tokens: null  # Unlimited (models need flexibility for BDI reasoning)
+  seed: null  # Not used in Xie et al.
+  n_retries: 3  # Retry API failures
+  retry_delay_seconds: 1.0  # Exponential backoff
+
+# Prompt templates (use defaults)
+prompts:
+  template_dir: "prompts/"
+  trustor_template: "trust_game_trustor_v1.txt"  # To be created
+  persona_template: "persona_v1.txt"  # To be created
+  # trustee_template omitted (not implementing trustee in MVP)
+
+# Output configuration
+output:
+  episodes_dir: "results/episodes"
+  aggregates_dir: "results/aggregates"
+  run_label: "xie_mvp"  # Human-readable label for this run
+
+# Human baseline comparison (Cox 2004)
+human_baseline:
+  source: "Cox 2004"
+  mean_sent: 6.0  # Mean amount sent by humans in Trust Game
+  n: null  # Sample size not specified in extraction
+
+# Expected outputs:
+# - results/episodes/<run_id>_xie_mvp.jsonl (120 episodes: 3 models × 2 framings × 20 personas)
+# - results/aggregates/<run_id>_xie_mvp.json (6 conditions: 3 models × 2 framings)
+#
+# Total LLM API calls: 120 (manageable for MVP testing)
+# Cost estimate (rough):
+#   - GPT-4 Turbo: ~$0.01/call × 40 = $0.40
+#   - Claude 3.5 Sonnet: ~$0.015/call × 40 = $0.60
+#   - Llama 3 70B: ~$0.001/call × 40 = $0.04
+#   Total: ~$1-2 for full MVP run

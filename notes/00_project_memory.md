@@ -834,4 +834,175 @@ Papers tested legacy OpenAI models (GPT-4, GPT-3.5-turbo-0613, text-davinci-003)
 **Created:** `notes/papers/arxiv_2402.04559.md` (complete, 10,000+ words)
 **Updated:** `plans/02a_design_accumulator.md` with Xie et al. findings
 **Updated:** This project memory with C2 outcomes
-**Next Up:** Iteration C3 - Extract Akata et al. (2025) Nature paper (Social CoT prompting)
+**Next Up:** Iteration C2.5 - Convert extraction to hard specs (runner schema + config)
+
+---
+
+## Iteration C2.5 Outcomes: Runner Schemas & MVP Config
+
+**Completed:** 2026-01-18
+**Goal:** Create minimum specification artifacts for Trust Game runner (NO implementation code)
+**Scope:** Based ONLY on notes/papers/arxiv_2402.04559.md extraction (no additional paper reading)
+
+### Files Created
+
+1. **`specs/01_runner_schema.json`** - JSON schemas for episode records and aggregate statistics
+   - **Episode record schema:** JSONL format for single Trust Game episodes
+     - Required fields: experiment_id, run_id, episode_id, timestamp
+     - Game params: endowment=10, multiplier=3, rounds=1 (constants)
+     - Persona: persona_id + persona_text (full narrative demographic)
+     - Partner framing: "baseline" | "llm_partner" | "human_partner"
+     - Model info: provider=openrouter, model_id, temperature, top_p, max_tokens, seed
+     - Prompts: trustor_prompt (rendered), trustee_prompt (optional), prompt_version IDs
+     - Raw outputs: trustor_raw, trustee_raw (full LLM text with BDI reasoning)
+     - Parsed actions: amount_sent, amount_returned, parse_status (enum)
+     - Payoffs: trustor_payoff, trustee_payoff (calculated from actions)
+     - VRR flags: valid_trustor, valid_trustee (boolean validity checks)
+     - Errors: parse_errors (list), api_errors (list)
+
+   - **Aggregate stats schema:** JSON format for per-condition summaries
+     - Condition: model_id + partner_framing
+     - Sample size: n_episodes, n_valid (for VRR calculation)
+     - Trustor stats: vrr, mean_sent, sd_sent, median_sent, min_sent, max_sent, distribution_bins
+     - Trustee stats (optional): n_valid_trustee, mean_returned, mean_return_ratio, sd_return_ratio
+     - Human baseline: source (citation), human_mean_sent, human_n
+     - Comparison-ready fields: sent_values (array), return_ratios (array) for t-tests
+
+2. **`specs/00_experiment_config.schema.json`** - Configuration file schema
+   - **OpenRouter config:** api_key_env_var, base_url
+   - **Models list:** model_id (OpenRouter format), label, paper_equivalent
+   - **Personas config:** source_path, n_sample, sampling_strategy (random|stratified|sequential), seed
+   - **Game params:** variant (trust_game|dictator_game), endowment, multiplier, rounds, roles (trustor|trustee)
+   - **Treatments:** partner_framing (array of baseline|llm_partner|human_partner)
+   - **Sampling params:** temperature, top_p, max_tokens, seed, n_retries, retry_delay_seconds
+   - **Prompts (optional):** template_dir, trustor_template, trustee_template, persona_template
+   - **Output:** episodes_dir, aggregates_dir, run_label
+   - **Human baseline (optional):** source, mean_sent, n
+
+3. **`configs/xie_mvp.yaml`** - MVP config instance (ready to run)
+   - **Experiment:** "xie_mvp_2026" (one-shot Trust Game, Xie et al. replication)
+   - **Models:** 3 models tested
+     - GPT-4 Turbo (paper equivalent: gpt-4)
+     - Claude 3.5 Sonnet (new, not in Xie et al.)
+     - Llama 3 70B Instruct (paper equivalent: llama2-70b)
+   - **Personas:** 20 personas (reduced from Xie's 53 for MVP cost control)
+     - Source: data/personas/xie_personas.json (to be created)
+     - Sampling: sequential (first 20)
+   - **Game:** Trust Game, endowment=10, multiplier=3, rounds=1, roles=[trustor]
+   - **Treatments:** 2 partner framings (baseline, llm_partner)
+   - **Sampling:** temperature=1.0 (Xie et al. standard), top_p=null, max_tokens=null, seed=null
+   - **Output:** results/episodes/, results/aggregates/, run_label="xie_mvp"
+   - **Human baseline:** Cox 2004, mean_sent=6.0
+   - **Expected:** 120 total episodes (3 models × 2 framings × 20 personas)
+   - **Cost estimate:** ~$1-2 for full MVP run
+
+### Design Decisions
+
+1. **Episode-level JSONL format:**
+   - One line per episode for streaming writes
+   - Full prompt + raw output + parsed action + payoffs
+   - All metadata for reproducibility (model version, temperature, timestamp, etc.)
+
+2. **Aggregate-level JSON format:**
+   - Per-condition summaries (model × partner_framing)
+   - Trustor stats always present; trustee stats nullable (MVP: trustor only)
+   - Distribution bins for histogram visualization
+   - Comparison-ready arrays for statistical tests (deferred to later)
+
+3. **Configuration as YAML:**
+   - Human-readable, supports comments
+   - Validates against JSON schema
+   - Single config file per experiment run
+
+4. **Conservative attribute handling:**
+   - Unknown/unspecified attributes marked as optional or nullable
+   - Trustee fields present but nullable (future extension)
+   - Top-p, max_tokens, seed nullable (not specified in Xie et al.)
+
+5. **Prompt versioning:**
+   - Store prompt_version IDs (e.g., "v1.0_xie_baseline") for reproducibility
+   - Allows A/B testing of prompt variants
+
+6. **VRR as first-class metric:**
+   - Boolean valid_trustor/valid_trustee flags per episode
+   - VRR calculated at aggregate level: n_valid / n_episodes
+   - Critical for detecting model capability issues (Xie found Llama-7b low VRR)
+
+### What This Enables (Next Steps)
+
+**Iteration C3 (Runner Implementation):**
+- Python runner script reading configs/xie_mvp.yaml
+- OpenRouter API client
+- Persona loading and sampling
+- Prompt rendering (persona + game + framing)
+- LLM API calls with retries
+- Output parsing (regex: "Finally, I will give X dollars")
+- Episode JSONL writer
+- Aggregate stats calculator
+
+**Blocked on:**
+- Prompt templates (to be created in prompts/ directory)
+- Persona pool (to be created in data/personas/xie_personas.json)
+- Runner code (Iteration C3)
+
+### Validation Against Xie et al. Extraction
+
+All schema fields directly traceable to notes/papers/arxiv_2402.04559.md:
+- ✅ Game params: endowment=10, multiplier=3 (lines 62-66)
+- ✅ Partner framing: baseline, llm_partner, human_partner (lines 101-103, 141-152)
+- ✅ Temperature=1.0 (line 192)
+- ✅ 53 personas (line 194; MVP reduced to 20)
+- ✅ VRR metric (line 207)
+- ✅ Trust metric: amount sent (line 204)
+- ✅ Reciprocity metric: amount returned (line 211)
+- ✅ BDI reasoning in raw outputs (lines 182-189)
+- ✅ Parsing pattern: "Finally, I will give X dollars" (line 186, 334)
+- ✅ Human baseline: Cox 2004, $6.0 sent (line 263)
+- ✅ Statistical test: one-tailed t-test (line 230)
+
+No new information added beyond extraction. All attributes conservative (nullable if uncertain).
+
+### Cost-Benefit Analysis for MVP Config
+
+**Reduced scope from Xie et al.:**
+- Personas: 20 vs 53 (62% reduction)
+- Models: 3 vs 9 (67% reduction)
+- Partner framings: 2 vs 3 (removed "human_partner" for MVP)
+- Total episodes: 120 vs ~1,400 (91% reduction)
+
+**MVP still tests core hypotheses:**
+- ✅ Do LLM agents exhibit trust behavior? (VRR, mean_sent > 0)
+- ✅ How does trust compare to humans? (mean_sent vs Cox 2004 baseline)
+- ✅ Does partner framing affect trust? (baseline vs llm_partner comparison)
+- ✅ Do different model families differ? (GPT-4 vs Claude vs Llama)
+
+**Deferred to extensions:**
+- Dictator Game (reciprocity anticipation)
+- Trustee role (two-sided trust)
+- Human partner framing
+- Repeated games
+- Full 53 personas
+
+### Next Steps (Iteration C3)
+
+**Goal:** Create prompt templates + persona pool (NO runner code yet)
+
+**Deliverables:**
+1. `prompts/persona_v1.txt` - Persona injection template
+2. `prompts/trust_game_trustor_v1.txt` - Trustor role prompt
+3. `data/personas/xie_personas.json` - 53 personas (from Xie et al. extraction examples)
+4. Update project memory with C2.5 → C3 transition
+
+**Stop condition:** Prompts and personas ready; runner implementation begins in next iteration
+
+---
+
+## End of Iteration C2.5
+
+**Completed:** Runner schemas and MVP config
+**Created:**
+  - `specs/01_runner_schema.json` (episode + aggregate schemas)
+  - `specs/00_experiment_config.schema.json` (config schema)
+  - `configs/xie_mvp.yaml` (MVP instance)
+**Updated:** This project memory with C2.5 outcomes
+**Next Up:** Iteration C3 - Create prompt templates and persona pool (still NO runner code)
