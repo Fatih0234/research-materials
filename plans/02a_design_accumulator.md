@@ -12,8 +12,7 @@
 | Paper Slug | Game | Endowment | Multiplier | Rounds | Communication | Treatments | Notes |
 |------------|------|-----------|------------|--------|--------------|------------|-------|
 | _Example_ | Trust Game | 10 tokens | 3x | 1 (one-shot) | No | Baseline, Persona | - |
-| | | | | | | | |
-| | | | | | | | |
+| arxiv_2301.07543 | Dictator (C&R 2002) | Varies by scenario | N/A | 1 (one-shot) | No | Persona (4 types) | Not a Trust Game; demonstrates methodology |
 | | | | | | | | |
 | | | | | | | | |
 | | | | | | | | |
@@ -33,8 +32,8 @@
 |------------|------|---------------|-----------|------------|---------------|------------------------|
 | _Example_ | Investor | Y (demographic) | N | N | JSON schema | BDI reasoning framework |
 | | Trustee | Y | N | N | JSON schema | Belief-desire-intention |
-| | | | | | | |
-| | | | | | | |
+| arxiv_2301.07543 | Person B (dictator) | Y (preference) | N | N | Constrained choice ("left"/"right") | Minimal persona prepend (1 sentence) |
+| | | | | | | Preference types: inequity-averse, efficient, self-interested, none |
 | | | | | | | |
 | | | | | | | |
 | | | | | | | |
@@ -53,8 +52,8 @@
 | Paper Slug | Temp | Top-p | N Samples/Condition | Self-Consistency (Y/N) | Seed Handling | Notes |
 |------------|------|-------|---------------------|------------------------|---------------|-------|
 | _Example_ | 0.7 | 0.9 | 50 | Y (majority vote) | Random per episode | - |
-| | | | | | | |
-| | | | | | | |
+| arxiv_2301.07543 | Not disclosed | Not disclosed | Not disclosed (likely small) | N | Not disclosed | ~$50 total cost, "minutes" runtime |
+| | | | | | | Emphasizes low cost enables "arbitrarily large" N |
 | | | | | | | |
 | | | | | | | |
 | | | | | | | |
@@ -73,7 +72,7 @@
 | Paper Slug | Trust Metric | Reciprocity Metric | Efficiency Metric | Aggregation Method | Statistical Tests | Effect Sizes Reported? |
 |------------|--------------|-------------------|-------------------|-------------------|-------------------|----------------------|
 | _Example_ | Amount sent / Endowment | Amount returned / Received | Joint surplus | Mean ± SD | t-test, ANOVA | Cohen's d = 0.5 |
-| | | | | | | |
+| arxiv_2301.07543 | N/A (not trust game) | N/A | Total payoff (sum of allocations) | Fraction choosing each option | None (qualitative comparison) | No |
 | | | | | | | |
 | | | | | | | |
 | | | | | | | |
@@ -93,9 +92,9 @@
 | Paper Slug | Baseline Source | Baseline Trust Measure | Baseline Reciprocity Measure | How LLM-Human Comparison Done | LLM vs Human Result |
 |------------|-----------------|------------------------|------------------------------|-------------------------------|---------------------|
 | _Example_ | Berg et al. 1995 | ~50% of endowment sent | ~30% returned | Mean comparison, t-test | LLM higher trust |
-| | | | | | |
-| | | | | | |
-| | | | | | |
+| arxiv_2301.07543 | Charness & Rabin 2002 | N/A (dictator game) | N/A | Qualitative directional comparison | Qualitative agreement |
+| | Kahneman et al. 1986 | N/A (fairness survey) | N/A | Qualitative comparison | Directional match |
+| | Samuelson & Zeckhauser 1988 | N/A (status quo bias) | N/A | Qualitative comparison | Status quo bias replicated |
 | | | | | | |
 | | | | | | |
 | | | | | | |
@@ -114,9 +113,10 @@
 | Paper Slug | Intervention Tested | Effect on Trust/Cooperation | Effect Size | Takeaway for TrustBench |
 |------------|---------------------|----------------------------|-------------|------------------------|
 | _Example_ | Social CoT prompting | +25% cooperation in PD | p < 0.001 | SCoT unlocks ToM reasoning |
-| | | | | |
-| | | | | |
-| | | | | |
+| arxiv_2301.07543 | Persona endowments (preference types) | Strong directional effects | Not quantified | Only capable models (text-davinci-003) respond to personas |
+| | Inequity-averse persona | → Chooses equitable allocations | Qualitative | Validates persona injection as tool |
+| | Efficiency persona | → Maximizes total payoff | Qualitative | Default (unendowed) behavior = efficiency-seeking |
+| | Self-interested persona | → Maximizes own payoff | Qualitative | Not the default (contra homo economicus) |
 
 ---
 
@@ -127,8 +127,9 @@
 | Paper Slug | Common Parsing Errors | Refusal Behaviors | Model-Specific Quirks | Mitigation Strategies |
 |------------|----------------------|-------------------|----------------------|----------------------|
 | _Example_ | Text instead of number | "I can't play unfairly" | GPT-4 overly cautious | Roleplay framing, retry logic |
-| | | | | |
-| | | | | |
+| arxiv_2301.07543 | Not disclosed | Not mentioned | Less capable models (ada/babbage/currie) ignore personas | Pre-test model capability before trusting results |
+| | | | Less capable models default to same choice repeatedly | Use only capable models (text-davinci-003+) |
+| | | | | Capability threshold exists for persona responsiveness |
 | | | | | |
 
 ---
@@ -158,10 +159,13 @@ After all papers extracted, rank which features are:
 - [e.g., "Self-consistency improves distribution quality"]
 
 ### Divergence (Where papers differ)
-- [e.g., "Persona formats vary widely - demographic vs BDI vs narrative"]
+- **Persona formats vary**: Horton uses minimal preference injection (1 sentence prepend); others may use demographic or BDI approaches
 - [e.g., "Temperature ranges from 0.5 to 1.0"]
 
 ### Gaps (What's missing)
+- **Horton does not disclose sampling parameters**: Temperature, top-p, N, seed handling all unspecified
+- **Horton does not test trust games**: Paper is foundational for methods but does not provide trust game baseline
+- **No quantitative human baseline comparison**: Only qualitative directional agreement
 - [e.g., "No paper tests Trust Game with both CoT and SCoT"]
 - [e.g., "Limited multi-model comparisons in same protocol"]
 

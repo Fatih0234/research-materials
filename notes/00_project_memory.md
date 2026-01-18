@@ -470,3 +470,109 @@ For each extraction (C1-C7), the following MUST be complete:
 **Created:** Template, extraction queue, design accumulator, LLM interface spec
 **Updated:** This project memory with C0 outcomes
 **Next Up:** Iteration C1 - Extract Horton (2023) arxiv_2301.07543
+
+---
+
+## Iteration C1 Outcomes: Horton (2023) - Homo Silicus
+
+**Completed:** 2026-01-18
+**Paper:** Large Language Models as Simulated Economic Agents: What Can We Learn from Homo Silicus?
+**Slug:** arxiv_2301.07543
+
+### Files Created/Updated
+
+1. **`notes/papers/arxiv_2301.07543.md`** - Complete extraction (6,500+ words)
+   - Full template populated with all sections
+   - Conceptual/methods paper (not a Trust Game study)
+   - Primary focus: Persona injection methodology and validity framework
+
+2. **`plans/02a_design_accumulator.md`** - Updated with Horton findings
+   - Game Parameters: Charness & Rabin dictator game (methodological demonstration)
+   - Prompt Patterns: Minimal persona prepend (1 sentence preference injection)
+   - Sampling/Variance: Parameters not disclosed (major gap)
+   - Metrics: Qualitative directional comparison to human baselines
+   - Human Baselines: C&R 2002, Kahneman 1986, Samuelson 1988
+   - Intervention Effects: Strong persona effects in capable models only
+   - Failure Modes: Less capable models (ada/babbage/currie) ignore personas
+
+3. **`notes/00_project_memory.md`** - This file (C1 outcomes added)
+
+### Most Actionable Takeaways for TrustBench
+
+1. **Conceptual Framing: "Homo Silicus"**
+   - Position LLMs as **computational models of humans** (not "AI subjects")
+   - Parallel to homo economicus: tools for exploring behavior under different endowments
+   - Justification: LLMs trained on vast corpus containing economic reasoning
+   - **Implication:** Use this terminology in TrustBench documentation and paper framing
+
+2. **Persona Injection Methodology**
+   - **Minimal is effective:** Simple 1-sentence prepend (e.g., "You value fairness.") can shift behavior
+   - **Capability threshold exists:** Only advanced models (GPT-3 text-davinci-003+) respond to personas
+   - **Pre-test required:** Must validate model responsiveness before trusting results
+   - **Implication:** TrustBench needs persona injection capability + model capability tests
+
+3. **Validity Framework (Three Threats to Address)**
+   - **Garbage-in-garbage-out:** Are results just corpus biases? → Mitigation: Test directional sensitivity to personas
+   - **Performativity:** Is LLM reciting memorized results? → Mitigation: Ask model to cite literature; if fails, less concern
+   - **Simulation vs. model:** Are we just programming expected behavior? → Mitigation: LLMs constrain behavior (unlike ABMs)
+   - **Implication:** TrustBench must implement all three validity checks
+
+4. **Default Behavior Is NOT Self-Interest**
+   - Unendowed LLMs tend toward **efficiency/cooperation**, not rational self-interest
+   - Horton's GPT-3 defaulted to maximizing total payoff in dictator games
+   - **Implication:** Trust game baselines may show higher-than-human cooperation; document this as feature, not bug
+
+5. **Model Capability Matters More Than Expected**
+   - Less capable GPT-3 models (ada/babbage/currie) completely failed to respond to persona prompts
+   - Only text-davinci-003 could adjust behavior based on preference endowments
+   - **Implication:** TrustBench must test model ladder (GPT-4, Claude-3.5, open models) to identify capability floor
+
+6. **Reproducibility Standards**
+   - Horton emphasizes "push-button" reproducibility: fork repo + replace API keys = exact replication
+   - Pre-registration does NOT fit (experiments too cheap/fast to prevent iteration)
+   - Alternative: Transparent reporting + open data + full prompt/response logs
+   - **Implication:** TrustBench should prioritize code/data release over pre-registration
+
+### Decisions Forced by Horton Paper
+
+1. **Use persona injection in TrustBench:** At least test baseline vs persona conditions
+2. **Implement model capability pre-test:** Validate persona responsiveness before experiment
+3. **Document three validity checks:** GIGO, performativity, simulation concerns
+4. **Expect non-selfish default behavior:** LLMs may be more cooperative than humans by default
+
+### Key Gaps Identified
+
+1. **No sampling parameters disclosed:** Temperature, top_p, N, seed handling all unspecified
+2. **No Trust Game tested:** Horton demonstrates methods but does not provide trust baseline
+3. **No quantitative statistical tests:** Only qualitative directional comparisons to human data
+4. **Prompt templates incomplete:** Only Charness & Rabin scenario fully specified
+
+### Chunks Consulted (Local Paths)
+
+- `knowledge_library/docling/arxiv_2301.07543/toc.md`
+- `knowledge_library/docling/arxiv_2301.07543/chunks/02-Abstract.md`
+- `knowledge_library/docling/arxiv_2301.07543/chunks/03-1 Introduction.md`
+- `knowledge_library/docling/arxiv_2301.07543/chunks/04-2 Background and conceptual issues.md`
+- `knowledge_library/docling/arxiv_2301.07543/chunks/05-2.1 The 'Garbage in, Garbage out' critique.md`
+- `knowledge_library/docling/arxiv_2301.07543/chunks/06-2.2 Are these just simulations-.md`
+- `knowledge_library/docling/arxiv_2301.07543/chunks/07-2.3 The 'performativity' problem.md`
+- `knowledge_library/docling/arxiv_2301.07543/chunks/08-2.4 What counts as an 'observation' and the need to endow beliefs.md`
+- `knowledge_library/docling/arxiv_2301.07543/chunks/09-3 Experiments.md`
+- `knowledge_library/docling/arxiv_2301.07543/chunks/10-3.1 A social preferences experiment- Charness and Rabin (2002).md`
+- `knowledge_library/docling/arxiv_2301.07543/chunks/14-4 Conclusion.md`
+
+### Next Paper: Iteration C2
+
+**Target:** arxiv_2402.04559 (Xie et al. 2024 - Trust Game) ⭐ PRIMARY REPLICATION TARGET
+**Why:** This is the actual Trust Game implementation with LLM-LLM dyads, BDI reasoning, and human baseline comparisons
+**Expected:** Game parameters, full prompts, trust/reciprocity metrics, human comparison statistics
+
+---
+
+## End of Iteration C1
+
+**Completed:** Horton (2023) extraction - foundational methods paper
+**Created:** `notes/papers/arxiv_2301.07543.md` (complete)
+**Updated:** `plans/02a_design_accumulator.md` with Horton findings
+**Updated:** This project memory with C1 outcomes
+**Next Up:** Iteration C2 - Extract Xie et al. (2024) Trust Game paper (PRIMARY TARGET)
