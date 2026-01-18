@@ -1,0 +1,2 @@
+condition,model_id,partner_framing,n_episodes,n_valid,vrr,mean_sent,sd_sent,median_sent,min_sent,max_sent
+gpt-5-nano_baseline,openai/gpt-5-nano,baseline,2,2,1.000,5.00,7.07,5.0,0.0,10.0

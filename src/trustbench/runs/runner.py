@@ -187,22 +187,82 @@ class TrustGameRunner:
             retry_delay=retry_delay
         )
 
-        # Parse trustor output
+        # Parse trustor output (with single repair retry on parse failure)
         raw_text = llm_response["raw_text"]
         api_error = llm_response["error"]
+
+        parse_errors: List[str] = []
+        api_errors: List[str] = []
+        repair_raw_text = None
+        repair_attempted = False
+        repair_succeeded = False
 
         if api_error:
             # API call failed
             amount_sent = None
             parse_status = "format_error"
-            parse_errors = [api_error]
             valid_trustor = False
+            api_errors.append(api_error)
         else:
-            amount_sent, parse_status, parse_errors = self.parser.parse_trustor_output(
+            amount_sent, parse_status, parser_errors, parse_reason, matched_text = self.parser.parse_trustor_output(
                 raw_text=raw_text,
                 endowment=endowment
             )
+            parse_errors.extend(parser_errors)
             valid_trustor = (parse_status == "success")
+
+            if not valid_trustor:
+                parse_errors.append(f"initial_parse_failed: {parse_reason}")
+                if matched_text:
+                    parse_errors.append(f"initial_matched_text: {matched_text}")
+
+                repair_attempted = True
+                repair_prompt = (
+                    "Reply with exactly one line: Finally, I will give <number> dollars.\n"
+                    "Use a number between 0 and 10."
+                )
+                repair_messages = [{"role": "user", "content": repair_prompt}]
+                repair_response = self.llm_client.call_llm(
+                    messages=repair_messages,
+                    model=model["model_id"],
+                    temperature=temperature,
+                    top_p=top_p,
+                    max_tokens=max_tokens,
+                    seed=seed,
+                    max_retries=max_retries,
+                    retry_delay=retry_delay
+                )
+                repair_raw_text = repair_response["raw_text"]
+                repair_error = repair_response["error"]
+
+                if repair_error:
+                    api_errors.append(repair_error)
+                    parse_errors.append("repair_parse_failed: api_error")
+                else:
+                    (
+                        amount_sent_repair,
+                        parse_status_repair,
+                        repair_errors,
+                        repair_reason,
+                        repair_matched_text,
+                    ) = self.parser.parse_trustor_output(
+                        raw_text=repair_raw_text,
+                        endowment=endowment,
+                        allow_fallback=False
+                    )
+                    parse_errors.extend(repair_errors)
+                    if parse_status_repair == "success":
+                        amount_sent = amount_sent_repair
+                        parse_status = parse_status_repair
+                        valid_trustor = True
+                        repair_succeeded = True
+                    else:
+                        parse_errors.append(f"repair_parse_failed: {repair_reason}")
+                        if repair_matched_text:
+                            parse_errors.append(f"repair_matched_text: {repair_matched_text}")
+
+        parse_errors.append(f"repair_attempted: {repair_attempted}")
+        parse_errors.append(f"repair_succeeded: {repair_succeeded}")
 
         # Calculate payoffs (trustor-only, assume nothing returned for MVP)
         # In full implementation, we'd run trustee and calculate both
@@ -246,6 +306,7 @@ class TrustGameRunner:
             },
             "raw_outputs": {
                 "trustor_raw": raw_text,
+                "trustor_raw_repair": repair_raw_text,
                 "trustee_raw": None
             },
             "parsed_actions": {
@@ -264,7 +325,7 @@ class TrustGameRunner:
             },
             "errors": {
                 "parse_errors": parse_errors,
-                "api_errors": [api_error] if api_error else []
+                "api_errors": api_errors
             },
             "llm_metadata": {
                 "request_id": llm_response.get("request_id"),

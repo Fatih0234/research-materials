@@ -8,124 +8,172 @@ class TrustGameParser:
     """Parse Trust Game decisions from LLM outputs."""
 
     @staticmethod
+    def _parse_number(value_str: str) -> Optional[float]:
+        """Parse a numeric string that may include $ and commas."""
+        if value_str is None:
+            return None
+        cleaned = value_str.replace("$", "").replace(",", "").strip()
+        try:
+            return float(cleaned)
+        except ValueError:
+            return None
+
+    @staticmethod
+    def extract_amount(
+        raw_text: str,
+        max_amount: float,
+        verb_pattern: str,
+        allow_fallback: bool = True
+    ) -> Tuple[Optional[float], str, str]:
+        """Extract a numeric amount from free text using ordered patterns.
+
+        Returns:
+            Tuple of (amount, parse_reason, matched_text)
+        """
+        if not raw_text:
+            return None, "no_numeric_value", ""
+
+        number_pattern = r"[-+]?\d[\d,]*(?:\.\d+)?"
+
+        patterns = [
+            (
+                "canonical_final",
+                rf"finally\s*,?\s*i\s*will\s*(?:{verb_pattern})\s*\$?\s*({number_pattern})\s*(?:dollars?)?"
+            ),
+            (
+                "answer_line",
+                rf"\banswer\s*:\s*\$?\s*({number_pattern})\s*(?:dollars?)?"
+            ),
+            (
+                "verb_near_number",
+                rf"\b(?:{verb_pattern})\b[^0-9$]{{0,30}}\$?\s*({number_pattern})\s*(?:dollars?)?"
+            ),
+        ]
+
+        for reason, pattern in patterns:
+            if not allow_fallback and reason != "canonical_final":
+                continue
+            match = re.search(pattern, raw_text, re.IGNORECASE)
+            if match:
+                value = TrustGameParser._parse_number(match.group(1))
+                if value is None:
+                    return None, "format_error", match.group(0)
+                if value < 0 or value > max_amount:
+                    return None, "value_out_of_range", match.group(0)
+                return value, reason, match.group(0)
+
+        if not allow_fallback:
+            return None, "no_numeric_value", ""
+
+        # Fallback: choose last numeric value within bounds
+        fallback_pattern = re.compile(rf"\$?\s*{number_pattern}")
+        last_in_range = None
+        last_in_range_text = ""
+        last_number_text = ""
+        last_number_value = None
+
+        for match in fallback_pattern.finditer(raw_text):
+            token = match.group(0)
+            value = TrustGameParser._parse_number(token)
+            if value is None:
+                continue
+            last_number_text = token
+            last_number_value = value
+            if 0 <= value <= max_amount:
+                last_in_range = value
+                last_in_range_text = token
+
+        if last_in_range is not None:
+            return last_in_range, "fallback_last_in_range", last_in_range_text
+
+        if last_number_value is not None:
+            return None, "value_out_of_range", last_number_text
+
+        return None, "no_numeric_value", ""
+
+    @staticmethod
     def parse_trustor_output(
         raw_text: str,
-        endowment: int = 10
-    ) -> Tuple[Optional[float], str, List[str]]:
+        endowment: int = 10,
+        allow_fallback: bool = True
+    ) -> Tuple[Optional[float], str, List[str], str, str]:
         """Parse trustor's send amount from raw LLM output.
 
         Args:
             raw_text: Raw text output from LLM
             endowment: Maximum valid amount (trustor's endowment)
+            allow_fallback: If False, only canonical pattern is accepted
 
         Returns:
-            Tuple of (amount_sent, parse_status, parse_errors)
+            Tuple of (amount_sent, parse_status, parse_errors, parse_reason, matched_text)
             - amount_sent: Parsed amount or None if parsing failed
             - parse_status: One of 'success', 'format_error', 'value_out_of_range', 'no_numeric_value'
             - parse_errors: List of error messages
         """
-        if not raw_text:
-            return None, "no_numeric_value", ["Empty output"]
+        errors: List[str] = []
+        verb_pattern = r"give|send|transfer"
+        amount, parse_reason, matched_text = TrustGameParser.extract_amount(
+            raw_text=raw_text,
+            max_amount=endowment,
+            verb_pattern=verb_pattern,
+            allow_fallback=allow_fallback
+        )
 
-        errors = []
+        if amount is None:
+            if parse_reason == "no_numeric_value":
+                errors.append("No numeric value found in output")
+            elif parse_reason == "format_error":
+                errors.append("Could not parse numeric value")
+            elif parse_reason == "value_out_of_range":
+                errors.append(f"Amount outside valid range [0, {endowment}]")
+            return None, parse_reason, errors, parse_reason, matched_text
 
-        # Try to extract numeric value from "Finally, I will give X dollars" pattern
-        # Allow negative sign for validation purposes
-        pattern = r"Finally,?\s+I\s+will\s+give\s+(\$?\s*-?\d+(?:\.\d+)?)\s*dollars?"
-        match = re.search(pattern, raw_text, re.IGNORECASE)
+        if parse_reason != "canonical_final":
+            errors.append(f"Used pattern: {parse_reason}")
 
-        if not match:
-            # Try alternative patterns (allow negative for validation)
-            patterns = [
-                r"I\s+will\s+give\s+(\$?\s*-?\d+(?:\.\d+)?)",
-                r"give\s+(\$?\s*-?\d+(?:\.\d+)?)\s+dollars?",
-                r"send\s+(\$?\s*-?\d+(?:\.\d+)?)",
-            ]
-
-            for alt_pattern in patterns:
-                match = re.search(alt_pattern, raw_text, re.IGNORECASE)
-                if match:
-                    errors.append(f"Used fallback pattern: {alt_pattern}")
-                    break
-
-        if not match:
-            return None, "no_numeric_value", ["No numeric value found in output"]
-
-        # Extract and clean numeric value
-        value_str = match.group(1).replace("$", "").strip()
-
-        try:
-            amount = float(value_str)
-        except ValueError:
-            return None, "format_error", [f"Could not parse '{value_str}' as number"]
-
-        # Validate range
-        if amount < 0 or amount > endowment:
-            return None, "value_out_of_range", [
-                f"Amount {amount} outside valid range [0, {endowment}]"
-            ]
-
-        return amount, "success", errors
+        return amount, "success", errors, parse_reason, matched_text
 
     @staticmethod
     def parse_trustee_output(
         raw_text: str,
-        amount_received: float
-    ) -> Tuple[Optional[float], str, List[str]]:
+        amount_received: float,
+        allow_fallback: bool = True
+    ) -> Tuple[Optional[float], str, List[str], str, str]:
         """Parse trustee's return amount from raw LLM output.
 
         Args:
             raw_text: Raw text output from LLM
             amount_received: Maximum valid amount (trustee received = 3 * amount_sent)
+            allow_fallback: If False, only canonical pattern is accepted
 
         Returns:
-            Tuple of (amount_returned, parse_status, parse_errors)
+            Tuple of (amount_returned, parse_status, parse_errors, parse_reason, matched_text)
             - amount_returned: Parsed amount or None if parsing failed
             - parse_status: One of 'success', 'format_error', 'value_out_of_range', 'no_numeric_value'
             - parse_errors: List of error messages
         """
-        if not raw_text:
-            return None, "no_numeric_value", ["Empty output"]
+        errors: List[str] = []
+        verb_pattern = r"return|give\s+back"
+        amount, parse_reason, matched_text = TrustGameParser.extract_amount(
+            raw_text=raw_text,
+            max_amount=amount_received,
+            verb_pattern=verb_pattern,
+            allow_fallback=allow_fallback
+        )
 
-        errors = []
+        if amount is None:
+            if parse_reason == "no_numeric_value":
+                errors.append("No numeric value found in output")
+            elif parse_reason == "format_error":
+                errors.append("Could not parse numeric value")
+            elif parse_reason == "value_out_of_range":
+                errors.append(f"Amount outside valid range [0, {amount_received}]")
+            return None, parse_reason, errors, parse_reason, matched_text
 
-        # Try to extract numeric value from "Finally, I will return X dollars" pattern
-        # Allow negative sign for validation purposes
-        pattern = r"Finally,?\s+I\s+will\s+return\s+(\$?\s*-?\d+(?:\.\d+)?)\s*dollars?"
-        match = re.search(pattern, raw_text, re.IGNORECASE)
+        if parse_reason != "canonical_final":
+            errors.append(f"Used pattern: {parse_reason}")
 
-        if not match:
-            # Try alternative patterns (allow negative for validation)
-            patterns = [
-                r"I\s+will\s+return\s+(\$?\s*-?\d+(?:\.\d+)?)",
-                r"return\s+(\$?\s*-?\d+(?:\.\d+)?)\s+dollars?",
-                r"give\s+back\s+(\$?\s*-?\d+(?:\.\d+)?)",
-            ]
-
-            for alt_pattern in patterns:
-                match = re.search(alt_pattern, raw_text, re.IGNORECASE)
-                if match:
-                    errors.append(f"Used fallback pattern: {alt_pattern}")
-                    break
-
-        if not match:
-            return None, "no_numeric_value", ["No numeric value found in output"]
-
-        # Extract and clean numeric value
-        value_str = match.group(1).replace("$", "").strip()
-
-        try:
-            amount = float(value_str)
-        except ValueError:
-            return None, "format_error", [f"Could not parse '{value_str}' as number"]
-
-        # Validate range
-        if amount < 0 or amount > amount_received:
-            return None, "value_out_of_range", [
-                f"Amount {amount} outside valid range [0, {amount_received}]"
-            ]
-
-        return amount, "success", errors
+        return amount, "success", errors, parse_reason, matched_text
 
     @staticmethod
     def calculate_payoffs(
