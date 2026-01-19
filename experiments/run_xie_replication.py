@@ -138,20 +138,30 @@ def run_vendor_experiment(
         from agent_trust.all_game_person import run_exp
         from agent_trust.exp_model_class import ExtendedModelType
 
-        # Map OpenRouter model ID to ExtendedModelType
-        # The vendor code uses model type enum to route API calls
-        # Since we're using OpenRouter, we need to create a compatible model type
-        # For now, we'll use a string-based approach and let OpenRouter handle routing
+        # Create a simple model wrapper with .value attribute
+        # Vendor code expects model.value for folder paths (e.g., "res/{model.value}_res/")
+        class ModelWrapper:
+            def __init__(self, model_id):
+                # Clean model ID for folder name (remove provider prefix and special chars)
+                self.value = model_id.replace("/", "_").replace(":", "_")
+                self._original_id = model_id
+
+            def __str__(self):
+                return self._original_id
+
+        model_wrapper = ModelWrapper(model_id)
 
         # Call vendor run_exp function
-        # Note: This may need adjustment based on actual vendor function signature
+        # Function signature: run_exp(model_list, whether_llm_player=False, gender=None,
+        #                             special_prompt_key="", re_run=False, part_exp=True, need_run=None)
         result = run_exp(
-            model_list=[model_id],  # Pass OpenRouter model ID directly
-            need_run=[game_id],     # List of game IDs to run
-            llm_player=False,        # Not LLM vs LLM
-            is_genderless=False,     # Use gendered personas
-            is_special_prompt=False, # Use default prompts
-            is_rerun=False           # Not a rerun
+            model_list=[model_wrapper],  # Pass model wrapper (has .value attribute)
+            whether_llm_player=False,    # Not LLM vs LLM
+            gender=None,                 # Use gendered personas (None = use from character_2.json)
+            special_prompt_key="",       # Use default prompts (no special prompt)
+            re_run=False,                # Not a rerun
+            part_exp=False,              # Run all games (or use need_run to filter)
+            need_run=[game_id]           # List of game IDs to run
         )
 
         print(f"✓ Vendor experiment completed for {model_spec['paper_name']}")
