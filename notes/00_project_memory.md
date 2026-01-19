@@ -1558,3 +1558,16 @@ jq -r '.errors.parse_errors[]? // empty' results/<latest_run_dir>/episodes_*.jso
 uv run python3 scripts/run_trustbench.py --config configs/xie_micro.yaml
 jq -r '.errors.parse_errors[]? // empty' results/<latest_run_dir>/episodes_*.jsonl | sort | uniq -c
 ```
+
+---
+
+## Repair single-line update
+
+**Why:** Live micro still showed `fallback_last_in_range` leaking after repair retries.
+**Change:** Repair prompt now demands a single-line output matching the canonical format only.
+**Expected outcome:** `fallback_last_in_range` should drop to 0 after rerun.
+**Validation commands:**
+```bash
+uv run python3 scripts/run_trustbench.py --config configs/xie_micro.yaml
+jq -r '.errors.parse_errors[]? // empty' results/<latest_run_dir>/episodes_*.jsonl | sort | uniq -c
+```

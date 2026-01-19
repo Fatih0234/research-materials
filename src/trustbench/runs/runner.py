@@ -28,6 +28,17 @@ class TrustGameRunner:
         prior_text = "\n".join(lines[:-1])
         return re.search(r"[0-9]", prior_text) is not None
 
+    @staticmethod
+    def _build_repair_prompt(action: str, max_amount: int) -> str:
+        """Build a strict single-line repair instruction for give/return."""
+        template_line = f"Finally, I will {action} <number> dollars."
+        return (
+            "Reply with exactly one line and nothing else: "
+            f"{template_line}\n"
+            f"Use a number between 0 and {max_amount}.\n"
+            "Do not include any other text, reasoning, or extra lines."
+        )
+
     def __init__(self, config: Config, dry_run: bool = False):
         """Initialize runner.
 
@@ -235,12 +246,7 @@ class TrustGameRunner:
                         parse_errors.append(f"initial_matched_text: {matched_text}")
 
                 repair_attempted = True
-                repair_prompt = (
-                    "Rewrite your response into exactly two lines.\n"
-                    "Line 1: one short sentence of reasoning with NO digits.\n"
-                    "Line 2: Finally, I will give <number> dollars.\n"
-                    "Use a number between 0 and 10."
-                )
+                repair_prompt = self._build_repair_prompt("give", endowment)
                 repair_messages = [{"role": "user", "content": repair_prompt}]
                 repair_response = self.llm_client.call_llm(
                     messages=repair_messages,
