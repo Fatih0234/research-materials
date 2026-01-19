@@ -28,6 +28,17 @@ from typing import Dict, Any
 # Add repo root to path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+# Try to load .env file (requires python-dotenv)
+try:
+    from dotenv import load_dotenv
+    # Load from repo root
+    env_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.env')
+    load_dotenv(env_path)
+except ImportError:
+    print("Warning: python-dotenv not installed. Environment variables must be set manually.")
+    print("Install with: pip install python-dotenv (or uv add python-dotenv)")
+    print()
+
 # Color codes for terminal output
 GREEN = '\033[92m'
 RED = '\033[91m'
