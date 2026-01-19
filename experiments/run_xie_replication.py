@@ -173,8 +173,22 @@ def run_vendor_experiment(
 
             @property
             def value_for_tiktoken(self) -> str:
-                """Return model ID for tiktoken."""
-                return self._original_id
+                """Return model ID for tiktoken, with fallbacks for unknown models."""
+                # Map OpenRouter IDs to tiktoken-compatible model names
+                model_id = self._original_id.lower()
+
+                # GPT-5 models -> use gpt-4 encoding (most similar)
+                if "gpt-5" in model_id:
+                    return "gpt-4"
+                # GPT-4 models
+                elif "gpt-4" in model_id:
+                    return "gpt-4"
+                # GPT-3.5 models
+                elif "gpt-3.5" in model_id:
+                    return "gpt-3.5-turbo"
+                # All other models -> use gpt-3.5-turbo as safe default
+                else:
+                    return "gpt-3.5-turbo"
 
             def __str__(self):
                 return self._original_id
