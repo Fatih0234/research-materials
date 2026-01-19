@@ -141,45 +141,61 @@ class TrustGameParser:
         """
         errors: List[str] = []
 
-        def match_explicit(text: str) -> Tuple[Optional[float], str, str]:
-            patterns = [
-                r"\bi\s+would\s+(?:give|send)\s*\$?\s*(\d+(?:\.\d+)?)",
-                r"\bi['’]?d\s+(?:give|send)\s*\$?\s*(\d+(?:\.\d+)?)",
-                r"\bi\s+(?:will\s*)?(?:give|send)\s*\$?\s*(\d+(?:\.\d+)?)",
-                r"\bmy\s+(?:choice|decision)\s*:\s*\$?\s*(\d+(?:\.\d+)?)",
-            ]
-            for pattern in patterns:
-                match = re.search(pattern, text, re.IGNORECASE)
-                if match:
-                    value = TrustGameParser._parse_number(match.group(1))
-                    if value is None:
-                        return None, "format_error", match.group(0)
-                    if value < 0 or value > endowment:
-                        return None, "value_out_of_range", match.group(0)
-                    return value, "explicit_variant", match.group(0)
-            return None, "", ""
+        def parse_value(value_str: str, matched: str) -> Tuple[Optional[float], str, str]:
+            value = TrustGameParser._parse_number(value_str)
+            if value is None:
+                return None, "format_error", matched
+            if value < 0 or value > endowment:
+                return None, "value_out_of_range", matched
+            return value, "explicit_variant", matched
 
-        first_line = ""
+        # Prefer canonical "Finally, I will give X dollars" anywhere in output
         if raw_text:
-            for line in raw_text.splitlines():
-                if line.strip():
-                    first_line = line.strip()
-                    break
+            number_pattern = r"[-+]?\d[\d,]*(?:\.\d+)?"
+            canonical_pattern = (
+                rf"finally\s*,?\s*i\s*will\s*(?:give|send|transfer)\s*"
+                rf"\$?\s*({number_pattern})\s*(?:dollars?)?"
+            )
+            canonical_matches = list(re.finditer(canonical_pattern, raw_text, re.IGNORECASE))
+            if canonical_matches:
+                match = canonical_matches[-1]
+                amount = TrustGameParser._parse_number(match.group(1))
+                if amount is None:
+                    return None, "format_error", errors, "format_error", match.group(0)
+                if amount < 0 or amount > endowment:
+                    return None, "value_out_of_range", errors, "value_out_of_range", match.group(0)
+                return amount, "success", errors, "canonical_final", match.group(0)
 
-        amount, parse_reason, matched_text = match_explicit(first_line)
+        def match_explicit_candidates(text: str) -> Tuple[Optional[float], str, str]:
+            patterns = [
+                ("line_amount", r"^\s*\$\s*(\d+(?:\.\d+)?)\s*\.?\s*$", False, True),
+                ("line_give", r"^\s*give\s*\$?\s*(\d+(?:\.\d+)?)\s*\.?\s*$", True, True),
+                ("id_give", r"i['’]?\s*d\s+(?:give|send)\s*\$?\s*(\d+(?:\.\d+)?)", True, False),
+                ("i_would_give", r"i\s*(?:would|will)?\s*(?:give|send)\s*\$?\s*(\d+(?:\.\d+)?)", True, False),
+                ("my_decision", r"my\s*(?:choice|decision)\s*:\s*\$?\s*(\d+(?:\.\d+)?)", False, False),
+            ]
+            candidates = []
+            for label, pattern, has_verb, multiline in patterns:
+                flags = re.IGNORECASE | (re.MULTILINE if multiline else 0)
+                for match in re.finditer(pattern, text, flags):
+                    candidates.append({
+                        "pos": match.start(),
+                        "has_verb": has_verb,
+                        "value_str": match.group(1),
+                        "matched": match.group(0),
+                    })
+
+            if not candidates:
+                return None, "", ""
+
+            chosen = max(candidates, key=lambda c: (c["pos"], c["has_verb"]))
+            return parse_value(chosen["value_str"], chosen["matched"])
+
+        amount, parse_reason, matched_text = match_explicit_candidates(raw_text or "")
         if parse_reason:
             if amount is None:
                 return None, parse_reason, errors, parse_reason, matched_text
-            if parse_reason != "canonical_final":
-                errors.append(f"Used pattern: {parse_reason}")
-            return amount, "success", errors, parse_reason, matched_text
-
-        amount, parse_reason, matched_text = match_explicit(raw_text)
-        if parse_reason:
-            if amount is None:
-                return None, parse_reason, errors, parse_reason, matched_text
-            if parse_reason != "canonical_final":
-                errors.append(f"Used pattern: {parse_reason}")
+            errors.append(f"Used pattern: {parse_reason}")
             return amount, "success", errors, parse_reason, matched_text
 
         verb_pattern = r"give|send|transfer"

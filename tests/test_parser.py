@@ -158,6 +158,13 @@ def test_trustor_parser():
     assert status == "success", f"Expected success, got {status}"
     print("✓ Test 20 passed: My decision: $10")
 
+    # Test case 21: Refusal text then answer line
+    text21 = "I can't pretend to be a real person.\n\n$0."
+    amount, status, errors, reason, matched = parser.parse_trustor_output(text21, endowment=10)
+    assert amount == 0.0, f"Expected 0.0, got {amount}"
+    assert status == "success", f"Expected success, got {status}"
+    print("✓ Test 21 passed: Refusal then $0 line")
+
     print("\n✅ All trustor parser tests passed!")
 
 
