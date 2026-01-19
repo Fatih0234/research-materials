@@ -1,8 +1,8 @@
 # TrustBench Quick Start Guide
 
 **Project**: LLM Applied Economics - Trust Game Experiments
-**Current Status**: Iteration C2 Complete ✅
-**Last Updated**: 2026-01-19
+**Current Status**: Iteration C2 Complete + Validation Study ✅
+**Last Updated**: 2026-01-19 20:30
 
 ---
 
@@ -174,12 +174,22 @@ cd vendor/agent-trust && ./run_demo.sh
 - Model selection (OpenAI models via OpenRouter)
 - Environment-based configuration
 - Cost tracking via OpenRouter dashboard
+- **Full experimental pipeline validated** (53 personas, 2 games, 100% success rate)
+
+### 📊 Validation Study Results (2026-01-19)
+- **Model**: gpt-4o-mini via OpenRouter
+- **Games**: Dictator Game and Trust Game
+- **Personas**: 53 (all personas in dataset)
+- **Key Findings**:
+  - Dictator Game: Mean $3.50 (35.8% gave fair share of $5)
+  - Trust Game: Mean $3.55 (28.3% gave fair share)
+  - See `results/20260119_202510/` for detailed analysis
 
 ### 🚧 Planned (Future Iterations)
 - Multi-provider models (Anthropic, Google, Meta)
 - Automatic model fallbacks
 - Built-in cost tracking
-- Paper replication experiments
+- Paper replication experiments (Horton 2023)
 
 ---
 
