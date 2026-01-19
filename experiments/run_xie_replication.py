@@ -138,13 +138,38 @@ def run_vendor_experiment(
         from agent_trust.all_game_person import run_exp
         from agent_trust.exp_model_class import ExtendedModelType
 
-        # Create a simple model wrapper with .value attribute
-        # Vendor code expects model.value for folder paths (e.g., "res/{model.value}_res/")
+        # Create a model wrapper that mimics ExtendedModelType enum
+        # Vendor code expects model.value for folder paths and model.is_openai for routing
         class ModelWrapper:
             def __init__(self, model_id):
                 # Clean model ID for folder name (remove provider prefix and special chars)
                 self.value = model_id.replace("/", "_").replace(":", "_")
                 self._original_id = model_id
+
+            @property
+            def is_openai(self) -> bool:
+                """Check if model is from OpenAI (routed through OpenRouter)."""
+                return "openai/" in self._original_id or "gpt" in self._original_id.lower()
+
+            @property
+            def is_open_source(self) -> bool:
+                """Check if model is open-source."""
+                return not self.is_openai
+
+            @property
+            def token_limit(self) -> int:
+                """Return a reasonable default token limit."""
+                if "gpt-4" in self._original_id:
+                    return 8192
+                elif "gpt-3.5" in self._original_id:
+                    return 16385
+                else:
+                    return 4096  # Default for open-source models
+
+            @property
+            def value_for_tiktoken(self) -> str:
+                """Return model ID for tiktoken."""
+                return self._original_id
 
             def __str__(self):
                 return self._original_id
