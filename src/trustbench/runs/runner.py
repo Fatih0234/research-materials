@@ -1,6 +1,7 @@
 """Trust Game experiment runner."""
 
 import json
+import re
 import uuid
 from datetime import datetime
 from pathlib import Path
@@ -15,6 +16,17 @@ from ..parsing.trust_game_parser import TrustGameParser
 
 class TrustGameRunner:
     """Run Trust Game experiments with LLM agents."""
+
+    @staticmethod
+    def _has_digits_outside_final_line(raw_text: str) -> bool:
+        """Return True if any digit appears outside the final non-empty line."""
+        if not raw_text:
+            return False
+        lines = [line for line in raw_text.splitlines() if line.strip()]
+        if len(lines) <= 1:
+            return False
+        prior_text = "\n".join(lines[:-1])
+        return re.search(r"[0-9]", prior_text) is not None
 
     def __init__(self, config: Config, dry_run: bool = False):
         """Initialize runner.
@@ -187,7 +199,7 @@ class TrustGameRunner:
             retry_delay=retry_delay
         )
 
-        # Parse trustor output (with single repair retry on parse failure)
+        # Parse trustor output (with single repair retry on parse failure or format violation)
         raw_text = llm_response["raw_text"]
         api_error = llm_response["error"]
 
@@ -196,6 +208,7 @@ class TrustGameRunner:
         repair_raw_text = None
         repair_attempted = False
         repair_succeeded = False
+        format_violation = False
 
         if api_error:
             # API call failed
@@ -211,14 +224,21 @@ class TrustGameRunner:
             parse_errors.extend(parser_errors)
             valid_trustor = (parse_status == "success")
 
-            if not valid_trustor:
-                parse_errors.append(f"initial_parse_failed: {parse_reason}")
-                if matched_text:
-                    parse_errors.append(f"initial_matched_text: {matched_text}")
+            format_violation = self._has_digits_outside_final_line(raw_text)
+            if format_violation:
+                parse_errors.append("format_violation_digits_outside_final_line")
+
+            if (not valid_trustor) or format_violation:
+                if not valid_trustor:
+                    parse_errors.append(f"initial_parse_failed: {parse_reason}")
+                    if matched_text:
+                        parse_errors.append(f"initial_matched_text: {matched_text}")
 
                 repair_attempted = True
                 repair_prompt = (
-                    "Reply with exactly one line: Finally, I will give <number> dollars.\n"
+                    "Rewrite your response into exactly two lines.\n"
+                    "Line 1: one short sentence of reasoning with NO digits.\n"
+                    "Line 2: Finally, I will give <number> dollars.\n"
                     "Use a number between 0 and 10."
                 )
                 repair_messages = [{"role": "user", "content": repair_prompt}]

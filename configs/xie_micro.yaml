@@ -14,8 +14,8 @@ models:
 
 prompts:
   template_dir: "specs/02_prompts/trust_game"
-  trustor_template: "v002_trustor.md"
-  trustee_template: "v002_trustee.md"
+  trustor_template: "v003_trustor.md"
+  trustee_template: "v003_trustee.md"
 
 personas:
   source_path: "data/personas/xie_53.jsonl"

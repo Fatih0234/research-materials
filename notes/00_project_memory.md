@@ -1545,3 +1545,16 @@ python scripts/run_trustbench.py \
 uv run python3 scripts/run_trustbench.py --config configs/xie_micro.yaml --dry-run
 jq -r '.errors.parse_errors[]? // empty' results/<latest_run_dir>/episodes_*.jsonl | sort | uniq -c
 ```
+
+---
+
+## Prompt v003 (Trust Game)
+
+**Rationale:** Live micro-runs still showed `fallback_last_in_range` in 2/20, so we enforced an exact two-line format.
+**Enforcement rule:** If any digit appears outside the final line, the runner triggers a single repair retry with the two-line format.
+**Micro-run summary:** Dry-run (OPENROUTER_API_KEY missing) completed 20 episodes; parse errors only included repair status lines.
+**Validation command:**
+```bash
+uv run python3 scripts/run_trustbench.py --config configs/xie_micro.yaml
+jq -r '.errors.parse_errors[]? // empty' results/<latest_run_dir>/episodes_*.jsonl | sort | uniq -c
+```
