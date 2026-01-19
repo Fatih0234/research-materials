@@ -139,12 +139,14 @@ def run_vendor_experiment(
         from agent_trust.exp_model_class import ExtendedModelType
 
         # Create a model wrapper that mimics ExtendedModelType enum
-        # Vendor code expects model.value for folder paths and model.is_openai for routing
+        # Vendor code expects model.value for API calls AND folder paths
         class ModelWrapper:
             def __init__(self, model_id):
-                # Clean model ID for folder name (remove provider prefix and special chars)
-                self.value = model_id.replace("/", "_").replace(":", "_")
+                # Keep original ID for API calls (OpenRouter needs "openai/gpt-4" format)
+                self.value = model_id
                 self._original_id = model_id
+                # Clean version for folder names
+                self._folder_safe_value = model_id.replace("/", "_").replace(":", "_")
 
             @property
             def is_openai(self) -> bool:
