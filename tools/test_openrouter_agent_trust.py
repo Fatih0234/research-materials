@@ -134,18 +134,35 @@ def test_legacy_api() -> bool:
             print_test("Base URL configured", "fail", f"Got: {base_url}")
             return False
 
-        # Make API call
+        # Make API call (try legacy first, fallback to modern)
         print_test("Making API call", "info", "Testing completion...")
         start_time = time.time()
 
-        response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "user", "content": "Say 'Hello from OpenRouter!' in exactly 5 words."}
-            ],
-            max_tokens=20,
-            temperature=0.7
-        )
+        try:
+            response = openai.ChatCompletion.create(
+                model="gpt-3.5-turbo",
+                messages=[
+                    {"role": "user", "content": "Say 'Hello from OpenRouter!' in exactly 5 words."}
+                ],
+                max_tokens=20,
+                temperature=0.7
+            )
+        except (AttributeError, Exception) as e:
+            if "APIRemovedInV1" in str(type(e)) or "not supported in openai>=1.0.0" in str(e):
+                print_test("Legacy API deprecated", "warn", "Using modern API fallback (agent-trust uses openai==1.12.0)")
+                # Fallback to modern API
+                from openai import OpenAI
+                client = OpenAI(api_key=openai.api_key, base_url=getattr(openai, 'base_url', None) or getattr(openai, 'api_base', None))
+                response = client.chat.completions.create(
+                    model="gpt-3.5-turbo",
+                    messages=[
+                        {"role": "user", "content": "Say 'Hello from OpenRouter!' in exactly 5 words."}
+                    ],
+                    max_tokens=20,
+                    temperature=0.7
+                )
+            else:
+                raise
 
         latency = time.time() - start_time
 
