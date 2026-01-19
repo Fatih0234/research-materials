@@ -150,13 +150,16 @@ def run_vendor_experiment(
 
             @property
             def is_openai(self) -> bool:
-                """Check if model is from OpenAI (routed through OpenRouter)."""
-                return "openai/" in self._original_id or "gpt" in self._original_id.lower()
+                """All models use OpenAI-compatible API through OpenRouter."""
+                # Return True for ALL models since OpenRouter provides unified API
+                # This ensures CAMEL uses ChatGPT config instead of OpenSourceConfig
+                return True
 
             @property
             def is_open_source(self) -> bool:
-                """Check if model is open-source."""
-                return not self.is_openai
+                """All models routed through OpenRouter, not locally hosted."""
+                # Always False - we're using OpenRouter API, not local model files
+                return False
 
             @property
             def token_limit(self) -> int:
