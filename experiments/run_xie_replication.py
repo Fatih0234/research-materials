@@ -112,9 +112,6 @@ def run_vendor_experiment(
     Returns:
         Path to vendor output JSON, or None if dry_run=True
     """
-    from agent_trust.all_game_person import run_exp
-    from agent_trust.exp_model_class import ExtendedModelType
-
     model_id = model_spec["openrouter_model_id"]
     game_id = game_config["game_id"]
 
@@ -129,12 +126,23 @@ def run_vendor_experiment(
         print("  [DRY RUN] Skipping actual execution")
         return None
 
-    # Map OpenRouter model ID to ExtendedModelType
-    # The vendor code uses model type enum to route API calls
-    # Since we're using OpenRouter, we need to create a compatible model type
-    # For now, we'll use a string-based approach and let OpenRouter handle routing
+    # Change to vendor directory (vendor code uses relative paths)
+    original_cwd = os.getcwd()
+    vendor_cwd = VENDOR_AGENT_TRUST_PATH
 
     try:
+        os.chdir(vendor_cwd)
+        print(f"  Changed working directory to: {vendor_cwd}")
+
+        # Import vendor code (must be after chdir)
+        from agent_trust.all_game_person import run_exp
+        from agent_trust.exp_model_class import ExtendedModelType
+
+        # Map OpenRouter model ID to ExtendedModelType
+        # The vendor code uses model type enum to route API calls
+        # Since we're using OpenRouter, we need to create a compatible model type
+        # For now, we'll use a string-based approach and let OpenRouter handle routing
+
         # Call vendor run_exp function
         # Note: This may need adjustment based on actual vendor function signature
         result = run_exp(
@@ -154,6 +162,10 @@ def run_vendor_experiment(
         import traceback
         traceback.print_exc()
         return None
+
+    finally:
+        # Always restore original working directory
+        os.chdir(original_cwd)
 
 
 def transform_vendor_output(
