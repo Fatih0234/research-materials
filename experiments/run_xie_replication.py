@@ -177,14 +177,20 @@ def run_vendor_experiment(
                 # Map OpenRouter IDs to tiktoken-compatible model names
                 model_id = self._original_id.lower()
 
+                # Gemini models -> use gpt-4 encoding (similar performance tier)
+                if "gemini" in model_id:
+                    return "gpt-4"
                 # GPT-5 models -> use gpt-4 encoding (most similar)
-                if "gpt-5" in model_id:
+                elif "gpt-5" in model_id:
                     return "gpt-4"
                 # GPT-4 models
                 elif "gpt-4" in model_id:
                     return "gpt-4"
                 # GPT-3.5 models
                 elif "gpt-3.5" in model_id:
+                    return "gpt-3.5-turbo"
+                # GPT-OSS models -> use gpt-3.5-turbo as default
+                elif "gpt-oss" in model_id:
                     return "gpt-3.5-turbo"
                 # All other models -> use gpt-3.5-turbo as safe default
                 else:
