@@ -75,8 +75,9 @@ Where `<Y>` is a numeric value between 0 and {AMOUNT_RECEIVED}.
 **Strict Output Rules:**
 1. Do not include any numbers in your reasoning.
 2. Do not include any other numbers besides the final amount on the last line.
-3. Your last line must be EXACTLY: `Finally, I will return <Y> dollars.`
-4. If you provide reasoning, write it without numbers.
+3. Use digits, not words (write "7", not "seven").
+4. Your last line must be EXACTLY: `Finally, I will return <Y> dollars.`
+5. If you provide reasoning, write it without numbers.
 
 **Format checklist:**
 - Reasoning: optional, must contain ZERO digits.

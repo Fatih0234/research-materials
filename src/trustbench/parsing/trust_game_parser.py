@@ -7,6 +7,20 @@ from typing import Tuple, Optional, List
 class TrustGameParser:
     """Parse Trust Game decisions from LLM outputs."""
 
+    WORD_NUMBERS = {
+        "zero": 0,
+        "one": 1,
+        "two": 2,
+        "three": 3,
+        "four": 4,
+        "five": 5,
+        "six": 6,
+        "seven": 7,
+        "eight": 8,
+        "nine": 9,
+        "ten": 10,
+    }
+
     @staticmethod
     def _parse_number(value_str: str) -> Optional[float]:
         """Parse a numeric string that may include $ and commas."""
@@ -61,6 +75,21 @@ class TrustGameParser:
                 if value < 0 or value > max_amount:
                     return None, "value_out_of_range", match.group(0)
                 return value, reason, match.group(0)
+
+        # Word-number fallback (only if no digits exist)
+        if re.search(r"\d", raw_text) is None:
+            word_pattern = r"\b(" + "|".join(TrustGameParser.WORD_NUMBERS.keys()) + r")\b"
+            last_word = None
+            for match in re.finditer(word_pattern, raw_text, re.IGNORECASE):
+                last_word = match
+            if last_word:
+                word = last_word.group(1).lower()
+                value = TrustGameParser.WORD_NUMBERS.get(word)
+                if value is None:
+                    return None, "no_numeric_value", last_word.group(0)
+                if value < 0 or value > max_amount:
+                    return None, "value_out_of_range", last_word.group(0)
+                return float(value), "word_number", last_word.group(0)
 
         if not allow_fallback:
             return None, "no_numeric_value", ""

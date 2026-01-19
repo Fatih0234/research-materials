@@ -123,6 +123,13 @@ def test_trustor_parser():
     assert status == "success", f"Expected success, got {status}"
     print("✓ Test 15 passed: Real example string")
 
+    # Test case 16: Word number
+    text16 = "Finally, I will give seven dollars."
+    amount, status, errors, reason, matched = parser.parse_trustor_output(text16, endowment=10)
+    assert amount == 7.0, f"Expected 7.0, got {amount}"
+    assert status == "success", f"Expected success, got {status}"
+    print("✓ Test 16 passed: Word number")
+
     print("\n✅ All trustor parser tests passed!")
 
 
@@ -157,6 +164,13 @@ def test_trustee_parser():
     assert amount is None, f"Expected None, got {amount}"
     assert status == "value_out_of_range", f"Expected value_out_of_range, got {status}"
     print("✓ Test 4 passed: Out of range")
+
+    # Test case 5: Word number
+    text5 = "Finally, I will return ten dollars."
+    amount, status, errors, reason, matched = parser.parse_trustee_output(text5, amount_received=21)
+    assert amount == 10.0, f"Expected 10.0, got {amount}"
+    assert status == "success", f"Expected success, got {status}"
+    print("✓ Test 5 passed: Word number")
 
     print("\n✅ All trustee parser tests passed!")
 

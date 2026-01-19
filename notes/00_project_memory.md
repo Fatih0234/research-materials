@@ -1584,3 +1584,16 @@ jq -r '.errors.parse_errors[]? // empty' results/<latest_run_dir>/episodes_*.jso
 uv run python3 scripts/run_trustbench.py --config configs/xie_micro.yaml --dry-run
 jq -r '.errors.parse_errors[]? // empty' results/<latest_run_dir>/episodes_*.jsonl | sort | uniq -c
 ```
+
+---
+
+## Word-number support
+
+**Why:** Live runs showed `initial_parse_failed: no_numeric_value`, likely from word numbers (e.g., "seven").
+**Change:** Parser now recognizes word numbers zero through ten, and v002 prompts explicitly require digits.
+**Expected outcome:** Fewer repair attempts and fewer `no_numeric_value` parse errors.
+**Validation commands:**
+```bash
+uv run python3 scripts/run_trustbench.py --config configs/xie_micro.yaml --dry-run
+jq -r '.errors.parse_errors[]? // empty' results/<latest_run_dir>/episodes_*.jsonl | sort | uniq -c
+```
