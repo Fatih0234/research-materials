@@ -130,6 +130,34 @@ def test_trustor_parser():
     assert status == "success", f"Expected success, got {status}"
     print("✓ Test 16 passed: Word number")
 
+    # Test case 17: I'd give with dollars
+    text17 = "I'd give $0."
+    amount, status, errors, reason, matched = parser.parse_trustor_output(text17, endowment=10)
+    assert amount == 0.0, f"Expected 0.0, got {amount}"
+    assert status == "success", f"Expected success, got {status}"
+    print("✓ Test 17 passed: I'd give $0")
+
+    # Test case 18: I'd give without dollars
+    text18 = "I'd give 3"
+    amount, status, errors, reason, matched = parser.parse_trustor_output(text18, endowment=10)
+    assert amount == 3.0, f"Expected 3.0, got {amount}"
+    assert status == "success", f"Expected success, got {status}"
+    print("✓ Test 18 passed: I'd give 3")
+
+    # Test case 19: I will send
+    text19 = "I will send $5."
+    amount, status, errors, reason, matched = parser.parse_trustor_output(text19, endowment=10)
+    assert amount == 5.0, f"Expected 5.0, got {amount}"
+    assert status == "success", f"Expected success, got {status}"
+    print("✓ Test 19 passed: I will send $5")
+
+    # Test case 20: My decision line
+    text20 = "My decision: $10"
+    amount, status, errors, reason, matched = parser.parse_trustor_output(text20, endowment=10)
+    assert amount == 10.0, f"Expected 10.0, got {amount}"
+    assert status == "success", f"Expected success, got {status}"
+    print("✓ Test 20 passed: My decision: $10")
+
     print("\n✅ All trustor parser tests passed!")
 
 

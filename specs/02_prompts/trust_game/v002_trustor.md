@@ -73,6 +73,11 @@ Finally, I will give <X> dollars.
 
 Where `<X>` is a numeric value between 0 and {ENDOWMENT}.
 
+**Strict Output Contract:**
+- Your response MUST end with the exact final line above.
+- Use digits (0-10), not words (write "7", not "seven").
+- If you do not follow the exact final line format, the response will be rejected.
+
 **Strict Output Rules:**
 1. Do not include any numbers in your reasoning.
 2. Do not include any other numbers besides the final amount on the last line.
@@ -154,5 +159,11 @@ You're taking part in an experiment. You are randomly paired online with another
 ```
 I want to show trust while staying cautious. I will keep my response concise.
 
+Finally, I will give 7 dollars.
+```
+
+**Minimal format example:**
+```
+I will keep this concise and focused.
 Finally, I will give 7 dollars.
 ```

@@ -140,6 +140,48 @@ class TrustGameParser:
             - parse_errors: List of error messages
         """
         errors: List[str] = []
+
+        def match_explicit(text: str) -> Tuple[Optional[float], str, str]:
+            patterns = [
+                r"\bi\s+would\s+(?:give|send)\s*\$?\s*(\d+(?:\.\d+)?)",
+                r"\bi['’]?d\s+(?:give|send)\s*\$?\s*(\d+(?:\.\d+)?)",
+                r"\bi\s+(?:will\s*)?(?:give|send)\s*\$?\s*(\d+(?:\.\d+)?)",
+                r"\bmy\s+(?:choice|decision)\s*:\s*\$?\s*(\d+(?:\.\d+)?)",
+            ]
+            for pattern in patterns:
+                match = re.search(pattern, text, re.IGNORECASE)
+                if match:
+                    value = TrustGameParser._parse_number(match.group(1))
+                    if value is None:
+                        return None, "format_error", match.group(0)
+                    if value < 0 or value > endowment:
+                        return None, "value_out_of_range", match.group(0)
+                    return value, "explicit_variant", match.group(0)
+            return None, "", ""
+
+        first_line = ""
+        if raw_text:
+            for line in raw_text.splitlines():
+                if line.strip():
+                    first_line = line.strip()
+                    break
+
+        amount, parse_reason, matched_text = match_explicit(first_line)
+        if parse_reason:
+            if amount is None:
+                return None, parse_reason, errors, parse_reason, matched_text
+            if parse_reason != "canonical_final":
+                errors.append(f"Used pattern: {parse_reason}")
+            return amount, "success", errors, parse_reason, matched_text
+
+        amount, parse_reason, matched_text = match_explicit(raw_text)
+        if parse_reason:
+            if amount is None:
+                return None, parse_reason, errors, parse_reason, matched_text
+            if parse_reason != "canonical_final":
+                errors.append(f"Used pattern: {parse_reason}")
+            return amount, "success", errors, parse_reason, matched_text
+
         verb_pattern = r"give|send|transfer"
         amount, parse_reason, matched_text = TrustGameParser.extract_amount(
             raw_text=raw_text,
