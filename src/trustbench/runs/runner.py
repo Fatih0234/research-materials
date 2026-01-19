@@ -18,26 +18,30 @@ class TrustGameRunner:
     """Run Trust Game experiments with LLM agents."""
 
     @staticmethod
-    def _has_digits_outside_final_line(raw_text: str) -> bool:
-        """Return True if any digit appears outside the final non-empty line."""
-        if not raw_text:
-            return False
-        lines = [line for line in raw_text.splitlines() if line.strip()]
-        if len(lines) <= 1:
-            return False
-        prior_text = "\n".join(lines[:-1])
-        return re.search(r"[0-9]", prior_text) is not None
+    def _build_repair_prompt(max_amount: int) -> str:
+        """Build a strict single-number repair instruction."""
+        return (
+            f"Reply with ONLY a single number between 0 and {max_amount} (inclusive). "
+            "No other text."
+        )
 
     @staticmethod
-    def _build_repair_prompt(action: str, max_amount: int) -> str:
-        """Build a strict single-line repair instruction for give/return."""
-        template_line = f"Finally, I will {action} <number> dollars."
-        return (
-            "Reply with exactly one line and nothing else: "
-            f"{template_line}\n"
-            f"Use a number between 0 and {max_amount}.\n"
-            "Do not include any other text, reasoning, or extra lines."
-        )
+    def _parse_repair_number(raw_text: str, max_amount: int) -> tuple:
+        """Parse the first numeric value from repair output and validate bounds."""
+        if not raw_text:
+            return None, "no_numeric_value", ""
+        match = re.search(r"\$?\s*[-+]?\d[\d,]*(?:\.\d+)?", raw_text)
+        if not match:
+            return None, "no_numeric_value", ""
+        value_str = match.group(0)
+        cleaned = value_str.replace("$", "").replace(",", "").strip()
+        try:
+            value = float(cleaned)
+        except ValueError:
+            return None, "format_error", value_str
+        if value < 0 or value > max_amount:
+            return None, "value_out_of_range", value_str
+        return value, "success", value_str
 
     def __init__(self, config: Config, dry_run: bool = False):
         """Initialize runner.
@@ -210,7 +214,7 @@ class TrustGameRunner:
             retry_delay=retry_delay
         )
 
-        # Parse trustor output (with single repair retry on parse failure or format violation)
+        # Parse trustor output (with single repair retry on parse failure)
         raw_text = llm_response["raw_text"]
         api_error = llm_response["error"]
 
@@ -219,8 +223,6 @@ class TrustGameRunner:
         repair_raw_text = None
         repair_attempted = False
         repair_succeeded = False
-        format_violation = False
-
         if api_error:
             # API call failed
             amount_sent = None
@@ -230,23 +232,18 @@ class TrustGameRunner:
         else:
             amount_sent, parse_status, parser_errors, parse_reason, matched_text = self.parser.parse_trustor_output(
                 raw_text=raw_text,
-                endowment=endowment
+                endowment=endowment,
+                allow_fallback=False
             )
             parse_errors.extend(parser_errors)
             valid_trustor = (parse_status == "success")
 
-            format_violation = self._has_digits_outside_final_line(raw_text)
-            if format_violation:
-                parse_errors.append("format_violation_digits_outside_final_line")
-
-            if (not valid_trustor) or format_violation:
-                if not valid_trustor:
-                    parse_errors.append(f"initial_parse_failed: {parse_reason}")
-                    if matched_text:
-                        parse_errors.append(f"initial_matched_text: {matched_text}")
-
+            if not valid_trustor:
+                parse_errors.append(f"initial_parse_failed: {parse_reason}")
+                if matched_text:
+                    parse_errors.append(f"initial_matched_text: {matched_text}")
                 repair_attempted = True
-                repair_prompt = self._build_repair_prompt("give", endowment)
+                repair_prompt = self._build_repair_prompt(endowment)
                 repair_messages = [{"role": "user", "content": repair_prompt}]
                 repair_response = self.llm_client.call_llm(
                     messages=repair_messages,
@@ -267,25 +264,41 @@ class TrustGameRunner:
                 else:
                     (
                         amount_sent_repair,
-                        parse_status_repair,
-                        repair_errors,
-                        repair_reason,
+                        repair_status,
                         repair_matched_text,
-                    ) = self.parser.parse_trustor_output(
-                        raw_text=repair_raw_text,
-                        endowment=endowment,
-                        allow_fallback=False
-                    )
-                    parse_errors.extend(repair_errors)
-                    if parse_status_repair == "success":
+                    ) = self._parse_repair_number(repair_raw_text, endowment)
+                    if repair_status == "success":
                         amount_sent = amount_sent_repair
-                        parse_status = parse_status_repair
+                        parse_status = "success"
                         valid_trustor = True
                         repair_succeeded = True
                     else:
-                        parse_errors.append(f"repair_parse_failed: {repair_reason}")
+                        parse_errors.append(f"repair_parse_failed: {repair_status}")
                         if repair_matched_text:
                             parse_errors.append(f"repair_matched_text: {repair_matched_text}")
+
+                if not repair_succeeded:
+                    (
+                        amount_fallback,
+                        fallback_status,
+                        fallback_errors,
+                        fallback_reason,
+                        fallback_matched_text,
+                    ) = self.parser.parse_trustor_output(
+                        raw_text=raw_text,
+                        endowment=endowment,
+                        allow_fallback=True
+                    )
+                    parse_errors.extend(fallback_errors)
+                    if fallback_status == "success":
+                        amount_sent = amount_fallback
+                        parse_status = fallback_status
+                        valid_trustor = True
+                        parse_errors.append("fallback_used_after_repair_failure")
+                        if fallback_reason:
+                            parse_errors.append(f"fallback_reason: {fallback_reason}")
+                        if fallback_matched_text:
+                            parse_errors.append(f"fallback_matched_text: {fallback_matched_text}")
 
         parse_errors.append(f"repair_attempted: {repair_attempted}")
         parse_errors.append(f"repair_succeeded: {repair_succeeded}")

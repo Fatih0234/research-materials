@@ -1571,3 +1571,16 @@ jq -r '.errors.parse_errors[]? // empty' results/<latest_run_dir>/episodes_*.jso
 uv run python3 scripts/run_trustbench.py --config configs/xie_micro.yaml
 jq -r '.errors.parse_errors[]? // empty' results/<latest_run_dir>/episodes_*.jsonl | sort | uniq -c
 ```
+
+---
+
+## Repair single-number policy
+
+**Why:** v003 strictness triggered repair on most episodes and produced repair failures.
+**Change:** Reverted micro prompts to v002 and replaced repair with a single-number-only response.
+**Expected outcome:** Repair succeeds without invoking `fallback_last_in_range`.
+**Validation commands:**
+```bash
+uv run python3 scripts/run_trustbench.py --config configs/xie_micro.yaml --dry-run
+jq -r '.errors.parse_errors[]? // empty' results/<latest_run_dir>/episodes_*.jsonl | sort | uniq -c
+```
