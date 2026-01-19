@@ -1533,3 +1533,15 @@ python scripts/run_trustbench.py \
 **Created:** `data/personas/xie_53.jsonl` with explicit per-persona provenance fields
 **Updated:** `data/personas/README.md` and `configs/xie_mvp.yaml` to point to the upstream persona pool (sample n=20)
 **Replication note:** The paper includes persona prompt examples but not the full 53-persona list; we use the authors’ released artifact version with recorded provenance.
+
+---
+
+## Prompt v002 (Trust Game)
+
+**Issue:** Micro-run showed `fallback_last_in_range` parsing in 2/20 episodes (about 10%).
+**Fix:** Added v002 prompts with strict formatting rules: no numbers in reasoning; only the final line contains the numeric amount.
+**Validation (dry-run if no key):**
+```bash
+uv run python3 scripts/run_trustbench.py --config configs/xie_micro.yaml --dry-run
+jq -r '.errors.parse_errors[]? // empty' results/<latest_run_dir>/episodes_*.jsonl | sort | uniq -c
+```

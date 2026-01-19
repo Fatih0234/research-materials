@@ -1,0 +1,48 @@
+experiment_id: xie_micro_2026
+openrouter:
+  api_key_env_var: OPENROUTER_API_KEY
+  base_url: https://openrouter.ai/api/v1
+models:
+- model_id: openai/gpt-5-nano
+  label: GPT-5 Nano
+  paper_equivalent: gpt-4
+prompts:
+  template_dir: specs/02_prompts/trust_game
+  trustor_template: v002_trustor.md
+  trustee_template: v002_trustee.md
+personas:
+  source_path: data/personas/xie_53.jsonl
+  n_sample: 10
+  sampling_strategy: sequential
+  seed: null
+game:
+  variant: trust_game
+  endowment: 10
+  multiplier: 3
+  rounds: 1
+  roles:
+  - trustor
+  - trustee
+treatments:
+  partner_framing:
+  - baseline
+  - llm_partner
+sampling:
+  temperature: 1.0
+  top_p: null
+  max_tokens: null
+  seed: null
+  n_retries: 3
+  retry_delay_seconds: 1.0
+output:
+  episodes_dir: results/episodes
+  aggregates_dir: results/aggregates
+  run_label: xie_micro
+human_baseline:
+  source: Cox 2004
+  mean_sent: 6.0
+  n: null
+_meta:
+  config_path: /Volumes/T7/llm-applied-economics/configs/xie_micro.yaml
+  experiment_hash: f64f9786d4f1
+  output_dir: /Volumes/T7/llm-applied-economics/results/f64f9786d4f1
