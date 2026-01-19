@@ -148,6 +148,11 @@ def initialize_openrouter(
     # Build attribution headers
     headers = _build_headers(app_url, app_name)
 
+    # CRITICAL: Set environment variable for libraries that create their own OpenAI clients
+    # (e.g., CAMEL framework). This ensures all clients use OpenRouter.
+    os.environ["OPENAI_API_KEY"] = api_key
+    os.environ["OPENAI_BASE_URL"] = base_url
+
     # Patch module-level configuration
     # Note: OpenAI SDK v1.x still supports module-level attributes for backward compatibility
     openai.api_key = api_key
