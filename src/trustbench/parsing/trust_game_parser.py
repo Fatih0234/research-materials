@@ -168,6 +168,7 @@ class TrustGameParser:
 
         def match_explicit_candidates(text: str) -> Tuple[Optional[float], str, str]:
             patterns = [
+                ("answer_line", r"\banswer\s*:\s*\$?\s*(\d+(?:\.\d+)?)\b", False, False),
                 ("line_amount", r"^\s*\$\s*(\d+(?:\.\d+)?)\s*\.?\s*$", False, True),
                 ("line_give", r"^\s*give\s*\$?\s*(\d+(?:\.\d+)?)\s*\.?\s*$", True, True),
                 ("id_give", r"i['’]?\s*d\s+(?:give|send)\s*\$?\s*(\d+(?:\.\d+)?)", True, False),
