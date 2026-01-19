@@ -1,0 +1,79 @@
+{
+  "gpt-4": {
+    "paper_name": "GPT-4",
+    "openrouter_model_id": "openai/gpt-4",
+    "status": "same",
+    "substitute_for": null,
+    "notes": "Direct match, using current GPT-4"
+  },
+  "gpt-3.5-turbo-0613": {
+    "paper_name": "GPT-3.5-turbo-0613",
+    "openrouter_model_id": "openai/gpt-3.5-turbo-0613",
+    "status": "same",
+    "substitute_for": null,
+    "notes": "Exact version match"
+  },
+  "gpt-3.5-turbo-16k-0613": {
+    "paper_name": "GPT-3.5-turbo-16k-0613",
+    "openrouter_model_id": "openai/gpt-3.5-turbo-16k",
+    "status": "same",
+    "substitute_for": null,
+    "notes": "16k context variant"
+  },
+  "gpt-3.5-turbo-instruct": {
+    "paper_name": "GPT-3.5-turbo-instruct",
+    "openrouter_model_id": "openai/gpt-3.5-turbo-instruct",
+    "status": "same",
+    "substitute_for": null,
+    "notes": "Direct match"
+  },
+  "text-davinci-003": {
+    "paper_name": "text-davinci-003",
+    "openrouter_model_id": "openai/gpt-3.5-turbo-instruct",
+    "status": "substitute",
+    "substitute_for": "text-davinci-003",
+    "notes": "text-davinci-003 deprecated, using gpt-3.5-turbo-instruct as closest equivalent"
+  },
+  "llama2-7b": {
+    "paper_name": "Llama2-7B",
+    "openrouter_model_id": "meta-llama/llama-3-8b-instruct",
+    "status": "substitute",
+    "substitute_for": "llama2-7b",
+    "notes": "Llama2-7B unavailable, using Llama-3-8B (closest modern size)"
+  },
+  "llama2-13b": {
+    "paper_name": "Llama2-13B",
+    "openrouter_model_id": "meta-llama/llama-3.3-8b-instruct",
+    "status": "substitute",
+    "substitute_for": "llama2-13b",
+    "notes": "Llama2-13B unavailable, using Llama-3.3-8B"
+  },
+  "llama2-70b": {
+    "paper_name": "Llama2-70B",
+    "openrouter_model_id": "meta-llama/llama-3.3-70b-instruct:free",
+    "status": "substitute",
+    "substitute_for": "llama2-70b",
+    "notes": "Llama2-70B unavailable, using Llama-3.3-70B (free tier)"
+  },
+  "vicuna-v1.3-7b": {
+    "paper_name": "Vicuna-v1.3-7B",
+    "openrouter_model_id": "deepseek/deepseek-r1-distill-qwen-7b",
+    "status": "substitute",
+    "substitute_for": "vicuna-v1.3-7b",
+    "notes": "Vicuna unavailable, using DeepSeek R1 Distill 7B (instruction-tuned, similar size)"
+  },
+  "vicuna-v1.3-13b": {
+    "paper_name": "Vicuna-v1.3-13B",
+    "openrouter_model_id": "deepseek/deepseek-r1-distill-qwen-14b",
+    "status": "substitute",
+    "substitute_for": "vicuna-v1.3-13b",
+    "notes": "Vicuna unavailable, using DeepSeek R1 Distill 14B (closest size tier)"
+  },
+  "vicuna-v1.3-33b": {
+    "paper_name": "Vicuna-v1.3-33B",
+    "openrouter_model_id": "deepseek/deepseek-r1-distill-qwen-32b",
+    "status": "substitute",
+    "substitute_for": "vicuna-v1.3-33b",
+    "notes": "Vicuna unavailable, using DeepSeek R1 Distill 32B (closest size tier)"
+  }
+}

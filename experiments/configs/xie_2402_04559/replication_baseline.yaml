@@ -1,0 +1,52 @@
+# Experiment metadata
+paper_id: "arxiv_2402.04559"
+experiment_name: "xie_trust_game_replication"
+description: "Replication of Xie et al. (2024) Trust Game with LLM agents"
+
+# Runner specification
+runner: "agent_trust/all_game_person.py::run_exp"
+
+# Game configuration
+games:
+  - game_id: "2"  # Trust Game (key in person_all_game_prompt.json)
+    game_name: "Trust_Game"
+    parameters:
+      endowment: 10
+      multiplier: 3
+
+# Personas
+personas_path: "vendor/agent-trust/agent_trust/prompt/character_2.json"
+personas_count: 53
+
+# Model panel (references specs/05_model_registry.json)
+model_panel:
+  - gpt-4
+  - gpt-3.5-turbo-0613
+  - gpt-3.5-turbo-16k-0613
+  - gpt-3.5-turbo-instruct
+  - text-davinci-003
+  - llama2-7b
+  - llama2-13b
+  - llama2-70b
+  - vicuna-v1.3-7b
+  - vicuna-v1.3-13b
+  - vicuna-v1.3-33b
+
+# Decoding parameters
+decoding:
+  temperature: 1.0
+  top_p: null
+  max_tokens: null
+  seed: null
+
+# Repetitions
+repetitions_per_persona: 1
+
+# Output configuration
+output_dir_template: "results/xie_replication__{timestamp}__trust_game/"
+raw_output_capture: true  # Copy vendor JSON outputs to results/raw/
+
+# Validation
+validation:
+  vrr_threshold: 0.85  # Valid Response Rate minimum
+  retry_failed: false  # Don't retry in first run

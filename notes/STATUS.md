@@ -45,12 +45,71 @@
 - ❌ Statistical testing not implemented
 - ❌ Analysis scripts missing
 
+### Step 3: Model Registry + Replication Configs + Wrapper Runner ✓ COMPLETE
+- **Objective:** Create minimal wrapper for running Xie replication without modifying vendor code
+- **Completed:** 2026-01-19
+- **Outputs:**
+  - `specs/05_model_registry.json` - Paper models → OpenRouter IDs mapping
+  - `experiments/configs/xie_2402_04559/replication_baseline.yaml` - Trust Game config
+  - `experiments/run_xie_replication.py` - Wrapper runner (import-based integration)
+- **Commit:** Pending (Step3: model registry + replication configs + wrapper runner)
+
+**Created:**
+1. **Model Registry** (`specs/05_model_registry.json`)
+   - 11 model entries (9 paper models)
+   - 4 exact matches: GPT-4, GPT-3.5-turbo-0613, GPT-3.5-turbo-16k, GPT-3.5-turbo-instruct
+   - 5 substitutions:
+     - text-davinci-003 → gpt-3.5-turbo-instruct
+     - Llama2-{7,13,70}B → Llama-3/3.3-{8,8,70}B
+     - Vicuna-v1.3-{7,13,33}B → DeepSeek-R1-Distill-Qwen-{7,14,32}B
+
+2. **Replication Config** (`experiments/configs/xie_2402_04559/replication_baseline.yaml`)
+   - Paper ID: arxiv_2402.04559
+   - Game: Trust Game (game_id="2")
+   - Personas: All 53 from character_2.json
+   - Model panel: All 11 models from registry
+   - Temperature: 1.0 (matches paper)
+   - Output: episodes.jsonl + aggregates.csv + metadata.json
+
+3. **Wrapper Runner** (`experiments/run_xie_replication.py`)
+   - Integration: Import vendor/agent-trust as library (not subprocess)
+   - Config loader + model resolver
+   - Vendor experiment caller (run_exp wrapper)
+   - Output transformer (vendor JSON → episodes.jsonl)
+   - Aggregate calculator (VRR, mean/median/sd statistics)
+   - Metadata tracker (git commit, timestamps, environment)
+
+**How to Run:**
+```bash
+# Dry run (validate config without API calls)
+python experiments/run_xie_replication.py \
+  --config experiments/configs/xie_2402_04559/replication_baseline.yaml \
+  --dry-run
+
+# Full run (11 models × 53 personas = 583 API calls)
+python experiments/run_xie_replication.py \
+  --config experiments/configs/xie_2402_04559/replication_baseline.yaml
+```
+
+**Results Location:**
+`results/xie_replication__<timestamp>__trust_game/`
+- `episodes.jsonl` - Full episode records (1 per persona × model)
+- `aggregates.csv` - Summary statistics by model
+- `metadata.json` - Run metadata (git commit, timestamps, config snapshot)
+- `raw/` - Original vendor/agent-trust JSON outputs
+
+**Known Limitations:**
+- Output transformation not fully implemented (vendor JSON location needs mapping)
+- No retry logic for failed personas
+- Single game only (Trust Game), other 5 games need configs
+- No statistical testing (t-tests vs human baseline)
+- No partner-type manipulation (Section 5 variations)
+
 **Next Steps:**
-- Step 3: Define replication configs + model registry
-- Step 4: Pilot run (single model smoke test)
-- Step 5: Full panel run
-- Step 6: Comparison report
-- Step 7: Evidence bundle
+- Step 4: Pilot run (single model, 53 personas, validate pipeline)
+- Step 5: Full panel run (all 11 models, all games)
+- Step 6: Comparison report (vs paper Table 1, statistical tests)
+- Step 7: Evidence bundle (archive results + configs)
 
 ---
 
