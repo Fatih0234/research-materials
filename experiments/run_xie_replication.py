@@ -33,7 +33,9 @@ import yaml
 # Add vendor/agent-trust to Python path
 REPO_ROOT = Path(__file__).parent.parent
 VENDOR_PATH = REPO_ROOT / "vendor" / "agent-trust"
+VENDOR_AGENT_TRUST_PATH = VENDOR_PATH / "agent_trust"
 sys.path.insert(0, str(VENDOR_PATH))
+sys.path.insert(0, str(VENDOR_AGENT_TRUST_PATH))  # For relative imports within agent_trust
 
 
 def load_config(config_path: str) -> Dict[str, Any]:
