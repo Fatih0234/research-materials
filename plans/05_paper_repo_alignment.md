@@ -126,11 +126,12 @@
 
 5. **Results folder structure:** Standardize as:
    ```
-   results/xie_replication__<timestamp>__<panel>/
-     config_snapshot.json  (resolved config + model IDs)
-     episodes.jsonl        (one episode per line: persona, model, game, response, parsed_value, etc.)
+   results/<paper_id>/<experiment_name>/run_<timestamp>/
+     episodes.jsonl        (run-level episodes after merge/full run)
      aggregates.csv        (summary stats: model, game, mean_sent, trust_rate, etc.)
-     run_metadata.json     (git commit, python version, environment, start/end times)
+     metadata.json         (git commit, python version, environment, start/end times)
+     analysis/             (paper-style summaries)
+     per_model/<model>/    (per-model episodes + raw outputs)
    ```
 
 ---

@@ -53,7 +53,7 @@ If the experiment is interrupted (Ctrl+C, crash, etc.), you can resume from wher
 ```bash
 uv run python experiments/run_xie_replication.py \
   --config experiments/configs/xie_2402_04559/replication_baseline.yaml \
-  --resume results/xie_replication__TIMESTAMP__trust_game/
+  --resume results/arxiv_2402.04559/xie_trust_game_replication/run_<timestamp>
 ```
 
 ### Parallel Runs (One Model Per Terminal)
@@ -61,15 +61,18 @@ uv run python experiments/run_xie_replication.py \
 For faster wall-clock time, run one model per terminal and merge the results.
 
 ```bash
+RUN_ID=20260120_025050
+RUN_ROOT="results/arxiv_2402.04559/xie_trust_game_replication/run_${RUN_ID}"
+
 uv run python experiments/run_xie_replication.py \
   --config experiments/configs/xie_2402_04559/replication_baseline.yaml \
   --models google/gemini-2.5-flash-lite \
-  --output-dir results/xie_replication__20260120_025050__trust_game__gemini-2.5-flash-lite
+  --output-dir "$RUN_ROOT"
 
 uv run python experiments/run_xie_replication.py \
   --config experiments/configs/xie_2402_04559/replication_baseline.yaml \
   --models openai/gpt-5-nano \
-  --output-dir results/xie_replication__20260120_025050__trust_game__gpt-5-nano
+  --output-dir "$RUN_ROOT"
 ```
 
 Repeat for the remaining models, then merge:
@@ -77,13 +80,10 @@ Repeat for the remaining models, then merge:
 ```bash
 uv run python experiments/merge_xie_results.py \
   --config experiments/configs/xie_2402_04559/replication_baseline.yaml \
-  --output-dir results/xie_replication__20260120_025050__trust_game \
-  --source-dir results/xie_replication__20260120_025050__trust_game__gemini-2.5-flash-lite \
-  --source-dir results/xie_replication__20260120_025050__trust_game__gpt-5-nano
+  --run-dir "$RUN_ROOT"
 ```
 
-Use a unique `--output-dir` per terminal; do not point multiple runs at the same folder.
-The merge step also creates `analysis/model_summary.csv` and `analysis/amount_sent_distribution.csv`
+The merge step creates `analysis/model_summary.csv` and `analysis/amount_sent_distribution.csv`
 to support paper-style comparisons (VRR, medians, and Figure 2-style distributions).
 
 ## Project Structure
@@ -157,14 +157,21 @@ The YAML config file (`experiments/configs/xie_2402_04559/replication_baseline.y
 Each experiment run creates a timestamped directory:
 
 ```
-results/xie_replication__20260120_143000__trust_game/
-├── episodes.jsonl      # Individual responses (appended incrementally)
-├── checkpoint.json     # Progress tracking for resume capability
+results/arxiv_2402.04559/xie_trust_game_replication/run_20260120_143000/
+├── episodes.jsonl      # Run-level episodes (after merge or full run)
 ├── aggregates.csv      # Summary statistics by model
 ├── metadata.json       # Run configuration and git commit info
-└── raw/                # Original vendor JSON outputs
-    ├── Trust_Game_google_gemini-2.5-flash-lite.json
-    ├── Trust_Game_openai_gpt-5-mini.json
+├── analysis/           # Paper-aligned analysis outputs
+│   ├── model_summary.csv
+│   └── amount_sent_distribution.csv
+├── raw/                # Consolidated vendor JSON outputs
+└── per_model/
+    ├── google_gemini-2.5-flash-lite/
+    │   ├── episodes.jsonl
+    │   └── raw/Trust_Game_google_gemini-2.5-flash-lite.json
+    ├── openai_gpt-5-nano/
+    │   ├── episodes.jsonl
+    │   └── raw/Trust_Game_openai_gpt-5-nano.json
     └── ...
 ```
 
@@ -185,6 +192,11 @@ Each line contains:
   "timestamp": "2026-01-20T14:30:15"
 }
 ```
+
+## Run Registry
+
+Completed runs are logged in `notes/run_registry.csv` with run path, models,
+games, and episode counts to make it easy to audit experiments over time.
 
 ## Key Features
 

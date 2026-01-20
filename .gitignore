@@ -26,6 +26,10 @@ build/
 # Experiment results (regenerable, can be large)
 results/
 
+# Vendor output artifacts
+vendor/agent-trust/agent_trust/*_res/
+vendor/agent-trust/agent_trust/res/*_res/
+
 # Temporary files
 *.log
 *.tmp

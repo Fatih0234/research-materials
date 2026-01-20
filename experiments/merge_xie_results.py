@@ -4,6 +4,7 @@ Merge Xie replication outputs from multiple runs into a single results folder.
 """
 
 import argparse
+import csv
 import json
 import shutil
 import sys
@@ -35,6 +36,7 @@ def load_episodes(episodes_path: Path) -> List[Dict[str, Any]]:
 
 
 def write_episodes(output_path: Path, episodes: List[Dict[str, Any]]):
+    output_path.parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, "w") as f:
         for episode in episodes:
             f.write(json.dumps(episode) + "\n")
@@ -149,6 +151,35 @@ def copy_raw_outputs(source_dir: Path, output_dir: Path):
         shutil.copy2(item, dest_path)
 
 
+def append_run_registry(entry: Dict[str, Any]):
+    registry_path = REPO_ROOT / "notes" / "run_registry.csv"
+    registry_path.parent.mkdir(parents=True, exist_ok=True)
+
+    fields = [
+        "run_id",
+        "run_path",
+        "paper_id",
+        "experiment_name",
+        "game_ids",
+        "game_names",
+        "model_ids",
+        "total_models",
+        "total_episodes",
+        "mode",
+        "created_at",
+        "config_path",
+        "git_commit",
+        "notes",
+    ]
+
+    exists = registry_path.exists()
+    with open(registry_path, "a", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=fields)
+        if not exists:
+            writer.writeheader()
+        writer.writerow({key: entry.get(key, "") for key in fields})
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Merge Xie replication results")
     parser.add_argument(
@@ -157,29 +188,49 @@ def main() -> int:
         help="Path to YAML configuration file",
     )
     parser.add_argument(
+        "--run-dir",
+        type=str,
+        default=None,
+        help="Run directory containing per_model outputs",
+    )
+    parser.add_argument(
         "--source-dir",
         action="append",
-        required=True,
+        required=False,
         help="Source results directory (repeatable)",
     )
     parser.add_argument(
         "--output-dir",
-        required=True,
+        required=False,
         help="Output directory for merged results",
     )
 
     args = parser.parse_args()
 
     config = load_config(args.config)
-    output_dir = Path(args.output_dir)
+
+    if args.run_dir:
+        run_dir = Path(args.run_dir)
+        output_dir = Path(args.output_dir) if args.output_dir else run_dir
+        per_model_root = run_dir / "per_model"
+        if not per_model_root.exists():
+            print(f"✗ Missing per_model directory in {run_dir}")
+            return 1
+        source_dirs = [p for p in sorted(per_model_root.iterdir()) if p.is_dir()]
+    else:
+        if not args.source_dir or not args.output_dir:
+            print("✗ Error: Provide --run-dir or both --source-dir and --output-dir")
+            return 1
+        output_dir = Path(args.output_dir)
+        source_dirs = [Path(source) for source in args.source_dir]
+
     output_dir.mkdir(parents=True, exist_ok=True)
     (output_dir / "raw").mkdir(exist_ok=True)
 
     episodes: List[Dict[str, Any]] = []
     source_runs = []
 
-    for source in args.source_dir:
-        source_dir = Path(source)
+    for source_dir in source_dirs:
         episodes_path = source_dir / "episodes.jsonl"
         if not episodes_path.exists():
             print(f"✗ Missing episodes.jsonl in {source_dir}")
@@ -199,8 +250,18 @@ def main() -> int:
     aggregates.to_csv(output_dir / "aggregates.csv", index=False)
     write_analysis_outputs(output_dir, episodes)
 
+    run_id = output_dir.name
+    if run_id.startswith("run_"):
+        run_id = run_id.replace("run_", "", 1)
+
+    model_ids = sorted({ep.get("model_id") for ep in episodes if ep.get("model_id")})
+    games = config.get("games", [])
+    game_ids = [game.get("game_id") for game in games]
+    game_names = [game.get("game_name") for game in games]
+
     metadata = {
-        "run_id": output_dir.name,
+        "run_id": run_id,
+        "scope": "run",
         "experiment_id": config.get("experiment_name", "unknown"),
         "paper_id": config.get("paper_id", "unknown"),
         "config_path": str(config.get("_config_path", "unknown")),
@@ -209,7 +270,10 @@ def main() -> int:
         "python_version": sys.version.split()[0],
         "merged_at": datetime.now().isoformat(),
         "total_episodes": len(episodes),
-        "total_models": len(set(ep.get("model_id") for ep in episodes)),
+        "total_models": len(model_ids),
+        "model_ids": model_ids,
+        "game_ids": game_ids,
+        "game_names": game_names,
         "source_runs": source_runs,
         "environment": {
             "openrouter_base_url": "https://openrouter.ai/api/v1",
@@ -219,6 +283,25 @@ def main() -> int:
 
     with open(output_dir / "metadata.json", "w") as f:
         json.dump(metadata, f, indent=2)
+
+    append_run_registry(
+        {
+            "run_id": run_id,
+            "run_path": str(output_dir),
+            "paper_id": config.get("paper_id", ""),
+            "experiment_name": config.get("experiment_name", ""),
+            "game_ids": ";".join(game_ids),
+            "game_names": ";".join(game_names),
+            "model_ids": ";".join(model_ids),
+            "total_models": len(model_ids),
+            "total_episodes": len(episodes),
+            "mode": "merge",
+            "created_at": datetime.now().isoformat(),
+            "config_path": str(config.get("_config_path", "")),
+            "git_commit": get_git_commit(),
+            "notes": "",
+        }
+    )
 
     print(f"✓ Merged results saved to {output_dir}")
     return 0

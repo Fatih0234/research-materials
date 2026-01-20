@@ -15,10 +15,11 @@
 - Personas: 53 (vendor/agent-trust persona file)
 - Temperature: 1.0
 - Outputs per run:
-  - episodes.jsonl (incremental append)
-  - aggregates.csv (model-level summary)
-  - metadata.json (run metadata)
-  - raw/ (vendor JSONs)
+  - run_<timestamp>/per_model/<model>/episodes.jsonl (per-model episodes)
+  - run_<timestamp>/aggregates.csv (run-level summary after merge/full run)
+  - run_<timestamp>/metadata.json (run metadata)
+  - run_<timestamp>/analysis/ (model summaries + amount distributions)
+  - run_<timestamp>/raw/ (consolidated vendor outputs)
 
 ## Model Panel (8 Models)
 
@@ -34,10 +35,10 @@
 ## Recent Run (Local Only)
 
 - Run ID: 20260120_025050
+- Run root:
+  - results/arxiv_2402.04559/xie_trust_game_replication/run_20260120_025050
 - Per-model outputs:
-  - results/xie_replication__20260120_025050__trust_game__<model>
-- Merged output:
-  - results/xie_replication__20260120_025050__trust_game
+  - results/arxiv_2402.04559/xie_trust_game_replication/run_20260120_025050/per_model/<model>
 - Total episodes: 424 (53 personas x 8 models)
 - Results are not committed (results/ is gitignored).
 
@@ -46,18 +47,19 @@
 Added safe parallel execution to avoid file contention:
 
 - --models: run a subset by model key or OpenRouter ID
-- --output-dir: write to a unique directory per terminal
+- --output-dir: set the shared run directory (per-model output is isolated)
 
 Example per model:
 
 ```bash
 RUN_ID=20260120_025050
+RUN_ROOT="results/arxiv_2402.04559/xie_trust_game_replication/run_${RUN_ID}"
 CONFIG=experiments/configs/xie_2402_04559/replication_baseline.yaml
 
 uv run python experiments/run_xie_replication.py \
   --config "$CONFIG" \
   --models openai/gpt-5-nano \
-  --output-dir "results/xie_replication__${RUN_ID}__trust_game__gpt-5-nano"
+  --output-dir "$RUN_ROOT"
 ```
 
 ## Merge + Analysis Outputs (New)
@@ -69,9 +71,7 @@ Merge example:
 ```bash
 uv run python experiments/merge_xie_results.py \
   --config experiments/configs/xie_2402_04559/replication_baseline.yaml \
-  --output-dir results/xie_replication__20260120_025050__trust_game \
-  --source-dir results/xie_replication__20260120_025050__trust_game__gemini-2.5-flash-lite \
-  --source-dir results/xie_replication__20260120_025050__trust_game__gpt-5-nano
+  --run-dir "$RUN_ROOT"
 ```
 
 Merge outputs:
@@ -92,6 +92,12 @@ Merge outputs:
 - experiments/run_xie_replication.py: added --models and --output-dir
 - experiments/merge_xie_results.py: new merge + analysis helper
 - README.md: documented parallel run and merge workflow
+- .gitignore: ignore vendor *_res artifacts
+- experiments/configs/xie_2402_04559/replication_baseline.yaml: new run root path
+
+## Run Registry (New)
+
+- notes/run_registry.csv records completed run summaries for quick overview.
 
 ## Next Steps
 

@@ -13,6 +13,7 @@ Features:
   - INCREMENTAL SAVE: Results saved after each model completes
   - RESUME CAPABILITY: Can resume from checkpoint if interrupted
   - Checkpoint file tracks completed models
+  - Per-model outputs stored under run_dir/per_model/<model>
 
 Responsibilities:
   1. Load YAML config + model registry
@@ -24,6 +25,7 @@ Responsibilities:
 """
 
 import argparse
+import csv
 import json
 import os
 import shutil
@@ -110,16 +112,22 @@ def create_output_directory(
     elif output_dir_override:
         output_dir = Path(output_dir_override)
         output_dir.mkdir(parents=True, exist_ok=True)
-        (output_dir / "raw").mkdir(exist_ok=True)
         print(f"✓ Using output directory: {output_dir}")
     else:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         output_dir = Path(template.replace("{timestamp}", timestamp))
         output_dir.mkdir(parents=True, exist_ok=True)
-        (output_dir / "raw").mkdir(exist_ok=True)
         print(f"✓ Created output directory: {output_dir}")
 
     return output_dir
+
+
+def safe_model_dir_name(model_id: str) -> str:
+    return model_id.replace("/", "_").replace(":", "_")
+
+
+def get_model_output_dir(run_dir: Path, model_id: str) -> Path:
+    return run_dir / "per_model" / safe_model_dir_name(model_id)
 
 
 def load_checkpoint(output_dir: Path) -> Dict[str, Any]:
@@ -150,6 +158,7 @@ def get_model_game_key(model_id: str, game_id: str) -> str:
 
 def append_episodes_to_jsonl(output_dir: Path, episodes: List[Dict[str, Any]]):
     """Append episodes to the JSONL file (incremental save)."""
+    output_dir.mkdir(parents=True, exist_ok=True)
     episodes_path = output_dir / "episodes.jsonl"
     with open(episodes_path, "a") as f:
         for episode in episodes:
@@ -157,15 +166,38 @@ def append_episodes_to_jsonl(output_dir: Path, episodes: List[Dict[str, Any]]):
     print(f"  ✓ Appended {len(episodes)} episodes to {episodes_path}")
 
 
-def load_all_episodes(output_dir: Path) -> List[Dict[str, Any]]:
-    """Load all episodes from JSONL file."""
+def write_episodes_jsonl(output_dir: Path, episodes: List[Dict[str, Any]]):
+    """Write episodes to JSONL file (overwrite)."""
+    output_dir.mkdir(parents=True, exist_ok=True)
     episodes_path = output_dir / "episodes.jsonl"
+    with open(episodes_path, "w") as f:
+        for episode in episodes:
+            f.write(json.dumps(episode) + "\n")
+    print(f"✓ Wrote {len(episodes)} episodes to {episodes_path}")
+
+
+def load_episodes(episodes_path: Path) -> List[Dict[str, Any]]:
     episodes = []
     if episodes_path.exists():
         with open(episodes_path, "r") as f:
             for line in f:
                 if line.strip():
                     episodes.append(json.loads(line))
+    return episodes
+
+
+def load_all_episodes(run_dir: Path) -> List[Dict[str, Any]]:
+    """Load all episodes from run-level or per-model outputs."""
+    run_level_path = run_dir / "episodes.jsonl"
+    if run_level_path.exists():
+        return load_episodes(run_level_path)
+
+    episodes = []
+    per_model_dir = run_dir / "per_model"
+    if per_model_dir.exists():
+        for model_dir in sorted(per_model_dir.iterdir()):
+            episodes_path = model_dir / "episodes.jsonl"
+            episodes.extend(load_episodes(episodes_path))
     return episodes
 
 
@@ -305,7 +337,7 @@ def run_vendor_experiment(
 def find_vendor_output(model_id: str, game_name: str) -> Optional[Path]:
     """Find the vendor output JSON file for a model+game."""
     # Sanitize model ID for folder name (matches the patch we applied)
-    safe_model_name = model_id.replace("/", "_").replace(":", "_")
+    safe_model_name = safe_model_dir_name(model_id)
 
     # Vendor saves to: {safe_model_name}_res/res/{safe_model_name}_res/{game_name}_{model_id}.json
     # The path structure is a bit nested due to vendor code
@@ -349,6 +381,95 @@ def find_vendor_output(model_id: str, game_name: str) -> Optional[Path]:
             return json_file
 
     return None
+
+
+def cleanup_vendor_outputs(model_id: str):
+    """Remove vendor-generated *_res folders after copying outputs."""
+    safe_model_name = safe_model_dir_name(model_id)
+    candidates = [
+        VENDOR_AGENT_TRUST_PATH / f"{safe_model_name}_res",
+        VENDOR_AGENT_TRUST_PATH / "res" / f"{safe_model_name}_res",
+    ]
+    for candidate in candidates:
+        if candidate.exists() and candidate.is_dir():
+            shutil.rmtree(candidate, ignore_errors=True)
+
+
+def consolidate_raw_outputs(run_dir: Path):
+    """Collect per-model raw outputs into run-level raw folder."""
+    raw_dir = run_dir / "raw"
+    raw_dir.mkdir(exist_ok=True)
+    per_model_dir = run_dir / "per_model"
+    if not per_model_dir.exists():
+        return
+
+    for model_dir in per_model_dir.iterdir():
+        model_raw = model_dir / "raw"
+        if not model_raw.exists():
+            continue
+        for item in model_raw.iterdir():
+            if not item.is_file():
+                continue
+            dest = raw_dir / item.name
+            if dest.exists():
+                dest = raw_dir / f"{model_dir.name}__{item.name}"
+            shutil.copy2(item, dest)
+
+
+def write_analysis_outputs(output_dir: Path, episodes: List[Dict[str, Any]]):
+    analysis_dir = output_dir / "analysis"
+    analysis_dir.mkdir(exist_ok=True)
+
+    aggregates = calculate_aggregates(episodes)
+    if not aggregates.empty:
+        aggregates.to_csv(analysis_dir / "model_summary.csv", index=False)
+
+    df = pd.DataFrame(episodes)
+    if df.empty:
+        return
+
+    valid_df = df[(df["success"] == True) & df["sent_amount"].notna()].copy()
+    if valid_df.empty:
+        return
+
+    valid_df["sent_amount_bucket"] = valid_df["sent_amount"].round().astype(int)
+    distribution = (
+        valid_df.groupby(
+            ["model_id", "model_paper_name", "game_id", "sent_amount_bucket"]
+        )
+        .size()
+        .reset_index(name="count")
+    )
+    distribution.to_csv(analysis_dir / "amount_sent_distribution.csv", index=False)
+
+
+def append_run_registry(entry: Dict[str, Any]):
+    registry_path = REPO_ROOT / "notes" / "run_registry.csv"
+    registry_path.parent.mkdir(parents=True, exist_ok=True)
+
+    fields = [
+        "run_id",
+        "run_path",
+        "paper_id",
+        "experiment_name",
+        "game_ids",
+        "game_names",
+        "model_ids",
+        "total_models",
+        "total_episodes",
+        "mode",
+        "created_at",
+        "config_path",
+        "git_commit",
+        "notes",
+    ]
+
+    exists = registry_path.exists()
+    with open(registry_path, "a", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=fields)
+        if not exists:
+            writer.writeheader()
+        writer.writerow({key: entry.get(key, "") for key in fields})
 
 
 def transform_vendor_output(
@@ -459,27 +580,35 @@ def calculate_aggregates(episodes: List[Dict[str, Any]]) -> pd.DataFrame:
     return pd.DataFrame(aggregates)
 
 
-def save_final_results(output_dir: Path, config: Dict[str, Any], run_id: str):
-    """Save final aggregates and metadata after all models complete."""
-
-    # Load all episodes
-    episodes = load_all_episodes(output_dir)
-
+def save_results(
+    output_dir: Path,
+    config: Dict[str, Any],
+    run_id: str,
+    episodes: List[Dict[str, Any]],
+    scope: str,
+    model_ids: Optional[List[str]] = None,
+    write_analysis: bool = False,
+):
+    """Save aggregates and metadata for a run or a single model."""
     if not episodes:
         print("\n⚠ No episodes found to aggregate")
         return
 
-    # Calculate aggregates
     aggregates = calculate_aggregates(episodes)
-
-    # Save aggregates.csv
     aggregates_path = output_dir / "aggregates.csv"
     aggregates.to_csv(aggregates_path, index=False)
     print(f"✓ Saved aggregates to {aggregates_path}")
 
-    # Save metadata.json
+    resolved_model_ids = model_ids or sorted(
+        {ep.get("model_id") for ep in episodes if ep.get("model_id")}
+    )
+    games = config.get("games", [])
+    game_ids = [game.get("game_id") for game in games]
+    game_names = [game.get("game_name") for game in games]
+
     metadata = {
         "run_id": run_id,
+        "scope": scope,
         "experiment_id": config["experiment_name"],
         "paper_id": config["paper_id"],
         "config_path": str(config.get("_config_path", "unknown")),
@@ -490,7 +619,10 @@ def save_final_results(output_dir: Path, config: Dict[str, Any], run_id: str):
         "start_time": config.get("_start_time", "unknown"),
         "end_time": datetime.now().isoformat(),
         "total_episodes": len(episodes),
-        "total_models": len(set(ep["model_id"] for ep in episodes)),
+        "total_models": len(resolved_model_ids),
+        "model_ids": resolved_model_ids,
+        "game_ids": game_ids,
+        "game_names": game_names,
         "environment": {
             "openrouter_base_url": os.getenv(
                 "OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1"
@@ -503,6 +635,9 @@ def save_final_results(output_dir: Path, config: Dict[str, Any], run_id: str):
     with open(metadata_path, "w") as f:
         json.dump(metadata, f, indent=2)
     print(f"✓ Saved metadata to {metadata_path}")
+
+    if write_analysis:
+        write_analysis_outputs(output_dir, episodes)
 
 
 def get_git_commit() -> str:
@@ -582,7 +717,7 @@ def main():
         "--output-dir",
         type=str,
         default=None,
-        help="Override output directory path (useful for parallel runs)",
+        help="Override run directory path (useful for parallel runs)",
     )
 
     args = parser.parse_args()
@@ -639,26 +774,28 @@ def main():
         return 0
 
     # Create or resume output directory
-    output_dir = create_output_directory(
+    run_dir = create_output_directory(
         config["output_dir_template"],
         args.resume,
         args.output_dir,
     )
-    run_id = output_dir.name
-    parts = output_dir.name.split("__")
-    if len(parts) >= 3:
-        run_id = parts[1]
+    per_model_root = run_dir / "per_model"
+    per_model_root.mkdir(exist_ok=True)
 
-    # Load checkpoint
-    checkpoint = load_checkpoint(output_dir)
-    completed_models: Set[str] = set(checkpoint.get("completed_models", []))
-    failed_models: List[str] = checkpoint.get("failed_models", [])
+    run_id = run_dir.name
+    if run_id.startswith("run_"):
+        run_id = run_id.replace("run_", "", 1)
+
+    use_run_checkpoint = args.models is None
+    run_checkpoint = load_checkpoint(run_dir) if use_run_checkpoint else {}
+    completed_models: Set[str] = set(run_checkpoint.get("completed_models", []))
+    failed_models: List[str] = run_checkpoint.get("failed_models", [])
 
     # Calculate progress
     total_combinations = len(model_specs) * len(config["games"])
     already_completed = len(completed_models)
 
-    if already_completed > 0:
+    if use_run_checkpoint and already_completed > 0:
         print(
             f"\n📊 Progress: {already_completed}/{total_combinations} model-game combinations already completed"
         )
@@ -669,13 +806,28 @@ def main():
     models_failed_this_run = 0
 
     for model_spec in model_specs:
+        model_id = model_spec["openrouter_model_id"]
+        model_output_dir = get_model_output_dir(run_dir, model_id)
+        model_output_dir.mkdir(parents=True, exist_ok=True)
+        (model_output_dir / "raw").mkdir(exist_ok=True)
+
+        if use_run_checkpoint:
+            checkpoint_dir = run_dir
+            checkpoint = run_checkpoint
+            model_completed = completed_models
+            model_failed = failed_models
+        else:
+            checkpoint_dir = model_output_dir
+            checkpoint = load_checkpoint(checkpoint_dir)
+            model_completed = set(checkpoint.get("completed_models", []))
+            model_failed = checkpoint.get("failed_models", [])
+
         for game_config in config["games"]:
-            model_id = model_spec["openrouter_model_id"]
             game_id = game_config["game_id"]
             model_game_key = get_model_game_key(model_id, game_id)
 
             # Skip if already completed
-            if model_game_key in completed_models:
+            if model_game_key in model_completed:
                 print(
                     f"\n⏭ Skipping {model_spec['paper_name']} - {game_config['game_name']} (already completed)"
                 )
@@ -694,12 +846,12 @@ def main():
                 print(
                     f"  ✗ Failed: {model_spec['paper_name']} - {game_config['game_name']}"
                 )
-                failed_models.append(model_game_key)
+                model_failed.append(model_game_key)
                 models_failed_this_run += 1
 
                 # Save checkpoint even on failure
-                checkpoint["failed_models"] = failed_models
-                save_checkpoint(output_dir, checkpoint)
+                checkpoint["failed_models"] = model_failed
+                save_checkpoint(checkpoint_dir, checkpoint)
                 continue
 
             # Find and transform vendor output
@@ -718,33 +870,46 @@ def main():
                 )
 
                 # INCREMENTAL SAVE: Append episodes immediately
-                append_episodes_to_jsonl(output_dir, episodes)
+                append_episodes_to_jsonl(model_output_dir, episodes)
 
                 # Copy raw vendor output to results/raw/
-                raw_dir = output_dir / "raw"
-                safe_model_name = model_id.replace("/", "_").replace(":", "_")
-                raw_copy_path = (
-                    raw_dir / f"{game_config['game_name']}_{safe_model_name}.json"
-                )
+                raw_dir = model_output_dir / "raw"
+                safe_model_name = safe_model_dir_name(model_id)
+                raw_copy_path = raw_dir / f"{game_config['game_name']}_{safe_model_name}.json"
                 shutil.copy2(vendor_output_path, raw_copy_path)
                 print(f"  ✓ Copied raw output to {raw_copy_path}")
+                cleanup_vendor_outputs(model_id)
 
             else:
                 print(f"  ⚠ Could not find vendor output file for {model_id}")
                 # Still mark as completed since the API calls were made
 
             # Mark as completed and save checkpoint
-            completed_models.add(model_game_key)
-            checkpoint["completed_models"] = list(completed_models)
-            save_checkpoint(output_dir, checkpoint)
+            model_completed.add(model_game_key)
+            checkpoint["completed_models"] = list(model_completed)
+            save_checkpoint(checkpoint_dir, checkpoint)
+
+            if use_run_checkpoint:
+                completed_models = model_completed
 
             models_completed_this_run += 1
 
-            print(
-                f"\n  💾 CHECKPOINT SAVED: {len(completed_models)}/{total_combinations} complete"
-            )
-            print(
-                f"     Progress this run: {models_completed_this_run} completed, {models_failed_this_run} failed\n"
+            if use_run_checkpoint:
+                print(
+                    f"\n  💾 CHECKPOINT SAVED: {len(completed_models)}/{total_combinations} complete"
+                )
+                print(
+                    f"     Progress this run: {models_completed_this_run} completed, {models_failed_this_run} failed\n"
+                )
+        if not use_run_checkpoint:
+            model_episodes = load_episodes(model_output_dir / "episodes.jsonl")
+            save_results(
+                output_dir=model_output_dir,
+                config=config,
+                run_id=run_id,
+                episodes=model_episodes,
+                scope="model",
+                model_ids=[model_spec["openrouter_model_id"]],
             )
 
     # Save final aggregates and metadata
@@ -752,19 +917,67 @@ def main():
     print("Saving final results...")
     print("=" * 60)
 
-    save_final_results(output_dir, config, run_id)
+    if use_run_checkpoint:
+        episodes = load_all_episodes(run_dir)
+        if episodes:
+            write_episodes_jsonl(run_dir, episodes)
+            consolidate_raw_outputs(run_dir)
+        save_results(
+            output_dir=run_dir,
+            config=config,
+            run_id=run_id,
+            episodes=episodes,
+            scope="run",
+            write_analysis=True,
+        )
+
+        append_run_registry(
+            {
+                "run_id": run_id,
+                "run_path": str(run_dir),
+                "paper_id": config.get("paper_id", ""),
+                "experiment_name": config.get("experiment_name", ""),
+                "game_ids": ";".join(
+                    [g.get("game_id") for g in config.get("games", []) if g.get("game_id")]
+                ),
+                "game_names": ";".join(
+                    [
+                        g.get("game_name")
+                        for g in config.get("games", [])
+                        if g.get("game_name")
+                    ]
+                ),
+                "model_ids": ";".join(
+                    [
+                        spec["openrouter_model_id"]
+                        for spec in model_specs
+                        if spec.get("openrouter_model_id")
+                    ]
+                ),
+                "total_models": len(model_specs),
+                "total_episodes": len(episodes),
+                "mode": "full",
+                "created_at": datetime.now().isoformat(),
+                "config_path": str(config.get("_config_path", "")),
+                "git_commit": get_git_commit(),
+                "notes": "",
+            }
+        )
 
     # Print summary
     print("\n" + "=" * 60)
     print("✓ Replication complete!")
     print("=" * 60)
-    print(f"  Results directory: {output_dir}")
-    print(f"  Total completed: {len(completed_models)}/{total_combinations}")
+    print(f"  Results directory: {run_dir}")
+    if use_run_checkpoint:
+        print(f"  Total completed: {len(completed_models)}/{total_combinations}")
     print(
         f"  This run: {models_completed_this_run} completed, {models_failed_this_run} failed"
     )
     if failed_models:
         print(f"  Failed models: {len(failed_models)}")
+    if not use_run_checkpoint:
+        print("  Note: Run-level aggregates require merge_xie_results.py")
     print("=" * 60 + "\n")
 
     return 0
