@@ -1,3 +1,0 @@
-[submodule "vendor/agent-trust"]
-	path = vendor/agent-trust
-	url = https://github.com/camel-ai/agent-trust.git
