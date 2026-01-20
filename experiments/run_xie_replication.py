@@ -96,18 +96,26 @@ def resolve_models(
     return resolved
 
 
-def create_output_directory(template: str, resume_dir: Optional[str] = None) -> Path:
+def create_output_directory(
+    template: str,
+    resume_dir: Optional[str] = None,
+    output_dir_override: Optional[str] = None,
+) -> Path:
     """Create timestamped output directory or resume from existing."""
     if resume_dir:
         output_dir = Path(resume_dir)
         if not output_dir.exists():
             raise ValueError(f"Resume directory does not exist: {resume_dir}")
         print(f"✓ Resuming from existing directory: {output_dir}")
+    elif output_dir_override:
+        output_dir = Path(output_dir_override)
+        output_dir.mkdir(parents=True, exist_ok=True)
+        (output_dir / "raw").mkdir(exist_ok=True)
+        print(f"✓ Using output directory: {output_dir}")
     else:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         output_dir = Path(template.replace("{timestamp}", timestamp))
         output_dir.mkdir(parents=True, exist_ok=True)
-        # Create subdirectories
         (output_dir / "raw").mkdir(exist_ok=True)
         print(f"✓ Created output directory: {output_dir}")
 
@@ -564,6 +572,18 @@ def main():
         default=None,
         help="Resume from existing output directory (path to directory)",
     )
+    parser.add_argument(
+        "--models",
+        type=str,
+        default=None,
+        help="Comma-separated list of model keys or OpenRouter IDs to run",
+    )
+    parser.add_argument(
+        "--output-dir",
+        type=str,
+        default=None,
+        help="Override output directory path (useful for parallel runs)",
+    )
 
     args = parser.parse_args()
 
@@ -571,6 +591,10 @@ def main():
     print("Xie et al. (2024) Replication Wrapper")
     print("  [INCREMENTAL SAVE ENABLED]")
     print("=" * 60 + "\n")
+
+    if args.resume and args.output_dir:
+        print("✗ Error: --resume and --output-dir cannot be used together")
+        return 1
 
     # Load configuration
     config = load_config(args.config)
@@ -583,6 +607,29 @@ def main():
     # Resolve model panel
     model_specs = resolve_models(config["model_panel"], registry)
 
+    if args.models:
+        model_filter = {item.strip() for item in args.models.split(",") if item.strip()}
+        filtered_specs = []
+        matched = set()
+        for spec in model_specs:
+            if spec["key"] in model_filter or spec["openrouter_model_id"] in model_filter:
+                filtered_specs.append(spec)
+                if spec["key"] in model_filter:
+                    matched.add(spec["key"])
+                if spec["openrouter_model_id"] in model_filter:
+                    matched.add(spec["openrouter_model_id"])
+
+        missing = sorted(model_filter - matched)
+        if missing:
+            print(f"  ⚠ Warning: Requested model(s) not found: {', '.join(missing)}")
+
+        if not filtered_specs:
+            print("✗ Error: No matching models found for --models")
+            return 1
+
+        model_specs = filtered_specs
+        print(f"✓ Filtered model panel to {len(model_specs)} model(s)")
+
     if args.dry_run:
         print("\n✓ DRY RUN: Configuration validated successfully")
         print(f"  Would run {len(model_specs)} models × {len(config['games'])} games")
@@ -592,8 +639,15 @@ def main():
         return 0
 
     # Create or resume output directory
-    output_dir = create_output_directory(config["output_dir_template"], args.resume)
-    run_id = output_dir.name.split("__")[1]  # Extract timestamp as run_id
+    output_dir = create_output_directory(
+        config["output_dir_template"],
+        args.resume,
+        args.output_dir,
+    )
+    run_id = output_dir.name
+    parts = output_dir.name.split("__")
+    if len(parts) >= 3:
+        run_id = parts[1]
 
     # Load checkpoint
     checkpoint = load_checkpoint(output_dir)

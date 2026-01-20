@@ -56,6 +56,36 @@ uv run python experiments/run_xie_replication.py \
   --resume results/xie_replication__TIMESTAMP__trust_game/
 ```
 
+### Parallel Runs (One Model Per Terminal)
+
+For faster wall-clock time, run one model per terminal and merge the results.
+
+```bash
+uv run python experiments/run_xie_replication.py \
+  --config experiments/configs/xie_2402_04559/replication_baseline.yaml \
+  --models google/gemini-2.5-flash-lite \
+  --output-dir results/xie_replication__20260120_025050__trust_game__gemini-2.5-flash-lite
+
+uv run python experiments/run_xie_replication.py \
+  --config experiments/configs/xie_2402_04559/replication_baseline.yaml \
+  --models openai/gpt-5-nano \
+  --output-dir results/xie_replication__20260120_025050__trust_game__gpt-5-nano
+```
+
+Repeat for the remaining models, then merge:
+
+```bash
+uv run python experiments/merge_xie_results.py \
+  --config experiments/configs/xie_2402_04559/replication_baseline.yaml \
+  --output-dir results/xie_replication__20260120_025050__trust_game \
+  --source-dir results/xie_replication__20260120_025050__trust_game__gemini-2.5-flash-lite \
+  --source-dir results/xie_replication__20260120_025050__trust_game__gpt-5-nano
+```
+
+Use a unique `--output-dir` per terminal; do not point multiple runs at the same folder.
+The merge step also creates `analysis/model_summary.csv` and `analysis/amount_sent_distribution.csv`
+to support paper-style comparisons (VRR, medians, and Figure 2-style distributions).
+
 ## Project Structure
 
 ```
