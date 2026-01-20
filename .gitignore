@@ -1,9 +1,35 @@
+# OS files
 .DS_Store
+Thumbs.db
+
+# Python
 .venv/
 __pycache__/
 *.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
 
 # Environment variables (NEVER commit secrets!)
 .env
 .env.local
 .env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Experiment results (regenerable, can be large)
+results/
+
+# Temporary files
+*.log
+*.tmp
+.ruff_cache/
+
+# Python version
+.python-version

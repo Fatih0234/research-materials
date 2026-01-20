@@ -9,11 +9,16 @@ Rationale:
   - Easier debugging (stack traces preserved)
   - vendor/agent-trust designed as library (has __init__.py, functions)
 
+Features:
+  - INCREMENTAL SAVE: Results saved after each model completes
+  - RESUME CAPABILITY: Can resume from checkpoint if interrupted
+  - Checkpoint file tracks completed models
+
 Responsibilities:
   1. Load YAML config + model registry
   2. Resolve model panel → OpenRouter IDs
   3. Import vendor.agent_trust.all_game_person
-  4. Call run_exp() for each model
+  4. Call run_exp() for each model (with incremental save)
   5. Transform vendor JSON → episodes.jsonl + aggregates.csv
   6. Write run_metadata.json
 """
@@ -21,11 +26,11 @@ Responsibilities:
 import argparse
 import json
 import os
+import shutil
 import sys
-import uuid
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Set
 
 import pandas as pd
 import yaml
@@ -35,7 +40,9 @@ REPO_ROOT = Path(__file__).parent.parent
 VENDOR_PATH = REPO_ROOT / "vendor" / "agent-trust"
 VENDOR_AGENT_TRUST_PATH = VENDOR_PATH / "agent_trust"
 sys.path.insert(0, str(VENDOR_PATH))
-sys.path.insert(0, str(VENDOR_AGENT_TRUST_PATH))  # For relative imports within agent_trust
+sys.path.insert(
+    0, str(VENDOR_AGENT_TRUST_PATH)
+)  # For relative imports within agent_trust
 
 
 def load_config(config_path: str) -> Dict[str, Any]:
@@ -52,7 +59,9 @@ def load_config(config_path: str) -> Dict[str, Any]:
     return config
 
 
-def load_model_registry(registry_path: str = "specs/05_model_registry.json") -> Dict[str, Any]:
+def load_model_registry(
+    registry_path: str = "specs/05_model_registry.json",
+) -> Dict[str, Any]:
     """Load model registry mapping paper models to OpenRouter IDs."""
     full_path = REPO_ROOT / registry_path
     with open(full_path, "r") as f:
@@ -64,7 +73,9 @@ def load_model_registry(registry_path: str = "specs/05_model_registry.json") -> 
     return registry
 
 
-def resolve_models(model_panel: List[str], registry: Dict[str, Any]) -> List[Dict[str, Any]]:
+def resolve_models(
+    model_panel: List[str], registry: Dict[str, Any]
+) -> List[Dict[str, Any]]:
     """Resolve model panel keys to full model specifications."""
     resolved = []
 
@@ -85,18 +96,69 @@ def resolve_models(model_panel: List[str], registry: Dict[str, Any]) -> List[Dic
     return resolved
 
 
-def create_output_directory(template: str) -> Path:
-    """Create timestamped output directory."""
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    output_dir = Path(template.replace("{timestamp}", timestamp))
-    output_dir.mkdir(parents=True, exist_ok=True)
-
-    # Create subdirectories
-    (output_dir / "raw").mkdir(exist_ok=True)
-
-    print(f"✓ Created output directory: {output_dir}")
+def create_output_directory(template: str, resume_dir: Optional[str] = None) -> Path:
+    """Create timestamped output directory or resume from existing."""
+    if resume_dir:
+        output_dir = Path(resume_dir)
+        if not output_dir.exists():
+            raise ValueError(f"Resume directory does not exist: {resume_dir}")
+        print(f"✓ Resuming from existing directory: {output_dir}")
+    else:
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        output_dir = Path(template.replace("{timestamp}", timestamp))
+        output_dir.mkdir(parents=True, exist_ok=True)
+        # Create subdirectories
+        (output_dir / "raw").mkdir(exist_ok=True)
+        print(f"✓ Created output directory: {output_dir}")
 
     return output_dir
+
+
+def load_checkpoint(output_dir: Path) -> Dict[str, Any]:
+    """Load checkpoint file to see which models have completed."""
+    checkpoint_path = output_dir / "checkpoint.json"
+    if checkpoint_path.exists():
+        with open(checkpoint_path, "r") as f:
+            checkpoint = json.load(f)
+        print(
+            f"✓ Loaded checkpoint: {len(checkpoint.get('completed_models', []))} models completed"
+        )
+        return checkpoint
+    return {"completed_models": [], "failed_models": []}
+
+
+def save_checkpoint(output_dir: Path, checkpoint: Dict[str, Any]):
+    """Save checkpoint file."""
+    checkpoint_path = output_dir / "checkpoint.json"
+    checkpoint["last_updated"] = datetime.now().isoformat()
+    with open(checkpoint_path, "w") as f:
+        json.dump(checkpoint, f, indent=2)
+
+
+def get_model_game_key(model_id: str, game_id: str) -> str:
+    """Create a unique key for model+game combination."""
+    return f"{model_id}::{game_id}"
+
+
+def append_episodes_to_jsonl(output_dir: Path, episodes: List[Dict[str, Any]]):
+    """Append episodes to the JSONL file (incremental save)."""
+    episodes_path = output_dir / "episodes.jsonl"
+    with open(episodes_path, "a") as f:
+        for episode in episodes:
+            f.write(json.dumps(episode) + "\n")
+    print(f"  ✓ Appended {len(episodes)} episodes to {episodes_path}")
+
+
+def load_all_episodes(output_dir: Path) -> List[Dict[str, Any]]:
+    """Load all episodes from JSONL file."""
+    episodes_path = output_dir / "episodes.jsonl"
+    episodes = []
+    if episodes_path.exists():
+        with open(episodes_path, "r") as f:
+            for line in f:
+                if line.strip():
+                    episodes.append(json.loads(line))
+    return episodes
 
 
 def run_vendor_experiment(
@@ -104,7 +166,7 @@ def run_vendor_experiment(
     game_config: Dict[str, Any],
     personas_path: str,
     temperature: float = 1.0,
-    dry_run: bool = False
+    dry_run: bool = False,
 ) -> Optional[Dict[str, Any]]:
     """
     Run vendor/agent-trust experiment for a single model.
@@ -115,12 +177,12 @@ def run_vendor_experiment(
     model_id = model_spec["openrouter_model_id"]
     game_id = game_config["game_id"]
 
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print(f"Running: {model_spec['paper_name']} on {game_config['game_name']}")
     print(f"  Model ID: {model_id}")
     print(f"  Game ID: {game_id}")
     print(f"  Temperature: {temperature}")
-    print(f"{'='*60}")
+    print(f"{'=' * 60}")
 
     if dry_run:
         print("  [DRY RUN] Skipping actual execution")
@@ -192,6 +254,9 @@ def run_vendor_experiment(
                 # GPT-OSS models -> use gpt-3.5-turbo as default
                 elif "gpt-oss" in model_id:
                     return "gpt-3.5-turbo"
+                # Llama models -> use gpt-3.5-turbo as default
+                elif "llama" in model_id:
+                    return "gpt-3.5-turbo"
                 # All other models -> use gpt-3.5-turbo as safe default
                 else:
                     return "gpt-3.5-turbo"
@@ -206,26 +271,76 @@ def run_vendor_experiment(
         #                             special_prompt_key="", re_run=False, part_exp=True, need_run=None)
         result = run_exp(
             model_list=[model_wrapper],  # Pass model wrapper (has .value attribute)
-            whether_llm_player=False,    # Not LLM vs LLM
-            gender=None,                 # Use gendered personas (None = use from character_2.json)
-            special_prompt_key="",       # Use default prompts (no special prompt)
-            re_run=False,                # Not a rerun
-            part_exp=False,              # Run all games (or use need_run to filter)
-            need_run=[game_id]           # List of game IDs to run
+            whether_llm_player=False,  # Not LLM vs LLM
+            gender=None,  # Use gendered personas (None = use from character_2.json)
+            special_prompt_key="",  # Use default prompts (no special prompt)
+            re_run=False,  # Not a rerun
+            part_exp=False,  # Run all games (or use need_run to filter)
+            need_run=[game_id],  # List of game IDs to run
         )
 
         print(f"✓ Vendor experiment completed for {model_spec['paper_name']}")
-        return result
+        return {"success": True, "model_id": model_id}
 
     except Exception as e:
         print(f"✗ Error running experiment: {e}")
         import traceback
+
         traceback.print_exc()
-        return None
+        return {"success": False, "model_id": model_id, "error": str(e)}
 
     finally:
         # Always restore original working directory
         os.chdir(original_cwd)
+
+
+def find_vendor_output(model_id: str, game_name: str) -> Optional[Path]:
+    """Find the vendor output JSON file for a model+game."""
+    # Sanitize model ID for folder name (matches the patch we applied)
+    safe_model_name = model_id.replace("/", "_").replace(":", "_")
+
+    # Vendor saves to: {safe_model_name}_res/res/{safe_model_name}_res/{game_name}_{model_id}.json
+    # The path structure is a bit nested due to vendor code
+    search_patterns = [
+        VENDOR_AGENT_TRUST_PATH
+        / f"{safe_model_name}_res"
+        / "res"
+        / f"{safe_model_name}_res"
+        / f"{game_name}_{model_id}.json",
+        VENDOR_AGENT_TRUST_PATH
+        / f"{safe_model_name}_res"
+        / f"{game_name}_{model_id}.json",
+        VENDOR_AGENT_TRUST_PATH
+        / "res"
+        / f"{safe_model_name}_res"
+        / f"{game_name}_{model_id}.json",
+    ]
+
+    # Also try with safe model name in the filename
+    search_patterns.extend(
+        [
+            VENDOR_AGENT_TRUST_PATH
+            / f"{safe_model_name}_res"
+            / "res"
+            / f"{safe_model_name}_res"
+            / f"{game_name}_{safe_model_name}.json",
+            VENDOR_AGENT_TRUST_PATH
+            / "res"
+            / f"{safe_model_name}_res"
+            / f"{game_name}_{safe_model_name}.json",
+        ]
+    )
+
+    for pattern in search_patterns:
+        if pattern.exists():
+            return pattern
+
+    # Fallback: search recursively
+    for json_file in VENDOR_AGENT_TRUST_PATH.glob(f"**/{game_name}*.json"):
+        if safe_model_name in str(json_file) or model_id in str(json_file):
+            return json_file
+
+    return None
 
 
 def transform_vendor_output(
@@ -233,7 +348,7 @@ def transform_vendor_output(
     model_spec: Dict[str, Any],
     game_config: Dict[str, Any],
     run_id: str,
-    paper_id: str
+    paper_id: str,
 ) -> List[Dict[str, Any]]:
     """
     Transform vendor JSON output to standardized episodes format.
@@ -257,9 +372,9 @@ def transform_vendor_output(
 
     # Align by index
     for idx, (amount, dialog_entry) in enumerate(zip(amounts, dialogs)):
-        persona_idx = dialog_entry[0]
-        persona_text = dialog_entry[1]
-        raw_response = dialog_entry[2]
+        persona_idx = dialog_entry[0] if len(dialog_entry) > 0 else idx
+        persona_text = dialog_entry[1] if len(dialog_entry) > 1 else ""
+        raw_response = dialog_entry[2] if len(dialog_entry) > 2 else ""
 
         # Validate amount
         success = True
@@ -288,7 +403,7 @@ def transform_vendor_output(
             "timestamp": datetime.now().isoformat(),
             "temperature": 1.0,
             "success": success,
-            "error": error
+            "error": error,
         }
 
         episodes.append(episode)
@@ -298,10 +413,16 @@ def transform_vendor_output(
 
 def calculate_aggregates(episodes: List[Dict[str, Any]]) -> pd.DataFrame:
     """Calculate aggregate statistics by model and game."""
+    if not episodes:
+        return pd.DataFrame()
+
     df = pd.DataFrame(episodes)
 
     # Filter to valid episodes only
     valid_df = df[df["success"] == True].copy()
+
+    if valid_df.empty:
+        return pd.DataFrame()
 
     # Group by model_id and game_id
     aggregates = []
@@ -330,21 +451,18 @@ def calculate_aggregates(episodes: List[Dict[str, Any]]) -> pd.DataFrame:
     return pd.DataFrame(aggregates)
 
 
-def save_results(
-    episodes: List[Dict[str, Any]],
-    aggregates: pd.DataFrame,
-    config: Dict[str, Any],
-    output_dir: Path,
-    run_id: str
-):
-    """Save all results to output directory."""
+def save_final_results(output_dir: Path, config: Dict[str, Any], run_id: str):
+    """Save final aggregates and metadata after all models complete."""
 
-    # Save episodes.jsonl
-    episodes_path = output_dir / "episodes.jsonl"
-    with open(episodes_path, "w") as f:
-        for episode in episodes:
-            f.write(json.dumps(episode) + "\n")
-    print(f"✓ Saved {len(episodes)} episodes to {episodes_path}")
+    # Load all episodes
+    episodes = load_all_episodes(output_dir)
+
+    if not episodes:
+        print("\n⚠ No episodes found to aggregate")
+        return
+
+    # Calculate aggregates
+    aggregates = calculate_aggregates(episodes)
 
     # Save aggregates.csv
     aggregates_path = output_dir / "aggregates.csv"
@@ -363,10 +481,14 @@ def save_results(
         "python_version": sys.version.split()[0],
         "start_time": config.get("_start_time", "unknown"),
         "end_time": datetime.now().isoformat(),
+        "total_episodes": len(episodes),
+        "total_models": len(set(ep["model_id"] for ep in episodes)),
         "environment": {
-            "openrouter_base_url": os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1"),
-            "vendor_agent_trust_commit": get_vendor_git_commit()
-        }
+            "openrouter_base_url": os.getenv(
+                "OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1"
+            ),
+            "vendor_agent_trust_commit": get_vendor_git_commit(),
+        },
     }
 
     metadata_path = output_dir / "metadata.json"
@@ -379,12 +501,13 @@ def get_git_commit() -> str:
     """Get current git commit hash."""
     try:
         import subprocess
+
         result = subprocess.run(
             ["git", "rev-parse", "HEAD"],
             cwd=REPO_ROOT,
             capture_output=True,
             text=True,
-            check=True
+            check=True,
         )
         return result.stdout.strip()
     except:
@@ -395,12 +518,13 @@ def get_git_branch() -> str:
     """Get current git branch."""
     try:
         import subprocess
+
         result = subprocess.run(
             ["git", "rev-parse", "--abbrev-ref", "HEAD"],
             cwd=REPO_ROOT,
             capture_output=True,
             text=True,
-            check=True
+            check=True,
         )
         return result.stdout.strip()
     except:
@@ -411,12 +535,13 @@ def get_vendor_git_commit() -> str:
     """Get vendor/agent-trust git commit hash."""
     try:
         import subprocess
+
         result = subprocess.run(
             ["git", "rev-parse", "HEAD"],
             cwd=VENDOR_PATH,
             capture_output=True,
             text=True,
-            check=True
+            check=True,
         )
         return result.stdout.strip()
     except:
@@ -426,21 +551,26 @@ def get_vendor_git_commit() -> str:
 def main():
     parser = argparse.ArgumentParser(description="Run Xie et al. (2024) replication")
     parser.add_argument(
-        "--config",
-        required=True,
-        help="Path to YAML configuration file"
+        "--config", required=True, help="Path to YAML configuration file"
     )
     parser.add_argument(
         "--dry-run",
         action="store_true",
-        help="Validate config without running experiments"
+        help="Validate config without running experiments",
+    )
+    parser.add_argument(
+        "--resume",
+        type=str,
+        default=None,
+        help="Resume from existing output directory (path to directory)",
     )
 
     args = parser.parse_args()
 
-    print("\n" + "="*60)
+    print("\n" + "=" * 60)
     print("Xie et al. (2024) Replication Wrapper")
-    print("="*60 + "\n")
+    print("  [INCREMENTAL SAVE ENABLED]")
+    print("=" * 60 + "\n")
 
     # Load configuration
     config = load_config(args.config)
@@ -456,50 +586,132 @@ def main():
     if args.dry_run:
         print("\n✓ DRY RUN: Configuration validated successfully")
         print(f"  Would run {len(model_specs)} models × {len(config['games'])} games")
-        print(f"  = {len(model_specs) * len(config['games']) * config['personas_count']} total API calls")
+        print(
+            f"  = {len(model_specs) * len(config['games']) * config['personas_count']} total API calls"
+        )
         return 0
 
-    # Create output directory
-    output_dir = create_output_directory(config["output_dir_template"])
+    # Create or resume output directory
+    output_dir = create_output_directory(config["output_dir_template"], args.resume)
     run_id = output_dir.name.split("__")[1]  # Extract timestamp as run_id
 
-    # Run experiments
-    all_episodes = []
+    # Load checkpoint
+    checkpoint = load_checkpoint(output_dir)
+    completed_models: Set[str] = set(checkpoint.get("completed_models", []))
+    failed_models: List[str] = checkpoint.get("failed_models", [])
+
+    # Calculate progress
+    total_combinations = len(model_specs) * len(config["games"])
+    already_completed = len(completed_models)
+
+    if already_completed > 0:
+        print(
+            f"\n📊 Progress: {already_completed}/{total_combinations} model-game combinations already completed"
+        )
+        print(f"   Resuming from where we left off...\n")
+
+    # Run experiments with INCREMENTAL SAVE
+    models_completed_this_run = 0
+    models_failed_this_run = 0
 
     for model_spec in model_specs:
         for game_config in config["games"]:
+            model_id = model_spec["openrouter_model_id"]
+            game_id = game_config["game_id"]
+            model_game_key = get_model_game_key(model_id, game_id)
+
+            # Skip if already completed
+            if model_game_key in completed_models:
+                print(
+                    f"\n⏭ Skipping {model_spec['paper_name']} - {game_config['game_name']} (already completed)"
+                )
+                continue
+
             # Run vendor experiment
             vendor_result = run_vendor_experiment(
                 model_spec=model_spec,
                 game_config=game_config,
                 personas_path=config["personas_path"],
                 temperature=config["decoding"]["temperature"],
-                dry_run=False
+                dry_run=False,
             )
 
-            if vendor_result is None:
-                print(f"  ⚠ Skipping {model_spec['paper_name']} - {game_config['game_name']}")
+            if vendor_result is None or not vendor_result.get("success", False):
+                print(
+                    f"  ✗ Failed: {model_spec['paper_name']} - {game_config['game_name']}"
+                )
+                failed_models.append(model_game_key)
+                models_failed_this_run += 1
+
+                # Save checkpoint even on failure
+                checkpoint["failed_models"] = failed_models
+                save_checkpoint(output_dir, checkpoint)
                 continue
 
-            # Transform output
-            # Note: This requires finding the vendor output file
-            # For now, we'll create a placeholder
-            # In actual implementation, need to locate vendor JSON output
+            # Find and transform vendor output
+            vendor_output_path = find_vendor_output(model_id, game_config["game_name"])
 
-            print(f"  ⚠ Output transformation not yet implemented")
-            print(f"     TODO: Locate vendor JSON at vendor/agent-trust/[model]_res/[game]_res/*.json")
+            if vendor_output_path and vendor_output_path.exists():
+                print(f"  Found vendor output: {vendor_output_path}")
 
-    # Save results
-    if all_episodes:
-        aggregates = calculate_aggregates(all_episodes)
-        save_results(all_episodes, aggregates, config, output_dir, run_id)
-    else:
-        print("\n⚠ No episodes to save (output transformation not implemented)")
+                # Transform to episodes
+                episodes = transform_vendor_output(
+                    vendor_output_path=vendor_output_path,
+                    model_spec=model_spec,
+                    game_config=game_config,
+                    run_id=run_id,
+                    paper_id=config["paper_id"],
+                )
 
-    print("\n" + "="*60)
-    print("✓ Replication complete")
-    print(f"  Results: {output_dir}")
-    print("="*60 + "\n")
+                # INCREMENTAL SAVE: Append episodes immediately
+                append_episodes_to_jsonl(output_dir, episodes)
+
+                # Copy raw vendor output to results/raw/
+                raw_dir = output_dir / "raw"
+                safe_model_name = model_id.replace("/", "_").replace(":", "_")
+                raw_copy_path = (
+                    raw_dir / f"{game_config['game_name']}_{safe_model_name}.json"
+                )
+                shutil.copy2(vendor_output_path, raw_copy_path)
+                print(f"  ✓ Copied raw output to {raw_copy_path}")
+
+            else:
+                print(f"  ⚠ Could not find vendor output file for {model_id}")
+                # Still mark as completed since the API calls were made
+
+            # Mark as completed and save checkpoint
+            completed_models.add(model_game_key)
+            checkpoint["completed_models"] = list(completed_models)
+            save_checkpoint(output_dir, checkpoint)
+
+            models_completed_this_run += 1
+
+            print(
+                f"\n  💾 CHECKPOINT SAVED: {len(completed_models)}/{total_combinations} complete"
+            )
+            print(
+                f"     Progress this run: {models_completed_this_run} completed, {models_failed_this_run} failed\n"
+            )
+
+    # Save final aggregates and metadata
+    print("\n" + "=" * 60)
+    print("Saving final results...")
+    print("=" * 60)
+
+    save_final_results(output_dir, config, run_id)
+
+    # Print summary
+    print("\n" + "=" * 60)
+    print("✓ Replication complete!")
+    print("=" * 60)
+    print(f"  Results directory: {output_dir}")
+    print(f"  Total completed: {len(completed_models)}/{total_combinations}")
+    print(
+        f"  This run: {models_completed_this_run} completed, {models_failed_this_run} failed"
+    )
+    if failed_models:
+        print(f"  Failed models: {len(failed_models)}")
+    print("=" * 60 + "\n")
 
     return 0
 

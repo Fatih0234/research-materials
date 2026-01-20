@@ -35,14 +35,14 @@ from typing import Optional, Dict, Any
 # Try to load dotenv if available (graceful fallback if not installed)
 try:
     from dotenv import load_dotenv
+
     load_dotenv()
 except ImportError:
     pass
 
 # Configure logging
 logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 )
 logger = logging.getLogger(__name__)
 
@@ -50,7 +50,9 @@ logger = logging.getLogger(__name__)
 DEFAULT_BASE_URL = "https://openrouter.ai/api/v1"
 
 
-def _get_env(key: str, default: Optional[str] = None, fallback_key: Optional[str] = None) -> Optional[str]:
+def _get_env(
+    key: str, default: Optional[str] = None, fallback_key: Optional[str] = None
+) -> Optional[str]:
     """
     Get environment variable with optional fallback.
 
@@ -73,7 +75,9 @@ def _get_env(key: str, default: Optional[str] = None, fallback_key: Optional[str
     return default
 
 
-def _build_headers(app_url: Optional[str] = None, app_name: Optional[str] = None) -> Dict[str, str]:
+def _build_headers(
+    app_url: Optional[str] = None, app_name: Optional[str] = None
+) -> Dict[str, str]:
     """
     Build OpenRouter attribution headers.
 
@@ -128,8 +132,7 @@ def initialize_openrouter(
         import openai
     except ImportError:
         raise ImportError(
-            "openai package not installed. "
-            "Install with: pip install openai"
+            "openai package not installed. Install with: pip install openai"
         )
 
     # Get configuration from arguments or environment
@@ -152,6 +155,9 @@ def initialize_openrouter(
     # (e.g., CAMEL framework). This ensures all clients use OpenRouter.
     os.environ["OPENAI_API_KEY"] = api_key
     os.environ["OPENAI_BASE_URL"] = base_url
+    os.environ["OPENAI_API_BASE_URL"] = (
+        base_url  # CAMEL library uses this variable name
+    )
 
     # Patch module-level configuration
     # Note: OpenAI SDK v1.x still supports module-level attributes for backward compatibility
@@ -168,12 +174,14 @@ def initialize_openrouter(
     # Set default headers if SDK supports it
     if headers:
         try:
-            if not hasattr(openai, 'default_headers'):
+            if not hasattr(openai, "default_headers"):
                 openai.default_headers = {}
             openai.default_headers.update(headers)
             logger.debug(f"Set attribution headers: {headers}")
         except AttributeError:
-            logger.warning("Unable to set attribution headers (SDK version may not support it)")
+            logger.warning(
+                "Unable to set attribution headers (SDK version may not support it)"
+            )
 
     logger.info(f"✓ OpenRouter initialized for legacy API (base_url: {base_url})")
     if app_name or app_url:
@@ -282,7 +290,7 @@ def log_api_call(
     prompt_tokens: Optional[int] = None,
     completion_tokens: Optional[int] = None,
     latency: Optional[float] = None,
-    **kwargs
+    **kwargs,
 ) -> None:
     """
     Log API call metadata for observability.
@@ -315,9 +323,12 @@ def is_openrouter_initialized() -> bool:
     """
     try:
         import openai
+
         # Check if base URL contains openrouter.ai
-        base_url = getattr(openai, 'base_url', None) or getattr(openai, 'api_base', None)
-        if base_url and 'openrouter.ai' in str(base_url):
+        base_url = getattr(openai, "base_url", None) or getattr(
+            openai, "api_base", None
+        )
+        if base_url and "openrouter.ai" in str(base_url):
             return True
     except (ImportError, AttributeError):
         pass
